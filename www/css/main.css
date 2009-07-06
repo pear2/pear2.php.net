@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color:#fff;
+	font-family:Helvetica, sans-serif;
+	font-size:0.9em;
+}
+#header {
+	border:1px solid #ccc;
+	border-top:none;
+	border-bottom:none;
+	background-color:#00aa4f;
+	padding:18px;
+	height:125px;
+	position:relative;
+	width:980px;
+	margin:0 auto;
+}
+#header a, #header a:link, #header a:visited {
+	text-decoration:none;
+	border-bottom:1px dotted #ccc;
+	color:#1c1c1c;
+}
+#header h1 {
+	display:block;
+	margin-left:120px;
+	display:block;
+	background:url('../images/pear2_masthead.png') no-repeat;
+	width:270px;
+	height:54px;
+	text-indent:-9999em;
+	overflow:hidden;
+}
+#header a.logo {
+	position:absolute;
+	clear:none;
+	border-bottom:none;
+}
+#header ul {
+	position:absolute;
+	bottom:10px;
+	left:140px;
+}
+#header ul li {
+	display:inline;
+	padding:10px;
+	border:5px solid #cce8d9;
+	-moz-border-radius:5px 0 0 0;
+	border-radius:5px 0 0 0;
+	-webkit-border-radius:5px 0 0 0;
+	border-bottom:none;
+	background-color:#FFF;
+	font-size:1.2em;
+	font-weight:bold;
+}
+#maincontent {
+	clear:both;
+	background-color:#fafffc;
+	padding:18px;
+	overflow:auto;
+	width:980px;
+	margin:0 auto;
+	border:1px solid #ccc;
+	border-top:none;
+	height:100%;
+}

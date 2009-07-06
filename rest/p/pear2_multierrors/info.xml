@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>
+ <n>PEAR2_MultiErrors</n>
+ <c>pear2.php.net</c>
+ <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <l>New BSD License</l>
+ <s>PEAR2_MultiErrors provides a simple and effective mechanism for
+</s>
+ <d>aggregating many errors and organizing them by severity.
+
+Errors are represented by PHP's built in exception object, and
+severity levels are represented by PHP's pre-defined error levels
+E_ERROR, E_WARNING, or E_NOTICE.  Adding errors to the PEAR2_MultiErrors
+object is simple, and done like adding to an array.  Retrieving errors can
+be done with iteration, and count() can be used to determine whether errors
+were added.
+
+&lt;?php
+include '/path/to/PEAR2/Autoload.php';
+$a = new PEAR2_MultiErrors;
+$a-&gt;E_ERROR[] = new Exception('message one');
+$a-&gt;E_WARNING[] = new PEAR2_BlahException('message two');
+// iterate over all errors
+foreach ($a as $error) {...}
+// iterate over E_ERROR severity
+foreach ($a-&gt;E_ERROR as $error) {...}
+count($a); // 2
+count($a-&gt;E_ERROR); // 1
+count($a-&gt;E_WARNING); // 1
+count(E_NOTICE); // 0
+?&gt;
+
+Used in conjuction with PEAR2_Exception, it can also be used as a &quot;cause&quot;
+of an Exception:
+
+&lt;?php
+include '/path/to/PEAR2/Autoload.php';
+$a = new PEAR2_MultiErrors;
+$a-&gt;E_ERROR[] = new Exception('message one');
+$a-&gt;E_ERROR[] = new PEAR2_BlahException('message two');
+throw new PEAR2_Exception('task failed', $a);
+?&gt;</d>
+ <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+</p>

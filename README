@@ -1,0 +1,9 @@
+Simple channel frontend
+
+To release a package, run php pearscs.phar release MyPackage.tgz handle,
+then commit to the repository.
+
+Requirements - 
+Savant3
+
+Eventually Pyrus when we have 5.3 on the server  :-(

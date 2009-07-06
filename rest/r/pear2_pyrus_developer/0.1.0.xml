@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_pyrus_developer">PEAR2_Pyrus_Developer</p>
+ <c>pear2.php.net</c>
+ <v>0.1.0</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>cellog</m>
+ <s>Developer tools for the Pyrus installer
+</s>
+ <d>
+This package contains several custom commands for Pyrus,
+including command to automatically generate a package.xml,
+and commands to create a package from an existing package.xml</d>
+ <da>2009-07-03 11:30:52</da>
+ <n>Initial development release</n>
+ <f>49463</f>
+ <g>http://pear2.php.net/get/PEAR2_Pyrus_Developer-0.1.0</g>
+ <x xlink:href="package.0.1.0.xml"/>
+</r>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_autoload">PEAR2_Autoload</p>
+ <c>pear2.php.net</c>
+ <v>0.1.0</v>
+ <st>devel</st>
+ <l>New BSD License</l>
+ <m>cellog</m>
+ <s>PEAR2_Autoload is the standard method of class loading for
+</s>
+ <d>development and low-volume web sites using PEAR2 packages.
+
+To use:
+
+&lt;?php
+require '/path/to/PEAR2/Autoload.php';
+// now use class names from installed PEAR2
+// packages at will
+?&gt;</d>
+ <da>2007-10-04 </da>
+ <n>Initial Release</n>
+ <f>
+  <g>http://pear2.php.net/get/PEAR2_Autoload-0.1.0</g>
+  <x xlink:href="package.0.1.0.xml"/>
+ </f>
+</r>

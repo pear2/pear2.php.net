@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a1">
+ <name>PEAR2_Pyrus_Developer</name>
+ <channel>pear2.php.net</channel>
+ <summary>Developer tools for the Pyrus installer
+</summary>
+ <description>
+This package contains several custom commands for Pyrus,
+including command to automatically generate a package.xml,
+and commands to create a package from an existing package.xml</description>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-07-03</date>
+ <time>11:30:52</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Initial development release</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/pear2/Pyrus/Developer/Runphpt/Runner.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/Runphpt/Exception.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/PackageFile/v2.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/PackageFile/PECL/Filter.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/PackageFile/PECL.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/PackageFile/PEAR2SVN/Filter.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/PackageFile/PEAR2SVN.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/PackageFile/Commands.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/Creator/Zip.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/Creator/Xml.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/Creator/Tar.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/Creator/Phar/PHPArchive.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/Creator/Phar.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/Creator/Exception.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Web/View.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Web/Exception.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Web/Controller.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Web/Aggregator.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/test.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/test-modified.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Sqlite.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/SourceFile/PerTest.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/SourceFile.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/pear2coverage.phar.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/make-coverage-phar.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Exception.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/DefaultSourceDecorator.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Aggregator.php"/>
+   <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/AbstractSourceDecorator.php"/>
+   <file role="data" name="data/pear2.php.net/PEAR2_Pyrus_Developer/phartemplate.php"/>
+   <file role="customcommand" name="customcommand/pear2.php.net/PEAR2_Pyrus_Developer/commands.xml"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
