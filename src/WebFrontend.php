@@ -39,7 +39,7 @@ class WebFrontend
 	function listPackages()
 	{
 		include_once 'WebFrontend/PackageList.php';
-		return new WebFrontend_PackageList($this->channel->file->getPath().'/rest/p');
+		return new WebFrontend_PackageList($this->channel->file->getPath());
 	}
 	
 	function showPackage()
