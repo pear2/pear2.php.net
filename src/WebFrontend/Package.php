@@ -3,12 +3,19 @@ class WebFrontend_Package
 {
 	public $package;
 	
-	function __construct($filename)
+	public $releases = array();
+	
+	function __construct($channel, $package)
 	{
-		if (!file_exists($filename)) {
-			throw new Exception('Invalid package.');
-		}
-		$this->package = simplexml_load_file($filename);
+        Internet::addDirectory($channel->file->getPath(),
+                       'http://pear2.php.net/');
+        \pear2\Pyrus\Main::$downloadClass = 'Internet';
+        \pear2\Pyrus\Config::current()->cache_dir = '/tmp';
+        $chan = \pear2\Pyrus\Config::current()->channelregistry['pear2.php.net'];
+        $this->package = $chan->remotepackage[$package];
+	    foreach ($chan->remotepackage[$package] as $version => $release) {
+            $this->releases[$version] = $release;
+        }
 	}
 }
 ?>

@@ -5,9 +5,9 @@ class WebFrontend_PackageList
 	
 	public $packages = array();
 	
-	function __construct($dir)
+	function __construct($channel)
 	{
-	    $this->directory = $dir;
+	    $this->directory = $channel->file->getPath();
 	    
 	    Internet::addDirectory($this->directory,
                        'http://pear2.php.net/');

@@ -5,7 +5,7 @@ class WebFrontend
 	 * The channel object
 	 * @var Channel
 	 */
-	public $channel;
+	static public $channel;
 	
 	public $page_content;
 	
@@ -39,7 +39,7 @@ class WebFrontend
 	function listPackages()
 	{
 		include_once 'WebFrontend/PackageList.php';
-		return new WebFrontend_PackageList($this->channel->file->getPath());
+		return new WebFrontend_PackageList($this->channel);
 	}
 	
 	function showPackage()
@@ -48,6 +48,6 @@ class WebFrontend
 		if (!preg_match('/[\w\_]+/', $this->options['package'])) {
 			throw new Exception('Invalid package name.');
 		}
-		return new WebFrontend_Package($this->channel->file->getPath().'/rest/p/'.$this->options['package'].'/info.xml');
+		return new WebFrontend_Package($this->channel, $this->options['package']);
 	}
 }
