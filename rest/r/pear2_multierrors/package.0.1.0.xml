@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a1">
  <name>PEAR2_MultiErrors</name>
  <channel>pear2.php.net</channel>
- <summary>PEAR2_MultiErrors provides a simple and effective mechanism for
+ <summary>PEAR2_MultiErrors provides a simple and effective mechanism for aggregating many errors and organizing them by severity.
 </summary>
- <description>aggregating many errors and organizing them by severity.
-
+ <description>
 Errors are represented by PHP's built in exception object, and
 severity levels are represented by PHP's pre-defined error levels
 E_ERROR, E_WARNING, or E_NOTICE.  Adding errors to the PEAR2_MultiErrors
@@ -14,10 +13,10 @@ be done with iteration, and count() can be used to determine whether errors
 were added.
 
 &lt;?php
-include '/path/to/PEAR2/Autoload.php';
-$a = new PEAR2_MultiErrors;
+include '/path/to/pear2/Autoload.php';
+$a = new pear2\MultiErrors;
 $a-&gt;E_ERROR[] = new Exception('message one');
-$a-&gt;E_WARNING[] = new PEAR2_BlahException('message two');
+$a-&gt;E_WARNING[] = new pear2\Blah\Exception('message two');
 // iterate over all errors
 foreach ($a as $error) {...}
 // iterate over E_ERROR severity
@@ -28,15 +27,15 @@ count($a-&gt;E_WARNING); // 1
 count(E_NOTICE); // 0
 ?&gt;
 
-Used in conjuction with PEAR2_Exception, it can also be used as a &quot;cause&quot;
+Used in conjuction with pear2\Exception, it can also be used as a &quot;cause&quot;
 of an Exception:
 
 &lt;?php
-include '/path/to/PEAR2/Autoload.php';
-$a = new PEAR2_MultiErrors;
+include '/path/to/pear2/Autoload.php';
+$a = new pear2\MultiErrors;
 $a-&gt;E_ERROR[] = new Exception('message one');
-$a-&gt;E_ERROR[] = new PEAR2_BlahException('message two');
-throw new PEAR2_Exception('task failed', $a);
+$a-&gt;E_ERROR[] = new pear2\Blah\Exception('message two');
+throw new pear2\My\Exception('task failed', $a);
 ?&gt;</description>
  <lead>
   <name>Gregory Beaver</name>
@@ -44,25 +43,22 @@ throw new PEAR2_Exception('task failed', $a);
   <email>cellog@php.net</email>
   <active>yes</active>
  </lead>
- <date>2007-10-05</date>
+ <date>2009-07-07</date>
+ <time>23:21:48</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
  </version>
  <stability>
-  <release>devel</release>
+  <release>alpha</release>
   <api>alpha</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
  <notes>Initial Release</notes>
  <contents>
   <dir name="/">
-   <dir name="src" baseinstalldir="PEAR2">
-    <dir name="MultiErrors">
-     <file role="php" name="Exception.php"/>
-    </dir>
-    <file role="php" name="MultiErrors.php"/>
-   </dir>
+   <file role="php" name="php/pear2/MultiErrors/Exception.php"/>
+   <file role="php" name="php/pear2/MultiErrors.php"/>
   </dir>
  </contents>
  <dependencies>

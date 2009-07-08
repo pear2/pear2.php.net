@@ -2,16 +2,25 @@
 <f xmlns="http://pear.php.net/dtd/rest.categorypackageinfo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.categorypackageinfo http://pear.php.net/dtd/rest.categorypackageinfo.xsd">
  <pi>
   <p>
-   <n>PEAR2_Pyrus_Developer</n>
+   <n>PEAR2_SimpleChannelServer</n>
    <c>pear2.php.net</c>
    <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
    <l>New BSD License</l>
-   <s>Developer tools for the Pyrus installer
+   <s>A Simple Channel Server for PEAR2 compatible channels
 </s>
    <d>
-This package contains several custom commands for Pyrus,
-including command to automatically generate a package.xml,
-and commands to create a package from an existing package.xml</d>
+This package contains a set of scripts to create a simple PEAR compatible
+channel server. Included with the package is the pearscs command which you
+can use for the command line to manage a pear channel.
+
+The pearscs utility will be installed in the directory configured by the
+bin_dir setting within Pyrus.
+
+Example usage from the command line:
+pearscs create pear.example.com &quot;My Channel&quot; myalias
+pearscs release MyPackage-0.0.0.tgz myhandle
+
+Test</d>
    <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
   </p>
   <a>

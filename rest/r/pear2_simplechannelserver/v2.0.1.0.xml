@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_simplechannelserver">PEAR2_SimpleChannelServer</p>
+ <c>pear2.php.net</c>
+ <v>0.1.0</v>
+ <a>0.1.0</a>
+ <mp>5.2.0</mp>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>cellog</m>
+ <s>A Simple Channel Server for PEAR2 compatible channels
+</s>
+ <d>
+This package contains a set of scripts to create a simple PEAR compatible
+channel server. Included with the package is the pearscs command which you
+can use for the command line to manage a pear channel.
+
+The pearscs utility will be installed in the directory configured by the
+bin_dir setting within Pyrus.
+
+Example usage from the command line:
+pearscs create pear.example.com &quot;My Channel&quot; myalias
+pearscs release MyPackage-0.0.0.tgz myhandle
+
+Test</d>
+ <da>2009-07-07 17:12:05</da>
+ <n>First attempt.
+</n>
+ <f>6554474</f>
+ <g>http://pear2.php.net/get/PEAR2_SimpleChannelServer-0.1.0</g>
+ <x xlink:href="package.0.1.0.xml"/>
+</r>

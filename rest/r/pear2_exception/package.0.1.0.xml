@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a1">
  <name>PEAR2_Exception</name>
  <channel>pear2.php.net</channel>
- <summary>PEAR2_Exception is the standard exception class for PEAR2.
+ <summary>pear2\Exception is the standard exception class for PEAR2.
 </summary>
  <description>In addition to supporting the default signature of the built-in
-Exception class, PEAR2_Exception also supports passing a
+Exception class, pear2\Exception also supports passing a
 cause of an exception, which can be another exception object
 or a PEAR2_MultiErrors object.  The error messages of the causes
 are used when constructing the error message displayed when
-converting PEAR2_Exception to a string.
+converting pear2\Exception to a string.
 
-PEAR2_Exception should always be extended by your own custom exception
+pear2\Exception should always be extended by your own custom exception
 class for the package.</description>
  <lead>
   <name>Gregory Beaver</name>
@@ -37,22 +37,21 @@ class for the package.</description>
   <email>hans@velum.net</email>
   <active>no</active>
  </developer>
- <date>2007-10-05</date>
+ <date>2009-07-07</date>
+ <time>22:57:54</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
  </version>
  <stability>
-  <release>devel</release>
+  <release>alpha</release>
   <api>alpha</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
  <notes>Initial Release</notes>
  <contents>
   <dir name="/">
-   <dir name="src" baseinstalldir="PEAR2">
-    <file role="php" name="Exception.php"/>
-   </dir>
+   <file role="php" name="php/pear2/Exception.php"/>
   </dir>
  </contents>
  <dependencies>
@@ -65,5 +64,5 @@ class for the package.</description>
    </pearinstaller>
   </required>
  </dependencies>
- <phprelease></phprelease>
+ <phprelease/>
 </package>

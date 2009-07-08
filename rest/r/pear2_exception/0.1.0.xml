@@ -3,24 +3,23 @@
  <p xlink:href="rest/p/pear2_exception">PEAR2_Exception</p>
  <c>pear2.php.net</c>
  <v>0.1.0</v>
- <st>devel</st>
+ <st>alpha</st>
  <l>New BSD License</l>
  <m>cellog</m>
- <s>PEAR2_Exception is the standard exception class for PEAR2.
+ <s>pear2\Exception is the standard exception class for PEAR2.
 </s>
  <d>In addition to supporting the default signature of the built-in
-Exception class, PEAR2_Exception also supports passing a
+Exception class, pear2\Exception also supports passing a
 cause of an exception, which can be another exception object
 or a PEAR2_MultiErrors object.  The error messages of the causes
 are used when constructing the error message displayed when
-converting PEAR2_Exception to a string.
+converting pear2\Exception to a string.
 
-PEAR2_Exception should always be extended by your own custom exception
+pear2\Exception should always be extended by your own custom exception
 class for the package.</d>
- <da>2007-10-05 </da>
+ <da>2009-07-07 22:57:54</da>
  <n>Initial Release</n>
- <f>
-  <g>http://pear2.php.net/get/PEAR2_Exception-0.1.0</g>
-  <x xlink:href="package.0.1.0.xml"/>
- </f>
+ <f>32533</f>
+ <g>http://pear2.php.net/get/PEAR2_Exception-0.1.0</g>
+ <x xlink:href="package.0.1.0.xml"/>
 </r>

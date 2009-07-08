@@ -3,24 +3,25 @@
  <p xlink:href="rest/p/pear2_autoload">PEAR2_Autoload</p>
  <c>pear2.php.net</c>
  <v>0.1.0</v>
- <st>devel</st>
+ <st>alpha</st>
  <l>New BSD License</l>
  <m>cellog</m>
- <s>PEAR2_Autoload is the standard method of class loading for
+ <s>Standard Autoloader for PEAR2
 </s>
- <d>development and low-volume web sites using PEAR2 packages.
+ <d>
+PEAR2_Autoload is the standard method of class loading for
+development and low-volume web sites using PEAR2 packages.
 
 To use:
 
 &lt;?php
-require '/path/to/PEAR2/Autoload.php';
+require '/path/to/pear2/Autoload.php';
 // now use class names from installed PEAR2
 // packages at will
 ?&gt;</d>
- <da>2007-10-04 </da>
+ <da>2009-07-07 23:18:59</da>
  <n>Initial Release</n>
- <f>
-  <g>http://pear2.php.net/get/PEAR2_Autoload-0.1.0</g>
-  <x xlink:href="package.0.1.0.xml"/>
- </f>
+ <f>31295</f>
+ <g>http://pear2.php.net/get/PEAR2_Autoload-0.1.0</g>
+ <x xlink:href="package.0.1.0.xml"/>
 </r>
