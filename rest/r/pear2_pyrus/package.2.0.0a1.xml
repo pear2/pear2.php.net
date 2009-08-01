@@ -35,8 +35,8 @@ try {
   <email>cellog@php.net</email>
   <active>yes</active>
  </lead>
- <date>2009-07-21</date>
- <time>19:56:56</time>
+ <date>2009-08-01</date>
+ <time>13:10:29</time>
  <version>
   <release>2.0.0a1</release>
   <api>2.0.0a1</api>
@@ -106,14 +106,14 @@ Initial pyrus public API
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.0001.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.1.phpt"/>
-   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.000.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.0.1.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.00.1.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.devel.1.0.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.2.0.0.phpt"/>
-   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.1.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.0001.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.1.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.000.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.00.0.0.phpt"/>
@@ -383,6 +383,10 @@ Initial pyrus public API
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Remotecategories/exceptions.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/uninstall/test.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/uninstall/setup.php.inc"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/uninstall/readonly.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/uninstall/doesnotexist.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/removeregistry/setup.php.inc"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/removeregistry/removeregistry.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/package/basic/setup.php.inc"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/package/basic/release3.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/package/basic/release2.phpt"/>
@@ -401,10 +405,12 @@ Initial pyrus public API
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/listpackages/listpackages.multiple.channels.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/install/test.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/install/setup.php.inc"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/install/readonly.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/info/setup.php.inc"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/info/info.simple.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/info/info.installedfiles.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/info/info.dirtree.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/info/doesnotexist.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/getdependentpackages/setup.php.inc"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/getdependentpackages/getdependentpackages.basic.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Registry/Xml/detectfileconflicts/setup.php.inc"/>
