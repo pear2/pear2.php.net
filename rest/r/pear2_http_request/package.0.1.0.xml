@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a1">
+ <name>PEAR2_HTTP_Request</name>
+ <channel>pear2.php.net</channel>
+ <summary>class to do http requests, uses a adapter based system for performing those requests
+</summary>
+ <description>
+Please see the examples dir for basic usage
+
+Adapters are available for based on the following code and are used in this order:
+PEAR2_HTTP_Request_Adapter_Http (uses the Pecl Http class)
+PEAR2_HTTP_Request_Adapter_Curl (based on the curl extension, not complete)
+PEAR2_HTTP_Request_Adapter_Phpstream (based on the http php stream code)
+PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+</description>
+ <lead>
+  <name>Joshua Eichorn</name>
+  <user>jeichorn</user>
+  <email>josh@bluga.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>David Coallier</name>
+  <user>davidc</user>
+  <email>davidc@php.net</email>
+  <active>yes</active>
+ </lead>
+ <helper>
+  <name>Richard Heyes</name>
+  <user>rheyes</user>
+  <email>richard@php.net</email>
+  <active>yes</active>
+ </helper>
+ <helper>
+  <name>Alexey Borzov</name>
+  <user>avb</user>
+  <email>borz_off@cs.msu.su</email>
+  <active>yes</active>
+ </helper>
+ <helper>
+  <name>Elizabeth Marie Smith</name>
+  <user>auroraeosrose</user>
+  <email>auroraeosrose@php.net</email>
+  <active>yes</active>
+ </helper>
+ <date>2008-05-21</date>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>devel</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>First attempt.
+</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/_setup.php"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test003.png"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test002.php"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test001.html"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/post.001.php"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/get.002.php"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/get.001.php"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpstream/post.001.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpstream/get.002.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpstream/get.001.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpsocket/post.001.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpsocket/get.002.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpsocket/get.001.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/http/post.001.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/http/get.002.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/http/get.001.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.004.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.003.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.002.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.001.phpt"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Uri.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Response.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Listener.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Headers.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Exception.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/allfiles.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Phpstream.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Phpsocket.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Http.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Curl.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request.php"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/post.php"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/head.php"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/get.php"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/adapter.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

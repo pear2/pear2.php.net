@@ -16,7 +16,7 @@ including command to automatically generate a package.xml,
 and commands to create a package from an existing package.xml</d>
  <da>2009-07-06 12:29:24</da>
  <n>Initial development release</n>
- <f>49989</f>
+ <f>300609</f>
  <g>http://pear2.php.net/get/PEAR2_Pyrus_Developer-0.1.0</g>
  <x xlink:href="package.0.1.0.xml"/>
 </r>
