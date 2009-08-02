@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule (.*) ../bugtracker/site/$1 [QSA]
