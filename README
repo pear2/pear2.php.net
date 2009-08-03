@@ -1,25 +1,18 @@
 Simple channel frontend
 
-To release a package, run php pearscs.phar release MyPackage.tgz handle,
-then commit to the repository.
+To release a package, run pyrus scs-release MyPackage.tgz handle then commit to
+http://svn.php.net/repository/pear2/sandbox/pear2.php.net/branches/LIVE
 
 The live pear2.php.net site is automatically synchronized every 30 minutes from
-branches/LIVE. To sync to live, you can use:
-
-svn del http://svn.pear.php.net/PEAR2/sandbox/pear2.php.net/branches/LIVE
-svn copy http://svn.pear.php.net/PEAR2/sandbox/pear2.php.net/trunk \
-http://svn.pear.php.net/PEAR2/sandbox/pear2.php.net/branches/LIVE
+branches/LIVE. To sync to live, cd into a checkout of branches/LIVE and run
+svn merge /path/to/trunk/checkout/pear2.php.net
 
 Requirements - 
-Savant3
-Pyrus
+* Savant3
+* Pyrus
 
 Quick Setup:
 cp config.sample.php config.inc.php
 mkdir includes
-php pyrus.phar `pwd`/includes channel-discover phpsavant.com 
-php pyrus.phar `pwd`/includes install savant/Savant3
-php pyrus.phar `pwd`/includes install Pyrus
-
-
-Eventually Pyrus when we have 5.3 on the server  :-(
+pyrus `pwd`/includes channel-discover phpsavant.com 
+pyrus `pwd`/includes install savant/Savant3 PEAR2_Pyrus-devel
