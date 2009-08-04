@@ -8,6 +8,6 @@
 	</div>
 	<div class="featurebox col right">
 		<h2>Download Pyrus</h2>
-		<a href="http://svn.pear.php.net/wsvn/PEARSVN/Pyrus/trunk/pyrus.phar?op=file&rev=0&sc=0">Download pyrus.phar</a>
+		<a href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">Download pyrus.phar</a>
 	</div>
 </div>
