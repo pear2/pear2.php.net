@@ -14,8 +14,8 @@ and commands to create a package from an existing package.xml</description>
   <email>cellog@php.net</email>
   <active>yes</active>
  </lead>
- <date>2009-07-06</date>
- <time>12:29:24</time>
+ <date>2009-08-04</date>
+ <time>21:23:50</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -57,7 +57,17 @@ and commands to create a package from an existing package.xml</description>
    <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/DefaultSourceDecorator.php"/>
    <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/Aggregator.php"/>
    <file role="php" name="php/pear2/Pyrus/Developer/CoverageAnalyzer/AbstractSourceDecorator.php"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/tests/001.phpt"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/skeleton.php"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/skeleton.dsp"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/skeleton.c"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/php_skeleton.h"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/EXPERIMENTAL"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/CREDITS"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/create_stubs"/>
    <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/phartemplate.php"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/config.w32"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/config.m4"/>
    <file role="customcommand" name="customcommand/PEAR2_Pyrus_Developer/pear2.php.net/commands.xml"/>
   </dir>
  </contents>

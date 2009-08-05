@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <m xmlns="http://pear.php.net/dtd/rest.allmaintainers" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.allmaintainers http://pear.php.net/dtd/rest.allmaintainers.xsd">
- <h xlink:href="rest/m/auroraeosrose">auroraeosrose</h>
- <h xlink:href="rest/m/avb">avb</h>
- <h xlink:href="rest/m/cellog">cellog</h>
  <h xlink:href="rest/m/cox">cox</h>
- <h xlink:href="rest/m/davidc">davidc</h>
- <h xlink:href="rest/m/hlellelid">hlellelid</h>
- <h xlink:href="rest/m/jeichorn">jeichorn</h>
  <h xlink:href="rest/m/mansion">mansion</h>
- <h xlink:href="rest/m/rheyes">rheyes</h>
  <h xlink:href="rest/m/saltybeagle">saltybeagle</h>
+ <h xlink:href="rest/m/hlellelid">hlellelid</h>
+ <h xlink:href="rest/m/cellog">cellog</h>
+ <h xlink:href="rest/m/avb">avb</h>
+ <h xlink:href="rest/m/auroraeosrose">auroraeosrose</h>
+ <h xlink:href="rest/m/rheyes">rheyes</h>
+ <h xlink:href="rest/m/jeichorn">jeichorn</h>
+ <h xlink:href="rest/m/davidc">davidc</h>
 </m>
