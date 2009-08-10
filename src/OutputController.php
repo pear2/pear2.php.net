@@ -100,8 +100,7 @@ class OutputController
     
     static protected function sendObjectOutput(&$object, $return = false)
     {
-    	include_once 'Savant3.php';
-        $savant = new Savant3();
+        $savant = new \pear2\Templates\Savant\Main();
         if (!empty(self::$template_path)) {
             $savant->addPath('template', self::$template_path);
         }
