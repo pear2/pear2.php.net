@@ -17,7 +17,7 @@ class WebFrontend
 	
 	function __construct(Channel $channel, $options = array())
 	{
-		$this->channel = $channel;
+		self::$channel = $channel;
 		$this->options = array_merge($this->options, $options);
 		$this->run();
 	}
@@ -39,7 +39,7 @@ class WebFrontend
 	function listPackages()
 	{
 		include_once 'WebFrontend/PackageList.php';
-		return new WebFrontend_PackageList($this->channel);
+		return new WebFrontend_PackageList(self::$channel);
 	}
 	
 	function showPackage()
@@ -48,6 +48,6 @@ class WebFrontend
 		if (!preg_match('/[\w\_]+/', $this->options['package'])) {
 			throw new Exception('Invalid package name.');
 		}
-		return new WebFrontend_Package($this->channel, $this->options['package']);
+		return new WebFrontend_Package(self::$channel, $this->options['package']);
 	}
 }
