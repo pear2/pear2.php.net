@@ -104,14 +104,7 @@ class OutputController
         if (!empty(self::$template_path)) {
             $savant->addPath('template', self::$template_path);
         }
-        foreach (get_object_vars($object) as $key=>$var) {
-            $savant->$key = $var;
-        }
-        if (in_array('ArrayAccess', class_implements($object))) {
-            foreach ($object->toArray() as $key=>$var) {
-                $savant->$key = $var;
-            }
-        }
+        $savant->assign($object);
         if ($object instanceof Exception) {
             $savant->code    = $object->getCode();
             $savant->line    = $object->getLine();
