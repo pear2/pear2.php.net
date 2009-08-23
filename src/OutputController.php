@@ -10,14 +10,14 @@
  */
 class OutputController
 {
-	/**
-	 * Default template mapping can be temporarily overridden by 
-	 * assigning a direct template name.
-	 * 
-	 * OutputController::$output_template['My_Class'] = 'My/Class_rss.tpl.php';
-	 * 
-	 * @var array
-	 */
+    /**
+     * Default template mapping can be temporarily overridden by 
+     * assigning a direct template name.
+     * 
+     * OutputController::$output_template['My_Class'] = 'My/Class_rss.tpl.php';
+     * 
+     * @var array
+     */
     static $output_template       = array();
     
     /**
