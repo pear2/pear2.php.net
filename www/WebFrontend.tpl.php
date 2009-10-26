@@ -16,7 +16,7 @@
 </div>
 <div id="maincontent">
 	<?php
-	OutputController::display($this->page_content);
+	echo $savant->render($context->page_content);
 	?>
 </div>
 </body>
