@@ -2,16 +2,16 @@
 <f xmlns="http://pear.php.net/dtd/rest.categorypackageinfo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.categorypackageinfo http://pear.php.net/dtd/rest.categorypackageinfo.xsd">
  <pi>
   <p>
-   <n>PEAR2_Pyrus_Developer</n>
+   <n>PEAR2_Templates_Savant</n>
    <c>pear2.php.net</c>
    <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
    <l>New BSD License</l>
-   <s>Developer tools for the Pyrus installer
+   <s>Savant is a powerful but lightweight object-oriented template system for PHP.
 </s>
    <d>
-This package contains several custom commands for Pyrus,
-including command to automatically generate a package.xml,
-and commands to create a package from an existing package.xml</d>
+Unlike other template systems, Savant by default does not compile your
+templates into PHP; instead, it uses PHP itself as its template language so you
+don't need to learn a new markup system.</d>
    <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
   </p>
   <a>

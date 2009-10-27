@@ -35,8 +35,14 @@ try {
   <email>cellog@php.net</email>
   <active>yes</active>
  </lead>
- <date>2009-08-01</date>
- <time>13:10:29</time>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-10-27</date>
+ <time>11:13:52</time>
  <version>
   <release>2.0.0a1</release>
   <api>2.0.0a1</api>
@@ -104,18 +110,18 @@ Initial pyrus public API
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.invalidversion.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.stable.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.phpt"/>
-   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.0001.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.1.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.0001.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.000.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.2.0.0.phpt"/>
-   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.0.1.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.00.1.0.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.extends.alpha.0.1.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.devel.1.0.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.2.0.0.phpt"/>
-   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.0001.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.1.phpt"/>
-   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.0.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.0001.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.000.phpt"/>
+   <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.1.0.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.alpha.00.0.0.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.2decimals.phpt"/>
    <file role="test" name="test/PEAR2_Pyrus/pear2.php.net/Validate/validateversion.failure.00.0.0.phpt"/>
@@ -2353,6 +2359,7 @@ Initial pyrus public API
    <file role="php" name="php/pear2/Pyrus/Channel.php"/>
    <file role="php" name="php/pear2/Pyrus/AtomicFileTransaction/Exception.php"/>
    <file role="php" name="php/pear2/Pyrus/AtomicFileTransaction.php"/>
+   <file role="script" name="script/pyrus"/>
    <file role="data" name="data/PEAR2_Pyrus/pear2.php.net/x509rootcerts/XRampGlobalCertificationAuthority"/>
    <file role="data" name="data/PEAR2_Pyrus/pear2.php.net/x509rootcerts/WellsFargoRootCertificateAuthority"/>
    <file role="data" name="data/PEAR2_Pyrus/pear2.php.net/x509rootcerts/VisaeCommerceRoot"/>
@@ -2501,7 +2508,7 @@ Initial pyrus public API
  <dependencies>
   <required>
    <php>
-    <min>5.2.0</min>
+    <min>5.3.1RC1</min>
    </php>
    <pearinstaller>
     <min>2.0.0a1</min>
