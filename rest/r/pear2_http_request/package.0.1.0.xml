@@ -43,13 +43,14 @@ PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTT
   <email>auroraeosrose@php.net</email>
   <active>yes</active>
  </helper>
- <date>2008-05-21</date>
+ <date>2009-10-29</date>
+ <time>15:39:58</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
  </version>
  <stability>
-  <release>devel</release>
+  <release>alpha</release>
   <api>alpha</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
@@ -61,6 +62,7 @@ PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTT
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test003.png"/>
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test002.php"/>
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test001.html"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/mktestFiles.sh"/>
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/post.001.php"/>
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/get.002.php"/>
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/get.001.php"/>
@@ -77,6 +79,7 @@ PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTT
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.003.phpt"/>
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.002.phpt"/>
    <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.001.phpt"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/get_large_file.phpt"/>
    <file role="php" name="php/PEAR2/HTTP/Request/Uri.php"/>
    <file role="php" name="php/PEAR2/HTTP/Request/Response.php"/>
    <file role="php" name="php/PEAR2/HTTP/Request/Listener.php"/>
@@ -86,6 +89,7 @@ PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTT
    <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Phpstream.php"/>
    <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Phpsocket.php"/>
    <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Http.php"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Filesystem.php"/>
    <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Curl.php"/>
    <file role="php" name="php/PEAR2/HTTP/Request/Adapter.php"/>
    <file role="php" name="php/PEAR2/HTTP/Request.php"/>

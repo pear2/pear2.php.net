@@ -3,9 +3,9 @@
  <p xlink:href="rest/p/pear2_http_request">PEAR2_HTTP_Request</p>
  <c>pear2.php.net</c>
  <v>0.1.0</v>
- <st>devel</st>
+ <st>alpha</st>
  <l>New BSD License</l>
- <m>jeichorn</m>
+ <m>davidc</m>
  <s>class to do http requests, uses a adapter based system for performing those requests
 </s>
  <d>
@@ -17,10 +17,10 @@ PEAR2_HTTP_Request_Adapter_Curl (based on the curl extension, not complete)
 PEAR2_HTTP_Request_Adapter_Phpstream (based on the http php stream code)
 PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
 </d>
- <da>2008-05-21 </da>
+ <da>2009-10-29 15:39:58</da>
  <n>First attempt.
 </n>
- <f>109134</f>
+ <f>41156</f>
  <g>http://pear2.php.net/get/PEAR2_HTTP_Request-0.1.0</g>
  <x xlink:href="package.0.1.0.xml"/>
 </r>
