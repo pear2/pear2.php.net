@@ -14,8 +14,8 @@ and commands to create a package from an existing package.xml</description>
   <email>cellog@php.net</email>
   <active>yes</active>
  </lead>
- <date>2009-08-04</date>
- <time>21:23:50</time>
+ <date>2009-12-02</date>
+ <time>15:41:14</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>

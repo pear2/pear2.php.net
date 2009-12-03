@@ -35,7 +35,7 @@ try {
     echo $e;
 }
 ?&gt;</d>
- <da>2009-10-27 11:13:52</da>
+ <da>2009-12-02 16:12:09</da>
  <n>Initial development release
 
 Missing features:
@@ -58,7 +58,7 @@ Implemented features:
 
 Initial pyrus public API
 </n>
- <f>8564262</f>
+ <f>8569038</f>
  <g>http://pear2.php.net/get/PEAR2_Pyrus-2.0.0a1</g>
  <x xlink:href="package.2.0.0a1.xml"/>
 </r>
