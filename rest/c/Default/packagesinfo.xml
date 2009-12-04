@@ -105,4 +105,27 @@ try {
    <d>a:1:{s:8:&quot;required&quot;;a:3:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:8:&quot;5.3.1RC1&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}s:7:&quot;package&quot;;a:4:{i:0;a:2:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}i:1;a:2:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Exception&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}i:2;a:2:{s:4:&quot;name&quot;;s:17:&quot;PEAR2_MultiErrors&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}i:3;a:2:{s:4:&quot;name&quot;;s:18:&quot;PEAR2_HTTP_Request&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}}}}</d>
   </deps>
  </pi>
+ <pi>
+  <p>
+   <n>PEAR2_SimpleChannelFrontend</n>
+   <c>pear2.php.net</c>
+   <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
+   <l>New BSD License</l>
+   <s>A simple PEAR channel frontend that does not require a database.
+</s>
+   <d>
+This package provides a simple frontend to a PEAR channel.</d>
+   <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+  </p>
+  <a>
+   <r>
+    <v>0.1.0</v>
+    <s>alpha</s>
+   </r>
+  </a>
+  <deps>
+   <v>0.1.0</v>
+   <d>a:1:{s:8:&quot;required&quot;;a:3:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.2.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}s:7:&quot;package&quot;;a:2:{i:0;a:2:{s:4:&quot;name&quot;;s:11:&quot;PEAR2_Pyrus&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}i:1;a:2:{s:4:&quot;name&quot;;s:22:&quot;PEAR2_Templates_Savant&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}}}}</d>
+  </deps>
+ </pi>
 </f>
