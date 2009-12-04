@@ -1,12 +1,22 @@
-<?php 
+<?php
 require_once 'config.inc.php';
 
-$channel = new Channel('channel.xml');
-$webfrontend = new WebFrontend($channel, $_GET);
+$options = $_GET;
 
-$savant = new \pear2\Templates\Savant\Main();
-$savant->setTemplatePath(array(__DIR__ . '/www'));
-echo $savant->render($webfrontend);
+if (isset($_SERVER['REDIRECT_URL'])) {
+    $options['view']    = 'package';
+    $options['package'] = substr($_SERVER['REDIRECT_URL'],
+                                 strrpos($_SERVER['REDIRECT_URL'], '/'));
+}
 
+$channel = new \pear2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
+$frontend = new pear2\SimpleChannelFrontend\Main($channel, $options);
+
+$savant = new pear2\Templates\Savant\Main();
+$savant->setClassToTemplateMapper(new pear2\SimpleChannelFrontend\TemplateMapper);
+$savant->setTemplatePath(array(__DIR__ . '/templates/pear2', __DIR__ . '/templates/default'));
+$savant->setEscape('htmlspecialchars');
+$savant->addFilters(array($frontend, 'postRender'));
+echo $savant->render($frontend);
 ?>
