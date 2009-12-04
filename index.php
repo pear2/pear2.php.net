@@ -15,7 +15,7 @@ $frontend = new pear2\SimpleChannelFrontend\Main($channel, $options);
 
 $savant = new pear2\Templates\Savant\Main();
 $savant->setClassToTemplateMapper(new pear2\SimpleChannelFrontend\TemplateMapper);
-$savant->setTemplatePath(array(__DIR__ . '/templates/pear2', __DIR__ . '/templates/default'));
+$savant->setTemplatePath(array(__DIR__ . '/templates/default', __DIR__ . '/templates/pear2'));
 $savant->setEscape('htmlspecialchars');
 $savant->addFilters(array($frontend, 'postRender'));
 echo $savant->render($frontend);
