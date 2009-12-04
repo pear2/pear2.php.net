@@ -4,4 +4,5 @@
  <c xlink:href="rest/c/Default/info.xml">Default</c>
  <c xlink:href="rest/c/HTTP/info.xml">HTTP</c>
  <c xlink:href="rest/c/PEAR2/info.xml">PEAR2</c>
+ <c xlink:href="rest/c/Templates/info.xml">Templates</c>
 </a>
