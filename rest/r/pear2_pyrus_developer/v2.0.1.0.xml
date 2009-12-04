@@ -14,9 +14,9 @@
 This package contains several custom commands for Pyrus,
 including command to automatically generate a package.xml,
 and commands to create a package from an existing package.xml</d>
- <da>2009-12-02 15:41:14</da>
+ <da>2009-12-02 15:58:31</da>
  <n>Initial development release</n>
- <f>63666</f>
+ <f>359192</f>
  <g>http://pear2.php.net/get/PEAR2_Pyrus_Developer-0.1.0</g>
  <x xlink:href="package.0.1.0.xml"/>
 </r>
