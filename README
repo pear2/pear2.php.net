@@ -10,9 +10,10 @@ svn merge /path/to/trunk/checkout/pear2.php.net
 Requirements - 
 * PEAR2_Templates_Savant
 * PEAR2_Pyrus
+* PEAR2_SimpleChannelFrontend
 
 Quick Setup:
 cp config.sample.php config.inc.php
+cp sample.htaccess .htaccess
 mkdir includes
-pyrus `pwd`/includes channel-discover phpsavant.com 
-pyrus `pwd`/includes install PEAR2_Templates_Savant-alpha PEAR2_Pyrus-devel
+svn checkout http://svn.php.net/repository/pear2/all includes
