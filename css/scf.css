@@ -48,8 +48,12 @@ ol.instructions {
     background-color:rgba(0, 0, 0, 0.8);
     color:#FFF;
     font-size:120%;
-    line-height:3em;
+    line-height:2em;
     font-family:"andale mono", monaco, "courier new", courier;
+}
+ol.instructions a,
+ol.instructions a:link {
+    color:#FFF;
 }
 .footer {
     margin:10px;
