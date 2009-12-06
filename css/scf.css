@@ -33,12 +33,12 @@ ul.navigation li {
 }
 .content {
     margin-top:3em;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-radius:10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
     overflow:auto;
-    background-color:#F8F5EA;
-    color:#222;
+    background-color:#EBECDA;
+    color:#444;
 }
 ol.instructions {
     -moz-border-radius:10px;
@@ -50,6 +50,12 @@ ol.instructions {
     font-size:120%;
     line-height:2em;
     font-family:"andale mono", monaco, "courier new", courier;
+}
+.releases {
+    border-left: 1px dotted;
+    position: absolute;
+    float: right;
+    padding: 3px;
 }
 ol.instructions a,
 ol.instructions a:link {
