@@ -5,6 +5,7 @@ $parent->context->page_title = $context->name.' | '.pear2\SimpleChannelFrontend\
 <div class="package">
     <div class="grid_8 left">
         <h2>Package :: <?php echo $context->name; ?></h2>
+        <p><em><?php echo $context->summary; ?></em></p>
         <p>
             <?php
             echo nl2br(trim($context->description));
@@ -18,7 +19,7 @@ $parent->context->page_title = $context->name.' | '.pear2\SimpleChannelFrontend\
             <li><code>$>php pyrus.phar install <?php echo $context->name . '-' . $latest['release']; ?></code></li>
         </ol>
     </div>
-    <div class="grid_4 right">
+    <div class="grid_4 right releases">
         <h3>Releases</h3>
         <ul>
             <?php
