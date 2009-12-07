@@ -13,10 +13,7 @@ $parent->context->page_title = $context->name.' | '.pear2\SimpleChannelFrontend\
         </p>
         <h3>Installation</h3>
         <ol class="instructions">
-            <?php
-            $latest = $context->__raw('version');
-            ?>
-            <li><code>$>php pyrus.phar install <?php echo $context->name . '-' . $latest['release']; ?></code></li>
+            <li><code>$>php pyrus.phar install <?php echo $context->name . '-' . $context->version['release']; ?></code></li>
         </ol>
     </div>
     <div class="grid_4 right releases">
