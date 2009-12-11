@@ -31,6 +31,9 @@ ul.navigation li {
     list-style:none;
     display:inline;
 }
+ul.package-info {
+    list-style-type: none;
+}
 .content {
     margin-top:3em;
     -moz-border-radius:5px;
