@@ -1,6 +1,6 @@
 <?php
 // Set the title for the main template
-$parent->context->page_title = $context->name.' | '.pear2\SimpleChannelFrontend\Main::$channel->name;
+$parent->context->page_title = $context->name.' | pear2.php.net';
 ?>
 <div class="package">
     <div class="grid_8 left">
