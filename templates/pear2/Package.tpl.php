@@ -11,10 +11,7 @@ $parent->context->page_title = $context->name.' | '.pear2\SimpleChannelFrontend\
             echo nl2br(trim($context->description));
             ?>
         </p>
-        <h3>Installation</h3>
-        <ol class="instructions">
-            <li><code>$>php pyrus.phar install <?php echo $context->name . '-' . $context->version['release']; ?></code></li>
-        </ol>
+        <?php echo $savant->render($context->name . '-' . $context->version['release'], 'InstallInstructions.tpl.php'); ?>
     </div>
     <div class="grid_4 right releases">
         <h3>Releases</h3>
@@ -23,7 +20,8 @@ $parent->context->page_title = $context->name.' | '.pear2\SimpleChannelFrontend\
              foreach ($context as $version => $release): ?>
             <li>
                 <a href="<?php echo pear2\SimpleChannelFrontend\Main::getURL() . $context->name . '-' . $version; ?>"><?php echo $version; ?></a>
-                <span class="stability"><?php echo $release['stability']; ?></span>
+                <span class="stability"><?php echo $release['stability']; ?></span> 
+                <?php echo $version; ?> <span class="stability"><?php echo $release['stability']; ?></span>
                 <abbr class="releasedate" title="<?php echo $context->date.' '.$context->time; ?>"><?php echo $context->date; ?></abbr>
                 <a class="download" href="<?php echo $context->getDownloadURL('.tgz'); ?>">Download</a>
             </li>
