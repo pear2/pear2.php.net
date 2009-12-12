@@ -5,8 +5,7 @@ $parent->context->page_title = $context->name.' | pear2.php.net';
 <div class="package">
     <div class="grid_8 left">
         <h2>
-            <a href="<?php echo pear2\SimpleChannelFrontend\Main::getURL() . $context->name; ?>"><?php echo $context->name; ?></a> ::
-                <?php echo $context->version['release']; ?>
+            <a href="<?php echo pear2\SimpleChannelFrontend\Main::getURL() . $context->name; ?>"><?php echo $context->name; ?></a>-<?php echo $context->version['release']; ?>
         </h2>
         <ul class="package-info">
             <li><strong>Version:</strong>
