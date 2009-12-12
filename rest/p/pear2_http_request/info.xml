@@ -4,16 +4,19 @@
  <c>pear2.php.net</c>
  <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
  <l>New BSD License</l>
- <s>class to do http requests, uses a adapter based system for performing those requests
+ <s>Class to perform HTTP requests. Uses an adapter based system for performing those requests
 </s>
  <d>
 Please see the examples dir for basic usage
 
 Adapters are available for based on the following code and are used in this order:
-PEAR2_HTTP_Request_Adapter_Http (uses the Pecl Http class)
-PEAR2_HTTP_Request_Adapter_Curl (based on the curl extension, not complete)
-PEAR2_HTTP_Request_Adapter_Phpstream (based on the http php stream code)
-PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+pear2\HTTP\Request\Adapter\Http (uses the Pecl Http class)
+pear2\HTTP\Request\Adapter\Curl (based on the curl extension, not complete)
+pear2\HTTP\Request\Adapter\Phpstream (based on the http php stream code)
+pear2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+
+Additional adapters:
+pear2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
 </d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>

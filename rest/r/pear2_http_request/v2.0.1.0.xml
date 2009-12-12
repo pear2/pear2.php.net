@@ -7,22 +7,25 @@
  <mp>5.2.0</mp>
  <st>alpha</st>
  <l>New BSD License</l>
- <m>davidc</m>
- <s>class to do http requests, uses a adapter based system for performing those requests
+ <m>saltybeagle</m>
+ <s>Class to perform HTTP requests. Uses an adapter based system for performing those requests
 </s>
  <d>
 Please see the examples dir for basic usage
 
 Adapters are available for based on the following code and are used in this order:
-PEAR2_HTTP_Request_Adapter_Http (uses the Pecl Http class)
-PEAR2_HTTP_Request_Adapter_Curl (based on the curl extension, not complete)
-PEAR2_HTTP_Request_Adapter_Phpstream (based on the http php stream code)
-PEAR2_HTTP_Request_Adapter_Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+pear2\HTTP\Request\Adapter\Http (uses the Pecl Http class)
+pear2\HTTP\Request\Adapter\Curl (based on the curl extension, not complete)
+pear2\HTTP\Request\Adapter\Phpstream (based on the http php stream code)
+pear2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+
+Additional adapters:
+pear2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
 </d>
- <da>2009-10-29 15:39:58</da>
+ <da>2009-12-12 15:54:59</da>
  <n>First attempt.
 </n>
- <f>41156</f>
+ <f>125366</f>
  <g>http://pear2.php.net/get/PEAR2_HTTP_Request-0.1.0</g>
  <x xlink:href="package.0.1.0.xml"/>
 </r>
