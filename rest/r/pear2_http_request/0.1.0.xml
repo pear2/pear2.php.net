@@ -20,7 +20,7 @@ pear2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTT
 Additional adapters:
 pear2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
 </d>
- <da>2009-12-12 15:54:59</da>
+ <da>2009-12-13 08:23:40</da>
  <n>First attempt.
 </n>
  <f>125366</f>

@@ -4,7 +4,7 @@
  <c>pear2.php.net</c>
  <v>0.1.0</v>
  <a>0.1.0</a>
- <mp>5.2.0</mp>
+ <mp>5.3.0</mp>
  <st>alpha</st>
  <l>New BSD License</l>
  <m>saltybeagle</m>
@@ -22,7 +22,7 @@ pear2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTT
 Additional adapters:
 pear2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
 </d>
- <da>2009-12-12 15:54:59</da>
+ <da>2009-12-13 08:23:40</da>
  <n>First attempt.
 </n>
  <f>125366</f>
