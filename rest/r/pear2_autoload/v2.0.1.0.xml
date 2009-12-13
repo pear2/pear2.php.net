@@ -4,10 +4,10 @@
  <c>pear2.php.net</c>
  <v>0.1.0</v>
  <a>0.1.0</a>
- <mp>5.2.0</mp>
+ <mp>5.3.0</mp>
  <st>alpha</st>
  <l>New BSD License</l>
- <m>cellog</m>
+ <m>saltybeagle</m>
  <s>Standard Autoloader for PEAR2
 </s>
  <d>
@@ -21,9 +21,9 @@ require '/path/to/pear2/Autoload.php';
 // now use class names from installed PEAR2
 // packages at will
 ?&gt;</d>
- <da>2009-07-07 23:18:59</da>
+ <da>2009-12-13 08:13:47</da>
  <n>Initial Release</n>
- <f>31295</f>
+ <f>33019</f>
  <g>http://pear2.php.net/get/PEAR2_Autoload-0.1.0</g>
  <x xlink:href="package.0.1.0.xml"/>
 </r>
