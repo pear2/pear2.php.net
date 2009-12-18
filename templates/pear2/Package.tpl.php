@@ -8,7 +8,8 @@ $parent->context->page_title = $context->name.' | pear2.php.net';
         <p><em><?php echo $context->summary; ?></em></p>
         <p>
             <?php
-            echo nl2br(trim($context->description));
+            $description = preg_replace("|<\?php(.*)\?\>|Use", "highlight_string('<?php\\1?>', true)", trim($context->getRaw('description')));
+            echo nl2br($description);
             ?>
         </p>
         <?php echo $savant->render($context->name . '-' . $context->version['release'], 'InstallInstructions.tpl.php'); ?>
