@@ -25,6 +25,6 @@ $parent->context->page_title = $context->name.' | pear2.php.net';
     </div>
     <div class="grid_4 right releases">
         <h3>Release Notes</h3>
-        <?php echo nl2br($context->notes); ?>
+        <div class="release-notes"><?php echo nl2br($context->notes); ?></div>
     </div>
 </div>

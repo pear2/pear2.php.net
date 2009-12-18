@@ -55,10 +55,37 @@ ol.instructions {
     font-family:"andale mono", monaco, "courier new", courier;
 }
 .releases {
-    border-left: 1px dotted;
     position: absolute;
     float: right;
-    padding: 3px;
+    background-color: #00BB00;
+    color: #FFF;
+}
+.releases h3 {
+    font-family: Georgia,Palatino,"Times New Roman",Times,serif;
+    font-size: 150%;
+    background-color: #006500;
+    color: #FFF;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+.releases ul, .releases li {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-left: 2px;
+}
+.releases ul, .release-notes {
+    padding-left: 10px;
+}
+.releases li, .release-notes {
+    padding-bottom: 5px;
+}
+.releases li a {
+    color: #000;
+}
+.releases .download {
+    float: right;
+    margin-right: 5px;
 }
 ol.instructions a,
 ol.instructions a:link {
