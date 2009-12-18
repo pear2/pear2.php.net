@@ -8,7 +8,7 @@ $parent->context->page_title = $context->name.' | pear2.php.net';
         <p><em><?php echo $context->summary; ?></em></p>
         <p>
             <?php
-            $description = preg_replace("|<\?php(.*)\?\>|Use", "highlight_string('<?php\\1?>', true)", trim($context->getRaw('description')));
+            $description = preg_replace("|\&lt\;\?php(.*)\?\&gt\;|Use", "highlight_string('<?php'.html_entity_decode('\\1').'?>', true)", $context->description);
             echo nl2br($description);
             ?>
         </p>
