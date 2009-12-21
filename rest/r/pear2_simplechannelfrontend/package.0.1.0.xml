@@ -5,15 +5,32 @@
  <summary>A simple PEAR channel frontend that does not require a database.
 </summary>
  <description>
-This package provides a simple frontend to a PEAR channel.</description>
+This package provides a simple frontend to a PEAR channel by directly using
+the PEAR channel files.
+
+To use, place the PEAR2_SimpleChannelFrontend-0.1.0.phar in the root of your
+channel server as index.php, and add an .htaccess file with the following:
+
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+&lt;/IfModule&gt;
+
+For a more customized interface, you can create a config.inc.php file, or
+install the package and use the files in the www_dir as a starting point for
+a fully customized PEAR channel.
+</description>
  <lead>
   <name>Brett Bieber</name>
   <user>saltybeagle</user>
   <email>saltybeagle@php.net</email>
   <active>yes</active>
  </lead>
- <date>2009-12-04</date>
- <time>16:55:59</time>
+ <date>2009-12-20</date>
+ <time>12:21:21</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
@@ -26,18 +43,22 @@ This package provides a simple frontend to a PEAR channel.</description>
  <notes>Package PEAR2_SimpleChannelFrontend release notes for version 0.1.0.
 
 Basic features:
-* Customizable News page
+* Customizable News and Support pages
 * Package pages with download links
 * Category listing
+
 
 Package PEAR2_SimpleChannelFrontend API release notes for version 0.1.0.</notes>
  <contents>
   <dir name="/">
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/UnregisteredViewException.tpl.php"/>
+   <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/Support.tpl.php"/>
+   <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/PackageRelease.tpl.php"/>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/PackageList.tpl.php"/>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/Package.tpl.php"/>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/News.tpl.php"/>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/Main.tpl.php"/>
+   <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/InstallInstructions.tpl.php"/>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/templates/Categories.tpl.php"/>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/sample.htaccess"/>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/index.php"/>
@@ -50,6 +71,8 @@ Package PEAR2_SimpleChannelFrontend API release notes for version 0.1.0.</notes>
    <file role="www" name="www/PEAR2_SimpleChannelFrontend/pear2.php.net/config.sample.php"/>
    <file role="php" name="php/pear2/SimpleChannelFrontend/UnregisteredViewException.php"/>
    <file role="php" name="php/pear2/SimpleChannelFrontend/TemplateMapper.php"/>
+   <file role="php" name="php/pear2/SimpleChannelFrontend/Support.php"/>
+   <file role="php" name="php/pear2/SimpleChannelFrontend/PackageRelease.php"/>
    <file role="php" name="php/pear2/SimpleChannelFrontend/PackageList.php"/>
    <file role="php" name="php/pear2/SimpleChannelFrontend/Package.php"/>
    <file role="php" name="php/pear2/SimpleChannelFrontend/News.php"/>
