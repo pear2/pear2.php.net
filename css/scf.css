@@ -55,7 +55,7 @@ ol.instructions {
     font-family:"andale mono", monaco, "courier new", courier;
 }
 .releases {
-    position: absolute;
+    position: relative;
     float: right;
     background-color: #00BB00;
     color: #FFF;
