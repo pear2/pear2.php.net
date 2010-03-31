@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_pyrus_developer">PEAR2_Pyrus_Developer</p>
+ <c>pear2.php.net</c>
+ <v>0.2.0</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>Developer tools for the Pyrus installer
+</s>
+ <d>
+This package contains several custom commands for Pyrus.
+
+Included are commands for:
+* Creating pear2 and pecl package skeletons
+ $ php pyrus.phar generate-pear2 MyNewPackage
+* Creating a package.xml file
+ $ php pyrus.phar make
+* Packaging PEAR2 and PEAR releases
+ $ php pyrus.phar package
+* Running phpt tests and generating code coverage reports
+ $ php pyrus.phar run-phpt -m
+</d>
+ <da>2010-03-31 12:14:31</da>
+ <n>Feature Release:
+
+Basic fixes:
+* Only add pear2 baseinstalldir if the package is for pear2.php.net [saltybeagle]
+* Add empty $extrafiles array to prevent an exception when packaging a newly generated skeleton. [saltybeagle]
+* Update interface references to PEAR2 standards [saltybeagle]
+* Simplify the autoload included in skeleton package stub [saltybeagle]
+
+Code Coverage Improvements:
+* Improved color schema for the coverage. [helgi]
+* New database schema to handle more information. [helgi]
+* Show dead code as dead instead of not covered [helgi]
+* Improve the code coverage detection, handle xdebug edge cases [helgi]
+* Better overall coverage of Pyrus with better processing of xdebug coverage [helgi]
+* Speed improvements [helgi]
+* Make output easier to read [helgi]
+</n>
+ <f>361350</f>
+ <g>http://pear2.php.net/get/PEAR2_Pyrus_Developer-0.2.0</g>
+ <x xlink:href="package.0.2.0.xml"/>
+</r>

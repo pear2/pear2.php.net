@@ -7,8 +7,17 @@
  <s>Developer tools for the Pyrus installer
 </s>
  <d>
-This package contains several custom commands for Pyrus,
-including command to automatically generate a package.xml,
-and commands to create a package from an existing package.xml</d>
+This package contains several custom commands for Pyrus.
+
+Included are commands for:
+* Creating pear2 and pecl package skeletons
+ $ php pyrus.phar generate-pear2 MyNewPackage
+* Creating a package.xml file
+ $ php pyrus.phar make
+* Packaging PEAR2 and PEAR releases
+ $ php pyrus.phar package
+* Running phpt tests and generating code coverage reports
+ $ php pyrus.phar run-phpt -m
+</d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>
