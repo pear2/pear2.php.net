@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<p>
- <n>PEAR2_MultiErrors</n>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_multierrors">PEAR2_MultiErrors</p>
  <c>pear2.php.net</c>
- <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <v>0.2.0</v>
+ <st>alpha</st>
  <l>New BSD License</l>
+ <m>saltybeagle</m>
  <s>PEAR2_MultiErrors provides a simple and effective mechanism for aggregating many errors and organizing them by severity.
 </s>
  <d>
@@ -39,5 +41,9 @@ $a-&gt;E_ERROR[] = new Exception('message one');
 $a-&gt;E_ERROR[] = new PEAR2\Blah\Exception('message two');
 throw new PEAR2\My\Exception('task failed', $a);
 ?&gt;</d>
- <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
-</p>
+ <da>2010-05-23 08:49:38</da>
+ <n>Convert namespace to PEAR2</n>
+ <f>5663</f>
+ <g>http://pear2.php.net/get/PEAR2_MultiErrors-0.2.0</g>
+ <x xlink:href="package.0.2.0.xml"/>
+</r>
