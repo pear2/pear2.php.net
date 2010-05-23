@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Exception</name>
+ <channel>pear2.php.net</channel>
+ <summary>PEAR2\Exception is the standard exception class for PEAR2.
+</summary>
+ <description>In addition to supporting the default signature of the built-in
+Exception class, PEAR2\Exception also supports passing a
+cause of an exception, which can be another exception object
+or a PEAR2_MultiErrors object.  The error messages of the causes
+are used when constructing the error message displayed when
+converting PEAR2\Exception to a string.
+
+PEAR2\Exception should always be extended by your own custom exception
+class for the package.</description>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Tomas V.V. Cox</name>
+  <user>cox</user>
+  <email>cox@idecnet.com</email>
+  <active>no</active>
+ </lead>
+ <lead>
+  <name>Bertrand Mansion</name>
+  <user>mansion</user>
+  <email>bmansion@mamasam.com</email>
+  <active>no</active>
+ </lead>
+ <developer>
+  <name>Hans Lellelid</name>
+  <user>hlellelid</user>
+  <email>hans@velum.net</email>
+  <active>no</active>
+ </developer>
+ <date>2010-05-23</date>
+ <time>08:39:48</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>- Covert namespace to PEAR2
+- Removed getCause() as it just uses the built in getPrevious() that was added in PHP 5.3
+- Removed getUniqueId as it's used anywhere
+- Removed toHtml, toText and __toString (which only handled calling the former two).
+  People should implement their owny decorator calls.
+- Removed the built in outputs of the observer functions. Those where the class constants
+  OBSERVER_PRINT, OBSERVER_TRIGGER, OBSERVER_DIE
+  This can be achieved by writing a custom callback function, using the appropriate printf(),
+  trigger_error and die() to achieve the same result.
+- Removed getErroClass and getErrorMethod as it can be easily gotten from getTrace/getTraceSafe first array element
+- Add the proper LICENSE file and move Exception.php to the NEW BSD license as the package.xml already defines
+- Removed __toString, toText and toHtml. For those wanting to get pretty outputs they can use this approach:
+
+    $causes = array();
+    $this-&gt;getCauseMessage($causes);
+    foreach ($causes as $i =&gt; $cause) {
+        var_dump($cause);
+    }
+
+    And combine that with getTraceSafe() or getTraceAsString() if needed.
+
+    Put all that in a function and use set_exception_handler('exceptionHandler'); or similar to process
+    all Exceptions.
+
+    Example code or see the removed code at http://svn.php.net/viewvc/pear2/Exception/trunk/src/Exception.php?r1=295348&amp;r2=295352 :
+
+    function exceptionHandler($e)
+    {
+        if ($e instanceof \PEAR2\Exception) {
+            $causes = array();
+            $e-&gt;getCauseMessage($causes);
+            $causeMsg = '';
+            foreach ($causes as $i =&gt; $cause) {
+                $causeMsg .= str_repeat(' ', $i) . $cause['class'] . ': '
+                       . $cause['message'] . &quot;\n&quot;;
+            }
+            echo $causeMsg;
+        } else {
+            echo $e-&gt;getMessage(), &quot;\n&quot;;
+        }
+    }
+
+    set_exception_handler('exceptionHandler');</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/Exception.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

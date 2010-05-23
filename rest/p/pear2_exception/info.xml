@@ -4,16 +4,16 @@
  <c>pear2.php.net</c>
  <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
  <l>New BSD License</l>
- <s>pear2\Exception is the standard exception class for PEAR2.
+ <s>PEAR2\Exception is the standard exception class for PEAR2.
 </s>
  <d>In addition to supporting the default signature of the built-in
-Exception class, pear2\Exception also supports passing a
+Exception class, PEAR2\Exception also supports passing a
 cause of an exception, which can be another exception object
 or a PEAR2_MultiErrors object.  The error messages of the causes
 are used when constructing the error message displayed when
-converting pear2\Exception to a string.
+converting PEAR2\Exception to a string.
 
-pear2\Exception should always be extended by your own custom exception
+PEAR2\Exception should always be extended by your own custom exception
 class for the package.</d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>

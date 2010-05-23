@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_exception">PEAR2_Exception</p>
+ <c>pear2.php.net</c>
+ <v>0.2.0</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>PEAR2\Exception is the standard exception class for PEAR2.
+</s>
+ <d>In addition to supporting the default signature of the built-in
+Exception class, PEAR2\Exception also supports passing a
+cause of an exception, which can be another exception object
+or a PEAR2_MultiErrors object.  The error messages of the causes
+are used when constructing the error message displayed when
+converting PEAR2\Exception to a string.
+
+PEAR2\Exception should always be extended by your own custom exception
+class for the package.</d>
+ <da>2010-05-23 08:39:48</da>
+ <n>- Covert namespace to PEAR2
+- Removed getCause() as it just uses the built in getPrevious() that was added in PHP 5.3
+- Removed getUniqueId as it's used anywhere
+- Removed toHtml, toText and __toString (which only handled calling the former two).
+  People should implement their owny decorator calls.
+- Removed the built in outputs of the observer functions. Those where the class constants
+  OBSERVER_PRINT, OBSERVER_TRIGGER, OBSERVER_DIE
+  This can be achieved by writing a custom callback function, using the appropriate printf(),
+  trigger_error and die() to achieve the same result.
+- Removed getErroClass and getErrorMethod as it can be easily gotten from getTrace/getTraceSafe first array element
+- Add the proper LICENSE file and move Exception.php to the NEW BSD license as the package.xml already defines
+- Removed __toString, toText and toHtml. For those wanting to get pretty outputs they can use this approach:
+
+    $causes = array();
+    $this-&gt;getCauseMessage($causes);
+    foreach ($causes as $i =&gt; $cause) {
+        var_dump($cause);
+    }
+
+    And combine that with getTraceSafe() or getTraceAsString() if needed.
+
+    Put all that in a function and use set_exception_handler('exceptionHandler'); or similar to process
+    all Exceptions.
+
+    Example code or see the removed code at http://svn.php.net/viewvc/pear2/Exception/trunk/src/Exception.php?r1=295348&amp;r2=295352 :
+
+    function exceptionHandler($e)
+    {
+        if ($e instanceof \PEAR2\Exception) {
+            $causes = array();
+            $e-&gt;getCauseMessage($causes);
+            $causeMsg = '';
+            foreach ($causes as $i =&gt; $cause) {
+                $causeMsg .= str_repeat(' ', $i) . $cause['class'] . ': '
+                       . $cause['message'] . &quot;\n&quot;;
+            }
+            echo $causeMsg;
+        } else {
+            echo $e-&gt;getMessage(), &quot;\n&quot;;
+        }
+    }
+
+    set_exception_handler('exceptionHandler');</n>
+ <f>6223</f>
+ <g>http://pear2.php.net/get/PEAR2_Exception-0.2.0</g>
+ <x xlink:href="package.0.2.0.xml"/>
+</r>
