@@ -1,0 +1,499 @@
+html {
+	height: 100%;
+	background: none;
+}
+
+body {
+	background: #fff;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	color: #323232;
+}
+
+:link,
+:visited {
+	color: #154c9b;
+	text-decoration: none;
+}
+
+:link:hover,
+:visited:hover {
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 22px;
+}
+
+h3 {
+	font-size: 17px;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.content {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.button {
+	background: #fff;
+	color: #555;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 3px 15px;
+	background-color: #fff;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5, #fff),color-stop(0.5, #f0f0f0));
+	background-image: -moz-linear-gradient(center top , #fff 50%, #f0f0f0 0%);
+	border-radius: 4px;
+	text-shadow: 0 1px #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #999;
+	-webkit-box-shadow: 0 0 0 1px rgba(255,255,255,1) inset, 0 0 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 0 0 1px rgba(255,255,255,1) inset, 0 0 2px rgba(0,0,0,0.3);
+}
+a.button {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+textarea,
+input[type=search],
+input[type=password],
+input[type=text] {
+	padding: 4px;
+	border: 1px solid #999;
+	color: #646464;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-moz-box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
+}
+
+textarea:focus,
+input[type=search]:focus,
+input[type=password]:focus,
+input[type=text]:focus {
+	-moz-box-shadow: 0 0 5px rgba(255, 107, 0, 0.7), inset 1px 2px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 5px rgba(255, 107, 0, 0.7), inset 1px 2px 3px rgba(0,0,0,0.1);
+	outline: none;
+	border-color: #ef833b;
+}
+
+.form-field,
+.checkbox-form-field {
+	margin: 0 0 1em 0;
+}
+
+.checkbox-form-field label {
+	font-weight: bold;
+	color: #646464;
+}
+.checkbox-form-field input {
+	margin: 2px 0.5em 0 0;
+	float: left;
+}
+
+.form-field .form-field-title,
+.form-field label {
+	display: block;
+	font-weight: bold;
+	color: #646464;
+}
+
+.form-field .form-field-title span,
+.form-field label span {
+	font-weight: normal;
+}
+
+.form-field label.radio-label {
+	font-weight: normal;
+	margin: 0.2em 0;
+	float: left;
+}
+input[type=radio] {
+	margin: 5px 0.5em 0 0;
+	float: left;
+	clear: left;
+}
+
+#header #top {
+	padding: 0 20px 5px 20px;
+	color: #fff;
+	background: #507f35;
+	height: 55px;
+}
+
+#header #top .content {
+	position: relative;
+}
+
+#header #top :link,
+#header #top :visited,
+#header #top :link:hover,
+#header #top :visited:hover {
+	color: #fff;
+}
+
+#header #top :link:hover,
+#header #top :visited:hover {
+	text-decoration: underline;
+}
+
+#header #top h1,
+#header #top h1 img,
+#header #top h1 span {
+	float: left;
+	display: block;
+}
+
+#header #top h1 {
+	position: relative;
+	top: 15px;
+}
+
+#header #top h1 span {
+	width: 200px;
+	font-size: 13px;
+	position: relative;
+	top: -2px;
+	margin-left: 4px;
+}
+
+#header #session {
+	padding: 6px;
+	font-size: 13px;
+	background-color: #555;
+	background-image:
+		-webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgba(0,0,0,0.2)),
+			color-stop(0.15, rgba(0,0,0,0))
+		);
+
+	background-image:
+		-moz-linear-gradient(
+			center bottom,
+			rgba(0,0,0,0.2) 0%,
+			rgba(0,0,0,0) 15%
+		);
+	text-align: right;
+	color: #ccc;
+}
+
+#header #session a:link,
+#header #session a:visited {
+	color: #ccc;
+}
+
+#header #session form {
+	display: inline;
+}
+
+#header #session input {
+	font-size: 11px;
+	padding: 1px 4px;
+	margin-left: 8px;
+}
+
+#header #nav {
+	font-size: 17px;
+	font-weight: bold;
+	float: right;
+	margin-top: 15px;
+}
+
+#header #nav li {
+	float: left;
+}
+
+#header #nav li {
+	padding: 6px 8px 8px 8px;
+	line-height: 20px;
+}
+
+#header #nav li.selected {
+	background: #40652a;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	position: relative;
+	z-index: 999;
+}
+
+#header #subnavcontainer {
+	background: #507f35;
+	padding: 0 2px 2px;
+	position: relative;
+	top: -4px;
+	left: 2px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	float: right;
+	width: 100%;
+}
+
+#header #subnavbar {
+position:relative;
+height: 100%;
+	background: #40652a;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	float: right;
+	width: 100%;
+}
+
+#header #subnavbar li {
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 13px;
+	padding: 6px 12px;
+}
+
+
+#header #mid {
+	clear: both;
+	padding: 20px;
+	font-size: 17px;
+	color: #fff;
+	background: #649f43;
+}
+#header #mid :link,
+#header #mid :visited,
+#header #mid :link:hover,
+#header #mid :visited:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+#header #mid .left {
+	width: 440px;
+	float: left;
+}
+
+#header #mid .right {
+	width: 440px;
+	float: right;
+}
+#header #mid h2 span {
+	text-transform: uppercase;
+	color: #ffff86;
+	font-size: 15px;
+}
+
+#header #mid #download {
+	padding-top: 10px;
+}
+#header #mid #download a {
+	color: #646464;
+	text-decoration: none;
+}
+
+#header #bottom {
+	clear: both;
+	padding: 12px;
+	color: #505050;
+	background: #afd5df;
+}
+#header #bottom h2 {
+	margin-right: 20px;
+	font-size: 14px;
+	display: inline;
+}
+
+#content {
+	padding: 20px;
+}
+
+#content .content {
+}
+
+#content ol li {
+	list-style-type: decimal;
+	margin: 0.5em 0 0.5em 2em;
+}
+
+
+/* Recent Packages */
+
+#recent {
+	padding: 10px 0;
+	float: left;
+	width: 290px;
+	margin: 0 15px 0 0;
+}
+
+#recent li {
+	margin: 0 0 0.3em 10px;
+}
+#recent li span {
+	font-size: 10px;
+	color: #505050;
+	white-space: nowrap;
+}
+
+/* News */
+
+#news {
+	float: left;
+	width: 290px;
+	margin: 0 0 0;
+	padding-bottom: 20px;
+}
+#news ul {
+	padding: 10px 0;
+}
+#news li {
+	margin: 0 0 0.3em 10px;
+}
+#news li span {
+	font-size: 10px;
+	color: #505050;
+	white-space: nowrap;
+}
+
+
+/* Find Packages */
+
+#find-packages {
+	float: right;
+	padding: 2px 0px 10px 0px;
+}
+
+#find-packages input[type=submit] {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#find-packages input[type=submit]::-moz-focus-inner {
+	padding: 0;
+	border: none;
+}
+
+#find-packages input[type=search] {
+	border-right: 0;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.pearbox {
+	background: #d0e2c6;
+	margin: 20px 0;
+	padding: 5px;
+	clear: both;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.pearbox .pearbox-content {
+	border: 1px solid rgba(100, 159, 67, 0.9);
+	background: #f7faf5;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px;
+	clear: both;
+}
+
+.pearbox .pearbox-header {
+	padding: 4px 4px 8px 4px;
+}
+
+.pearbox .pearbox-header h2 {
+	text-shadow: 0 1px #fff;
+}
+
+.pearbox .pearbox-footer {
+	padding: 12px 4px 8px 4px;
+}
+
+/* Browse Packages */
+
+#packages h2 {
+	float: left;
+}
+
+
+/* Footer */
+
+#footer {
+	padding: 20px;
+	background: #649f43;
+}
+
+#footer-left {
+	width: 630px;
+}
+
+.footer-menu :link,
+.footer-menu :visited,
+.footer-menu :link:hover,
+.footer-menu :visited:hover {
+	color: #fff;
+}
+
+.footer-menu {
+	font-size: 17px;
+	margin-right: 19px;
+	float: left;
+	padding-bottom: 20px;
+}
+
+.footer-menu-last {
+	margin-right: 0;
+}
+
+.footer-menu .header {
+	font-weight: bold;
+	margin-bottom: 0.2em;
+}
+
+#footer .note {
+	color: rgba(255,255,255,0.6);
+	font-size: 14px;
+	margin-bottom: 80px;
+}
+#footer .note :link,
+#footer .note :visited,
+#footer .note :link:hover,
+#footer .note :visited:hover {
+	text-decoration: underline;
+	color: rgba(255,255,255,0.6);
+}

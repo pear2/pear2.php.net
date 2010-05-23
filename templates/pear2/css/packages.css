@@ -1,0 +1,109 @@
+
+ul.categories {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 16px;
+	clear: both;
+	width: 848px;
+	background: rgba(0,0,255,0.5);
+}
+
+ul.categories a {
+	border-bottom: none;
+}
+
+ul.categories > li {
+	float: left;
+	width: 276px;
+	list-style-type: none;
+	padding: 1em 0 1em 10px;
+	margin: 0;
+}
+/* IE6 hack */
+* html ul.categories li {
+	height: 85px;
+}
+
+ul.categories li.category-clear {
+	clear: left;
+	padding: 1em 0;
+}
+
+ul.categories h3 {
+	margin: 0 10px;
+	font-size: 100%;
+	background: url(img/category-background.png) top right no-repeat;
+	min-height: 23px;
+
+}
+/* IE6 hack */
+* html ul.categories h3 {
+	height: 23px;
+}
+
+ul.categories h3 a {
+	display: block;
+	position: relative;
+}
+
+ul.categories h3 a:link,
+ul.categories h3 a:visited {
+	text-decoration: none;
+}
+
+ul.categories h3 a:hover span.category-title,
+ul.categories h3 a:active span.category-title{
+	text-decoration: underline;
+}
+
+ul.categories h3 span.category-count {
+	position: absolute;
+	top: 4px;
+	right: 0;
+	font-size: 75%;
+	display: block;
+	width: 23px;
+	text-align: center;
+	color: #666;
+}
+
+ul.categories h3 a:hover span.category-count,
+ul.categories h3 a:active span.category-count {
+	color: #999;
+}
+
+ul.categories h3 span.category-title {
+	margin-right: 2em;
+	font-size: 100%;
+	background: #f7faf5;
+	padding-right: 6px;
+}
+
+ul.categories div {
+	font-size: 75%;
+	margin: 0 10px;
+}
+
+ul.categories div a:link,
+ul.categories div a:visited {
+	text-decoration: none;
+	color: #333;
+}
+
+ul.categories div a:hover,
+ul.categories div a:active {
+	text-decoration: underline;
+	color: #204173;
+}
+
+a.category {
+	font-weight: bold;
+}
+
+ul.categories .category-sub-category {
+	font-weight: bold;
+}
+
+.categories-clear {
+	clear: left;
+}
