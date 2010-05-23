@@ -206,13 +206,17 @@ development and low-volume web sites using PEAR2 packages.
 To use:
 
 &lt;?php
-require '/path/to/pear2/Autoload.php';
+require '/path/to/PEAR2/Autoload.php';
 // now use class names from installed PEAR2
 // packages at will
 ?&gt;</d>
    <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
   </p>
   <a>
+   <r>
+    <v>0.2.0</v>
+    <s>alpha</s>
+   </r>
    <r>
     <v>0.1.1</v>
     <s>alpha</s>
@@ -223,7 +227,7 @@ require '/path/to/pear2/Autoload.php';
    </r>
   </a>
   <deps>
-   <v>0.1.1</v>
+   <v>0.2.0</v>
    <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}}}</d>
   </deps>
  </pi>
