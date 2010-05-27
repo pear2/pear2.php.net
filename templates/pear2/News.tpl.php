@@ -3,10 +3,15 @@
 $parent->context->page_title = 'News | pear2.php.net';
 ?>
 
-<?php echo $savant->render(new \PEAR2\SimpleChannelFrontend\LatestReleases(array('frontend'=>$parent->context->getRawObject(),
-    'limit'=>5))); ?>
-<?php echo $savant->render(new \PEAR2\SimpleChannelFrontend\LatestReleases(array('frontend'=>$parent->context->getRawObject(),
-    'limit'=>5, 'offset'=>5))); ?>
+<div id="recent">
+    <h2>Recent Packages</h2>
+    <ul>
+        <?php echo $savant->render(new \PEAR2\SimpleChannelFrontend\LatestReleases(array('frontend'=>$parent->context->getRawObject(),
+            'limit'=>5, 'id'=>'recent-left'))); ?>
+        <?php echo $savant->render(new \PEAR2\SimpleChannelFrontend\LatestReleases(array('frontend'=>$parent->context->getRawObject(),
+            'limit'=>5, 'offset'=>5, 'id'=>'recent-right'))); ?>
+    </ul>
+</div>
 <div id="news">
     <h2>News</h2>
     <ul>

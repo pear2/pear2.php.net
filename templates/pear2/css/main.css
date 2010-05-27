@@ -340,12 +340,23 @@ height: 100%;
 /* Recent Packages */
 
 #recent {
-	padding: 10px 0;
 	float: left;
-	width: 290px;
-	margin: 0 15px 0 0;
+	width: 595px;
+	padding-bottom: 20px;
+	margin: 0;
+}
+#recent-left {
+    float: left;
+    width: 270px;
+}
+#recent-right {
+    float: left;
+    width: 270px;
 }
 
+#recent ul {
+    padding: 15px 0 0 0;
+}
 #recent li {
 	margin: 0 0 0.3em 10px;
 }
