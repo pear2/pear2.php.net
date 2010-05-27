@@ -11,9 +11,9 @@
             <div class="pearbox-content">
                 <ul class="categories">
                     <?php
-                    foreach ($context as $category) : ?>
-                    <li id="category-<?php echo $num; ?>" class="category">
-                        <h3><a href=""><span class="category-title"><?php echo $category->name; ?></span> <span class="category-count"> (<?php echo count($category); ?>)</span></a></h3>
+                    $num = 0; foreach ($context as $category) : ?>
+                    <li id="category-<?php echo ++$num; ?>" class="category <?php echo (($num % 3) === 1) ? 'category-clear' : ''; ?>">
+                        <h3><a href=""><span class="category-title"><?php echo $category->name; ?></span> <span class="category-count"><?php echo count($category); ?></span></a></h3>
                         <div><?php
                         if (count($category)) {
                             echo '<ul>';
