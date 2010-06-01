@@ -343,20 +343,14 @@ height: 100%;
 	padding-bottom: 20px;
 	margin: 0;
 }
-#recent-left {
-    float: left;
-    width: 270px;
-}
-#recent-right {
-    float: left;
-    width: 270px;
-}
 
 #recent ul {
     padding: 15px 0 0 0;
 }
 #recent li {
 	margin: 0 0 0.3em 10px;
+	float: left;
+	width: 270px;
 }
 #recent li span {
 	font-size: 10px;
@@ -448,16 +442,11 @@ height: 100%;
 
 .pearbox .pearbox-header h2 {
 	text-shadow: 0 1px #fff;
+	float:left;
 }
 
 .pearbox .pearbox-footer {
 	padding: 12px 4px 8px 4px;
-}
-
-/* Browse Packages */
-
-#packages h2 {
-	float: left;
 }
 
 

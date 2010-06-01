@@ -1,12 +1,7 @@
- <div id="packages" class="pearbox">
+        <div id="packages" class="pearbox">
             <div class="pearbox-header">
                 <h2>Packages</h2>
-                <form method="get" action="." id="find-packages">
-                    <div>
-                        <input type="search" placeholder="Package name or description …" size="30" name="q" /><input class="button" value="Search" type="submit" />
-                        <input type="hidden" name="view" value="search" />
-                    </div>
-                </form>
+                <?php echo $savant->render(null, 'SearchForm.tpl.php'); ?>
             </div>
             <div class="pearbox-content">
                 <ul class="categories">
