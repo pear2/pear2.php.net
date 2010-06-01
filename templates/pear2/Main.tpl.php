@@ -21,7 +21,7 @@
 
     <div id="top">
         <div class="content">
-            <h1><img src="templates/pear2/css/img/logo.png" alt="Pear" /><span>PHP Extension and Application Repository</span></h1>
+            <h1><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>"><img src="templates/pear2/css/img/logo.png" alt="Pear" /><span>PHP Extension and Application Repository</span></a></h1>
             <div id="nav">
                 <ul id="navbar">
                     <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\News'); ?>">Home</a></li>
