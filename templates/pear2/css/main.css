@@ -44,10 +44,6 @@ strong {
 	font-weight: bold;
 }
 
-.clearfix {
-	clear: both;
-}
-
 .content {
 	width: 900px;
 	margin: 0 auto;
@@ -280,6 +276,7 @@ height: 100%;
 	font-size: 17px;
 	color: #fff;
 	background: #649f43;
+	overflow:auto;
 }
 #header #mid :link,
 #header #mid :visited,
@@ -326,6 +323,7 @@ height: 100%;
 
 #content {
 	padding: 20px;
+	overflow: auto;
 }
 
 #content .content {
@@ -441,6 +439,7 @@ height: 100%;
 	border-radius: 6px;
 	padding: 20px;
 	clear: both;
+	overflow:auto;
 }
 
 .pearbox .pearbox-header {
@@ -500,6 +499,7 @@ height: 100%;
 	color: rgba(255,255,255,0.6);
 	font-size: 14px;
 	margin-bottom: 80px;
+	clear:both;
 }
 #footer .note :link,
 #footer .note :visited,

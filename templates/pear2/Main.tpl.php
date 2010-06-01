@@ -30,7 +30,6 @@
                     <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\Support'); ?>">Support</a></li>
                 </ul>
             </div>
-            <div class="clearfix"></div>
 
         </div>
     </div>
@@ -49,7 +48,6 @@
                     <a class="button" href="#">Download Pyrus ↴</a>
                 </div>
             </div>
-            <div class="clearfix"></div>
 
         </div>
     </div>
@@ -74,7 +72,6 @@
 <div id="content">
     <div class="content">
         <?php echo $savant->render($context->page_content); ?>
-        <div class="clearfix"></div>
     </div>
 </div>
 
@@ -94,7 +91,6 @@
             <ul class="footer-menu footer-menu-last">
                 <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\Support'); ?>">Support</a></li>
             </ul>
-            <div class="clearfix"></div>
             <p class="note">
             Copyright © 2001-2010 The PHP Group, all rights reserved. Bandwidth and
             hardware provided by Pair Networks. Pear is a framework and distribution

@@ -27,7 +27,5 @@
                     <?php
                     endforeach; ?>
                 </ul>
-
-                <div class="clearfix"></div>
             </div>
         </div>
