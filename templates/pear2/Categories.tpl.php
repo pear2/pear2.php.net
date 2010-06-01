@@ -26,20 +26,6 @@
                     </li>
                     <?php
                     endforeach; ?>
-                     <li id="category-6" class="category">
-  <h3>
-   <a href="/packages.php?catpid=6&amp;catname=Encryption"><span class="category-title">Encryption</span> <span class="category-count">13</span></a>
-  </h3>
-  <div>
-   <a href="/package/Crypt_Blowfish" class="category-package" title="Allows for quick two-way blowfish encryption without requiring the MCrypt PHP extension.">Crypt_Blowfish</a>,
-   <a href="/package/Crypt_CBC" class="category-package" title="A class to emulate Perl's Crypt::CBC module.">Crypt_CBC</a>,
-   <a href="/package/Crypt_CHAP" class="category-package" title="Generating CHAP packets.">Crypt_CHAP</a>,
-   <a href="/package/Crypt_DiffieHellman" class="category-package" title="Implementation of Diffie-Hellman Key Exchange cryptographic protocol for PHP5">Crypt_DiffieHellman</a>,
-   …
-  </div>
-
- </li>
-                    
                 </ul>
 
                 <div class="clearfix"></div>
