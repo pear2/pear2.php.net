@@ -47,7 +47,7 @@ if ($context->options['view'] == 'news'):
                 <h2>Download Pyrus <span>New!</span></h2>
                 Pyrus is a tool to manage Pear packages. Pyrus simplifies and improves the Pear experience.
                 <div id="download">
-                    <a class="button" href="#">Download Pyrus ↴</a>
+                    <a class="button" href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">Download Pyrus ↴</a>
                 </div>
             </div>
 
@@ -57,14 +57,14 @@ if ($context->options['view'] == 'news'):
         <div class="content">
         <h2>Who’s Using Pear?</h2>
         ...
-            <a href="#">Digg</a>,
-            <a href="#">Twitter</a>,
-            <a href="#">Facebook</a>,
-            <a href="#">silverorange</a>,
-            <a href="#">Ning</a>,
-            <a href="#">Roundcube</a>,
-            <a href="#">Zend Framework</a>,
-            <a href="#">Symfony</a>
+            <a href="http://digg.com/">Digg</a>,
+            <a href="http://twitter.com/">Twitter</a>,
+            <a href="http://www.facebook.com/">Facebook</a>,
+            <a href="http://www.silverorange.com/">silverorange</a>,
+            <a href="http://www.ning.com/">Ning</a>,
+            <a href="http://roundcube.net/">Roundcube</a>,
+            <a href="http://framework.zend.com/">Zend Framework</a>,
+            <a href="http://www.symfony-project.org/">Symfony</a>
 
         ...
         </div>
