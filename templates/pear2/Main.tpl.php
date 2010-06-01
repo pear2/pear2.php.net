@@ -33,7 +33,9 @@
 
         </div>
     </div>
-
+<?php
+if ($context->options['view'] == 'news'):
+?>
     <div id="mid">
         <div class="content">
             <div class="left">
@@ -68,7 +70,7 @@
         </div>
     </div>
 </div>
-
+<?php endif; ?>
 <div id="content">
     <div class="content">
         <?php echo $savant->render($context->page_content); ?>
