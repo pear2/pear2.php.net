@@ -24,7 +24,7 @@ $parent->context->page_title = $context->name.' | pear2.php.net';
         <h3>Release Notes</h3>
         <div class="release-notes"><?php echo nl2br($context->notes); ?></div>
     </div>
-    <div class="right">
+    <div class="right releases">
         <?php echo $savant->render($context->name . '-' . $context->version['release'], 'InstallInstructions.tpl.php'); ?>
     </div>
 </div>
