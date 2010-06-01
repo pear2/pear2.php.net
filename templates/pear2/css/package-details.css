@@ -58,18 +58,20 @@ table.details th {
 	margin-right: 5px;
 }
 
-ol.instructions {
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	border-radius:10px;
-	padding:10px;
+.package .releases .instructions .pearbox-content {
 	background-color:rgba(0, 0, 0, 0.8);
+	border-color:rgba(0, 0, 0, 0.8);
 	color:#FFF;
-	font-size:120%;
-	line-height:2em;
 	font-family:"andale mono", monaco, "courier new", courier;
 }
-ol.instructions a,
-ol.instructions a:link {
+
+.package .instructions ol, .package .instructions ol li {
+	list-style: none !important;
+	margin:0 !important;
+	padding:0 !important;
+}
+
+.instructions a,
+.instructions a:link {
 	color:#FFF;
 }
