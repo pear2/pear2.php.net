@@ -44,7 +44,7 @@ if ($context->options['view'] == 'news'):
             </div>
 
             <div class="right">
-                <h2>Download Pyrus <span>New!</span></h2>
+                <h2>Download Pyrus <span>New for PHP 5.3+!</span></h2>
                 Pyrus is a tool to manage Pear packages. Pyrus simplifies and improves the Pear experience.
                 <div id="download">
                     <a class="button" href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">Download Pyrus ↴</a>
@@ -94,7 +94,7 @@ if ($context->options['view'] == 'news'):
                 <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\Support'); ?>">Support</a></li>
             </ul>
             <p class="note">
-            Copyright © 2001-2010 The PHP Group, all rights reserved. Bandwidth and
+            Copyright © 2001-2010 The PEAR Group, all rights reserved. Bandwidth and
             hardware provided by Pair Networks. Pear is a framework and distribution
             system for reusable PHP components. You can find out more information
             about Pear in the <a href="#">online manual</a>.
