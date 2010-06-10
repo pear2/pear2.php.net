@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_pyrus_developer">PEAR2_Pyrus_Developer</p>
+ <c>pear2.php.net</c>
+ <v>0.3.0</v>
+ <a>0.1.0</a>
+ <mp>5.2.0</mp>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>Developer tools for the Pyrus installer
+</s>
+ <d>
+This package contains several custom commands for Pyrus.
+
+Included are commands for:
+* Creating pear2 and pecl package skeletons
+ $ php pyrus.phar generate-pear2 MyNewPackage
+* Creating a package.xml file
+ $ php pyrus.phar make
+* Packaging PEAR2 and PEAR releases
+ $ php pyrus.phar package
+* Running phpt tests and generating code coverage reports
+ $ php pyrus.phar run-phpt -m
+</d>
+ <da>2010-06-10 10:06:41</da>
+ <n>Feature release:
+
+* Change namespace from pear2 to PEAR2.
+* Add coverage web page example to the www directory.</n>
+ <f>66984</f>
+ <g>http://pear2.php.net/get/PEAR2_Pyrus_Developer-0.3.0</g>
+ <x xlink:href="package.0.3.0.xml"/>
+</r>

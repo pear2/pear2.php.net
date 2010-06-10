@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Pyrus_Developer</name>
+ <channel>pear2.php.net</channel>
+ <summary>Developer tools for the Pyrus installer
+</summary>
+ <description>
+This package contains several custom commands for Pyrus.
+
+Included are commands for:
+* Creating pear2 and pecl package skeletons
+ $ php pyrus.phar generate-pear2 MyNewPackage
+* Creating a package.xml file
+ $ php pyrus.phar make
+* Packaging PEAR2 and PEAR releases
+ $ php pyrus.phar package
+* Running phpt tests and generating code coverage reports
+ $ php pyrus.phar run-phpt -m
+</description>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Helgi Þormar Þorbjörnsson</name>
+  <user>dufuz</user>
+  <email>helgi@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-06-10</date>
+ <time>10:06:41</time>
+ <version>
+  <release>0.3.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Feature release:
+
+* Change namespace from pear2 to PEAR2.
+* Add coverage web page example to the www directory.</notes>
+ <contents>
+  <dir name="/">
+   <file role="www" name="www/PEAR2_Pyrus_Developer/pear2.php.net/CoverageAnalyzer/index.php"/>
+   <file role="www" name="www/PEAR2_Pyrus_Developer/pear2.php.net/CoverageAnalyzer/cover.css"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Runphpt/Runner.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Runphpt/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/v2.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PECL/Filter.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PECL.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PEAR2SVN/Filter.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PEAR2SVN.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/Commands.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Zip.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Xml.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Tar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Phar/PHPArchive.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Phar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/View.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/Controller.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/Aggregator.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/test.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/test-modified.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Sqlite.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/SourceFile/PerTest.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/SourceFile.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/pear2coverage.phar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/make-coverage-phar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/DefaultSourceDecorator.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Aggregator.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/AbstractSourceDecorator.php"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/tests/001.phpt"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/skeleton.php"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/skeleton.dsp"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/skeleton.c"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/php_skeleton.h"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/EXPERIMENTAL"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/CREDITS"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/skeleton/create_stubs"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/phartemplate.php"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/config.w32"/>
+   <file role="data" name="data/PEAR2_Pyrus_Developer/pear2.php.net/config.m4"/>
+   <file role="customcommand" name="customcommand/PEAR2_Pyrus_Developer/pear2.php.net/commands.xml"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
