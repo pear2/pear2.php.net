@@ -1,3 +1,7 @@
+<?php
+// Set the page title
+$parent->context->page_title = 'Categories | ' . PEAR2\SimpleChannelFrontend\Main::$channel->name;
+?>
         <div id="packages" class="pearbox">
             <div class="pearbox-header">
                 <h2>Packages</h2>
