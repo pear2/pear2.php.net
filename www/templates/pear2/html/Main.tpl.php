@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>templates/pear2/html/css/signin.css" />
     <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>templates/pear2/html/css/account-request.css" />
-    
+
     <link rel="alternate" title="PEAR2 Latest Releases" type="application/rss+xml" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>?view=latest&amp;format=rss" />
 </head>
 
@@ -57,15 +57,14 @@ if ($context->options['view'] == 'news'):
         <div class="content">
         <h2>Who’s Using PEAR?</h2>
         ...
-            <a href="http://digg.com/">Digg</a>,
-            <a href="http://twitter.com/">Twitter</a>,
-            <a href="http://www.facebook.com/">Facebook</a>,
-            <a href="http://www.silverorange.com/">silverorange</a>,
-            <a href="http://www.ning.com/">Ning</a>,
+            <a href="http://digg.com/api/docs/toolkits">Digg</a>,
+            <a href="http://www.doctrine-project.org/">Doctrine</a>,
+            <a href="http://ezcomponents.org/">eZ Components</a>,
             <a href="http://roundcube.net/">Roundcube</a>,
-            <a href="http://framework.zend.com/">Zend Framework</a>,
-            <a href="http://www.symfony-project.org/">Symfony</a>
-
+            <a href="http://code.google.com/p/sabredav/wiki/Installation">SabreDAV</a>,
+            <a href="http://code.silverorange.com/">silverorange</a>,
+            <a href="http://www.symfony-project.org/">Symfony</a>,
+            <a href="http://framework.zend.com/">Zend Framework</a>
         ...
         </div>
     </div>
