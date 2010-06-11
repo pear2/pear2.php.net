@@ -2,11 +2,11 @@
 require_once dirname(__FILE__).'/../config.inc.php';
 require_once dirname(__FILE__).'/../src/pear2web/Router.php';
 
-$options = $_GET;
-
 $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
-$frontend = new PEAR2\SimpleChannelFrontend\Main($channel, pear2web\Router::getRoute($_SERVER['REQUEST_URI']) + $_GET);
+$options = $_GET + pear2web\Router::getRoute($_SERVER['REQUEST_URI']);
+
+$frontend = new PEAR2\SimpleChannelFrontend\Main($channel, $options);
 
 $savant = new PEAR2\Templates\Savant\Main();
 $savant->setClassToTemplateMapper(new PEAR2\SimpleChannelFrontend\TemplateMapper);
@@ -21,4 +21,4 @@ case 'rss':
 $savant->setEscape('htmlspecialchars');
 $savant->addFilters(array($frontend, 'postRender'));
 echo $savant->render($frontend);
-?>
+

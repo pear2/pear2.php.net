@@ -8,17 +8,27 @@ class Router
             $requestURI = substr($requestURI, 0, strlen($_SERVER['QUERY_STRING'])*-1-1);
         }
 
-        $base = preg_quote(\PEAR2\SimpleChannelFrontend\Main::getURL(), '/');
+        $base   = \PEAR2\SimpleChannelFrontend\Main::getURL();
+        $q_base = preg_quote($base, '/');
 
         $options = array();
 
         switch(true) {
-            case ($requestURI == '/'):
+            case ($requestURI == $base):
                 // Short circuit
-                $options['view'] = 'News';
+                $options['view'] = 'news';
+                break;
+            case ($requestURI == $base . 'categories/'):
+                $options['view'] = 'categories';
+                break;
+            case ($requestURI == $base . 'packages/'):
+                $options['view'] = 'packages';
+                break;
+            case ($requestURI == $base . 'support/'):
+                $options['view'] = 'support';
                 break;
 
-            case preg_match('/\/(?<package>[0-9a-z_]+)(-(?<version>[0-9ab.]+))?$/i',
+            case preg_match('/'.$q_base.'(?<package>[0-9a-z_]+)(-(?<version>[0-9ab.]+))?$/i',
                     $requestURI, $matches):
 
                 // Viewing an individual package

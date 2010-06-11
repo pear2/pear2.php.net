@@ -24,10 +24,10 @@
             <h1><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>"><img src="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>templates/pear2/html/css/img/logo.png" alt="PEAR" /><span>PHP Extension and Application Repository</span></a></h1>
             <div id="nav">
                 <ul id="navbar">
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\News'); ?>">Home</a></li>
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\PackageList'); ?>">Packages</a></li>
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\Categories'); ?>">Categories</a></li>
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\Support'); ?>">Support</a></li>
+                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>">Home</a></li>
+                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>packages/">Packages</a></li>
+                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/">Categories</a></li>
+                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>support/">Support</a></li>
                 </ul>
             </div>
 
@@ -82,16 +82,16 @@ if ($context->options['view'] == 'news'):
 
         <div id="footer-left">
             <ul class="footer-menu">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\News'); ?>">Home</a></li>
+                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>">Home</a></li>
             </ul>
             <ul class="footer-menu">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\PackageList'); ?>">Packages</a></li>
+                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>packages/">Packages</a></li>
             </ul>
             <ul class="footer-menu">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\Categories'); ?>">Categories</a></li>
+                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/">Categories</a></li>
             </ul>
             <ul class="footer-menu footer-menu-last">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL('PEAR2\SimpleChannelFrontend\Support'); ?>">Support</a></li>
+                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>support/">Support</a></li>
             </ul>
             <p class="note">
             Copyright © 2001-2010 The PEAR Group, all rights reserved. Bandwidth and
