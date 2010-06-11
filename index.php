@@ -21,7 +21,7 @@ $frontend = new PEAR2\SimpleChannelFrontend\Main($channel, $options);
 
 $savant = new PEAR2\Templates\Savant\Main();
 $savant->setClassToTemplateMapper(new PEAR2\SimpleChannelFrontend\TemplateMapper);
-$savant->setTemplatePath(array(__DIR__ . '/templates/default/html', __DIR__ . '/templates/pear2'));
+$savant->setTemplatePath(array(__DIR__ . '/templates/default/html', __DIR__ . '/templates/pear2/html'));
 
 switch($frontend->options['format']) {
 case 'rss':
