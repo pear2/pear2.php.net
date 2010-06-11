@@ -1,23 +1,12 @@
 <?php
 require_once dirname(__FILE__).'/../config.inc.php';
+require_once dirname(__FILE__).'/../src/pear2web/Router.php';
 
 $options = $_GET;
 
-if (isset($_SERVER['REDIRECT_URL'])) {
-    $options['view'] = 'package';
-    preg_match('/\/(?<package>[0-9a-z_]+)(-(?<version>[0-9ab.]+))?$/i',
-        $_SERVER['REDIRECT_URL'], $matches);
-    $options['package'] = $matches['package'];
-
-    if (isset($matches['version'])) {
-        $options['packageVersion'] = $matches['version'];
-        $options['view']           = 'release';
-    }
-}
-
 $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
-$frontend = new PEAR2\SimpleChannelFrontend\Main($channel, $options);
+$frontend = new PEAR2\SimpleChannelFrontend\Main($channel, pear2web\Router::getRoute($_SERVER['REQUEST_URI']) + $_GET);
 
 $savant = new PEAR2\Templates\Savant\Main();
 $savant->setClassToTemplateMapper(new PEAR2\SimpleChannelFrontend\TemplateMapper);
