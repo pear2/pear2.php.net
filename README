@@ -14,6 +14,6 @@ Requirements -
 
 Quick Setup:
 cp config.sample.php config.inc.php
-cp sample.htaccess .htaccess
+cp www/sample.htaccess www/.htaccess
 mkdir includes
 svn checkout http://svn.php.net/repository/pear2/all includes
