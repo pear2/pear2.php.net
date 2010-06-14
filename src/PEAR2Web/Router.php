@@ -1,5 +1,7 @@
 <?php
-namespace pear2web;
+
+namespace PEAR2Web;
+
 class Router
 {
     public static function getRoute($requestURI)

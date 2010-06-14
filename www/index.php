@@ -1,10 +1,10 @@
 <?php
 require_once dirname(__FILE__).'/../config.inc.php';
-require_once dirname(__FILE__).'/../src/pear2web/Router.php';
+require_once dirname(__FILE__).'/../src/PEAR2Web/Router.php';
 
 $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
-$options = $_GET + pear2web\Router::getRoute($_SERVER['REQUEST_URI']);
+$options = $_GET + PEAR2Web\Router::getRoute($_SERVER['REQUEST_URI']);
 
 $frontend = new PEAR2\SimpleChannelFrontend\Main($channel, $options);
 
