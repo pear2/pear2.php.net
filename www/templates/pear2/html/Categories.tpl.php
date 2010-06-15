@@ -13,6 +13,7 @@ $packagesPerCategory = 4;
                 <?php echo $savant->render(null, 'SearchForm.tpl.php'); ?>
             </div>
             <div class="pearbox-content">
+
                 <ul class="categories">
 <?php
 
@@ -69,6 +70,9 @@ foreach ($context as $category) {
 
 ?>
                 </ul>
+
+                <div class="clearfix"></div>
+
             </div>
         </div>
         <h3>Don't see what you need?</h3>

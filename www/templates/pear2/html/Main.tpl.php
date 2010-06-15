@@ -40,9 +40,10 @@ PEAR2Web\MenuDisplayer::display(
 
     <div id="mid">
         <div class="content">
+
             <div class="left">
-            <h2>What is PEAR?</h2>
-            PEAR is a packaging and distribution system for reusable PHP components. You can find more information about using PEAR in the <a href="#">online manual</a>.
+                <h2>What is PEAR?</h2>
+                PEAR is a packaging and distribution system for reusable PHP components. You can find more information about using PEAR in the <a href="#">online manual</a>.
             </div>
 
             <div class="right">
@@ -52,6 +53,8 @@ PEAR2Web\MenuDisplayer::display(
                     <a class="button" href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">Download Pyrus ↴</a>
                 </div>
             </div>
+
+            <div class="clearfix"></div>
 
         </div>
     </div>

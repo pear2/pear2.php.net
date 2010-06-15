@@ -9,7 +9,7 @@ if (file_exists($rss_feed)) {
 
 <div id="recent">
     <h2>Recent Packages</h2>
-    <ul>
+
 <?php
 
 echo $savant->render(
@@ -22,8 +22,9 @@ echo $savant->render(
 );
 
 ?>
-    </ul>
+
 </div>
+
 <div id="news">
     <h2>News</h2>
     <?php if (!empty($blog)) { ?>
@@ -35,9 +36,11 @@ echo $savant->render(
         <?php } ?>
         </ul>
     <?php } else { ?>
-        <p>Looks like we don't have an RSS feed. Try adding a cron job to fetch <a href="http://blog.pear.php.net/feed/">http://blog.pear.php.net/feed/</a> and put it in <?php print $rss_feed; ?></p>
-        <pre>wget --output-document=/var/tmp/pear/rss_cache/pear-news.xml http://blog.pear.php.net/feed/</pre>
+
+    <p>Looks like we don't have an RSS feed. Try adding a cron job to fetch <a href="http://blog.pear.php.net/feed/">http://blog.pear.php.net/feed/</a> and put it in <?php print $rss_feed; ?></p>
+    <p><code>wget --output-document=/var/tmp/pear/rss_cache/pear-news.xml http://blog.pear.php.net/feed/</code></p>
     <?php } ?>
+
 </div>
 
 <?php
