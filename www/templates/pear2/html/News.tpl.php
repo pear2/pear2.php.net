@@ -10,7 +10,18 @@ if (file_exists($rss_feed)) {
 <div id="recent">
     <h2>Recent Packages</h2>
     <ul>
-        <?php echo $savant->render(new \PEAR2\SimpleChannelFrontend\LatestReleases(array('frontend'=>$parent->context->getRawObject(), 'limit'=>10))); ?>
+<?php
+
+echo $savant->render(
+    new \PEAR2\SimpleChannelFrontend\LatestReleases(
+        array(
+            'frontend' => $parent->context->getRawObject(),
+            'limit'    => 10,
+        )
+    )
+);
+
+?>
     </ul>
 </div>
 <div id="news">
@@ -29,4 +40,14 @@ if (file_exists($rss_feed)) {
     <?php } ?>
 </div>
 
-<?php echo $savant->render(new \PEAR2\SimpleChannelFrontend\Categories(array('frontend'=>$parent->context->getRawObject()))); ?>
+<?php
+
+echo $savant->render(
+    new \PEAR2\SimpleChannelFrontend\Categories(
+        array(
+            'frontend' => $parent->context->getRawObject()
+        )
+    )
+);
+
+?>
