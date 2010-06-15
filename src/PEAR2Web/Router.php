@@ -19,13 +19,13 @@ class Router
         $base       = \PEAR2\SimpleChannelFrontend\Main::getURL();
         $quotedBase = preg_quote($base, '/');
         $packageExp = "/"
-            . "^"
-            . $quotedBase . "            # base"
-            . "(?<package>[0-9a-z_]+)    # package name"
-            . "(-                        # dash separator"
-            . "    (?<version>[0-9ab.]+) # version"
-            . ")?                        # ... is optional"
-            . "$"
+            . "^\n"
+            . $quotedBase . "            # base\n"
+            . "(?<package>[0-9a-z_]+)    # package name\n"
+            . "(-                        # dash separator\n"
+            . "    (?<version>[0-9ab.]+) # version\n"
+            . ")?                        # ... is optional\n"
+            . "$\n"
             . "/xi";
 
         if ($requestURI === $base) {
