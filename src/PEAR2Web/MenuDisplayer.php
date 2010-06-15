@@ -4,111 +4,111 @@ namespace PEAR2Web;
 
 class MenuDisplayer
 {
-	public static function display(array $menu, $selected = null)
-	{
-		echo "\t" . '<h1>';
+    public static function display(array $menu, $selected = null)
+    {
+        echo "\t" . '<h1>';
 
-		if ($selected) {
-			echo '<a href=".">';
-		}
+        if ($selected) {
+            echo '<a href=".">';
+        }
 
-		echo '<img src="img/logo.png" alt="Pear" />';
-		echo '<span>PHP Extension and Application Repository</span>';
+        echo '<img src="img/logo.png" alt="Pear" />';
+        echo '<span>PHP Extension and Application Repository</span>';
 
-		if ($selected) {
-			echo '</a>';
-		}
+        if ($selected) {
+            echo '</a>';
+        }
 
-		echo '</h1>' ."\n";
+        echo '</h1>' ."\n";
 
-		echo "\t\t\t" . '<div id="nav">' ."\n";
-		echo "\t\t\t" . '<ul id="navbar">' ."\n";
+        echo "\t\t\t" . '<div id="nav">' ."\n";
+        echo "\t\t\t" . '<ul id="navbar">' ."\n";
 
-		foreach ($menu as $id => $item) {
-			echo "\t\t\t\t";
+        foreach ($menu as $id => $item) {
+            echo "\t\t\t\t";
 
-			if ($selected == $id) {
-				echo '<li class="selected">';
-			} else {
-				echo '<li>';
-			}
+            if ($selected == $id) {
+                echo '<li class="selected">';
+            } else {
+                echo '<li>';
+            }
 
-			if ($selected != $id) {
-				echo '<a href="' . $item['link'] . '">';
-			}
+            if ($selected != $id) {
+                echo '<a href="' . $item['link'] . '">';
+            }
 
-			echo $item['title'];
+            echo $item['title'];
 
-			if ($selected != $id) {
-				echo '</a>';
-			}
+            if ($selected != $id) {
+                echo '</a>';
+            }
 
-			echo '</li>';
-			echo "\n";
-		}
+            echo '</li>';
+            echo "\n";
+        }
 
-		echo "\t\t\t" . '</ul>' . "\n";
+        echo "\t\t\t" . '</ul>' . "\n";
 
-		if (   $selected
-			&& isset($menu[$selected])
-			&& isset($menu[$selected]['menu'])
-			&& is_array($menu[$selected]['menu'])
-			&& count($menu[$selected]['menu']) > 0
-		) {
-			echo "\t\t\t" . '<div id="subnav">' . "\n";
-			echo "\t\t\t\t" . '<div id="subnavcontainer">' . "\n";
-			echo "\t\t\t\t\t" . '<ul id="subnavbar">' . "\n";
+        if (   $selected
+            && isset($menu[$selected])
+            && isset($menu[$selected]['menu'])
+            && is_array($menu[$selected]['menu'])
+            && count($menu[$selected]['menu']) > 0
+        ) {
+            echo "\t\t\t" . '<div id="subnav">' . "\n";
+            echo "\t\t\t\t" . '<div id="subnavcontainer">' . "\n";
+            echo "\t\t\t\t\t" . '<ul id="subnavbar">' . "\n";
 
-			foreach ($menu[$selected]['menu'] as $id => $item) {
-				echo "\t\t\t\t\t\t" . '<li>';
+            foreach ($menu[$selected]['menu'] as $id => $item) {
+                echo "\t\t\t\t\t\t" . '<li>';
 
-				echo '<a href="' . $item['link'] . '">';
-				echo $item['title'];
-				echo '</a>';
+                echo '<a href="' . $item['link'] . '">';
+                echo $item['title'];
+                echo '</a>';
 
-				echo '</li>' . "\n";
-			}
+                echo '</li>' . "\n";
+            }
 
-			echo "\t\t\t\t\t" . '</ul>' . "\n";
-			echo "\t\t\t\t" . '</div>' . "\n";
-			echo "\t\t\t" . '</div>' . "\n";
-		}
+            echo "\t\t\t\t\t" . '</ul>' . "\n";
+            echo "\t\t\t\t" . '</div>' . "\n";
+            echo "\t\t\t" . '</div>' . "\n";
+        }
 
-		echo "\t\t\t" . '</div>' . "\n";
-		echo "\t\t\t" . '<div class="clearfix"></div>' . "\n";
-	}
+        echo "\t\t\t" . '</div>' . "\n";
+        echo "\t\t\t" . '<div class="clearfix"></div>' . "\n";
+    }
 
-	public static function displayFooter(array $menu)
-	{
-		$last = end(array_keys($menu));
+    public static function displayFooter(array $menu)
+    {
+        $last = end(array_keys($menu));
 
-		foreach ($menu as $id => $item) {
-			echo "\t\t\t";
+        foreach ($menu as $id => $item) {
+            echo "\t\t\t";
 
-			if ($id == $last) {
-				echo '<ul class="footer-menu footer-menu-last">' . "\n";
-			} else {
-				echo '<ul class="footer-menu">' . "\n";
-			}
+            if ($id == $last) {
+                echo '<ul class="footer-menu footer-menu-last">' . "\n";
+            } else {
+                echo '<ul class="footer-menu">' . "\n";
+            }
 
-			echo "\t\t\t\t" . '<li class="header">';
-			echo '<a href="' . $item['link'] . '">';
-			echo $item['title'];
-			echo '</a>';
-			echo '</li>' . "\n";
+            echo "\t\t\t\t" . '<li class="header">';
+            echo '<a href="' . $item['link'] . '">';
+            echo $item['title'];
+            echo '</a>';
+            echo '</li>' . "\n";
 
-			if (isset($item['menu']) && is_array($item['menu'])) {
-				foreach ($item['menu'] as $subId => $subItem) {
-					echo "\t\t\t\t";
-					echo '<li><a href="' . $subItem['link'] . '">';
-					echo $subItem['title'];
-					echo '</a></li>' . "\n";
-				}
-			}
+            if (isset($item['menu']) && is_array($item['menu'])) {
+                foreach ($item['menu'] as $subId => $subItem) {
+                    echo "\t\t\t\t";
+                    echo '<li><a href="' . $subItem['link'] . '">';
+                    echo $subItem['title'];
+                    echo '</a></li>' . "\n";
+                }
+            }
 
-			echo "\t\t\t" . '</ul>' . "\n";
-		}
+            echo "\t\t\t" . '</ul>' . "\n";
+        }
 
-		echo "\t\t\t" . '<div class="clearfix"></div>' . "\n";
-	}
+        echo "\t\t\t" . '<div class="clearfix"></div>' . "\n";
+    }
 }
