@@ -32,7 +32,7 @@ ul.categories li.category-clear {
 ul.categories h3 {
 	margin: 0 10px;
 	font-size: 100%;
-	background: url(img/category-background.png) top right no-repeat;
+	background: url(../img/category-background.png) top right no-repeat;
 	min-height: 23px;
 
 }
