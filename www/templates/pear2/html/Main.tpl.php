@@ -24,21 +24,20 @@
 
     <div id="top">
         <div class="content">
-            <h1><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>"><img src="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>img/logo.png" alt="PEAR" /><span>PHP Extension and Application Repository</span></a></h1>
-            <div id="nav">
-                <ul id="navbar">
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>">Home</a></li>
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>packages/">Packages</a></li>
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/">Categories</a></li>
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>support/">Support</a></li>
-                </ul>
-            </div>
+<?php
 
+PEAR2Web\MenuDisplayer::display(
+    PEAR2\SimpleChannelFrontend\Main::getURL(),
+    PEAR2Web\Menu::$data,
+    null
+);
+
+?>
         </div>
     </div>
-<?php
-if ($context->options['view'] == 'news'):
-?>
+
+    <?php if ($context->options['view'] == 'news'): ?>
+
     <div id="mid">
         <div class="content">
             <div class="left">
@@ -56,6 +55,7 @@ if ($context->options['view'] == 'news'):
 
         </div>
     </div>
+
     <div id="bottom">
         <div class="content">
         <h2>Who’s Using PEAR?</h2>
@@ -71,8 +71,11 @@ if ($context->options['view'] == 'news'):
         ...
         </div>
     </div>
+
+    <?php endif; ?>
+
 </div>
-<?php endif; ?>
+
 <div id="content">
     <div class="content">
         <?php echo $savant->render($context->page_content); ?>
@@ -83,18 +86,9 @@ if ($context->options['view'] == 'news'):
     <div class="content">
 
         <div id="footer-left">
-            <ul class="footer-menu">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>">Home</a></li>
-            </ul>
-            <ul class="footer-menu">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>packages/">Packages</a></li>
-            </ul>
-            <ul class="footer-menu">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/">Categories</a></li>
-            </ul>
-            <ul class="footer-menu footer-menu-last">
-                <li class="header"><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>support/">Support</a></li>
-            </ul>
+
+            <?php PEAR2Web\MenuDisplayer::displayFooter(PEAR2Web\Menu::$data, null); ?>
+
             <p class="note">
             Copyright © 2001-2010 The PEAR Group, all rights reserved. Bandwidth and
             hardware provided by Pair Networks. PEAR is a framework and distribution
