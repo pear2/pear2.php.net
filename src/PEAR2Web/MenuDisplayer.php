@@ -4,15 +4,15 @@ namespace PEAR2Web;
 
 class MenuDisplayer
 {
-    public static function display(array $menu, $selected = null)
+    public static function display($base, array $menu, $selected = null)
     {
         echo "\t" . '<h1>';
 
-        if ($selected) {
-            echo '<a href=".">';
+        if ($selected !== 'news') {
+            echo '<a href="' . $base . '">';
         }
 
-        echo '<img src="img/logo.png" alt="Pear" />';
+        echo '<img src="' . $base . 'img/logo.png" alt="Pear" />';
         echo '<span>PHP Extension and Application Repository</span>';
 
         if ($selected) {
@@ -34,7 +34,7 @@ class MenuDisplayer
             }
 
             if ($selected != $id) {
-                echo '<a href="' . $item['link'] . '">';
+                echo '<a href="' . $base . $item['link'] . '">';
             }
 
             echo $item['title'];
@@ -62,7 +62,7 @@ class MenuDisplayer
             foreach ($menu[$selected]['menu'] as $id => $item) {
                 echo "\t\t\t\t\t\t" . '<li>';
 
-                echo '<a href="' . $item['link'] . '">';
+                echo '<a href="' . $base . $item['link'] . '">';
                 echo $item['title'];
                 echo '</a>';
 
@@ -78,7 +78,7 @@ class MenuDisplayer
         echo "\t\t\t" . '<div class="clearfix"></div>' . "\n";
     }
 
-    public static function displayFooter(array $menu)
+    public static function displayFooter($base, array $menu)
     {
         $last = end(array_keys($menu));
 
@@ -92,7 +92,7 @@ class MenuDisplayer
             }
 
             echo "\t\t\t\t" . '<li class="header">';
-            echo '<a href="' . $item['link'] . '">';
+            echo '<a href="' . $base . $item['link'] . '">';
             echo $item['title'];
             echo '</a>';
             echo '</li>' . "\n";

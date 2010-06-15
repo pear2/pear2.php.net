@@ -29,7 +29,7 @@
 PEAR2Web\MenuDisplayer::display(
     PEAR2\SimpleChannelFrontend\Main::getURL(),
     PEAR2Web\Menu::$data,
-    null
+    $context->options['view']
 );
 
 ?>
@@ -87,7 +87,14 @@ PEAR2Web\MenuDisplayer::display(
 
         <div id="footer-left">
 
-            <?php PEAR2Web\MenuDisplayer::displayFooter(PEAR2Web\Menu::$data, null); ?>
+<?php
+
+PEAR2Web\MenuDisplayer::displayFooter(
+    PEAR2\SimpleChannelFrontend\Main::getURL(),
+    PEAR2Web\Menu::$data
+);
+
+?>
 
             <p class="note">
             Copyright © 2001-2010 The PEAR Group, all rights reserved. Bandwidth and
