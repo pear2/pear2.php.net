@@ -79,19 +79,23 @@ ul.categories h3 span.category-title {
 	padding-right: 6px;
 }
 
-ul.categories div {
+ul.categories ul {
 	font-size: 75%;
 	margin: 0 10px;
 }
 
-ul.categories div a:link,
-ul.categories div a:visited {
+ul.categories ul li {
+	display: inline;
+}
+
+ul.categories ul a:link,
+ul.categories ul a:visited {
 	text-decoration: none;
 	color: #333;
 }
 
-ul.categories div a:hover,
-ul.categories div a:active {
+ul.categories ul a:hover,
+ul.categories ul a:active {
 	text-decoration: underline;
 	color: #204173;
 }

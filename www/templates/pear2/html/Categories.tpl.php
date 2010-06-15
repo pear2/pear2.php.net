@@ -1,6 +1,11 @@
 <?php
+
 // Set the page title
 $parent->context->page_title = 'Categories | ' . PEAR2\SimpleChannelFrontend\Main::$channel->name;
+
+$categoriesPerRow    = 3;
+$packagesPerCategory = 4;
+
 ?>
         <div id="packages" class="pearbox">
             <div class="pearbox-header">
@@ -9,22 +14,60 @@ $parent->context->page_title = 'Categories | ' . PEAR2\SimpleChannelFrontend\Mai
             </div>
             <div class="pearbox-content">
                 <ul class="categories">
-                    <?php
-                    $num = 0; foreach ($context as $category) : ?>
-                    <li id="category-<?php echo ++$num; ?>" class="category <?php echo (($num % 3) === 1) ? 'category-clear' : ''; ?>">
-                        <h3><a href=""><span class="category-title"><?php echo $category->name; ?></span> <span class="category-count"><?php echo count($category); ?></span></a></h3>
-                        <div><?php
-                        if (count($category)) {
-                            echo '<ul>';
-                            foreach ($category as $package) {
-                                echo '<li><a href="'.PEAR2\SimpleChannelFrontend\Main::getURL().$package->name.'">'.$package->name.'</a></li>';
-                            }
-                            echo '</ul>';
-                        }
-                        ?></div>
-                    </li>
-                    <?php
-                    endforeach; ?>
+<?php
+
+$categoryCount = 0;
+foreach ($context as $category) {
+    $class = ($categoryCount % $categoriesPerRow === 0) ?
+        'category category-clear' : 'category';
+
+    $packageCount = count($category);
+    $categoryName = htmlspecialchars($category->name);
+
+    echo '<li class="' . $class . '">';
+
+    echo '<h3>';
+    echo '<a href="#">';
+    echo '<span class="category-title">' . $categoryName . '</span> ';
+    echo '<span class="category-count">' . $packageCount . '</span>';
+    echo '</a>';
+    echo '</h3>';
+
+    if ($packageCount > 0) {
+        echo '<ul>';
+
+        $packageCount = 0;
+        foreach ($category as $package) {
+            echo '<li>';
+
+            if ($packageCount > 0) {
+                echo ', ';
+            }
+
+            if ($packageCount >= $packagesPerCategory) {
+                echo '…';
+                break;
+            } else {
+                $packageHref = PEAR2\SimpleChannelFrontend\Main::getURL()
+                    . htmlspecialchars($package->name);
+
+                $packageName = htmlspecialchars($package->name);
+
+                echo '<a href="' . $packageHref . '">' . $packageName . '</a>';
+            }
+
+            echo '</li>';
+            $packageCount++;
+        }
+
+        echo '</ul>';
+    }
+
+    echo '</li>';
+    $categoryCount++;
+}
+
+?>
                 </ul>
             </div>
         </div>
