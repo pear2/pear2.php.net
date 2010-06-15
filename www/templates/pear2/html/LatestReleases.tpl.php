@@ -12,7 +12,7 @@ foreach ($context as $date => $package) {
     }
 
     $packageURL = PEAR2\SimpleChannelFrontend\Main::getURL()
-        . $package->name . '-' . $package->version['release'];
+        . $package->name;
 
     $packageTitle = htmlspecialchars(
         str_replace('PEAR2_', '', $package->name)
