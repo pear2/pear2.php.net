@@ -1,10 +1,10 @@
-<div class="pearbox instructions">
-    <div class="pearbox-header">
-        <h2>Installation</h2>
-    </div>
-    <div class="pearbox-content">
-        <ol>
-            <li><code>$>php pyrus.phar install <?php echo $context; ?></code></li>
-        </ol>
+<div class="package-install">
+    <h3>Installation</h3>
+    <div class="package-install-instructions">
+        <div>
+            <span class="package-install-prompt">$</span>
+            php pyrus.phar install
+            <span class="package-install-package"><?php echo $context; ?></span>
+        </div>
     </div>
 </div>
