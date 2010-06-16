@@ -1,30 +1,123 @@
+#package-details {
+	margin-top: 10px;
+}
+
 h3 {
-	margin: 20px 0 10px 0;
+	margin: 20px 0 5px 0;
 }
 
 .left {
-	width: 440px;
+	width: 528px;
 	float: left;
 	margin-right: 20px;
 }
 
 .right {
-	width: 440px;
+	width: 352px;
 	float: left;
 }
 
-.description p {
-	margin: 0.5em 0 0 0;
+.signin {
+	margin-top: 0;
+	display: none;
 }
 
-table.details {
+
+/* Package Description */
+
+.package-description {
+	margin-top: 0;
+}
+
+.package-description p {
+	margin: 0 0 0.5em;
+}
+
+.package-description .code {
+	font-size: 11px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.package-description .code code {
+	font-family: "Consolas", "Monaco", "DejaVu Sans Mono", "Lucida Console", monospace;
+}
+
+.package-description h3 {
+	margin: 1em 0 0;
+}
+
+.package-description .package-categories li {
+	font-size: 11px;
+}
+
+.package-description .package-categories li a {
+	display: block;
+	background: #d0e2c6;
+	float: left;
+	padding: 2px 8px 2px 8px;
+	margin: 0 4px 2px 0;
+	color: #323232;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.package-description .package-categories li a:hover {
+	background: #649f43; /* IE fallback */
+	background: rgba(100, 159, 67, 0.9);
+	text-decoration: none;
+	color: #fff;
+}
+
+.package-description .package-categories ul::after {
+	clear: left;
+	display: block;
+	content: '.';
+	height: 1px;
+	visibility: hidden;
+}
+
+
+/* Package Details */
+
+table.package-details {
 	margin: 1em;
 }
 
-table.details th {
+table.package-details tbody {
+	font-size: 12px;
+}
+
+table.package-details td {
+	padding-bottom: 0.25em;
+}
+
+table.package-details th {
 	font-weight: bold;
 	text-align: right;
-	padding-right: 1em;
+	padding-right: 0.5em;
+	padding-bottom: 0.25em;
+	vertical-align: top;
+}
+
+table.package-details li {
+	list-style-type: none;
+	margin: 0;
+}
+
+.package-unmaintained {
+	color: #af351a;
+}
+
+.package-alpha {
+	color: #af351a;
+}
+
+.package-beta {
+	color: #da2;
+}
+
+.package-stable {
 }
 
 .maintainers li {
@@ -32,13 +125,93 @@ table.details th {
 	margin-left: 2em;
 }
 
+.package-details .package-bugs-new {
+	margin-left: 0.5em;
+}
+
+
+/* Package Dependencies */
+
+#content .package-dependencies ul li {
+	margin: 0 0 0 2em;
+	list-style-type: disc;
+}
+
+
+/* Package Documentation */
+
+.package-documentation h3 {
+	margin-top: 0;
+}
+
+#content .package-documentation ol li {
+	margin: 0 0 0 2em;
+}
+
+li.package-documentation-api {
+	font-weight: bold;
+}
+
+
+/* Package Releases */
+
+.package-releases table {
+	margin: 0;
+	width: 100%;
+}
+
+.package-releases td.package-releases-release {
+	padding-left: 2em;
+}
+
+.package-releases td.package-releases-date {
+	text-align: right;
+	padding-right: 2em;
+}
+
+
+/* Package Installation */
+
+.package-install {
+	margin: 0;
+}
+
+.package-install-instructions {
+	text-indent: -16px;
+	font-family: "Consolas", "Monaco", "DejaVu Sans Mono", "Lucida Console", monospace;
+	color: #eee;
+	background: #333;
+	border-color: #111;
+	padding: 10px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+.package-install-instructions div {
+	margin-left: 16px;
+}
+
+.package-install .package-install-prompt {
+	font-weight: bold;
+}
+
+.package-install .package-install-package {
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+
+/* Package Comments */
+
 .comments .comment {
-	margin: 0 0 1em 0;
+	margin: 0 0 1.5em 0;
 }
 .comments .comment-title {
 	font-size: 12px;
 }
 .comments .comment-content {
+	margin-top: 0.5em;
 	font-size: 12px;
 }
 .comments .comment-content p {
@@ -53,25 +226,77 @@ table.details th {
 	width: 97%;
 }
 
-.releases .download {
+
+/* Package Rating Widget */
+
+.package-rating {
+	margin: 0 0 1em;
+}
+
+.package-rating h3 {
+	margin: 0 0 5px 0;
+}
+
+.package-rating-bar {
+	position: relative;
+	font-size: 11px;
+	font-weight: bold;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.0975) 1px 2px 3px inset;
+	-moz-box-shadow: rgba(0, 0, 0, 0.0975) 1px 2px 3px inset;
+}
+
+.package-rating-fill {
+	padding: 2px 0;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-bottomleft: 2px;
+}
+
+.package-rating .package-rating-description {
+	padding: 2px 0px;
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.package-rating .package-rating-description span {
+	padding: 0 4px;
+}
+
+.package-rating-good .package-rating-bar {
+	border: 1px solid #507f35;
+}
+
+.package-rating-bad .package-rating-bar {
+	border: 1px solid #992e17;
+}
+
+.package-rating-good .package-rating-fill {
+	background: #649f43;
+}
+
+.package-rating-bad .package-rating-fill {
+	background: #af351a;
+}
+
+.package-rating-good .package-rating-description {
+	color: #fff;
+	text-align: left;
+}
+
+.package-rating-bad .package-rating-description {
+	color: #992e17;
+	text-align: right;
+}
+
+.package-rating-controls {
 	float: right;
-	margin-right: 5px;
-}
-
-.package .releases .instructions .pearbox-content {
-	background-color:rgba(0, 0, 0, 0.8);
-	border-color:rgba(0, 0, 0, 0.8);
-	color:#FFF;
-	font-family:"andale mono", monaco, "courier new", courier;
-}
-
-.package .instructions ol, .package .instructions ol li {
-	list-style: none !important;
-	margin:0 !important;
-	padding:0 !important;
-}
-
-.instructions a,
-.instructions a:link {
-	color:#FFF;
+	padding: 0 0;
 }
