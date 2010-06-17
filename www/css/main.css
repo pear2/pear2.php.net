@@ -500,6 +500,8 @@ height: 100%;
 .pear-message {
 	padding: 5px;
 	background: #fcf7b8;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 }
 
@@ -507,6 +509,8 @@ height: 100%;
 	padding: 15px;
 	border: 1px solid #ded45c;
 	background: #fcf9d8;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 }
 
