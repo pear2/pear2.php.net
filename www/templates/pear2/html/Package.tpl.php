@@ -108,8 +108,7 @@ foreach ($context as $version => $release) {
     </div>
 
 <?php
-$dependencies = $context->dependencies['required']->package;
-if (count($dependencies) > 0):
+if (count($context->dependencies['required']->package) > 0):
 ?>
     <div class="package-dependencies">
         <h3>Dependencies for <?php echo $context->name; ?></h3>
@@ -117,7 +116,7 @@ if (count($dependencies) > 0):
 
 <?php
 
-foreach ($dependencies as $name => $package) {
+foreach ($context->dependencies['required']->package as $name => $package) {
     echo '<li><a href="http://'.$name.'">' . $name . '</a></li>';
 }
 
