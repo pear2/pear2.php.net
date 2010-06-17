@@ -127,5 +127,3 @@ foreach ($context->dependencies['required']->package as $name => $package) {
 <?php endif; ?>
 
 </div>
-
-<div class="clearfix"></div>

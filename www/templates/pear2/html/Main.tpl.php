@@ -74,7 +74,7 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
 </div>
 
 <div id="content">
-    <div class="content">
+    <div class="content clearfix">
         <?php echo $savant->render($context->page_content); ?>
     </div>
 </div>
