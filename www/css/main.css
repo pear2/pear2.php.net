@@ -485,6 +485,26 @@ height: 100%;
 	padding: 12px 4px 8px 4px;
 }
 
+
+/* Messages */
+
+.pear-message {
+	padding: 5px;
+	background: #fcf7b8;
+	-moz-border-radius: 8px;
+}
+
+.pear-message-content {
+	padding: 15px;
+	border: 1px solid #ded45c;
+	background: #fcf9d8;
+	-moz-border-radius: 6px;
+}
+
+.pear-message h3 {
+	margin: 0;
+}
+
 /* Browse Packages */
 
 #packages h2,
