@@ -483,7 +483,8 @@ height: 100%;
 
 /* Browse Packages */
 
-#packages h2 {
+#packages h2,
+.packagelist h2 {
 	float: left;
 }
 
