@@ -118,7 +118,7 @@ if (count($dependencies) > 0):
 <?php
 
 foreach ($dependencies as $name => $package) {
-    echo '<li>' . $name . '</li>';
+    echo '<li><a href="http://'.$name.'">' . $name . '</a></li>';
 }
 
 ?>
