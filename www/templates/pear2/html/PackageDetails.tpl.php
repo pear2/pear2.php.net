@@ -61,10 +61,10 @@ if (count($context->maintainer) === 0) {
     echo '<span class="package-unmaintained">none</span>';
 } else {
     echo '                <ul class="package-maintainers">' . "\n";
-    foreach ($context->maintainer as $maintainer) {
+    foreach ($context->maintainer as $handle=>$maintainer) {
         echo '                    <li>';
         echo '<a href="#">' . $maintainer->name . '</a>';
-        echo ' (' . $maintainer->role . ')';
+        echo ' [' . $handle .'] (' . $maintainer->role . ')';
         echo '</li>' . "\n";
     }
     echo '                </ul>' . "\n";
