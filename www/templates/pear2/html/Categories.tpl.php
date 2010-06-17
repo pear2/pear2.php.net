@@ -19,6 +19,7 @@ $packagesPerCategory = 4;
 
 $categoryCount = 0;
 foreach ($context as $category) {
+
     $class = ($categoryCount % $categoriesPerRow === 0) ?
         'category category-clear' : 'category';
 
@@ -27,7 +28,7 @@ foreach ($context as $category) {
     echo '<li class="' . $class . '">';
 
     echo '<h3>';
-    echo '<a href="#">';
+    echo '<a href="' . PEAR2\SimpleChannelFrontend\Main::getURL() . 'categories/' . $category->name . '">';
     echo '<span class="category-title">' . $category->name . '</span> ';
     echo '<span class="category-count">' . $packageCount . '</span>';
     echo '</a>';

@@ -20,7 +20,7 @@ $savant->setClassToTemplateMapper(
 );
 $savant->setTemplatePath(
     array(
-        __DIR__ . '/templates/default/html',
+//        __DIR__ . '/templates/default/html',
         __DIR__ . '/templates/pear2/html'
     )
 );

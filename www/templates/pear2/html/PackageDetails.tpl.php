@@ -52,6 +52,8 @@ if ($licenseURI) {
             <th>Bugs:</th>
             <td></td>
         </tr -->
+
+<?php if ($parent->parent->context->options['view'] === 'package') { ?>
         <tr>
             <th>Maintainers:</th>
             <td>
@@ -73,5 +75,22 @@ if (count($context->maintainer) === 0) {
 ?>
             </td>
         </tr>
+<?php } else { ?>
+        <tr>
+            <th>Maintained:</th>
+            <td>
+<?php
+
+if (count($context->maintainer) === 0) {
+    echo '<span class="package-unmaintained">no</span>';
+} else {
+    echo '<span class="package-maintained">yes</span>';
+}
+
+?>
+            </td>
+        </tr>
+<?php } ?>
+
     </tbody>
 </table>
