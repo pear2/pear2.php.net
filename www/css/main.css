@@ -202,6 +202,10 @@ input[type=radio] {
 	margin-left: 4px;
 }
 
+#header #top h1 a:hover span {
+	text-decoration: underline;
+}
+
 #header #session {
 	padding: 6px;
 	font-size: 13px;
