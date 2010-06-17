@@ -44,13 +44,22 @@ strong {
 	font-weight: bold;
 }
 
-.clearfix::after {
+
+/* Clearing container fix */
+
+.clearfix:after {
 	display: block;
 	content: '.';
 	visibility: hidden;
 	height: 0;
 	clear: both;
 }
+
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+
 
 .content {
 	width: 900px;
