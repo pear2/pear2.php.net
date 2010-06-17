@@ -45,3 +45,5 @@ foreach ($context as $key => $package) {
 
             </div>
         </div>
+
+<?php echo $savant->render(null, 'OtherChannelsNote.tpl.php'); ?>
