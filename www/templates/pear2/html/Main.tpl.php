@@ -23,14 +23,10 @@
 <div id="header">
 
     <div id="top">
-        <div class="content">
+        <div class="content clearfix">
 <?php
 
-PEAR2Web\MenuDisplayer::display(
-    PEAR2\SimpleChannelFrontend\Main::getURL(),
-    PEAR2Web\Menu::$data,
-    $context->options['view']
-);
+echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
 
 ?>
         </div>
@@ -39,7 +35,7 @@ PEAR2Web\MenuDisplayer::display(
     <?php if ($context->options['view'] == 'news'): ?>
 
     <div id="mid">
-        <div class="content">
+        <div class="content clearfix">
 
             <div class="left">
                 <h2>What is PEAR?</h2>
@@ -53,8 +49,6 @@ PEAR2Web\MenuDisplayer::display(
                     <a class="button" href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">Download Pyrus ↴</a>
                 </div>
             </div>
-
-            <div class="clearfix"></div>
 
         </div>
     </div>
@@ -92,10 +86,7 @@ PEAR2Web\MenuDisplayer::display(
 
 <?php
 
-PEAR2Web\MenuDisplayer::displayFooter(
-    PEAR2\SimpleChannelFrontend\Main::getURL(),
-    PEAR2Web\Menu::$data
-);
+echo $savant->render(new PEAR2Web\Menu(), 'MenuFoot.tpl.php');
 
 ?>
 

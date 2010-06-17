@@ -47,10 +47,7 @@ echo $savant->render(
 
 <?php
 
-echo $savant->render(
-    $context,
-    'PackageDetails.tpl.php'
-);
+echo $savant->render($context, 'PackageDetails.tpl.php');
 
 ?>
 

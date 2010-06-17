@@ -14,10 +14,7 @@ foreach ($context as $date => $package) {
     $packageURL = PEAR2\SimpleChannelFrontend\Main::getURL()
         . $package->name;
 
-    $packageTitle = htmlspecialchars(
-        str_replace('PEAR2_', '', $package->name)
-    );
-
+    $packageTitle  = str_replace('PEAR2_', '', $package->name);
     $packageTitle .= '-' . $package->version['release'];
 
     $releaseDate = date('F j', strtotime($date));

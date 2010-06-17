@@ -12,7 +12,7 @@ $packagesPerCategory = 4;
                 <h2>Packages</h2>
                 <?php echo $savant->render(null, 'SearchForm.tpl.php'); ?>
             </div>
-            <div class="pearbox-content">
+            <div class="pearbox-content clearfix">
 
                 <ul class="categories">
 <?php
@@ -23,13 +23,12 @@ foreach ($context as $category) {
         'category category-clear' : 'category';
 
     $packageCount = count($category);
-    $categoryName = htmlspecialchars($category->name);
 
     echo '<li class="' . $class . '">';
 
     echo '<h3>';
     echo '<a href="#">';
-    echo '<span class="category-title">' . $categoryName . '</span> ';
+    echo '<span class="category-title">' . $category->name . '</span> ';
     echo '<span class="category-count">' . $packageCount . '</span>';
     echo '</a>';
     echo '</h3>';
@@ -50,11 +49,9 @@ foreach ($context as $category) {
                 break;
             } else {
                 $packageHref = PEAR2\SimpleChannelFrontend\Main::getURL()
-                    . htmlspecialchars($package->name);
+                    . $package->name;
 
-                $packageName = htmlspecialchars($package->name);
-
-                echo '<a href="' . $packageHref . '">' . $packageName . '</a>';
+                echo '<a href="' . $packageHref . '">' . $package->name . '</a>';
             }
 
             echo '</li>';
@@ -70,8 +67,6 @@ foreach ($context as $category) {
 
 ?>
                 </ul>
-
-                <div class="clearfix"></div>
 
             </div>
         </div>

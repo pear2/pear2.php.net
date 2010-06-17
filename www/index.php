@@ -4,7 +4,6 @@ require_once dirname(__FILE__).'/../config.inc.php';
 require_once dirname(__FILE__).'/../src/PEAR2Web/Router.php';
 require_once dirname(__FILE__).'/../src/PEAR2Web/License.php';
 require_once dirname(__FILE__).'/../src/PEAR2Web/Menu.php';
-require_once dirname(__FILE__).'/../src/PEAR2Web/MenuDisplayer.php';
 
 $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 

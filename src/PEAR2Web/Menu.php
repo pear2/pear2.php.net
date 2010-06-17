@@ -4,7 +4,7 @@ namespace PEAR2Web;
 
 class Menu
 {
-    public static $data = array(
+    public $data = array(
 
         'packages'      => array(
             'title'     => 'Packages',

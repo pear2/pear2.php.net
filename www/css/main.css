@@ -44,7 +44,11 @@ strong {
 	font-weight: bold;
 }
 
-.clearfix {
+.clearfix::after {
+	display: block;
+	content: '.';
+	visibility: hidden;
+	height: 0;
 	clear: both;
 }
 

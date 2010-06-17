@@ -15,7 +15,6 @@ default:
 $releaseDateISO = $context->date . 'T' . $context->time;
 $releaseDate    = date('F j, Y', strtotime($releaseDateISO));
 
-$licenseName  = htmlspecialchars($context->license['name']);
 $licenseURI   = \PEAR2Web\License::getLink($context->license['name']);
 $licenseClass = \PEAR2Web\License::isValid($context->license['name']) ?
     'package-license-good' : 'package-license-bad';
@@ -38,11 +37,12 @@ $licenseClass = \PEAR2Web\License::isValid($context->license['name']) ?
 <?php
 
 if ($licenseURI) {
+    echo '                ';
     echo '<a href="' . $licenseURI . '" class="' . $licenseClass . '">';
 }
-echo $licenseName;
+echo $context->license['name'];
 if ($licenseURI) {
-    echo '</a>';
+    echo '</a>' . "\n";
 }
 
 ?>
@@ -52,9 +52,26 @@ if ($licenseURI) {
             <th>Bugs:</th>
             <td></td>
         </tr -->
-        <!-- tr>
+        <tr>
             <th>Maintainers:</th>
-            <td></td>
-        </tr -->
+            <td>
+<?php
+
+if (count($context->maintainer) === 0) {
+    echo '<span class="package-unmaintained">none</span>';
+} else {
+    echo '                <ul class="package-maintainers">' . "\n";
+    foreach ($context->maintainer as $maintainer) {
+        echo '                    <li>';
+        echo '<a href="#">' . $maintainer->name . '</a>';
+        echo ' (' . $maintainer->role . ')';
+        echo '</li>' . "\n";
+    }
+    echo '                </ul>' . "\n";
+}
+
+?>
+            </td>
+        </tr>
     </tbody>
 </table>
