@@ -5,6 +5,9 @@ require_once dirname(__FILE__).'/../src/PEAR2Web/Router.php';
 require_once dirname(__FILE__).'/../src/PEAR2Web/License.php';
 require_once dirname(__FILE__).'/../src/PEAR2Web/Menu.php';
 
+// Set preferred state to devel, so pyrus can get info on all releases
+\PEAR2\Pyrus\Config::current()->preferred_state = 'devel';
+
 $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
 $options = $_GET + PEAR2Web\Router::getRoute($_SERVER['REQUEST_URI']);
