@@ -5,7 +5,7 @@ $parent->context->page_title = $context->name . ' | Categories | ' . PEAR2\Simpl
 
 ?>
 
-        <div id="categories" class="pearbox">
+        <div id="category-packages" class="pearbox">
             <div class="pearbox-header">
                 <h2>
                     <a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/">Packages</a>

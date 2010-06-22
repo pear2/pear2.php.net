@@ -12,6 +12,10 @@
 	float: left;
 }
 
+.view-categories #categories {
+	margin-top: 0;
+}
+
 /* }}} */
 /* {{{ Category list */
 
