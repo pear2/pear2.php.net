@@ -115,6 +115,7 @@ table.package-details li {
 	color: #af351a;
 }
 
+.package-devel,
 .package-alpha {
 	color: #af351a;
 }

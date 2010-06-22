@@ -1,6 +1,9 @@
 <?php
 
 switch ($context->stability['release']) {
+case 'devel':
+    $statusClass = 'package-devel';
+    break;
 case 'alpha':
     $statusClass = 'package-alpha';
     break;

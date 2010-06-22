@@ -18,14 +18,16 @@ $parent->context->page_title = $context->name . ' | Categories | ' . PEAR2\Simpl
 <?php
 
 foreach ($context as $key => $package) {
+    $packageTitle = str_replace('PEAR2_', '', $package->name);
+    $packageHref  = PEAR2\SimpleChannelFrontend\Main::getURL()
+        . $package->name;
+
     echo '<div class="package">';
 
     echo '<div class="package-info">';
 
     echo '<div class="package-title">';
-    echo '<a href="' . PEAR2\SimpleChannelFrontend\Main::getURL()
-        . $package->name . '">' . $package->name . '</a>';
-
+    echo '<a href="' . $packageHref . '">' . $packageTitle . '</a>';
     echo '</div>';
     echo '<div class="package-description">';
     echo '<p>' . $package->summary . '</p>';

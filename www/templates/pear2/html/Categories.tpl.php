@@ -49,10 +49,11 @@ foreach ($context as $category) {
                 echo '…';
                 break;
             } else {
-                $packageHref = PEAR2\SimpleChannelFrontend\Main::getURL()
+                $packageTitle = str_replace('PEAR2_', '', $package->name);
+                $packageHref  = PEAR2\SimpleChannelFrontend\Main::getURL()
                     . $package->name;
 
-                echo '<a href="' . $packageHref . '">' . $package->name . '</a>';
+                echo '<a href="' . $packageHref . '">' . $packageTitle . '</a>';
             }
 
             echo '</li>';

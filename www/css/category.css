@@ -26,3 +26,38 @@
 }
 
 /* }}} */
+/* {{{ Category package list */
+
+.view-category .package-title {
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.view-category .package {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #d8e7d0;
+}
+
+.view-category .package:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.view-category .package-info {
+	float: left;
+	width: 415px;
+	padding-right: 10px;
+}
+
+.view-category .package-more-info {
+	margin-left: 425px;
+	padding-left: 10px;
+}
+
+.view-category .package-more-info table.package-details {
+	margin: 0;
+}
+
+/* }}} */
