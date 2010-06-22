@@ -1,0 +1,28 @@
+/**
+ * Category Page Styles
+ *
+ * @package   PEAR2Web
+ * @copyright 2010 PEAR Group
+ * @license   http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @author    Michael Gauthier <mike@silverorange.com>
+ */
+/* {{{ Category package count */
+
+#categories h2 span {
+	background: #323232;
+	color: #d0e2c6;
+	font-size: 17px;
+	margin-left: 4px;
+	padding: 1px 6px;
+	vertical-align:middle;
+	position: relative;
+	top: -1px;
+	border-radius: 18px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	-webkit-box-shadow: 0 1px 0 #fff;
+	-moz-box-shadow: 0 1px 0 #fff;
+	text-shadow: none;
+}
+
+/* }}} */

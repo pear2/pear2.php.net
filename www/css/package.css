@@ -1,29 +1,35 @@
-#package-details {
-	margin-top: 10px;
-}
+/**
+ * Package Details Page Styles
+ *
+ * @package   PEAR2Web
+ * @copyright 2010 PEAR Group
+ * @license   http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @author    Michael Gauthier <mike@silverorange.com>
+ */
+/* {{{ Layout */
 
-h3 {
+.view-package h3 {
 	margin: 20px 0 5px 0;
 }
 
-.left {
+.view-package .left {
 	width: 528px;
 	float: left;
 	margin-right: 20px;
 }
 
-.right {
+.view-package .right {
 	width: 352px;
 	float: left;
 }
 
-.signin {
+.view-package .signin {
 	margin-top: 0;
 	display: none;
 }
 
-
-/* Package Description */
+/* }}} */
+/* {{{ Package description */
 
 .package-description {
 	margin-top: 0;
@@ -77,8 +83,8 @@ h3 {
 	visibility: hidden;
 }
 
-
-/* Package Details */
+/* }}} */
+/* {{{ Package details */
 
 table.package-details {
 	margin: 1em;
@@ -129,16 +135,16 @@ table.package-details li {
 	margin-left: 0.5em;
 }
 
-
-/* Package Dependencies */
+/* }}} */
+/* {{{ Package dependencies */
 
 #content .package-dependencies ul li {
 	margin: 0 0 0 2em;
 	list-style-type: disc;
 }
 
-
-/* Package Documentation */
+/* }}} */
+/* {{{ Package documentation */
 
 .package-documentation h3 {
 	margin-top: 0;
@@ -152,8 +158,8 @@ li.package-documentation-api {
 	font-weight: bold;
 }
 
-
-/* Package Releases */
+/* }}} */
+/* {{{ Package releases */
 
 .package-releases table {
 	margin: 0;
@@ -169,8 +175,8 @@ li.package-documentation-api {
 	padding-right: 2em;
 }
 
-
-/* Package Installation */
+/* }}} */
+/* {{{ Package installation */
 
 .package-install {
 	margin: 0;
@@ -201,19 +207,22 @@ li.package-documentation-api {
 	white-space: nowrap;
 }
 
-
-/* Package Comments */
+/* }}} */
+/* {{{ Package comments */
 
 .comments .comment {
 	margin: 0 0 1.5em 0;
 }
+
 .comments .comment-title {
 	font-size: 12px;
 }
+
 .comments .comment-content {
 	margin-top: 0.5em;
 	font-size: 12px;
 }
+
 .comments .comment-content p {
 	margin:  0 0 0.5em 0;
 }
@@ -226,8 +235,8 @@ li.package-documentation-api {
 	width: 97%;
 }
 
-
-/* Package Rating Widget */
+/* }}} */
+/* {{{ Package rating widget */
 
 .package-rating {
 	margin: 0 0 1em;
@@ -300,3 +309,5 @@ li.package-documentation-api {
 	float: right;
 	padding: 0 0;
 }
+
+/* }}} */

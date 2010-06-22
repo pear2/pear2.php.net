@@ -6,11 +6,11 @@
     <title><?php echo $context->page_title; ?></title>
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/yui/2.8.0r4/build/reset-fonts/reset-fonts.css" />
     <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/main.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/packages.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/package-details.css" />
-
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/signin.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/account-request.css" />
+    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/news.css" />
+    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/search-form.css" />
+    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/categories.css" />
+    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/category.css" />
+    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/package.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>js/pearweb.js"></script>
@@ -56,7 +56,7 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
     <div id="bottom">
         <div class="content">
         <h2>Who’s Using PEAR?</h2>
-        ...
+        …
             <a href="http://digg.com/api/docs/toolkits">Digg</a>,
             <a href="http://www.doctrine-project.org/">Doctrine</a>,
             <a href="http://ezcomponents.org/">eZ Components</a>,
@@ -65,7 +65,7 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
             <a href="http://code.silverorange.com/">silverorange</a>,
             <a href="http://www.symfony-project.org/">Symfony</a>,
             <a href="http://framework.zend.com/">Zend Framework</a>
-        ...
+        …
         </div>
     </div>
 

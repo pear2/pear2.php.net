@@ -1,0 +1,126 @@
+/**
+ * News Page Styles
+ *
+ * @package   PEAR2Web
+ * @copyright 2010 PEAR Group
+ * @license   http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @author    Michael Gauthier <mike@silverorange.com>
+ */
+/* {{{ Main top feature */
+
+#header #mid {
+	clear: both;
+	padding: 20px;
+	font-size: 17px;
+	color: #fff;
+	background: #649f43;
+}
+
+#header #mid :link,
+#header #mid :visited,
+#header #mid :link:hover,
+#header #mid :visited:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+#header #mid .left {
+	width: 440px;
+	float: left;
+}
+
+#header #mid .right {
+	width: 440px;
+	float: right;
+}
+
+#header #mid h2 span {
+	text-transform: uppercase;
+	color: #ffff86;
+	font-size: 15px;
+}
+
+#header #mid #download {
+	padding-top: 10px;
+}
+
+#header #mid #download a {
+	color: #646464;
+	text-decoration: none;
+}
+
+/* }}} */
+/* {{{ Featured companies bar */
+
+#header #bottom {
+	clear: both;
+	padding: 12px;
+	color: #505050;
+	background: #afd5df;
+}
+
+#header #bottom h2 {
+	margin-right: 20px;
+	font-size: 14px;
+	display: inline;
+}
+
+/* }}} */
+/* {{{ Recent packages */
+
+#recent {
+	float: left;
+	width: 595px;
+	margin: 0;
+	padding-bottom: 20px;
+}
+
+#recent-left {
+	padding: 10px 0;
+	float: left;
+	width: 290px;
+	margin: 0 15px 0 0;
+}
+
+#recent-right{
+	padding: 10px 0;
+	float: left;
+	width: 290px;
+	margin 0 15px;
+}
+
+#recent li {
+	margin: 0 0 0.3em 10px;
+}
+
+#recent li span {
+	font-size: 10px;
+	color: #505050;
+	white-space: nowrap;
+}
+
+/* }}} */
+/* {{{ News */
+
+#news {
+	float: right;
+	width: 290px;
+	margin: 0 0 0 15px;
+	padding-bottom: 20px;
+}
+
+#news ul {
+	padding: 10px 0;
+}
+
+#news li {
+	margin: 0 0 0.3em 10px;
+}
+
+#news li span {
+	font-size: 10px;
+	color: #505050;
+	white-space: nowrap;
+}
+
+/* }}} */

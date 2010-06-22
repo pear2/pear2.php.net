@@ -1,0 +1,45 @@
+/**
+ * Package Search Form Styles
+ *
+ * @package   PEAR2Web
+ * @copyright 2010 PEAR Group
+ * @license   http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @author    Michael Gauthier <mike@silverorange.com>
+ */
+/* {{{ Find Packages */
+
+#find-packages {
+	float: right;
+	padding: 2px 0px 10px 0px;
+}
+
+#find-packages input[type=submit] {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#find-packages input[type=submit]::-moz-focus-inner {
+	padding: 0;
+	border: none;
+}
+
+#find-packages input[type=search] {
+	border-right: 0;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/* }}} */

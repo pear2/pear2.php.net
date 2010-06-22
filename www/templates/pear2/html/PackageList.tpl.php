@@ -2,7 +2,7 @@
 // Set the title for the main template
 $parent->context->page_title = 'Packages | '.PEAR2\SimpleChannelFrontend\Main::$channel->name;
 ?>
-<div class="packagelist pearbox">
+<div class="package-list pearbox">
     <div class="pearbox-header">
         <h2>Available Packages</h2>
         <?php echo $savant->render(null, 'SearchForm.tpl.php'); ?>

@@ -1,3 +1,19 @@
+/**
+ * Category List Styles
+ *
+ * @package   PEAR2Web
+ * @copyright 2010 PEAR Group
+ * @license   http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @author    Michael Gauthier <mike@silverorange.com>
+ */
+/* {{{ Package browser header */
+
+.package-list h2 {
+	float: left;
+}
+
+/* }}} */
+/* {{{ Category list */
 
 ul.categories {
 	margin: 0 auto;
@@ -5,7 +21,6 @@ ul.categories {
 	font-size: 16px;
 	clear: both;
 	width: 848px;
-	background: rgba(0,0,255,0.5);
 }
 
 ul.categories a {
@@ -111,3 +126,5 @@ ul.categories .category-sub-category {
 .categories-clear {
 	clear: left;
 }
+
+/* }}} */

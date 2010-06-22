@@ -7,7 +7,7 @@ $categoriesPerRow    = 3;
 $packagesPerCategory = 4;
 
 ?>
-        <div id="packages" class="pearbox">
+        <div class="package-list pearbox">
             <div class="pearbox-header">
                 <h2>Packages</h2>
                 <?php echo $savant->render(null, 'SearchForm.tpl.php'); ?>
