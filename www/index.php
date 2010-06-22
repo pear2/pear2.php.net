@@ -8,6 +8,10 @@ require_once dirname(__FILE__).'/../src/PEAR2Web/Menu.php';
 // Set preferred state to devel, so pyrus can get info on all releases
 \PEAR2\Pyrus\Config::current()->preferred_state = 'devel';
 
+// Set 'force' option so we can get info about packages we can't actually
+// install on the Web server hosting PEAR2Web.
+\PEAR2\Pyrus\Main::$options['force'] = true;
+
 $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
 $options = $_GET + PEAR2Web\Router::getRoute($_SERVER['REQUEST_URI']);
