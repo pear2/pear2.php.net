@@ -18,6 +18,27 @@ $parent->context->page_title = $context->name . ' | Categories | ' . PEAR2\Simpl
 <?php
 
 foreach ($context as $key => $package) {
+
+    $package->figureOutBestVersion(
+        new \PEAR2\Pyrus\PackageFile\v2\Dependencies\Package(
+            'required',
+            'package',
+            null,
+            array(
+                'name'              => $package->name,
+                'channel'           => 'pear2.php.net',
+                'uri'               => null,
+                'min'               => null,
+                'max'               => null,
+                'recommended'       => null,
+                'exclude'           => null,
+                'providesextension' => null,
+                'conflicts'         => null
+            ),
+            0
+        )
+    );
+
     $packageTitle = str_replace('PEAR2_', '', $package->name);
     $packageHref  = PEAR2\SimpleChannelFrontend\Main::getURL()
         . $package->name;
