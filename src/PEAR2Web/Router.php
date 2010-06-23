@@ -37,6 +37,10 @@ class Router
 
         if ($requestURI === $base) {
             $options['view'] = 'news';
+        } elseif ($requestURI === $base . 'search/'
+            || $requestURI === $base . 'search'
+        ) {
+            $options['view'] = 'search';
         } elseif ($requestURI === $base . 'categories/') {
             $options['view'] = 'categories';
         } elseif ($requestURI === $base . 'packages/') {

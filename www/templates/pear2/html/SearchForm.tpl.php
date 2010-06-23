@@ -1,6 +1,10 @@
-<form method="get" action="." id="find-packages">
+<?php
+
+$keywords = (isset($parent->context->query)) ? $parent->context->query : null;
+
+?>
+<form method="get" action="search" id="find-packages">
     <div>
-        <input type="search" placeholder="Package name or description …" size="30" name="q" /><input class="button" value="Search" type="submit" />
-        <input type="hidden" name="view" value="search" />
+        <input type="search" placeholder="Package name or description …" size="30" name="q" value="<?php echo $keywords; ?>" /><input class="button" value="Search" type="submit" />
     </div>
 </form>
