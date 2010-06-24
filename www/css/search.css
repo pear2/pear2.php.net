@@ -1,0 +1,25 @@
+/**
+ * Package Search Styles
+ *
+ * @package   PEAR2Web
+ * @copyright 2010 PEAR Group
+ * @license   http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @author    Michael Gauthier <mike@silverorange.com>
+ */
+/* {{{ Layout */
+.view-search #search-packages {
+	margin-top: 0;
+}
+
+/* }}} */
+/* {{{ Keyword highlight */
+
+.search-keyword-highlight {
+	background: #fcf7b8;
+}
+
+a:hover .search-keyword-highlight {
+	text-decoration: underline;
+}
+
+/* }}} */

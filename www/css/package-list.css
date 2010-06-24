@@ -1,0 +1,43 @@
+/**
+ * Package List Styles
+ *
+ * @package   PEAR2Web
+ * @copyright 2010 PEAR Group
+ * @license   http://www.opensource.org/licenses/bsd-license.php BSD License
+ * @author    Michael Gauthier <mike@silverorange.com>
+ */
+/* {{{ Package list */
+
+.package-list-package .package-title {
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.package-list-package {
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #d8e7d0;
+}
+
+.package-list-package:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.package-list-package .package-info {
+	float: left;
+	width: 415px;
+	padding-right: 10px;
+}
+
+.package-list-package .package-more-info {
+	margin-left: 425px;
+	padding-left: 10px;
+}
+
+.package-list-package .package-more-info table.package-details {
+	margin: 0;
+}
+
+/* }}} */

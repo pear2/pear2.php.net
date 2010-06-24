@@ -14,58 +14,7 @@ $parent->context->page_title = $context->name . ' | Categories | ' . PEAR2\Simpl
                 </h2>
             </div>
             <div class="pearbox-content clearfix">
-
-<?php
-
-foreach ($context as $key => $package) {
-
-    $package->figureOutBestVersion(
-        new \PEAR2\Pyrus\PackageFile\v2\Dependencies\Package(
-            'required',
-            'package',
-            null,
-            array(
-                'name'              => $package->name,
-                'channel'           => 'pear2.php.net',
-                'uri'               => null,
-                'min'               => null,
-                'max'               => null,
-                'recommended'       => null,
-                'exclude'           => null,
-                'providesextension' => null,
-                'conflicts'         => null
-            ),
-            0
-        )
-    );
-
-    $packageTitle = str_replace('PEAR2_', '', $package->name);
-    $packageHref  = PEAR2\SimpleChannelFrontend\Main::getURL()
-        . $package->name;
-
-    echo '<div class="package">';
-
-    echo '<div class="package-info">';
-
-    echo '<div class="package-title">';
-    echo '<a href="' . $packageHref . '">' . $packageTitle . '</a>';
-    echo '</div>';
-    echo '<div class="package-description">';
-    echo '<p>' . $package->summary . '</p>';
-    echo '</div>';
-
-    echo '</div>';
-    echo '<div class="package-more-info">';
-
-    echo $savant->render($package, 'PackageDetails.tpl.php');
-
-    echo '</div>';
-
-    echo '</div>';
-}
-
-?>
-
+                <?php echo $savant->render($context, 'PackageList.tpl.php'); ?>
             </div>
         </div>
 

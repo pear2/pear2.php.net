@@ -56,7 +56,11 @@ if ($licenseURI) {
             <td></td>
         </tr -->
 
-<?php if ($parent->parent->context->options['view'] === 'package') { ?>
+<?php
+if (   isset($parent->parent->context->options)
+    && $parent->parent->context->options['view'] === 'package'
+) {
+?>
         <tr>
             <th>Maintainers:</th>
             <td>
