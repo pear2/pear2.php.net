@@ -8,6 +8,20 @@ $parent->context->page_title = 'Search | ' . PEAR2\SimpleChannelFrontend\Main::$
         <?php echo $savant->render(null, 'SearchForm.tpl.php'); ?>
     </div>
     <div class="pearbox-content">
-        <?php echo $savant->render($context, 'PackageList.tpl.php'); ?>
+<?php
+
+if (count($context) === 0) {
+    ?>
+    <p>No packages were found for the keywords <strong><?php echo $context->query; ?></strong>.</p>
+    <ul>
+        <li>try using less specific keywords</li>
+    </ul>
+    <?php
+} else {
+    echo $savant->render($context, 'PackageList.tpl.php');
+}
+
+?>
+
     </div>
 </div>

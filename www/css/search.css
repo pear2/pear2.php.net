@@ -23,3 +23,15 @@ a:hover .search-keyword-highlight {
 }
 
 /* }}} */
+/* {{{ No results message */
+
+.view-search ul {
+	margin: 0.5em 0;
+}
+
+.view-search ul li {
+	list-style-type: disc;
+	margin-left: 2em;
+}
+
+/* }}} */
