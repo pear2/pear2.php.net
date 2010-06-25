@@ -151,6 +151,10 @@ input[type=text] {
 	-webkit-box-shadow: inset 1px 2px 3px rgba(0,0,0,0.1);
 }
 
+input[type=search] {
+	-webkit-appearance: textfield;
+}
+
 textarea:focus,
 input[type=search]:focus,
 input[type=password]:focus,
