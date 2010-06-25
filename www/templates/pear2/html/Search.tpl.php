@@ -11,12 +11,16 @@ $parent->context->page_title = 'Search | ' . PEAR2\SimpleChannelFrontend\Main::$
 <?php
 
 if (count($context) === 0) {
-    ?>
-    <p>No packages were found for the keywords <strong><?php echo $context->query; ?></strong>.</p>
-    <ul>
-        <li>try using less specific keywords</li>
-    </ul>
-    <?php
+    if ($context->query == '') {
+        ?><p>No search keywords specified.</p><?php
+    } else {
+        ?>
+        <p>No packages were found for the keywords <strong><?php echo $context->query; ?></strong>.</p>
+        <ul>
+            <li>try using less specific keywords</li>
+        </ul>
+        <?php
+    }
 } else {
     echo $savant->render($context, 'PackageList.tpl.php');
 }
