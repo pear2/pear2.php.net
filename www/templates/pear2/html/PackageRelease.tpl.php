@@ -1,6 +1,10 @@
 <?php
-// Set the title for the main template
-$parent->context->page_title = $context->name . '-' . $context->version['release'] . ' | pear2.php.net';
+
+// Set the page title
+$parent->context->page_title = $context->name . '-'
+    . $context->version['release'] . ' - ' .
+    . PEAR2\SimpleChannelFrontend\Main::$title;
+
 ?>
 
 <div class="left">

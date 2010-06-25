@@ -1,7 +1,8 @@
 <?php
 
 // Set the page title
-$parent->context->page_title = $context->name . ' | Categories | ' . PEAR2\SimpleChannelFrontend\Main::$channel->name;
+$parent->context->page_title = $context->name . ' - Categories - '
+    . PEAR2\SimpleChannelFrontend\Main::$title;
 
 ?>
 

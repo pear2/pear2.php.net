@@ -1,6 +1,8 @@
 <?php
-// Set the title for the main template
-$parent->context->page_title = 'News | pear2.php.net';
+
+// Set the page title
+$parent->context->page_title = PEAR2\SimpleChannelFrontend\Main::$title;
+
 $rss_feed = '/var/tmp/pear/rss_cache/pear-news.xml';
 if (file_exists($rss_feed)) {
     $blog = simplexml_load_file($rss_feed);

@@ -1,6 +1,9 @@
 <?php
-// Set the title for the main template
-$parent->context->page_title = $context->name.' | pear2.php.net';
+
+// Set the page title
+$parent->context->page_title = $context->name . ' - '
+    . PEAR2\SimpleChannelFrontend\Main::$title;
+
 ?>
 
 <div class="left">
@@ -51,7 +54,7 @@ $count = 0;
 
 foreach ($context as $version => $release) {
 
-    $releaseURL = pear2\SimpleChannelFrontend\Main::getURL()
+    $releaseURL = PEAR2\SimpleChannelFrontend\Main::getURL()
         . $context->name . '-' . $version;
 
     $class = ($count % 2 === 0) ? 'odd' : 'even';

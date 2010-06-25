@@ -1,7 +1,8 @@
 <?php
 
 // Set the page title
-$parent->context->page_title = 'Categories | ' . PEAR2\SimpleChannelFrontend\Main::$channel->name;
+$parent->context->page_title = 'Categories - '
+    . PEAR2\SimpleChannelFrontend\Main::$title;
 
 $categoriesPerRow    = 3;
 $packagesPerCategory = 4;

@@ -1,6 +1,9 @@
 <?php
+
 // Set the title for the main template
-$parent->context->page_title = 'Search | ' . PEAR2\SimpleChannelFrontend\Main::$channel->name;
+$parent->context->page_title = 'Package Search - ' .
+    PEAR2\SimpleChannelFrontend\Main::$title;
+
 ?>
 <div id="search-packages" class="package-list pearbox">
     <div class="pearbox-header">
