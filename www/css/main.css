@@ -140,6 +140,7 @@ textarea,
 input[type=search],
 input[type=password],
 input[type=text] {
+	background: #fff;
 	padding: 4px;
 	border: 1px solid #999;
 	color: #646464;
