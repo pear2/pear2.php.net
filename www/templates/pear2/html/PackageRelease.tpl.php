@@ -2,7 +2,7 @@
 
 // Set the page title
 $parent->context->page_title = $context->name . '-'
-    . $context->version['release'] . ' - ' .
+    . $context->version['release'] . ' - '
     . PEAR2\SimpleChannelFrontend\Main::$title;
 
 ?>
