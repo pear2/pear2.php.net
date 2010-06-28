@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Autoload</name>
+ <channel>pear2.php.net</channel>
+ <summary>Standard Autoloader for PEAR2
+</summary>
+ <description>
+PEAR2_Autoload is the standard method of class loading for
+development and low-volume web sites using PEAR2 packages.
+
+To use:
+
+&lt;?php
+require '/path/to/PEAR2/Autoload.php';
+// now use class names from installed PEAR2
+// packages at will
+?&gt;</description>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-06-28</date>
+ <time>14:16:16</time>
+ <version>
+  <release>0.2.1</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Bugfix Release:
+* Correct case-insensitive check for vendor namespace of PEAR2 [saltybeagle]</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/Autoload.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

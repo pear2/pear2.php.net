@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_autoload">PEAR2_Autoload</p>
+ <c>pear2.php.net</c>
+ <v>0.2.1</v>
+ <a>0.1.0</a>
+ <mp>5.3.0</mp>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>Standard Autoloader for PEAR2
+</s>
+ <d>
+PEAR2_Autoload is the standard method of class loading for
+development and low-volume web sites using PEAR2 packages.
+
+To use:
+
+&lt;?php
+require '/path/to/PEAR2/Autoload.php';
+// now use class names from installed PEAR2
+// packages at will
+?&gt;</d>
+ <da>2010-06-28 14:16:16</da>
+ <n>Bugfix Release:
+* Correct case-insensitive check for vendor namespace of PEAR2 [saltybeagle]</n>
+ <f>5403</f>
+ <g>http://pear2.php.net/get/PEAR2_Autoload-0.2.1</g>
+ <x xlink:href="package.0.2.1.xml"/>
+</r>
