@@ -35,6 +35,20 @@ class Router
             . "$\n"
             . "/xi";
 
+        $fileExp = "/"
+            . "^\n"
+            . $quotedBase . "             # base\n"
+            . "(?<package>[0-9a-z_]+)     # package name\n"
+            . "(-                         # dash separator\n"
+            . "    (?<version>[0-9ab.]+)  # version\n"
+            . ")?                         # ... is optional\n"
+            . "\/files                    # file view\n"
+            . "(\/                        # file path separator\n"
+            . "    (?<file>.*)            # file path\n"
+            . ")?                         # file path is optional\n"
+            . "$\n"
+            . "/xi";
+
         if ($requestURI === $base) {
             $options['view'] = 'news';
         } elseif ($requestURI === $base . 'search/'
@@ -61,6 +75,23 @@ class Router
             if (isset($matches['version'])) {
                 $options['view']           = 'release';
                 $options['packageVersion'] = $matches['version'];
+            }
+
+        } elseif (preg_match($fileExp, $requestURI, $matches) === 1) {
+
+            // Viewing release files
+            $options['view']    = 'filebrowser';
+            $options['package'] = $matches['package'];
+
+            // Release selected
+            if (isset($matches['version'])) {
+                $options['packageVersion'] = $matches['version'];
+            }
+
+            // File browser selected
+            if (isset($matches['file']) && $matches['file'] != '') {
+                $options['file'] = $matches['file'];
+//                'PEAR2_HTTP_Request-0.2.0/php/PEAR2/HTTP/Request/Headers.php';
             }
 
         }

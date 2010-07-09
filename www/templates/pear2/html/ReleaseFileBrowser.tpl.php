@@ -5,6 +5,7 @@ $parent->context->page_title = 'File Content - '
     . PEAR2\SimpleChannelFrontend\Main::$title;
 
 ?>
+<h2>File</h2>
 <div class="file-list pearbox">
 <div class="pearbox-header">
 <h3>Files</h3>
@@ -12,7 +13,17 @@ $parent->context->page_title = 'File Content - '
 <div class="pearbox-content">
 <?php
 
-$traverseFiles = function(\RecursiveIterator $node) use (&$traverseFiles, $context)
+if (isset($context->options['packageVersion'])) {
+    $releaseRoot = $context->package->name . '-'
+        . $context->package->version['release'];
+} else {
+    $releaseRoot = $context->package->name;
+}
+
+$releaseFile = $context->package->name . '-'
+    . $context->package->version['release'] . '.tgz';
+
+$traverseFiles = function(\RecursiveIterator $node) use (&$traverseFiles, $context, $releaseFile, $releaseRoot)
 {
     echo '<ul>';
     foreach ($node as $file) {
@@ -27,10 +38,13 @@ $traverseFiles = function(\RecursiveIterator $node) use (&$traverseFiles, $conte
         } else {
             $filePath = substr(
                 $file,
-                strpos($file, $context->options['release'])
-                + strlen($context->options['release']) + 1
+                strpos($file, $releaseFile) + strlen($releaseFile) + 1
             );
-            echo '<a href="?view=filebrowser&amp;release='.$context->options['release'].'&amp;internal=' . $filePath . '">';
+
+            $fileURL = PEAR2\SimpleChannelFrontend\Main::getURL()
+                . $releaseRoot . '/files/' . $filePath;
+
+            echo '<a href="' . htmlspecialchars($fileURL) . '">';
             echo $filename;
             echo '</a>';
         }
@@ -40,7 +54,7 @@ $traverseFiles = function(\RecursiveIterator $node) use (&$traverseFiles, $conte
     echo '</ul>';
 };
 
-$node = $context->getRaw('release');
+$node = $context->getRaw('releaseFile');
 $traverseFiles($node);
 
 ?>
@@ -49,10 +63,10 @@ $traverseFiles($node);
 <div class="file-content">
 <?php
 
-if (isset($context->internal_file)) {
+if (isset($context->file)) {
     echo '<div class="file-line-numbers">';
     $count = 0;
-    foreach ($context->internal_file as $line) {
+    foreach ($context->file as $line) {
         $count++;
         $class = ($count % 2 === 0) ? 'even' : 'odd';
         $line = str_replace(' ', '&nbsp;', $line);
@@ -61,23 +75,27 @@ if (isset($context->internal_file)) {
     echo '</div>';
 }
 
-if (isset($context->internal_file)) {
-    echo '<div class="file-lines">';
+if (isset($context->file)) {
+    echo '<pre class="file-lines">';
+    echo '<code>';
     $count = 0;
-    foreach ($context->internal_file as $line) {
+    foreach ($context->file as $line) {
         $count++;
         $class = ($count % 2 === 0) ? 'even' : 'odd';
         $line = str_replace(' ', '&nbsp;', $line);
         $line = str_replace("\t", '&nbsp;&nbsp;&nbsp;&nbsp;', $line);
-        if (preg_match('/^\s+$/', $line) === 1) {
+/*        if (preg_match('/^\s+$/', $line) === 1) {
             $line = '&nbsp;';
-        }
-        echo '<div class=' . $class . '>' . $line . '</div>';
+        }*/
+        echo $line;
     }
-    echo '</div>';
+    echo '</code>';
+    echo '</pre>';
 }
-
-echo '<div class="file-end">EOF</div>';
-
 ?>
+
+<div class="file-end">EOF</div>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
 </div>

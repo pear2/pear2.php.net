@@ -25,14 +25,13 @@
 	margin: 0 1em 0 0;
 }
 
-.file-content .file-lines {
+.file-content pre {
 	overflow-x: auto;
 }
 
-.file-content .file-lines div {
-	margin: 0;
-	font-size: 12px;
-	white-space: nowrap;
+.file-content pre code {
+	line-height: 1.231;
+	font-family: "Consolas", "Monaco", "DejaVu Sans Mono", "Lucida Console", monospace;
 }
 
 .file-content .file-end {
