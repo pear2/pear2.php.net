@@ -12,18 +12,35 @@
 This package contains several custom commands for Pyrus.
 
 Included are commands for:
-* Creating pear2 and pecl package skeletons
- $ php pyrus.phar generate-pear2 MyNewPackage
+
+* Creating PEAR2 and PECL package skeletons
+    * `php pyrus.phar generate-pear2 MyNewPackage`
+    * [generate-pear2 documentation][1]
 * Creating a package.xml file
- $ php pyrus.phar make
+    * `php pyrus.phar make`
+    * [make documentation][2]
 * Packaging PEAR2 and PEAR releases
- $ php pyrus.phar package
+    * `php pyrus.phar package`
+    * [package documentation][3]
 * Running phpt tests and generating code coverage reports
- $ php pyrus.phar run-phpt -m
+    * `php pyrus.phar run-phpt -m`
+    * [run-phpt documentation][4]
+
+For more information, read the [documentation][5].
+
+[1]: http://pear.php.net/manual/en/pyrus.commands.generatepear2.php
+[2]: http://pear.php.net/manual/en/pyrus.commands.make.php
+[3]: http://pear.php.net/manual/en/pyrus.commands.package.php
+[4]: http://pear.php.net/manual/en/pyrus.commands.runphpt.php
+[5]: http://pear.php.net/manual/en/pyrus.developers.php
 </d>
    <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
   </p>
   <a>
+   <r>
+    <v>0.3.1</v>
+    <s>alpha</s>
+   </r>
    <r>
     <v>0.3.0</v>
     <s>alpha</s>
@@ -38,7 +55,7 @@ Included are commands for:
    </r>
   </a>
   <deps>
-   <v>0.3.0</v>
+   <v>0.3.1</v>
    <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.2.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}}}</d>
   </deps>
  </pi>

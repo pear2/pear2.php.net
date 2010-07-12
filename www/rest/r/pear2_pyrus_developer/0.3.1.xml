@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<p>
- <n>PEAR2_Pyrus_Developer</n>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_pyrus_developer">PEAR2_Pyrus_Developer</p>
  <c>pear2.php.net</c>
- <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <v>0.3.1</v>
+ <st>alpha</st>
  <l>New BSD License</l>
+ <m>saltybeagle</m>
  <s>Developer tools for the Pyrus installer
 </s>
  <d>
@@ -32,5 +34,12 @@ For more information, read the [documentation][5].
 [4]: http://pear.php.net/manual/en/pyrus.commands.runphpt.php
 [5]: http://pear.php.net/manual/en/pyrus.developers.php
 </d>
- <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
-</p>
+ <da>2010-07-12 09:26:58</da>
+ <n>Bugfix Release:
+
+* Fix package command failure &quot;Cannot locate PEAR2/Exception.php&quot; [saltybeagle]
+* Remove unused elements in PEAR2 package skeleton generator [saltybeagle]</n>
+ <f>67194</f>
+ <g>http://pear2.php.net/get/PEAR2_Pyrus_Developer-0.3.1</g>
+ <x xlink:href="package.0.3.1.xml"/>
+</r>
