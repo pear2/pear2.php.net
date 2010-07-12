@@ -45,6 +45,21 @@
 	overflow-y: hidden;
 }
 
+.package-description ol,
+.package-description ul {
+	margin: 0 0 0.5em 0;
+}
+
+.package-description ol li {
+	margin-left: 2em;
+	list-style-type: decimal;
+}
+
+.package-description ul li {
+	margin-left: 2em;
+	list-style-type: disc;
+}
+
 .package-description .code code {
 	font-family: "Consolas", "Monaco", "DejaVu Sans Mono", "Lucida Console", monospace;
 }
