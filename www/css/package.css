@@ -8,17 +8,20 @@
  */
 /* {{{ Layout */
 
-.view-package h3 {
+.view-package h3,
+.view-release h3 {
 	margin: 20px 0 5px 0;
 }
 
-.view-package .left {
+.view-package .left,
+.view-release .left {
 	width: 528px;
 	float: left;
 	margin-right: 20px;
 }
 
-.view-package .right {
+.view-package .right,
+.view-release .right {
 	width: 352px;
 	float: left;
 }
