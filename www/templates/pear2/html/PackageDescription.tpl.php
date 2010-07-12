@@ -1,7 +1,7 @@
             <p>
                 <?php
                 $markdown = new \PEAR2\Text\Markdown_Extra();
-                echo $markdown->transform($context->description);
+                echo $markdown->transform($context->getRaw('description'));
                 ?>
             </p>
 
@@ -10,7 +10,7 @@
                 <p>
                 <?php
                 $markdown = new \PEAR2\Text\Markdown_Extra();
-                echo $markdown->transform($context->notes);
+                echo $markdown->transform($context->getRaw('notes'));
                 ?>
                 </p>
             </div>
