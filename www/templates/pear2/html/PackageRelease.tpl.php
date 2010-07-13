@@ -36,26 +36,8 @@ echo $savant->render(
 );
 
 echo $savant->render($context, 'PackageDetails.tpl.php');
+echo $savant->render($context, 'PackageDependencies.tpl.php');
 
 ?>
-
-<?php
-if (count($context->dependencies['required']->package) > 0):
-?>
-    <div class="package-dependencies">
-        <h3>Dependencies for <?php echo $context->name; ?></h3>
-        <ul>
-
-<?php
-
-foreach ($context->dependencies['required']->package as $name => $package) {
-    echo '<li><a href="http://'.$name.'">' . $name . '</a></li>';
-}
-
-?>
-        </ul>
-    </div>
-
-<?php endif; ?>
 
 </div>
