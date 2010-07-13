@@ -35,9 +35,8 @@ if (isset($context->options['file'])) {
                 echo '-<a href="' . $releaseURL . '">' . $context->package->version['release'] . '</a>';
             }
 
-            echo ' › ';
-
             if (isset($context->options['file'])) {
+                echo ' › ';
                 echo '<span>' . $context->options['file'] . '</span>';
             }
             ?>
