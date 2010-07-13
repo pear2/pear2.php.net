@@ -84,14 +84,13 @@ class Router
             $options['package'] = $matches['package'];
 
             // Release selected
-            if (isset($matches['version'])) {
+            if (isset($matches['version']) && $matches['version'] != '') {
                 $options['packageVersion'] = $matches['version'];
             }
 
             // File browser selected
             if (isset($matches['file']) && $matches['file'] != '') {
                 $options['file'] = $matches['file'];
-//                'PEAR2_HTTP_Request-0.2.0/php/PEAR2/HTTP/Request/Headers.php';
             }
 
         }
