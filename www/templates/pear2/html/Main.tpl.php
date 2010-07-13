@@ -97,9 +97,10 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuFoot.tpl.php');
 
             <p class="note">
             Copyright © 2001-2010 The PEAR Group, all rights reserved. Bandwidth and
-            hardware provided by Pair Networks. PEAR is a framework and distribution
-            system for reusable PHP components. You can find out more information
-            about PEAR in the <a href="#">online manual</a>.
+            hardware provided by <a href="http://www.pair.com/">pair Networks</a>.
+            Site design provided by <a href="http://www.silverorange.com">silverorange</a>.
+            PEAR is a framework and distribution system for reusable PHP components. You
+            can find out more information about PEAR in the <a href="#">online manual</a>.
             </p>
 
         </div>
