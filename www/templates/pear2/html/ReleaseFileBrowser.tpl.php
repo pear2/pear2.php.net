@@ -7,6 +7,9 @@ if (isset($context->options['packageVersion'])) {
     $releaseRoot = $context->package->name;
 }
 
+$packageURL = PEAR2\SimpleChannelFrontend\Main::getURL()
+    . $context->package->name;
+
 $releaseURL = PEAR2\SimpleChannelFrontend\Main::getURL()
     . $releaseRoot;
 
@@ -25,10 +28,19 @@ if (isset($context->options['file'])) {
 <div class="file-title pearbox">
     <div class="pearbox-header">
         <h2>
-            <a href="<?php echo $releaseURL; ?>"><?php echo $releaseRoot; ?></a> ›
-            <?php if (isset($context->options['file'])) { ?>
-                <span><?php echo $context->options['file']; ?></span>
-            <?php } ?>
+            <?php
+            echo '<a href="' . $packageURL . '">' . $context->package->name . '</a>';
+
+            if (isset($context->options['packageVersion'])) {
+                echo '-<a href="' . $releaseURL . '">' . $context->package->version['release'] . '</a>';
+            }
+
+            echo ' › ';
+
+            if (isset($context->options['file'])) {
+                echo '<span>' . $context->options['file'] . '</span>';
+            }
+            ?>
         </h2>
     </div>
 </div>
