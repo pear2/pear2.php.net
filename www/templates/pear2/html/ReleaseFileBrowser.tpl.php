@@ -11,8 +11,15 @@ $releaseURL = PEAR2\SimpleChannelFrontend\Main::getURL()
     . $releaseRoot;
 
 // Set the page title
-$parent->context->page_title = 'File Content - '
-    . PEAR2\SimpleChannelFrontend\Main::$title;
+if (isset($context->options['file'])) {
+    $parent->context->page_title = $context->options['file'] . ' - '
+        . $releaseRoot . ' - '
+        . PEAR2\SimpleChannelFrontend\Main::$title;
+} else {
+    $parent->context->page_title = 'Files - '
+        . $releaseRoot . ' - '
+        . PEAR2\SimpleChannelFrontend\Main::$title;
+}
 
 ?>
 <div class="file-title pearbox">
