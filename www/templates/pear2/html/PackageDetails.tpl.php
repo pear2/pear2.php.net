@@ -94,6 +94,9 @@ if (count($context->maintainer) === 0) {
     echo '<span class="package-maintained">yes</span>';
 }
 
+// TODO: Counting the maintainers somehow resets the package version
+//       I'm not sure what's up with that.
+
 ?>
             </td>
         </tr>

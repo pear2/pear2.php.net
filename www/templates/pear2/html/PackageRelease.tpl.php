@@ -36,6 +36,28 @@ echo $savant->render(
 );
 
 echo $savant->render($context, 'PackageDetails.tpl.php');
+
+?>
+
+<?php
+
+// reset version, maintainer count resets version for some reason
+$context->setRawVersion(
+    null,
+    array('release' => $parent->context->options['packageVersion'])
+);
+
+$filesURL = PEAR2\SimpleChannelFrontend\Main::getURL()
+    . $context->name . '-' . $context->version['release']
+    . '/files';
+
+?>
+    <div class="package-files">
+        <h3><a class="button" href="<?php echo $filesURL; ?>">Browse Files</a></h3>
+        <span class="package-files-info"><?php echo $savant->render($context, 'PackageFileInfo.tpl.php'); ?>
+    </div>
+<?php
+
 echo $savant->render($context, 'PackageDependencies.tpl.php');
 
 ?>
