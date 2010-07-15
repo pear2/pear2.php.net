@@ -131,6 +131,7 @@ a.button-small {
 	padding: 2px 12px;
 }
 
+a.button:hover,
 a.button-small:hover {
 	text-decoration: none;
 	cursor: default;

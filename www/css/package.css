@@ -178,7 +178,25 @@ li.package-documentation-api {
 }
 
 /* }}} */
+/* {{{ Browse files */
+
+.package-files {
+	margin: 15px 0 5px 1.8em;
+}
+
+.package-files h3 {
+	font-size: 13px;
+	display: inline;
+	margin: 0 0.5em 0 0;
+}
+
+/* }}} */
 /* {{{ Package releases */
+
+.package-releases h3 {
+	/* TODO: remove this when the documentation section goes live */
+	margin-top: 0;
+}
 
 .package-releases table {
 	margin: 0;

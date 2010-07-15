@@ -42,6 +42,12 @@ echo $savant->render(
 echo $savant->render($context, 'PackageDetails.tpl.php');
 
 ?>
+<?php
+
+$filesURL = PEAR2\SimpleChannelFrontend\Main::getURL()
+    . $context->name . '/files';
+
+?>
 
     <div class="package-releases">
         <h3>Release History</h3>
@@ -94,9 +100,18 @@ foreach ($context as $version => $release) {
     $count++;
 }
 
+// TODO: should iteration really modify the object?
+$context->rewind();
+$context->setRawVersion(null, array('release' => $context->key()));
+
 ?>
             </tbody>
         </table>
+    </div>
+
+    <div class="package-files">
+        <h3><a class="button" href="<?php echo $filesURL; ?>">Browse Files</a></h3>
+        <span class="package-files-info"><?php echo $savant->render($context, 'PackageFileInfo.tpl.php'); ?>
     </div>
 
 <?php
