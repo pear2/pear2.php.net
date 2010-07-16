@@ -109,6 +109,7 @@ ol li {
 }
 
 .button:active {
+	outline: none;
 	background: #ebebeb url(../img/button-bg-depressed.png) repeat-x 0 50%;
 }
 
