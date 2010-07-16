@@ -93,6 +93,8 @@ class Router
                 $options['file'] = $matches['file'];
             }
 
+        } else {
+            $options['view'] = '404';
         }
 
         return $options;
