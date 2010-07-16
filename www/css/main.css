@@ -108,6 +108,10 @@ ol li {
 	-moz-box-shadow: 0 0 0 1px rgba(255,255,255,1) inset, 0 1px 3px -1px rgba(0,0,0,0.3);
 }
 
+.button:active {
+	background: #ebebeb url(../img/button-bg-depressed.png) repeat-x 0 50%;
+}
+
 #mid .button {
 	border: 1px solid #fff;
 	box-shadow: 0 0 3px rgba(0,0,0,0.4);
