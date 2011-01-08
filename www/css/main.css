@@ -139,7 +139,7 @@ a.button-small {
 a.button:hover,
 a.button-small:hover {
 	text-decoration: none;
-	cursor: default;
+	cursor: pointer;
 }
 
 textarea,
