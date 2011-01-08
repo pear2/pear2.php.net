@@ -51,7 +51,7 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
                 <h2>Download Pyrus <span>New for PHP 5.3.1+!</span></h2>
                 Pyrus is a tool to manage PEAR packages. Pyrus simplifies and improves the PEAR experience.
                 <div id="download">
-                    <a class="button" href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">Download Pyrus ↴</a>
+                    <a class="button" href="http://pear2.php.net/pyrus.phar">Download Pyrus ↴</a>
                 </div>
             </div>
 
