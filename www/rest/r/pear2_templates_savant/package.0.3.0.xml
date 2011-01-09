@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Templates_Savant</name>
+ <channel>pear2.php.net</channel>
+ <summary>Savant is a powerful but lightweight object-oriented template system for PHP.
+</summary>
+ <description>
+Unlike other template systems, Savant by default does not compile your
+templates into PHP; instead, it uses PHP itself as its template language so you
+don't need to learn a new markup system.</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-01-09</date>
+ <time>06:04:12</time>
+ <version>
+  <release>0.3.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Feature Release:
+
+ - Add support for global variables, available within every template [saltybeagle]
+   Use $savant-&gt;addGlobal('var', $value);
+
+Package PEAR2_Templates_Savant API release notes for version 0.1.0.</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/test_framework.php.inc"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/string.phpt"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/object.phpt"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/Foo.tpl.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/fastcompile.phpt"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/echostring.tpl.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/array.phpt"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/string.phpt"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/raw.tpl.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/object.phpt"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/Foo.tpl.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/echostring.tpl.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/UnexpectedValueException.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/TemplateException.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/Traversable.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/ArrayAccess.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/MapperInterface.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/Main.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/FilterAbstract.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/FastCompilerInterface.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/Exception.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/CompilerInterface.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/CompilerException.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ClassToTemplateMapper.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/BasicFastCompiler.php"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/BadMethodCallException.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/templates/examples/templates/StringView.tpl.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/templates/examples/templates/stdClass.tpl.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/templates/examples/templates/MyTemplate.tpl.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/examples/basic.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/PartialSeason.tpl.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/ListItem.tpl.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/index.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/BaseballTeam.tpl.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/BaseballPlayer.tpl.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
