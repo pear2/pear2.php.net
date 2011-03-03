@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
+ <name>PEAR2_SimpleChannelFrontend</name>
+ <channel>pear2.php.net</channel>
+ <summary>A simple PEAR channel frontend that does not require a database.
+</summary>
+ <description>
+This package provides a simple frontend to a PEAR channel by directly using
+the PEAR channel files.
+
+To use, place the PEAR2_SimpleChannelFrontend-0.1.0.phar in the root of your
+channel server as index.php, and add an .htaccess file with the following:
+
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+&lt;/IfModule&gt;
+
+For a more customized interface, you can create a config.inc.php file, or
+install the package and use the files in the www_dir as a starting point for
+a fully customized PEAR channel.
+</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-03-03</date>
+ <time>10:20:04</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Package PEAR2_SimpleChannelFrontend release notes for version 0.1.0.
+
+Basic features:
+* Customizable News and Support pages
+* Package pages with download links
+* Category listing
+
+
+Package PEAR2_SimpleChannelFrontend API release notes for version 0.1.0.</notes>
+ <contents>
+  <dir name="/">
+   <file role="www" name="www/templates/rss/Main.tpl.php" md5sum="e7b61bc03aa4e93017da00f62f5e4edd"/>
+   <file role="www" name="www/templates/rss/LatestReleases.tpl.php" md5sum="74a22b4ca18e8026dc9117efade6f751"/>
+   <file role="www" name="www/templates/html/UnregisteredViewException.tpl.php" md5sum="ce94b621b6ecc51f886fdd7e37043d58"/>
+   <file role="www" name="www/templates/html/Support.tpl.php" md5sum="c12b8a97dfc0b84cde7c24a3b464083f"/>
+   <file role="www" name="www/templates/html/Search.tpl.php" md5sum="a4f0e62c2a2292d614bae503e663be94"/>
+   <file role="www" name="www/templates/html/PackageRelease.tpl.php" md5sum="ac51e7808601b763dcd7f081185c54d8"/>
+   <file role="www" name="www/templates/html/PackageList.tpl.php" md5sum="ea25c02c48c8de13208204567d478a96"/>
+   <file role="www" name="www/templates/html/Package.tpl.php" md5sum="86eb44cde19ee25aa2a9259edb64cb03"/>
+   <file role="www" name="www/templates/html/News.tpl.php" md5sum="63e37ff0b192c69daa025010db0c1b11"/>
+   <file role="www" name="www/templates/html/Main.tpl.php" md5sum="b99ac6e79092b6dd7ca25e58c13f1387"/>
+   <file role="www" name="www/templates/html/LatestReleases.tpl.php" md5sum="cb048366672df4ad863c27f8b64bbafa"/>
+   <file role="www" name="www/templates/html/InstallInstructions.tpl.php" md5sum="94a261527a1df56fd20104c3b2e29213"/>
+   <file role="www" name="www/templates/html/Categories.tpl.php" md5sum="7dd2e886a3cae4719420c314e4dc301c"/>
+   <file role="www" name="www/sample.htaccess" md5sum="4a02e03c71ce3b4e119c8e8665f1fbda"/>
+   <file role="www" name="www/index.php" md5sum="a0a5b130eb5b5ee1789fe55bad456ee6"/>
+   <file role="www" name="www/css/text.css" md5sum="9ab4811156ff06dca5600d6761c922b3"/>
+   <file role="www" name="www/css/scf.css" md5sum="8e577ba61d4c1d33c4c25b7394fcd8b9"/>
+   <file role="www" name="www/css/reset.css" md5sum="5eafd59c737bd3f325f00e9de44a1d3c"/>
+   <file role="www" name="www/css/images/header.png" md5sum="7a8e52bba503f1eb2901c2d50cdd5399"/>
+   <file role="www" name="www/css/all.css" md5sum="71baec421874b9ba26348716ee99c0dd"/>
+   <file role="www" name="www/css/960.css" md5sum="283b5e3843e23b5243e7507ed7fa0036"/>
+   <file role="www" name="www/config.sample.php" md5sum="69df0abc56ad9d340b58f0def6efddf4"/>
+   <file role="php" name="src/SimpleChannelFrontend/UnregisteredViewException.php" md5sum="1091411309d58179b6ad31e20dfba736"/>
+   <file role="php" name="src/SimpleChannelFrontend/TemplateMapper.php" md5sum="e0e12e8fd4a441ccfc72bac1cf1f1080"/>
+   <file role="php" name="src/SimpleChannelFrontend/Support.php" md5sum="54bd1009d90914204349493b49bad645"/>
+   <file role="php" name="src/SimpleChannelFrontend/Search.php" md5sum="926a34319b03646296768b0325b05a8a"/>
+   <file role="php" name="src/SimpleChannelFrontend/PackageRelease.php" md5sum="98121356bf5c2c0c72d1e4f18bbdcd94"/>
+   <file role="php" name="src/SimpleChannelFrontend/PackageList.php" md5sum="222e6954b218f9283b9a6301d009cd20"/>
+   <file role="php" name="src/SimpleChannelFrontend/Package.php" md5sum="40028f0c8f84e25dea8c72a9cd6dd821"/>
+   <file role="php" name="src/SimpleChannelFrontend/News.php" md5sum="fa78e1caee9560226bab41109d7fd3ab"/>
+   <file role="php" name="src/SimpleChannelFrontend/Main.php" md5sum="d438ea049c6ffb99d69d89baf643f0ee"/>
+   <file role="php" name="src/SimpleChannelFrontend/LatestReleases.php" md5sum="d309dbeda6a9d45a3fda26020fcd3499"/>
+   <file role="php" name="src/SimpleChannelFrontend/Internet.php" md5sum="e76deecb0139c233d32aedc078e8cc2b"/>
+   <file role="php" name="src/SimpleChannelFrontend/Exception.php" md5sum="83bf3a874f0c55279dd0d6d3d50e2a82"/>
+   <file role="php" name="src/SimpleChannelFrontend/Categories.php" md5sum="ab8573f53b89efd4f7f774ecb00ef6eb"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR2_Pyrus</name>
+    <channel>pear2.php.net</channel>
+   </package>
+   <package>
+    <name>PEAR2_Templates_Savant</name>
+    <channel>pear2.php.net</channel>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
+ <name>PEAR2_Text_Markdown</name>
+ <channel>pear2.php.net</channel>
+ <summary>Markdown transforms text into formatted XHTML, similar to wiki syntax.
+</summary>
+ <description>
+This is a port of Solar_Markdown.</description>
+ <lead>
+  <name>Your Name</name>
+  <user>handle</user>
+  <email>handle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-03-03</date>
+ <time>10:22:27</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Package PEAR2_Text_Markdown release notes for version 0.1.0.
+
+Change from Solar_ to PEAR2\Text\.
+
+Package PEAR2_Text_Markdown API release notes for version 0.1.0.</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Tables.xhtml" md5sum="a434b45ccd0ae31631b4c0ca45fbba5f"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Tables.text" md5sum="d0a99ff9ce75c8d0a71a6f9c3f2fc017"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Inline HTML with Markdown content.xhtml" md5sum="7bb53fe7c4a546640763a045d533fbe1"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Inline HTML with Markdown content.text" md5sum="e2d7e559701914fb8e39130583b9bb54"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Footnotes.xhtml" md5sum="927e1a8026b0fc5ffa3a9515a7a16b88"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Footnotes.text" md5sum="a07ab47badaba5827b5e836b8992a1d6"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Fenced Code Blocks.xhtml" md5sum="0a97b9991014feb60cc65480c4d26d44"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Fenced Code Blocks.text" md5sum="aa82a16947e6469b3c092326194bfe92"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Emphasis.xhtml" md5sum="a5b05d80ad6d4b3e821b995b218da0a1"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Emphasis.text" md5sum="6742f7fd01f2c6f658515f19246aa0d8"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Definition Lists.xhtml" md5sum="baedddfb4d7221d5319fca22c01df78c"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Definition Lists.text" md5sum="ba9b45c3490a94f8a70fae238bc035c3"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Abbr.xhtml" md5sum="68d09cda1ffe815ada61e1781a04dab4"/>
+   <file role="test" name="tests/mdtest/PHP Markdown Extra.mdtest/Abbr.text" md5sum="8b5649a664de8c420c086c4880c633c1"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Tight blocks.xhtml" md5sum="72608eac2ff036b7220f12e192dd060e"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Tight blocks.text" md5sum="e667ec11ec891db627e74afe1e256aa1"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Quotes in attributes.xhtml" md5sum="f9be15df2f22b2aaa0cd5427cc7747f3"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Quotes in attributes.text" md5sum="d8af0cb62962b955269fce326eadd3c7"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/PHP-Specific Bugs.xhtml" md5sum="291739f02711429577b9f6b06696540a"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/PHP-Specific Bugs.text" md5sum="de5fca382f750c5258e6b9ddd157fe9c"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Parens in URL.xhtml" md5sum="e263f41d62d3914a9c315f89868ec312"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Parens in URL.text" md5sum="98af989c0449b6a35d4544327ce8ef6c"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Nesting.xhtml" md5sum="653706019e13accce837263502f52ce2"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Nesting.text" md5sum="4055d9ed5ba4113a4d4029d99e882a00"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Mixed OLs and ULs.xhtml" md5sum="f08e639494da727aa3c0c4de2c78288f"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Mixed OLs and ULs.text" md5sum="79096c84fbd10b63e7580a034e8f9752"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/MD5 Hashes.xhtml" md5sum="a6a15521c25bb9a45a163dba1e043207"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/MD5 Hashes.text" md5sum="cfc61c8336c9c4154db7ed944d6755f1"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Links, inline style.xhtml" md5sum="eaff2b1bbd9ab1aa4c95ca1804ff94a3"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Links, inline style.text" md5sum="dfc40f3b94fc1e0515767de6b3603192"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Ins &amp; del.xhtml" md5sum="feb05e5c18569036f91f5c88b8f75ae3"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Ins &amp; del.text" md5sum="e73fa08315ebda5ded80be96f6dc916c"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Inline HTML comments.text" md5sum="0b7dff9f2ba32b8f8cdeee057208f3c5"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Inline HTML comments.html" md5sum="ae3fd281495be647fe0d396ea853f529"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Inline HTML (Span).xhtml" md5sum="5cbcb159e9685617651caea8bc171e53"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Inline HTML (Span).text" md5sum="361e0f157f36cac1ec19faf7b1fc2a34"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Inline HTML (Simple).text" md5sum="44840eb6b145708827fb231e2b762efa"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Inline HTML (Simple).html" md5sum="29c55175475e849f12f7bbc00d890f07"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Horizontal Rules.xhtml" md5sum="44c7ebb632bce14c4520527552e1cadf"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Horizontal Rules.text" md5sum="24c8620292cfa15b8ca1cdf70deffcb2"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Headers.xhtml" md5sum="c4ca11d9af978cb6b9efee8be6c72cdb"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Headers.text" md5sum="e543ee6b342dc9452f2ae3d4794a23ac"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Empty List Item.xhtml" md5sum="e543ff49292f78f860ca52193d87f292"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Empty List Item.text" md5sum="f0058c2ebb37ef7af15ffdb91a84054b"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Emphasis.xhtml" md5sum="dd89db0c425e40b3befc562a9bea44bc"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Emphasis.text" md5sum="6742f7fd01f2c6f658515f19246aa0d8"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Email auto links.xhtml" md5sum="51300acb4687cb47580489ef2ffb683b"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Email auto links.text" md5sum="b182ad7cc360e948dc464e118e2a6714"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Code Spans.xhtml" md5sum="f0a2cad59c347d98b36169a75c768031"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Code Spans.text" md5sum="b6aa755853cd62cfecb86a4d6e0de31d"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Code block on second line.xhtml" md5sum="99349aca24c8586f554b33e3898b386b"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Code block on second line.text" md5sum="422a1bf304334b3fb769958284969730"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Code block in a list item.xhtml" md5sum="dce86209acce47334705f873613b8da0"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Code block in a list item.text" md5sum="0ebbdd035be9a9c485a5bc6040e7845a"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Backslash escapes.xhtml" md5sum="150f9211a029615b086158777f9c00d2"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Backslash escapes.text" md5sum="be25e85be2e6bcc85aa57e8b8eadea22"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Auto Links.xhtml" md5sum="f935ae847a55c9df16d98506afb5955e"/>
+   <file role="test" name="tests/mdtest/PHP Markdown.mdtest/Auto Links.text" md5sum="6bc4a84f0cc82a79bdd052bee50eabd3"/>
+   <file role="test" name="tests/mdtest/mdtest.php" md5sum="76e81934d2c95c94a3edfc4b22412fe7"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Tidyness.xhtml" md5sum="3253c5e050f9f773ab5f7cf17ebde2e2"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Tidyness.text" md5sum="42d0a9261980330ffa837e44763a5826"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Tabs.xhtml" md5sum="1c14a9da73125129f9220ad3fd344a3b"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Tabs.text" md5sum="be471ea0cfa89b5d118cad411b988827"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Strong and em together.xhtml" md5sum="9560bd3ad20bebcbfd78515c4b6fadb7"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Strong and em together.text" md5sum="6a74030babc87d47ba713039d5d41017"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Ordered and unordered lists.xhtml" md5sum="51817c33c84aa57643af7e81df6be6d3"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Ordered and unordered lists.text" md5sum="243c60895c11f8602b397cc2079c5cfb"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Nested blockquotes.xhtml" md5sum="a91691c056c8ac974e5efde6fe2395ef"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Nested blockquotes.text" md5sum="aaaefdabd0491e7d831db34fcc8ca6b1"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Markdown Documentation - Syntax.xhtml" md5sum="37134e92945a9fe26687d8e3475f7f47"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Markdown Documentation - Syntax.text" md5sum="e39e5415302f85bd28062dc78ff36923"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Markdown Documentation - Basics.xhtml" md5sum="23d11e5d721a8f9065bfe8ffc7c8944b"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Markdown Documentation - Basics.text" md5sum="aefbf59b88a66bcbd9286956e4cedb97"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Literal quotes in titles.xhtml" md5sum="f7f4ae4ee7f5a56f4f867dc5dd7248a7"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Literal quotes in titles.text" md5sum="ece7daec348fbbb5cb5de9054bf699f2"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Links, shortcut references.xhtml" md5sum="6c576f2795aedc957975afcbacf51616"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Links, shortcut references.text" md5sum="71661457521373c3f5ef222a39b0e185"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Links, reference style.xhtml" md5sum="cc31d5503f79ed99a530024abef599f2"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Links, reference style.text" md5sum="bb3b226238869588d70ed3b6b4b92c01"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Links, inline style.xhtml" md5sum="a1c4bcb037c5fe1a5102fc292c1e2781"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Links, inline style.text" md5sum="558c548e6c9f56cf0992430259b028bf"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Inline HTML comments.text" md5sum="ed574b2df82da45e768833bf399cb891"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Inline HTML comments.html" md5sum="8e68c8c5cc0fcc0d320997ef662d12c3"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Inline HTML (Simple).text" md5sum="5fc08203c389b2a1678158644f57c93a"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Inline HTML (Simple).html" md5sum="337950b6069cd198195c7719cd996714"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Inline HTML (Advanced).xhtml" md5sum="bdc848222b99fe28b1927ed2887d806c"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Inline HTML (Advanced).text" md5sum="35a7961b2d32fd8b150b325e9fda93ae"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Images.xhtml" md5sum="c3848f25332e552028f4fbdc715f69ed"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Images.text" md5sum="9aa8de61ea600432a48aa8d1f17b1c3e"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Horizontal rules.xhtml" md5sum="53789d11192b977e320a26d3f3ab1f8d"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Horizontal rules.text" md5sum="94ca56c9c9ce398b55a74f758e328482"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Hard-wrapped paragraphs with list-like lines.xhtml" md5sum="8e75e1b745486b125106f47fee52982d"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Hard-wrapped paragraphs with list-like lines.text" md5sum="2b0bfa5b553cc784a17bc47f71ff0207"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Code Spans.xhtml" md5sum="5b67897e7a6b4efb2bf23b67ffcdfb3d"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Code Spans.text" md5sum="4af94801304a344bd3ca76333fd4faa0"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Code Blocks.xhtml" md5sum="cb81463a2d69dd140a3af2dc2324c952"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Code Blocks.text" md5sum="d005296529086ffa74dacb336ffa2451"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Blockquotes with code blocks.xhtml" md5sum="c2d7416e0936c9ae7ee581278b15ec9c"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Blockquotes with code blocks.text" md5sum="31183a87bccf024f5dbfed3c73e4bafb"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Backslash escapes.xhtml" md5sum="b265664ce5ae838ba5a6c9aacccd23de"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Backslash escapes.text" md5sum="507fa6a6c2404930827a4a7f1c02f324"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Auto links.xhtml" md5sum="6c71375ce8a3a310322a07d0f43a179e"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Auto links.text" md5sum="d0e723772c0233416cd96fa938a63aef"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Amps and angle encoding.xhtml" md5sum="47c07199e4671bb27a8a47bcaadd2448"/>
+   <file role="test" name="tests/mdtest/Markdown.mdtest/Amps and angle encoding.text" md5sum="55d0fc6e6ceb752afd81a205daff71da"/>
+   <file role="test" name="tests/mdtest/License.text" md5sum="751419260aa954499f7abaabaa882bbe"/>
+   <file role="test" name="tests/mdtest/index.php" md5sum="99f00dbafcca72d26d21b6cdf622c937"/>
+   <file role="test" name="tests/mdtest/Implementations/PEAR2_Text_Markdown_Extra.php" md5sum="0b0aabb07d015072b7946e3e464cb9dd"/>
+   <file role="test" name="tests/mdtest/Implementations/PEAR2_Text_Markdown.php" md5sum="1b595858c7cf797d94e1511308c68cf0"/>
+   <file role="test" name="tests/mdtest/Implementations/Markdown.pl" md5sum="8b1db1125797ac76a6206f9a181260c3"/>
+   <file role="test" name="tests/mdtest/Implementations/markdown.php" md5sum="1f3249a1b3c3bdb7c5c7c17c29d1f96b"/>
+   <file role="test" name="tests/mdtest/Implementations/markdown-extra.php" md5sum="3285a6402743f1ab2320a59f2f9060bb"/>
+   <file role="test" name="tests/mdtest/.git/refs/remotes/origin/HEAD" md5sum="73a00957034783b7b5c8294c54cd3e12"/>
+   <file role="test" name="tests/mdtest/.git/refs/heads/master" md5sum="f9ef68bc8baa158d26b1e9f4613d5db0"/>
+   <file role="test" name="tests/mdtest/.git/packed-refs" md5sum="6ea92c22b3543d78047cca5cb43a17a5"/>
+   <file role="test" name="tests/mdtest/.git/ORIG_HEAD" md5sum="f9ef68bc8baa158d26b1e9f4613d5db0"/>
+   <file role="test" name="tests/mdtest/.git/objects/pack/pack-e46f36b7aa83caf4e6dacfeb393b593aa5cd770a.pack" md5sum="6778fb11565d92e6ef6675f7772353e1"/>
+   <file role="test" name="tests/mdtest/.git/objects/pack/pack-e46f36b7aa83caf4e6dacfeb393b593aa5cd770a.idx" md5sum="d947f3ead5cc9d81058a3f1228992a4d"/>
+   <file role="test" name="tests/mdtest/.git/objects/pack/pack-a417d04a6fa3e43e6d2ba343308953da7f45aad5.pack" md5sum="caf6e72761aceb562fea7de93fc7d6e2"/>
+   <file role="test" name="tests/mdtest/.git/objects/pack/pack-a417d04a6fa3e43e6d2ba343308953da7f45aad5.idx" md5sum="c03a999181de05511b5b13ca9bdb7b53"/>
+   <file role="test" name="tests/mdtest/.git/objects/pack/pack-8ec0fca4a464366dbd1aa7d5f9e31b3529daae77.pack" md5sum="d6d00b7cbb89e5775f0bd5e3af4b82a8"/>
+   <file role="test" name="tests/mdtest/.git/objects/pack/pack-8ec0fca4a464366dbd1aa7d5f9e31b3529daae77.idx" md5sum="c749d0cd74b1b7cb46a1f22cd7214c17"/>
+   <file role="test" name="tests/mdtest/.git/logs/refs/heads/master" md5sum="be787456a31cda73017e972948770885"/>
+   <file role="test" name="tests/mdtest/.git/logs/HEAD" md5sum="be787456a31cda73017e972948770885"/>
+   <file role="test" name="tests/mdtest/.git/info/exclude" md5sum="386e004757616a9cd2ca134b541648b7"/>
+   <file role="test" name="tests/mdtest/.git/index" md5sum="0dbb264e2f9656f606218590631847e2"/>
+   <file role="test" name="tests/mdtest/.git/hooks/update.sample" md5sum="d848ae78e95416d07974bed7b610f54f"/>
+   <file role="test" name="tests/mdtest/.git/hooks/prepare-commit-msg.sample" md5sum="9ec5ea099aab5de868c07fda3669f405"/>
+   <file role="test" name="tests/mdtest/.git/hooks/pre-rebase.sample" md5sum="38742c028e17c535af900379a0e79c5b"/>
+   <file role="test" name="tests/mdtest/.git/hooks/pre-commit.sample" md5sum="e5064e2d5f15409e08e1a92a02f02488"/>
+   <file role="test" name="tests/mdtest/.git/hooks/pre-applypatch.sample" md5sum="a4a7e457b55b5ac2877f7973dbba37e9"/>
+   <file role="test" name="tests/mdtest/.git/hooks/post-update.sample" md5sum="f81a97a948f5453715d491d45323f536"/>
+   <file role="test" name="tests/mdtest/.git/hooks/post-receive.sample" md5sum="5df473ab47ebecdf0c85f5f828f42991"/>
+   <file role="test" name="tests/mdtest/.git/hooks/post-commit.sample" md5sum="61ccc7ddbd92e1ae5a978a5709db2630"/>
+   <file role="test" name="tests/mdtest/.git/hooks/commit-msg.sample" md5sum="52beae462ced3e9bf3c03d5378a606e2"/>
+   <file role="test" name="tests/mdtest/.git/hooks/applypatch-msg.sample" md5sum="9cc72dc973e24f9623bd3fe708f60ef5"/>
+   <file role="test" name="tests/mdtest/.git/HEAD" md5sum="4cf2d64e44205fe628ddd534e1151b58"/>
+   <file role="test" name="tests/mdtest/.git/FETCH_HEAD" md5sum="7ea96e4267d27435fdfe8815b852c7c8"/>
+   <file role="test" name="tests/mdtest/.git/description" md5sum="a0a7c3fff21f2aea3cfa1d0316dd816c"/>
+   <file role="test" name="tests/mdtest/.git/config" md5sum="90f4324c9f4d6bb7b7a854ab24e61c31"/>
+   <file role="test" name="tests/mdtest/.DS_Store" md5sum="4208e4a77ed495df188b700f10f4f3d9"/>
+   <file role="test" name="tests/.DS_Store" md5sum="0f59e584bb167f5af58d5d42d772202c"/>
+   <file role="php" name="src/Text/Markdown/Wiki/MethodSynopsis.php" md5sum="5bfae8b40a0de47dc162b743d370f8c9"/>
+   <file role="php" name="src/Text/Markdown/Wiki/Link.php" md5sum="63c5a3cb251100a4f7294543d0719cfd"/>
+   <file role="php" name="src/Text/Markdown/Wiki/Header.php" md5sum="47fc20e421789a176a68e7aac68dbca6"/>
+   <file role="php" name="src/Text/Markdown/Wiki/Filter.php" md5sum="99fbdaa067543bc4aeb056b2d93524f7"/>
+   <file role="php" name="src/Text/Markdown/Wiki/Escape.php" md5sum="a0be89bb40836a31873bef30d3f22776"/>
+   <file role="php" name="src/Text/Markdown/Wiki/ColorCodeBlock.php" md5sum="3d9a57fab481e4bba3d5af00e412cc64"/>
+   <file role="php" name="src/Text/Markdown/Wiki.php" md5sum="cc1160530c84856a6524834cb3783db7"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Uri.php" md5sum="664be2f1737231fd656b50daa2afa3dc"/>
+   <file role="php" name="src/Text/Markdown/Plugin/StripLinkDefs.php" md5sum="fd3304033ba6349e030caf655d8d1fa5"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Prefilter.php" md5sum="f46a9052dd86ad08188fa8e5cea81b67"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Paragraph.php" md5sum="650ef5555ae142bb5574665f1c7f6607"/>
+   <file role="php" name="src/Text/Markdown/Plugin/List.php" md5sum="69ebeb5b80295626cb3c862bff3b0899"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Link.php" md5sum="d44c6626a9351c6f9cec78f2398a1143"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Image.php" md5sum="c34bb2e77531dd2e239fd2c3679445f9"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Html.php" md5sum="02bdf88efcc714cbd93329e68a8442f0"/>
+   <file role="php" name="src/Text/Markdown/Plugin/HorizRule.php" md5sum="5431a28542ba3946ccca4574b7b3ebaf"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Header.php" md5sum="af59fe292e9144e2398f30515be25cea"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Encode.php" md5sum="4ad0812b800f40508d5734fc5bcd5e6f"/>
+   <file role="php" name="src/Text/Markdown/Plugin/EmStrong.php" md5sum="dd0503953e50f192b86f5f14b5fa20c5"/>
+   <file role="php" name="src/Text/Markdown/Plugin/CodeSpan.php" md5sum="0a390d6d4d1d128c8137839dae7c8382"/>
+   <file role="php" name="src/Text/Markdown/Plugin/CodeBlock.php" md5sum="1d28f24d3b3f45105bb1a54eee51c0af"/>
+   <file role="php" name="src/Text/Markdown/Plugin/Break.php" md5sum="2d644956c7a206f55a0084745cfb1330"/>
+   <file role="php" name="src/Text/Markdown/Plugin/BlockQuote.php" md5sum="bc3ce8ab0128de99e71fac6cee2d4f44"/>
+   <file role="php" name="src/Text/Markdown/Plugin/AmpsAngles.php" md5sum="d0dbfd7dfc38cd9edb23602b698b70b3"/>
+   <file role="php" name="src/Text/Markdown/Plugin.php" md5sum="7511f6600c667bc8819c011ff873ede4"/>
+   <file role="php" name="src/Text/Markdown/Main.php" md5sum="4e7418712375b883ef3b3b430cccc182"/>
+   <file role="php" name="src/Text/Markdown/Extra/Table.php" md5sum="b7ede0499cd53e9535e1a43e214f123e"/>
+   <file role="php" name="src/Text/Markdown/Extra/Header.php" md5sum="b6d1e6543e420081ba804f74156757e3"/>
+   <file role="php" name="src/Text/Markdown/Extra/EmStrong.php" md5sum="92d326fa00410aa47622975748de92c3"/>
+   <file role="php" name="src/Text/Markdown/Extra/DefList.php" md5sum="29989e4a7f5171d7bc26b2b1507fc1fe"/>
+   <file role="php" name="src/Text/Markdown/Extra.php" md5sum="204256aa31c7b6f9235f0bd2072117cd"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/VariableList.php" md5sum="9a9f640f44a542d681b1c7eb41b31fec"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/Uri.php" md5sum="f35453852612a2424b0b8759b6668813"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/Table.php" md5sum="c81a92d51a9742a625cac2654e17551f"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/Section.php" md5sum="3d604c2f0d228b797a75a2a78734d4e4"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/Screen.php" md5sum="25c5a1a263e5be53f7ed35801a7bb3bc"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/ProgramListing.php" md5sum="3b81c311f1de854e3f0e1b9f50b7ce03"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/Paragraph.php" md5sum="c9561c66493dc1dbe6776b24978285d1"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/MethodSynopsis.php" md5sum="005053d8d80ac506a2f439f79956e22c"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/Literal.php" md5sum="b026f7f0b022b7a56d24bb33d4b69ef4"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/List.php" md5sum="a0e563b38fa4780ea4b7056929d73ba7"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/Link.php" md5sum="ce06b96d72cbad8ac9f98ee5a9748b05"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/EmStrong.php" md5sum="5a591efda3a303cdff42cb2a3e9e460e"/>
+   <file role="php" name="src/Text/Markdown/Apidoc/ClassPage.php" md5sum="b5e670d7247e3570be2b12fa2381fc47"/>
+   <file role="php" name="src/Text/Markdown/Apidoc.php" md5sum="bf39c81cef5534019adb80eea2d3725b"/>
+   <file role="php" name="src/Text/.DS_Store" md5sum="194577a7e20bdcc7afbb718f502c134c"/>
+   <file role="php" name="src/.DS_Store" md5sum="9d7cc3478ae22c813ef596d4b3fab4f0"/>
+   <file role="doc" name="examples/example1.php" md5sum="56d409a44a9dc61e96fbc951825d8c17"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_MultiErrors</name>
+ <channel>pear2.php.net</channel>
+ <summary>PEAR2_MultiErrors provides a simple and effective mechanism for aggregating many errors and organizing them by severity.
+</summary>
+ <description>
+Errors are represented by PHP's built in exception object, and
+severity levels are represented by PHP's pre-defined error levels
+E_ERROR, E_WARNING, or E_NOTICE.  Adding errors to the PEAR2_MultiErrors
+object is simple, and done like adding to an array.  Retrieving errors can
+be done with iteration, and count() can be used to determine whether errors
+were added.
+
+&lt;?php
+include '/path/to/PEAR2/Autoload.php';
+$a = new PEAR2\MultiErrors;
+$a-&gt;E_ERROR[] = new Exception('message one');
+$a-&gt;E_WARNING[] = new PEAR2\Blah\Exception('message two');
+// iterate over all errors
+foreach ($a as $error) {...}
+// iterate over E_ERROR severity
+foreach ($a-&gt;E_ERROR as $error) {...}
+count($a); // 2
+count($a-&gt;E_ERROR); // 1
+count($a-&gt;E_WARNING); // 1
+count(E_NOTICE); // 0
+?&gt;
+
+Used in conjuction with PEAR2\Exception, it can also be used as a &quot;cause&quot;
+of an Exception:
+
+&lt;?php
+include '/path/to/PEAR2/Autoload.php';
+$a = new PEAR2\MultiErrors;
+$a-&gt;E_ERROR[] = new Exception('message one');
+$a-&gt;E_ERROR[] = new PEAR2\Blah\Exception('message two');
+throw new PEAR2\My\Exception('task failed', $a);
+?&gt;</description>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-03-03</date>
+ <time>10:18:45</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Convert namespace to PEAR2</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/MultiErrors/Exception.php" md5sum="100c2a1919299ede759a82d939979775"/>
+   <file role="php" name="php/PEAR2/MultiErrors.php" md5sum="acaa8108382210fa3211d38fa7b5a4b1"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

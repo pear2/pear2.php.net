@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_HTTP_Request</name>
+ <channel>pear2.php.net</channel>
+ <summary>Class to perform HTTP requests. Uses an adapter based system for performing those requests
+</summary>
+ <description>
+Please see the examples dir for basic usage
+
+Adapters are available for based on the following code and are used in this order:
+PEAR2\HTTP\Request\Adapter\Http (uses the Pecl Http class)
+PEAR2\HTTP\Request\Adapter\Curl (based on the curl extension, not complete)
+PEAR2\HTTP\Request\Adapter\Phpstream (based on the http php stream code)
+PEAR2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+
+Additional adapters:
+PEAR2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
+</description>
+ <lead>
+  <name>Joshua Eichorn</name>
+  <user>jeichorn</user>
+  <email>josh@bluga.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>David Coallier</name>
+  <user>davidc</user>
+  <email>davidc@php.net</email>
+  <active>yes</active>
+ </lead>
+ <helper>
+  <name>Richard Heyes</name>
+  <user>rheyes</user>
+  <email>richard@php.net</email>
+  <active>yes</active>
+ </helper>
+ <helper>
+  <name>Alexey Borzov</name>
+  <user>avb</user>
+  <email>borz_off@cs.msu.su</email>
+  <active>yes</active>
+ </helper>
+ <helper>
+  <name>Elizabeth Marie Smith</name>
+  <user>auroraeosrose</user>
+  <email>auroraeosrose@php.net</email>
+  <active>yes</active>
+ </helper>
+ <helper>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </helper>
+ <date>2011-03-03</date>
+ <time>10:18:45</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Convert namespace to PEAR2</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/_setup.php" md5sum="6b725a8509f04810db4469118212c784"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test003.png" md5sum="3e4c6173971d58992d2f87f7045619f8"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test002.php" md5sum="52b6ee1881e5625548ae6ec5b32a934d"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/test001.html" md5sum="2205e48de5f93c784733ffcca841d2b5"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/testFiles/mktestFiles.sh" md5sum="20dc51bd4602de131e72693a3cae30b6"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/post.001.php" md5sum="1538cad771c1f9762b05f1d6c44de0c6"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/get.002.php" md5sum="7d7ae344703b3c2948a2b49df0e3e07a"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/shared/get.001.php" md5sum="f02d0eb1bb9cd1bfccca575130bb6783"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpstream/post.001.phpt" md5sum="35cab8fa8fcf3ff8677f3df70224af7e"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpstream/get.002.phpt" md5sum="48ec3062170b811e0b1894314f55b8a8"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpstream/get.001.phpt" md5sum="b0af9db9c3a8b622433f6f8fdd897751"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpsocket/post.001.phpt" md5sum="cabf3c7c3cd4d34caf680c7f8e5e7732"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpsocket/get.002.phpt" md5sum="651c72cc8df15ef21a93207306099e49"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/phpsocket/get.001.phpt" md5sum="c54c3ef4a1b51e0bfedf11e46fc2da66"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/http/post.001.phpt" md5sum="f5e7c2a20c9ccef398dd75ab7d19d787"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/http/get.002.phpt" md5sum="20b3f49f3b48e7735a19d5396615c025"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/http/get.001.phpt" md5sum="117b65fea026a9b867132991ea8f6e97"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.004.phpt" md5sum="badc84985b8e1ab0daf7b7bd22ab00a9"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.003.phpt" md5sum="cbd5096b63d9ec28e2701cd40d2e3c01"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.002.phpt" md5sum="904cc7647b16859af587500fdce1cb9c"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/headers.001.phpt" md5sum="d1dcebc2ff7a1886e3c3c9ffd67519af"/>
+   <file role="test" name="test/PEAR2_HTTP_Request/pear2.php.net/get_large_file.phpt" md5sum="36db23e119bc2bf189ecf8c430ca04dc"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Uri.php" md5sum="a81345d471f3197ad6c83573fa59432a"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Response.php" md5sum="9c6768df166d47eab5c69a0e701fe9d1"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Listener.php" md5sum="0edb3ed90b6a95cd6f6267a197765d0f"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Headers.php" md5sum="314f86e1c623830bf0ad57a78e346c24"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Exception.php" md5sum="dd30272c0608d7b136cd5994ec7598dd"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/allfiles.php" md5sum="f8410c16194b395836e6a29e7d9c448d"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Phpstream.php" md5sum="8d6f7233e138e00978094b979de14bfd"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Phpsocket.php" md5sum="461d76a0376dbb04b0778db49d16c466"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Http.php" md5sum="b186ff8eab47e1d36105017ebce4fd25"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Filesystem.php" md5sum="a8a3c8d9f522c51cb6b9f570203dd8bc"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter/Curl.php" md5sum="4d1018d7d9a5e41c352954a88c55d526"/>
+   <file role="php" name="php/PEAR2/HTTP/Request/Adapter.php" md5sum="dd0056fdf2e138407c1400fdf619e255"/>
+   <file role="php" name="php/PEAR2/HTTP/Request.php" md5sum="b2b51323398b9e97ef951f08724d009b"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/post.php" md5sum="059c13ebb87322170bb15bb33ff6a0b6"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/head.php" md5sum="bc15667952f5dcf90db2fb8e053ce0f8"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/get.php" md5sum="36d51ae388fc9e440cdfc21a913a88b4"/>
+   <file role="doc" name="doc/PEAR2_HTTP_Request/pear2.php.net/examples/examples/adapter.php" md5sum="be8a70c215b6cd0554bb5ed8661f30d7"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

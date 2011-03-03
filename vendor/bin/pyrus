@@ -1,0 +1,37 @@
+#!/usr/bin/env php
+<?php
+if (version_compare(phpversion(), '5.3.1', '<')) {
+    if (substr(phpversion(), 0, 5) != '5.3.1') {
+        // this small hack is because of running RCs of 5.3.1
+        echo "Pyrus requires PHP 5.3.1 or newer.\n";
+        exit -1;
+    }
+}
+
+foreach (array('phar', 'spl', 'pcre', 'simplexml', 'libxml', 'xmlreader', 'sqlite3')
+         as $ext) {
+    if (!extension_loaded($ext)) {
+        echo "The $ext extension is required.\n"
+             . "You must compile PHP with $ext enabled, "
+             . "or install the necessary extension for your distribution.\n";
+        exit -1;
+    }
+}
+
+// Reject old libxml installations
+if (version_compare(LIBXML_DOTTED_VERSION, '2.6.17', '<')) {
+    echo "Pyrus requires libxml >= 2.6.17."
+         . " Version detected: " . LIBXML_DOTTED_VERSION . "\n";
+    exit -1;
+}
+
+$autoload = '/Users/bbieber/Documents/workspace/pear2.php.net/vendor/php/PEAR2/Autoload.php';
+
+if (!file_exists($autoload)) {
+    $autoload = __DIR__ . '/../../PEAR2/autoload.php';
+}
+
+require_once $autoload;
+$frontend = new \PEAR2\Pyrus\ScriptFrontend\Commands;
+@array_shift($_SERVER['argv']);
+$frontend->run($_SERVER['argv']);

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Console_CommandLine</name>
+ <channel>pear2.php.net</channel>
+ <summary>PEAR2_Console_CommandLine is a full featured package for managing command-line
+</summary>
+ <description>options and arguments highly inspired from python optparse module, it allows
+the developer to easily build complex command line interfaces.
+
+Main features:
+* handles sub commands (ie. $ myscript.php -q subcommand -f file),
+* can be completely built from an xml definition file,
+* generate --help and --version options automatically,
+* can be completely customized,
+* builtin support for i18n,
+* and much more...
+
+</description>
+ <lead>
+  <name>David JEAN LOUIS</name>
+  <user>izi</user>
+  <email>izi@php.net</email>
+  <active>yes</active>
+ </lead>
+ <helper>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </helper>
+ <date>2011-03-03</date>
+ <time>10:18:45</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Initial port of PEAR Console_CommandLine to PEAR2.
+
+Major differences are namespace usage and no require statements.
+
+This release is in sync with pear.php.net/Console_CommandLine-1.1.3
+</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/tests.inc.php" md5sum="a6fc54aa9e4a05057e1446646929545a"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/test.xml" md5sum="a6f8a783578a38356eafca325e92b420"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_webrequest_3.phpt" md5sum="97d78ef07acd575af8b2cbfe1d37e28e"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_webrequest_2.phpt" md5sum="61edb5f0eaac6450fe627c14075d0d59"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_webrequest_1.phpt" md5sum="4060dfce206cb9cbe4eb02c9b9819d11"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_29.phpt" md5sum="e22e0bd15d9470be67ff9f4e5bc06c37"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_28.phpt" md5sum="41b183c81e1a66fc5fa894ee0b834225"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_27.phpt" md5sum="08a68c0929e3b0cc393c119e5d7b3fe5"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_26.phpt" md5sum="fa748ba9eb8859f33da218ea5158a245"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_25.phpt" md5sum="b921938416963140f71ae0243cc7a79c"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_24.phpt" md5sum="6a26a5fb608a0b9f8d4effae04ad9789"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_23.phpt" md5sum="4ae42e0d45ce6af0b8170b218d7ac2ec"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_22.phpt" md5sum="18383be7513a355d8e0298205d3e35cf"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_21.phpt" md5sum="38b6f9d1ab221f344f32b1153e970813"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_20.phpt" md5sum="46a06cdd18347a48a02cb2bc378be428"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_19.phpt" md5sum="8696ac0060ada30f7b0a1e609342bb0c"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_18.phpt" md5sum="22b0c4bc625db8433ca245be1a752284"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_17.phpt" md5sum="4d50f626a14e58dc047bba9ebc5d6715"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_16.phpt" md5sum="ec9271f2ff26208c225d60fcd6bf95a0"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_15.phpt" md5sum="4f2e697cb2db4d3141b3b2933dadce24"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_14.phpt" md5sum="588ec78b9d6faf1545e65c8109d13d49"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_13.phpt" md5sum="dabf7a4d8555941219c1641567a13d19"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_12.phpt" md5sum="1036952f917671f6bfae898efcea80ba"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_11.phpt" md5sum="af06c01bc0f8f94c0c28273e333f312f"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_10.phpt" md5sum="091f83160db7b8fe5b681ca7336b8164"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_9.phpt" md5sum="0cdb5149c7696b28a14425a97e5b224f"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_8.phpt" md5sum="e457b29cd9a948957016944a73327c1f"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_7.phpt" md5sum="47ca078a2a022218f6ba57944a7718c8"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_6.phpt" md5sum="1ca226a85d42a20987ed051f8ee64829"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_5.phpt" md5sum="b5eb21f5317b0021b5c6fb77e52036ab"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_4.phpt" md5sum="67193fc45f98a15735fb0f70ae202d9c"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_3.phpt" md5sum="a59b117f2f2ada6d6c097e887e598beb"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_2.phpt" md5sum="3f75ad650a79844049886f941003b174"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_parse_1.phpt" md5sum="96f0c448e5c90da9fc6e8d3c41389681"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_options_defaults.phpt" md5sum="f0a497d5da12384e833f4714380f76a6"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_fromxmlstring.phpt" md5sum="c93da174c832f27c8906bc1d0ce1fb8a"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_fromxmlfile_error.phpt" md5sum="eafc0b91026e6f644f16a9f518687e26"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_fromxmlfile.phpt" md5sum="654f45950ab124571a2b6938c10cb80a"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption_errors_7.phpt" md5sum="472ca3305395633a43618db23cece28a"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption_errors_6.phpt" md5sum="f469dc4e01ffa70c3ebd781d49b2dd8e"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption_errors_5.phpt" md5sum="202a2c606783ed5ae15ada78efd8756e"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption_errors_4.phpt" md5sum="9e74a90f77b39ddb70b2ebc74079559c"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption_errors_3.phpt" md5sum="e68eaa57a957d48fe2420ec7e5a9c309"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption_errors_2.phpt" md5sum="6ab8a8a02f88d96fd41fda3131224dde"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption_errors_1.phpt" md5sum="236a369d38ff00eaab2ac972b728343c"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addoption.phpt" md5sum="f80c2a2233b8628989b9dff070c2b743"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addcommand.phpt" md5sum="06662e1faacb93c5071754991d9f81e9"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_addargument.phpt" md5sum="310833535465e75ed1b25e97290e8bf0"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/console_commandline_accept.phpt" md5sum="36e50203f312e91d178682e5fae25f97"/>
+   <file role="test" name="test/PEAR2_Console_CommandLine/pear2.php.net/AllTests.php" md5sum="1d19827bc5c1a61a057ffe2387a396e5"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/XmlParser.php" md5sum="fa2a80cfc16e15429bb269ce25318baa"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Result.php" md5sum="fd72931c744a7d5f3816b6363441ba85"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Renderer/Default.php" md5sum="77d267e0fe5c782b80830ff5931fd99e"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Renderer.php" md5sum="4532a544d9344b50f2230bef45ac2f28"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Outputter/Default.php" md5sum="bf223c48163a41aa471b645c8dc5aaa2"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Outputter.php" md5sum="87855335101fe848ec9fce5eb30d747b"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Option.php" md5sum="e53fbf95999e4cc57bdc23c0bd9d0bde"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/MessageProvider/Default.php" md5sum="acb966c69c363ed305b5db74ae7903ca"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/MessageProvider.php" md5sum="9b2bf413cab647e2798c9eb832db9140"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Exception.php" md5sum="a107037374f343ea6e2ef5f255feef85"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Element.php" md5sum="37ebf8ee97d88f4eb3fda8e2840689d6"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/CustomMessageProvider.php" md5sum="115b98fd8a000b247c74f8e59746fd95"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Command.php" md5sum="225c7a93b1cd8b3c43aef10818572e9e"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Argument.php" md5sum="b19eecae6a2fbdfdff1c9b7ebdd32838"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/Version.php" md5sum="824baa5254975155e5d8c4215012ca4a"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/StoreTrue.php" md5sum="303613723ec78f0f59ff6e854868d272"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/StoreString.php" md5sum="72eaa9452c7807c01466ac08e5f6e9dc"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/StoreInt.php" md5sum="140a696e60ee1e9eb1bf4623dc00ce1e"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/StoreFloat.php" md5sum="171af27ce93b6888dc97c8b022c98841"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/StoreFalse.php" md5sum="af26e015d4d38d9bee15dacb0fe05ddd"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/StoreArray.php" md5sum="d3cb9e556cba7a917d3cf2cb828278bf"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/Password.php" md5sum="36e5c7bb83adf65453c4211551610dad"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/List.php" md5sum="56e1e18260b2038246b5b448b879ec98"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/Help.php" md5sum="0feec9c670847afb82e3f2d75120f5e7"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/Counter.php" md5sum="7998afca30b685776d47eec8d395430a"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action/Callback.php" md5sum="5ccca8558d0a5fb4935455ba59997af7"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine/Action.php" md5sum="1fac10cb55e3f684a260822846958f69"/>
+   <file role="php" name="php/PEAR2/Console/CommandLine.php" md5sum="f446a592cd5b651d58540c4e35ab2a38"/>
+   <file role="doc" name="doc/PEAR2_Console_CommandLine/pear2.php.net/examples/examples/ex4.xml" md5sum="e52db804ba092a30110c533ad83d4475"/>
+   <file role="doc" name="doc/PEAR2_Console_CommandLine/pear2.php.net/examples/examples/ex4.php" md5sum="565d7992eeab27838f4ba997f2e173df"/>
+   <file role="doc" name="doc/PEAR2_Console_CommandLine/pear2.php.net/examples/examples/ex3.php" md5sum="2598425a5e63e7226343dc9dabc5978c"/>
+   <file role="doc" name="doc/PEAR2_Console_CommandLine/pear2.php.net/examples/examples/ex2.xml" md5sum="3b3524b6fc8490c113e941cfee1792cd"/>
+   <file role="doc" name="doc/PEAR2_Console_CommandLine/pear2.php.net/examples/examples/ex2.php" md5sum="88ff5cdcb2ae1a228c0fdd450c3149a2"/>
+   <file role="doc" name="doc/PEAR2_Console_CommandLine/pear2.php.net/examples/examples/ex1.php" md5sum="a866627e222e669d4efdae7e7ccbdfb9"/>
+   <file role="data" name="data/PEAR2_Console_CommandLine/pear2.php.net/xmlschema.rng" md5sum="f38a94a3c49a39f3c9b0f1406f997ad5"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Templates_Savant</name>
+ <channel>pear2.php.net</channel>
+ <summary>Savant is a powerful but lightweight object-oriented template system for PHP.
+</summary>
+ <description>
+Unlike other template systems, Savant by default does not compile your
+templates into PHP; instead, it uses PHP itself as its template language so you
+don't need to learn a new markup system.</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-03-03</date>
+ <time>10:18:45</time>
+ <version>
+  <release>0.3.1</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Bugfix Release:
+
+ - Improve escaping of arrays
+ - Add tests for globals
+
+Package PEAR2_Templates_Savant API release notes for version 0.1.0.</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/test_framework.php.inc" md5sum="77aef1992ba0e56a57ee0807ad3a6623"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/string.phpt" md5sum="fc5844e25f29f37eb12ecf4c76b2661e"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/object.phpt" md5sum="e0b47f2dd1e8553f7cadeb463b9eaf1b"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/Foo.tpl.php" md5sum="2af7ae28b4d35227c53921eaabfaeaad"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/fastcompile.phpt" md5sum="3757fae0e3ea16ece54fbe15a91103d6"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/echostring.tpl.php" md5sum="138231e0b170c36ff602c09eaaa1690f"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/render/array.phpt" md5sum="0cd835bfd4b6bb433d211a9bca42d7b2"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/globals/escape.phpt" md5sum="09da36f4e47d615c7bec72d24cb5763c"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/globals/escape.nestedarrays.phpt" md5sum="8a5e23d6d00003bd75f7b049d14f135d"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/globals/escape.arrays.phpt" md5sum="5e3169919a327ac2741a64ba228afbf0"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/globals/basic.tpl.php" md5sum="7898705f5a0a5792a191cca28501e22e"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/globals/basic.phpt" md5sum="1f36e8ae40c81c83c95efd20207bcf9c"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/string.phpt" md5sum="b8c2702b9f60599dc5acfff2626dd9bd"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/raw.tpl.php" md5sum="2e7b87c466f106a575d6740258356109"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/object.phpt" md5sum="4fdd8b015fa348f0e5ae8994ef8290bb"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/Foo.tpl.php" md5sum="d960fd1fa4867a04702db10cda65d772"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Templates_Savant/escape/echostring.tpl.php" md5sum="a45c7c6b67b56e43935d844f358f080b"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/UnexpectedValueException.php" md5sum="6476d23be839fc97239e62845f998ae9"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/TemplateException.php" md5sum="05a33f3f0f059f6c68758a576966a312"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/Traversable.php" md5sum="263deb6dafcaba0e90f6553edf582686"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/ArrayAccess.php" md5sum="6c4a19e0feb079de2e4dfc6983547b19"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy.php" md5sum="bde09883c43b9c84b2b5c7e3029c0d2f"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/MapperInterface.php" md5sum="010c6059a851f2a89d4f4caa661ccf6f"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/Main.php" md5sum="9223c136139df8dff786e27acea3454f"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/FilterAbstract.php" md5sum="295b75cc419ff9bf02afface4227fb3b"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/FastCompilerInterface.php" md5sum="82c9f5ce0b400bb59556134b519a5332"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/Exception.php" md5sum="95f8ee4d2ca3ab754005bb47cdb37272"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/CompilerInterface.php" md5sum="20d3a4a581b1d2fbe8cb6e21a258afa3"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/CompilerException.php" md5sum="a49fd3f55ab315d02df1aa50e8e3c717"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ClassToTemplateMapper.php" md5sum="49726b3a69cecb684529545413ca87d8"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/BasicFastCompiler.php" md5sum="fa31c3640d048985bda4f2949a62d951"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/BadMethodCallException.php" md5sum="5810d771342fcc9398c88f56a076d17e"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/templates/examples/templates/StringView.tpl.php" md5sum="b4746d9c4e29624cb75c4bbf74600371"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/templates/examples/templates/stdClass.tpl.php" md5sum="ecb083ab102eac7b1bc6d5306092b36d"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/templates/examples/templates/MyTemplate.tpl.php" md5sum="b7004c1f5eed19602e5c7afe97dbbd27"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/examples/basic.php" md5sum="83f46fdb6f52ea62bc9cd5ffe33e6d04"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/PartialSeason.tpl.php" md5sum="028f2aa4e14931455bf1c2b89407def3"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/ListItem.tpl.php" md5sum="c8ec71df0cf58b6261fbac6ffddc5b75"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/index.php" md5sum="1320d6dd2ed76e3baae53b6941bcd238"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/BaseballTeam.tpl.php" md5sum="45b74b532b13da64d056c43da39cbfa2"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Templates_Savant/examples/baseball/examples/baseball/BaseballPlayer.tpl.php" md5sum="527b6bdb33fd0092ad24c3402988ec9c"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
