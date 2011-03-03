@@ -1,7 +1,7 @@
 <?php
 
 $base = PEAR2\SimpleChannelFrontend\Main::getURL();
-$keys = array_keys($context->data);
+$keys = array_keys($context->getRaw('data'));
 $last = end($keys);
 
 echo '            <div class="footer-menu-container clearfix">' . "\n";
