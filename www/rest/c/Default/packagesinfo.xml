@@ -38,6 +38,10 @@ For more information, read the [documentation][5].
   </p>
   <a>
    <r>
+    <v>0.4.0</v>
+    <s>alpha</s>
+   </r>
+   <r>
     <v>0.3.1</v>
     <s>alpha</s>
    </r>
@@ -55,8 +59,8 @@ For more information, read the [documentation][5].
    </r>
   </a>
   <deps>
-   <v>0.3.1</v>
-   <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.2.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}}}</d>
+   <v>0.4.0</v>
+   <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:8:&quot;5.3.1RC1&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}}}</d>
   </deps>
  </pi>
  <pi>

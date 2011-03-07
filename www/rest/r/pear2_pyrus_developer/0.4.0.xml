@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_pyrus_developer">PEAR2_Pyrus_Developer</p>
+ <c>pear2.php.net</c>
+ <v>0.4.0</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>Developer tools for the Pyrus installer
+</s>
+ <d>
+This package contains several custom commands for Pyrus.
+
+Included are commands for:
+
+* Creating PEAR2 and PECL package skeletons
+    * `php pyrus.phar generate-pear2 MyNewPackage`
+    * [generate-pear2 documentation][1]
+* Creating a package.xml file
+    * `php pyrus.phar make`
+    * [make documentation][2]
+* Packaging PEAR2 and PEAR releases
+    * `php pyrus.phar package`
+    * [package documentation][3]
+* Running phpt tests and generating code coverage reports
+    * `php pyrus.phar run-phpt -m`
+    * [run-phpt documentation][4]
+
+For more information, read the [documentation][5].
+
+[1]: http://pear.php.net/manual/en/pyrus.commands.generatepear2.php
+[2]: http://pear.php.net/manual/en/pyrus.commands.make.php
+[3]: http://pear.php.net/manual/en/pyrus.commands.package.php
+[4]: http://pear.php.net/manual/en/pyrus.commands.runphpt.php
+[5]: http://pear.php.net/manual/en/pyrus.developers.php
+</d>
+ <da>2011-03-07 15:40:06</da>
+ <n>New feature release:
+
+* Add --scanoptions to the make command [cellog]
+    This allows configuring several things when generating `package.xml`.
+    This option should specify the location of a php script that specifies 3
+    overrides to the default values for baseinstalldirs, for directory-&gt;role
+    mapping, and for pathnames in `package.xml`
+    
+    For example:
+
+        &lt;?php
+        // use &quot;htdocs&quot; as our web directory in the repository, instead of www
+        $scanoptions['baseinstalldirs'] = array('htdocs' =&gt; '/');
+        $scanoptions['rolemap'] = array('htdocs' =&gt; 'www');
+        $scanoptions['mappath'] = array('htdocs' =&gt; 'www');
+        
+        // ignore a library directory we install using pyrus,
+        // and a specific file
+        $scanoptions['ignore'] = array('lib' =&gt; 'dir', 'some/file.txt' =&gt; 'file');
+        ?&gt;
+
+    By default, the `make` command looks for scanoptions.php in the same directory
+    as the package.xml
+* Update source layout so files can be autoloaded from checkout [saltybeagle]
+* Add code coverage reporter to the www directory [saltybeagle]
+* For `$extrafiles`, support any object that implements `PackageInterface` [saltybeagle]
+
+Bugs fixed:
+
+* Increase minimum PHP dependency to 5.3.1RC1 [saltybeagle]
+* Prevent fatal errors when only a `package2.xml` is present, ala XML_RPC2 [clockwerx]
+* Allow `src/PEAR2` base directory for package layout [saltybeagle]
+* Fix Bug #18123 Exception when using `pyrus.phar make -n`. [saltybeagle]
+* Correct inconsitency of docs directory name. [saltybeagle]</n>
+ <f>64829</f>
+ <g>http://pear2.php.net/get/PEAR2_Pyrus_Developer-0.4.0</g>
+ <x xlink:href="package.0.4.0.xml"/>
+</r>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Pyrus_Developer</name>
+ <channel>pear2.php.net</channel>
+ <summary>Developer tools for the Pyrus installer
+</summary>
+ <description>
+This package contains several custom commands for Pyrus.
+
+Included are commands for:
+
+* Creating PEAR2 and PECL package skeletons
+    * `php pyrus.phar generate-pear2 MyNewPackage`
+    * [generate-pear2 documentation][1]
+* Creating a package.xml file
+    * `php pyrus.phar make`
+    * [make documentation][2]
+* Packaging PEAR2 and PEAR releases
+    * `php pyrus.phar package`
+    * [package documentation][3]
+* Running phpt tests and generating code coverage reports
+    * `php pyrus.phar run-phpt -m`
+    * [run-phpt documentation][4]
+
+For more information, read the [documentation][5].
+
+[1]: http://pear.php.net/manual/en/pyrus.commands.generatepear2.php
+[2]: http://pear.php.net/manual/en/pyrus.commands.make.php
+[3]: http://pear.php.net/manual/en/pyrus.commands.package.php
+[4]: http://pear.php.net/manual/en/pyrus.commands.runphpt.php
+[5]: http://pear.php.net/manual/en/pyrus.developers.php
+</description>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Helgi Þormar Þorbjörnsson</name>
+  <user>dufuz</user>
+  <email>helgi@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-03-07</date>
+ <time>15:40:06</time>
+ <version>
+  <release>0.4.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>New feature release:
+
+* Add --scanoptions to the make command [cellog]
+    This allows configuring several things when generating `package.xml`.
+    This option should specify the location of a php script that specifies 3
+    overrides to the default values for baseinstalldirs, for directory-&gt;role
+    mapping, and for pathnames in `package.xml`
+    
+    For example:
+
+        &lt;?php
+        // use &quot;htdocs&quot; as our web directory in the repository, instead of www
+        $scanoptions['baseinstalldirs'] = array('htdocs' =&gt; '/');
+        $scanoptions['rolemap'] = array('htdocs' =&gt; 'www');
+        $scanoptions['mappath'] = array('htdocs' =&gt; 'www');
+        
+        // ignore a library directory we install using pyrus,
+        // and a specific file
+        $scanoptions['ignore'] = array('lib' =&gt; 'dir', 'some/file.txt' =&gt; 'file');
+        ?&gt;
+
+    By default, the `make` command looks for scanoptions.php in the same directory
+    as the package.xml
+* Update source layout so files can be autoloaded from checkout [saltybeagle]
+* Add code coverage reporter to the www directory [saltybeagle]
+* For `$extrafiles`, support any object that implements `PackageInterface` [saltybeagle]
+
+Bugs fixed:
+
+* Increase minimum PHP dependency to 5.3.1RC1 [saltybeagle]
+* Prevent fatal errors when only a `package2.xml` is present, ala XML_RPC2 [clockwerx]
+* Allow `src/PEAR2` base directory for package layout [saltybeagle]
+* Fix Bug #18123 Exception when using `pyrus.phar make -n`. [saltybeagle]
+* Correct inconsitency of docs directory name. [saltybeagle]</notes>
+ <contents>
+  <dir name="/">
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/templates/TestSummary.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/templates/TestCoverage.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/templates/Summary.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/templates/SourceFile.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/templates/SelectDatabase.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/templates/LineSummary.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/templates/Controller.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/index.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_Pyrus_Developer/CoverageAnalyzer/cover.css"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Runphpt/Runner.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Runphpt/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/v2.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PECL/Filter.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PECL.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PEAR2SVN/Filter.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/PEAR2SVN.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/PackageFile/Commands.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Zip.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Xml.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Tar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Phar/PHPArchive.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Phar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/Creator/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/View.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/TestSummary.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/TestCoverage.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/Summary.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/SelectDatabase.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/LineSummary.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/Controller.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/ClassToTemplateMapper.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Web/Aggregator.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/test.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/test-modified.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Sqlite.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/SourceFile/PerTest.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/SourceFile.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/pear2coverage.phar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/make-coverage-phar.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Exception.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/DefaultSourceDecorator.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/Aggregator.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/Developer/CoverageAnalyzer/AbstractSourceDecorator.php"/>
+   <file role="data" name="data/pear2.php.net/PEAR2_Pyrus_Developer/phartemplate.php"/>
+   <file role="data" name="data/pear2.php.net/PEAR2_Pyrus_Developer/config.w32"/>
+   <file role="data" name="data/pear2.php.net/PEAR2_Pyrus_Developer/config.m4"/>
+   <file role="customcommand" name="customcommand/pear2.php.net/PEAR2_Pyrus_Developer/commands.xml"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.1RC1</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
