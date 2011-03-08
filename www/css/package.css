@@ -42,10 +42,16 @@
 	margin: 0 0 0.5em;
 }
 
-.package-description .code {
-	font-size: 11px;
-	overflow-x: auto;
-	overflow-y: hidden;
+.package-description code {
+	background-color: #EEEEEE;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    color: #444444;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin: 1em 0;
+    overflow: auto;
+    padding: 1px;
 }
 
 .package-description ol,
