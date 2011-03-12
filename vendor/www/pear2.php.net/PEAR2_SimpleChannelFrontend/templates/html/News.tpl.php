@@ -8,7 +8,7 @@ $parent->context->page_title = 'News | '.PEAR2\SimpleChannelFrontend\Main::$chan
     <p>Welcome to the next generation of PEAR channels.</p>
       <ol class="instructions">
             <li>Download the new PEAR installer:<br />
-                <code><a href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">pyrus.phar</a></code></li>
+                <code><a href="http://pear2.php.net/pyrus.phar">pyrus.phar</a></code></li>
             <li>Discover this channel:<br />
                 <code>$&gt;php pyrus.phar channel-discover <?php echo PEAR2\SimpleChannelFrontend\Main::$channel->name; ?></code></li>
             <li>Install packages:<br />
@@ -20,7 +20,7 @@ $parent->context->page_title = 'News | '.PEAR2\SimpleChannelFrontend\Main::$chan
     </div>
     <div class="grid_4 right">
         <h3>Download</h3>
-        <h4><a href="http://svn.php.net/viewvc/pear2/Pyrus/trunk/pyrus.phar?view=co">Download pyrus.phar</a></h4>
+        <h4><a href="http://pear2.php.net/pyrus.phar">Download pyrus.phar</a></h4>
         <p>
           This website provides packages to install using the pyrus package installer.
           With pyrus you can install all the packages available on this channel, as well as any PEAR

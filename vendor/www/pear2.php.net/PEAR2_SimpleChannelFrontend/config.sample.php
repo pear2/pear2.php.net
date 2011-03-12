@@ -4,20 +4,12 @@
  * 
  * Be sure to set up the $channel object to the appropriate channel.
  */
-require_once __DIR__ . '/../../PEAR2/autoload.php';
-
 ini_set('display_errors', true);
 error_reporting(E_ALL);
 
-set_include_path(dirname(__DIR__).'/src');
+require_once __DIR__ . '/../../../php/PEAR2/Autoload.php';
 
-function pyrus_autoload($class)
-{
-    $class = str_replace(array('PEAR2\\', '_'), array('', '\\'), $class);
-    include implode('/', explode('\\', $class)) . '.php';
-    
-}
-spl_autoload_register("pyrus_autoload");
+$config = PEAR2\Pyrus\Config::singleton('/tmp');
 
 /**
  * An example of setting up the channel object.
