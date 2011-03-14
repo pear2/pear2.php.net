@@ -407,6 +407,10 @@ don't need to learn a new markup system.</d>
   </p>
   <a>
    <r>
+    <v>0.3.2</v>
+    <s>alpha</s>
+   </r>
+   <r>
     <v>0.3.1</v>
     <s>alpha</s>
    </r>
@@ -424,7 +428,7 @@ don't need to learn a new markup system.</d>
    </r>
   </a>
   <deps>
-   <v>0.3.1</v>
+   <v>0.3.2</v>
    <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}}}</d>
   </deps>
  </pi>
