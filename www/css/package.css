@@ -79,6 +79,7 @@
 
 .package-description .package-categories li {
 	font-size: 11px;
+	list-style-type: none;
 }
 
 .package-description .package-categories li a {

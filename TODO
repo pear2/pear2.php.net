@@ -1,7 +1,9 @@
 Add in some Bugtracker to /bugs/
 Get news feed from blog updating
 Finish implementing package page from mockup
-Add documentation from PEAR2/Pyrus section of the manual
+ * API documentation links
+ * GIT repo links
+Add documentation from PEAR2/Pyrus section of the PEAR manual
 Add prominent section on the PEAR2 standards
 API Documentation!
-Package file browser
+Add routes for linking to the latest release files, trim version number off file URLs

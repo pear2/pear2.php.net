@@ -18,9 +18,18 @@ $parent->context->page_title = $context->name . ' - '
 
             <?php echo $savant->render($context, 'PackageDescription.tpl.php'); ?>
 
+            <?php
+            $categories = $context->getCategories();
+            if (count($categories)): ?>
             <div class="package-categories">
                 <h3>Categories</h3>
+                <ul>
+                    <?php foreach ($categories as $category): ?>
+                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::$url . 'categories/' . urlencode($category->name); ?>"><?php echo $category->name; ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 
