@@ -158,10 +158,10 @@ class Sqlite3 extends \PEAR2\Pyrus\Registry\Base
         $stmt->bindValue(':licensepath',       $licpath, ($licpath === null) ? SQLITE3_NULL : SQLITE3_TEXT);
         $stmt->bindValue(':notes',             $info->notes);
         $stmt->bindValue(':lastinstalledv',    null, SQLITE3_NULL);
-        if ('2.0.0a2' == '@'.'PACKAGE_VERSION@') {
+        if ('2.0.0a3' == '@'.'PACKAGE_VERSION@') {
             $v = '2.0.0a1';
         } else {
-            $v = '2.0.0a2';
+            $v = '2.0.0a3';
         }
         $stmt->bindValue(':lastinstalledp',    $v);
         $stmt->bindValue(':lastinstalltime',   Config::configSnapshot());

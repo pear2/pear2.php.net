@@ -73,16 +73,16 @@ class Commands implements \PEAR2\Pyrus\LogInterface
             $schemapath = \PEAR2\Pyrus\Main::getDataPath() . '/customcommand-2.0.xsd';
             $defaultcommands = \PEAR2\Pyrus\Main::getDataPath() . '/built-in-commands.xml';
             if (!file_exists($schemapath)) {
-                $schemapath = realpath(__DIR__ . '/../../../data/customcommand-2.0.xsd');
-                $defaultcommands = realpath(__DIR__ . '/../../../data/built-in-commands.xml');
+                $schemapath = realpath(__DIR__ . '/../../../../data/customcommand-2.0.xsd');
+                $defaultcommands = realpath(__DIR__ . '/../../../../data/built-in-commands.xml');
             }
             $parser = new \PEAR2\Pyrus\XMLParser;
             $commands = $parser->parse($defaultcommands, $schemapath);
             $commands = $commands['commands']['command'];
-            if ('2.0.0a2' == '@'.'PACKAGE_VERSION@') {
+            if ('2.0.0a3' == '@'.'PACKAGE_VERSION@') {
                 $version = '2.0.0a1'; // running from svn
             } else {
-                $version = '2.0.0a2';
+                $version = '2.0.0a3';
             }
             static::$commandParser = new \PEAR2\Pyrus\ScriptFrontend(array(
                     'version' => $version,
@@ -219,8 +219,8 @@ class Commands implements \PEAR2\Pyrus\LogInterface
         $schemapath = \PEAR2\Pyrus\Main::getDataPath() . '/customcommand-2.0.xsd';
         $defaultcommands = \PEAR2\Pyrus\Main::getDataPath() . '/' . $type . 'commands.xml';
         if (!file_exists($schemapath)) {
-            $schemapath = realpath(__DIR__ . '/../../../data/customcommand-2.0.xsd');
-            $defaultcommands = realpath(__DIR__ . '/../../../data/' . $type . 'commands.xml');
+            $schemapath = realpath(__DIR__ . '/../../../../data/customcommand-2.0.xsd');
+            $defaultcommands = realpath(__DIR__ . '/../../../../data/' . $type . 'commands.xml');
         }
         $parser = new \PEAR2\Pyrus\XMLParser;
         $commands = $parser->parse($defaultcommands, $schemapath);
@@ -293,6 +293,7 @@ class Commands implements \PEAR2\Pyrus\LogInterface
         } catch (\PEAR2\Console\CommandLine\Exception $e) {
             static::$commandParser->displayError($e->getMessage(), false);
             static::$commandParser->displayUsage(false);
+
         }
     }
 
@@ -685,28 +686,14 @@ previous:
      */
     function channelDiscover($args)
     {
-        // try secure first
-        $chan = 'https://' . $args['channel'] . '/channel.xml';
-        try {
-            $response = \PEAR2\Pyrus\Main::download($chan);
-            if ($response->code != 200) {
-                throw new \PEAR2\Pyrus\Exception('Download of channel.xml failed');
-            }
+		try {
+			$channel = new \PEAR2\Pyrus\ChannelFile($args['channel'], false, true);
         } catch (\Exception $e) {
-            try {
-                $chan = 'http://' . $args['channel'] . '/channel.xml';
-                $response = \PEAR2\Pyrus\Main::download($chan);
-                if ($response->code != 200) {
-                    throw new \PEAR2\Pyrus\Exception('Download of channel.xml failed');
-                }
-            } catch (\Exception $e) {
-                // failed, re-throw original error
-                echo "Discovery of channel ", $args['channel'], " failed: ", $e->getMessage(), "\n";
-                return;
-            }
-        }
+			echo "Discovery of channel ", $args['channel'], " failed: ", $e->getMessage(), "\n";
+			return;
+		}
 
-        $chan = new \PEAR2\Pyrus\Channel(new \PEAR2\Pyrus\ChannelFile($response->body, true));
+        $chan = new \PEAR2\Pyrus\Channel($channel);
         \PEAR2\Pyrus\Config::current()->channelregistry->add($chan);
         echo "Discovery of channel ", $chan->name, " successful\n";
     }

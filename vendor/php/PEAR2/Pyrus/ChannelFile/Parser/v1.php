@@ -21,7 +21,7 @@ class v1 extends \PEAR2\Pyrus\XMLParser
         $schema = \PEAR2\Pyrus\Main::getDataPath() . '/channel-1.0.xsd';
         // for running out of svn
         if (!file_exists($schema)) {
-            $schema = dirname(dirname(dirname(dirname(__DIR__)))) . '/data/channel-1.0.xsd';
+            $schema = dirname(dirname(dirname(dirname(dirname(__DIR__))))) . '/data/channel-1.0.xsd';
         }
 
         try {

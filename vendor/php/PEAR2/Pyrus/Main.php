@@ -26,7 +26,7 @@
 namespace PEAR2\Pyrus;
 class Main
 {
-    const VERSION = '2.0.0a2';
+    const VERSION = '2.0.0a3';
 
     /**
      * Installer options.  Valid indices are:
@@ -161,7 +161,7 @@ class Main
             $request->setHeader('If-Modified-Since', $lastmodified);
         }
 
-        $request->setHeader('User-Agent', 'PEAR2_Pyrus/2.0.0a2/PHP/' . PHP_VERSION);
+        $request->setHeader('User-Agent', 'PEAR2_Pyrus/2.0.0a3/PHP/' . PHP_VERSION);
         $username = Config::current()->username;
         $password = Config::current()->password;
         if ($username && $password) {
@@ -183,6 +183,10 @@ class Main
             throw new HTTPException(
                 "File $url not valid (received: {$response->body})", $response->code);
         }
+		if($response->code === 0 && $response->body === false) {
+            throw new HTTPException(
+                "File $url not valid (received a invalid response)", 500);
+		}
 
         return $response;
     }

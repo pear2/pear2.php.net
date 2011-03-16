@@ -64,10 +64,13 @@ class Role
         }
 
         if (!in_array($role, self::getValidRoles($packagetype))) {
-            throw new Exception('Invalid role ' . $role . 'requested for package type ' . $packagetype);
+            throw new Exception('Invalid role ' . $role . ' requested for package type ' . $packagetype);
         }
 
         $class = self::$_roles[$role]['class'];
+        if (!class_exists($class, true)) {
+            throw new Exception('Unable to load custom class ' . $class . ' for ' . $role);
+        }
         return new $class(Config::current(), self::$_roles[$role]);
     }
 
@@ -202,7 +205,7 @@ class Role
 
         $schemapath = \PEAR2\Pyrus\Main::getDataPath() . '/customrole-2.0.xsd';
         if (!file_exists($schemapath)) {
-            $schemapath = realpath(__DIR__ . '/../../../data/customrole-2.0.xsd');
+            $schemapath = realpath(__DIR__ . '/../../../../data/customrole-2.0.xsd');
         }
 
         while ($entry = readdir($dp)) {
@@ -236,6 +239,10 @@ class Role
 
     static function registerCustomRole($info)
     {
+        if (!isset(self::$_roles)) {
+            self::registerRoles();
+        }
+
         self::$_roles[$info['name']] = $info;
         $roles = self::$_roles;
         ksort($roles);
@@ -256,7 +263,10 @@ class Role
                         mkdir(dirname($tmp), 0755, true);
                     }
 
-                    file_put_contents($tmp, $default);
+                    if (file_put_contents($tmp, $default) === false) {
+                        throw new Role\Exception("Cannot create custom role configuration file $tmp");
+                    }
+
                     $getDefault = function() use ($tmp) {
                         include $tmp;
                         return $default;

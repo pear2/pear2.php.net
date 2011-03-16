@@ -201,7 +201,7 @@ class RemotePackage extends \PEAR2\Pyrus\PackageFile\v2 implements \ArrayAccess,
         $d = \PEAR2\Pyrus\Main::getDataPath() . DIRECTORY_SEPARATOR . 'x509rootcerts';
         // for running out of svn
         if (!file_exists($d)) {
-            $d = realpath(__DIR__ . '/../../../data/x509rootcerts');
+            $d = realpath(__DIR__ . '/../../../../data/x509rootcerts');
         } else {
             if (strpos($d, 'phar://') === 0) {
                 if (!file_exists($temp = Config::current()->temp_dir .
@@ -458,8 +458,7 @@ class RemotePackage extends \PEAR2\Pyrus\PackageFile\v2 implements \ArrayAccess,
     {
         $lowerpackage = strtolower($var);
         try {
-            $info = $this->rest->retrieveCacheFirst($this->parent->protocols->rest['REST1.0']->baseurl .
-                                                    'p/' . $lowerpackage . '/info.xml');
+            $info = $this->getPackageInfo($var);
         } catch (\Exception $e) {
             throw new Exception('package ' . $var . ' does not exist', $e);
         }
@@ -519,8 +518,7 @@ class RemotePackage extends \PEAR2\Pyrus\PackageFile\v2 implements \ArrayAccess,
     function offsetExists($var)
     {
         try {
-            $info = $this->rest->retrieveCacheFirst($this->parent->protocols->rest['REST1.0']->baseurl .
-                                                    'p/' . strtolower($var) . '/info.xml');
+            $info = $this->getPackageInfo($var);
         } catch (\Exception $e) {
             return false;
         }
@@ -605,6 +603,18 @@ class RemotePackage extends \PEAR2\Pyrus\PackageFile\v2 implements \ArrayAccess,
         // can't get email addresses from REST, have to grab the entire package.xml
         $this->grabEntirePackagexml();
         return parent::getMaintainer();
+    }
+
+    function getCategories()
+    {
+    	return new RemotePackage\Categories($this->parent, $this);
+    }
+
+    function getPackageInfo($var)
+    {
+    	$lowerpackage = strtolower($var);
+    	return $this->rest->retrieveCacheFirst($this->parent->protocols->rest['REST1.0']->baseurl .
+                                                    'p/' . $lowerpackage . '/info.xml');
     }
 
     function getPackagefileObject()

@@ -60,7 +60,7 @@ class PluginRegistry extends \PEAR2\Pyrus\Registry
         $parser = new XMLParser;
         $schemapath = Main::getDataPath();
         if (!file_exists(Main::getDataPath() . '/channel-1.0.xsd')) {
-            $schemapath = realpath(__DIR__ . '/../../data');
+            $schemapath = realpath(__DIR__ . '/../../../data');
         }
 
         $roleschema    = $schemapath . '/customrole-2.0.xsd';
@@ -140,22 +140,34 @@ class PluginRegistry extends \PEAR2\Pyrus\Registry
 
     static function makeAutoloader($info, $type)
     {
-        if (isset($info['autoloadpath']) && !isset(self::$autoloadMap[$info['autoloadpath']])) {
-            $fullpath = realpath(self::$config->php_dir . DIRECTORY_SEPARATOR . $info['autoloadpath']);
-            if (!$fullpath) {
-                throw new PluginRegistry\Exception(
-                    'Unable to create autoloader for custom ' . $type . ' ' . $info['name'] .
-                    ', autoload path ' . $info['autoloadpath'] . ' does not exist');
+        $autoloadPath = isset($info['autoloadpath']) ? $info['autoloadpath'] : false;
+        if ($autoloadPath === false) {
+            if(isset($info['class']) && self::$config !== null) {
+                $autoloadPath = self::$config->php_dir;
+                $fullPath = self::$config->php_dir;
+            } else {
+                return;
             }
-
-            $autoloader = function($class) use ($fullpath) {
-                $filepath = $fullpath . '/' . str_replace(array('\\', '_'), '/', $class) . '.php';
-                if (file_exists($filepath)) {
-                    include $filepath;
-                }
-            };
-
-            spl_autoload_register($autoloader);
+        } else {
+            $fullPath = realpath(self::$config->php_dir . DIRECTORY_SEPARATOR . $autoloadPath);
         }
+
+        if (isset(self::$autoloadMap[$autoloadPath])) {
+            return;
+        }
+
+        if (!$fullPath) {
+            throw new PluginRegistry\Exception(
+                'Unable to create autoloader for custom ' . $type . ' ' . $info['name'] .
+                ', autoload path ' . $autoloadPath . ' does not exist');
+        }
+
+        $autoloader = function($class) use ($fullPath) {
+            $filePath = $fullPath . '/' . str_replace(array('\\', '_'), '/', $class) . '.php';
+            if (file_exists($filePath)) {
+                include $filePath;
+            }
+        };
+        spl_autoload_register($autoloader);
     }
 }

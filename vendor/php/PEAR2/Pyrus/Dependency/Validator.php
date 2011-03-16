@@ -388,7 +388,8 @@ class Validator
                         $fail = false;
                         break;
                     }
-                    goto conflict_error;
+                    $fail = true;
+                    break;
                 } else {
                     if ($conflicts) {
                         $fail = true;
@@ -477,7 +478,7 @@ conflict_error:
      */
     function getPEARVersion()
     {
-        return '2.0.0a2' === '@'.'PACKAGE_VERSION@' ? '2.0.0' : '2.0.0a2';
+        return '2.0.0a3' === '@'.'PACKAGE_VERSION@' ? '2.0.0' : '2.0.0a3';
     }
 
     function validatePearinstallerDependency(\PEAR2\Pyrus\PackageFile\v2\Dependencies\Dep $dep)
@@ -687,7 +688,8 @@ conflict_error:
                         $fail = false;
                         break;
                     }
-                    goto conflict_error;
+                    $fail = true;
+                    break;
                 } else {
                     if ($conflicts) {
                         $fail = true;
@@ -699,7 +701,6 @@ conflict_error:
         }
 
         if ($fail) {
-conflict_error:
             $installed = $installed ? 'installed' : 'downloaded';
             $msg = '%s is not compatible with version ' . $version . ' of package "' .
                     $depname . '", ' . $installed . ' version is ' . $version;
@@ -784,20 +785,17 @@ conflict_error:
 
         $version = $param->version['release'];
         $fail = false;
+		if (isset($dep->max) && version_compare($version, $dep->max, '<=')) {
+			$fail = true;
+		}
         if (isset($dep->min)) {
             if (version_compare($version, $dep->min, '>=')) {
                 $fail = true;
             } else {
-                goto nofail;
-            }
+				$fail = false;
+			}
         }
-
-        if (isset($dep->max)) {
-            if (version_compare($version, $dep->max, '<=')) {
-                $fail = true;
-            }
-        }
-nofail:
+        
         if (isset($dep->exclude)) {
             $fail = true;
             foreach ($dep->exclude as $exclude) {

@@ -26,7 +26,7 @@
 namespace PEAR2\Pyrus\Package;
 class Creator
 {
-    const VERSION = '2.0.0a2';
+    const VERSION = '2.0.0a3';
     private $_creators;
     private $_handles = array();
     protected $prepend;
@@ -144,7 +144,7 @@ class Creator
      * This will take any package source and an array mapping internal
      * path => file name and create new packages in the formats requested.
      *
-     * All files in package.xml will have the string 2.0.0a2
+     * All files in package.xml will have the string 2.0.0a3
      * automatically replaced with the current package's version
      * @param \PEAR2\Pyrus\Package $package
      * @param array $extrafiles
@@ -342,7 +342,7 @@ class Creator
                                         'a \PEAR2\Pyrus\Package object');
             }
 
-            if ($filename instanceof \PEAR2\Pyrus\Package) {
+            if ($filename instanceof \PEAR2\Pyrus\PackageInterface) {
                 foreach ($filename->packagingcontents as $path => $info) {
                     foreach ($this->_creators as $creator) {
                         $creator->mkdir(dirname($this->prepend . '/' . $path));

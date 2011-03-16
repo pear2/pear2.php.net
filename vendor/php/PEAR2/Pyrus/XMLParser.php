@@ -28,7 +28,6 @@
  * @link       http://svn.php.net/viewvc/pear2/Pyrus/
  */
 namespace PEAR2\Pyrus;
-use \DOMDocument;
 class XMLParser extends \XMLReader
 {
     /**
@@ -42,7 +41,7 @@ class XMLParser extends \XMLReader
     function parseString($string, $schema = false)
     {
         $this->XML($string);
-        return $this->_parse($string, $schema, false);
+        return $this->_parse($schema);
     }
 
     /**
@@ -72,8 +71,7 @@ class XMLParser extends \XMLReader
         if (@$this->open($file) === false) {
             throw new XMLParser\Exception('Cannot open ' . $file . ' for parsing');
         }
-
-        return $this->_parse($file, $schema, true);
+        return $this->_parse($schema);
     }
 
     /**
@@ -164,49 +162,26 @@ class XMLParser extends \XMLReader
         return $me;
     }
 
-    private function _parse($file, $schema, $isfile)
+    private function _parse($schema)
     {
         libxml_use_internal_errors(true);
         libxml_clear_errors();
+
+        if ($schema) {
+            $this->setSchema($schema);
+        }
+
         $arr = $this->_recursiveParse();
         $this->close();
-        $causes = array();
+
+        $causes = new \PEAR2\MultiErrors;
         foreach (libxml_get_errors() as $error) {
-            $causes[] = new XMLParser\Exception("Line " .
+            $causes->E_ERROR[]= new XMLParser\Exception("Line " .
                  $error->line . ': ' . $error->message);
         }
 
-        if (count($causes)) {
+        if (count($causes->E_ERROR)) {
             throw new XMLParser\Exception('Invalid XML document', $causes);
-        }
-
-        if ($schema) {
-            $a = new \DOMDocument();
-            if ($isfile) {
-                $a->load($file);
-            } else {
-                $a->loadXML($file);
-            }
-
-            /*
-             from Rob Richards talk, use
-             $a->setSchema($schema);
-             and then check $a->isValid() in the _recursiveParse() and
-             log errors - much more efficient
-            */
-            libxml_use_internal_errors(true);
-            libxml_clear_errors();
-            $a->schemaValidate($schema);
-            $causes = array();
-            foreach (libxml_get_errors() as $error) {
-                $causes[] = new XMLParser\Exception("Line " .
-                     $error->line . ': ' . $error->message);
-            }
-
-            libxml_clear_errors();
-            if (count($causes)) {
-                throw new XMLParser\Exception('Invalid XML document', $causes);
-            }
         }
 
         return $arr;

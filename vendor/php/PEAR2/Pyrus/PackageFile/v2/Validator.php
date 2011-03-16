@@ -28,7 +28,7 @@
 namespace PEAR2\Pyrus\PackageFile\v2;
 class Validator
 {
-    const VERSION = '2.0.0a2';
+    const VERSION = '2.0.0a3';
     /**
      * @var array
      */
@@ -79,13 +79,13 @@ class Validator
                 $schema = \PEAR2\Pyrus\Main::getDataPath() . '/package-2.1.xsd';
                 // for running out of cvs
                 if (!file_exists($schema)) {
-                    $schema = dirname(dirname(dirname(dirname(__DIR__)))) . '/data/package-2.1.xsd';
+                    $schema = dirname(dirname(dirname(dirname(dirname(__DIR__))))) . '/data/package-2.1.xsd';
                 }
             } else {
                 $schema = \PEAR2\Pyrus\Main::getDataPath() . '/package-2.0.xsd';
                 // for running out of cvs
                 if (!file_exists($schema)) {
-                    $schema = dirname(dirname(dirname(dirname(__DIR__)))) . '/data/package-2.0.xsd';
+                    $schema = dirname(dirname(dirname(dirname(dirname(__DIR__))))) . '/data/package-2.0.xsd';
                 }
             }
             $dom->schemaValidate($schema);
@@ -107,7 +107,7 @@ class Validator
             return false;
         }
         $myversion = self::VERSION;
-        if ($myversion === '2.0.0a2') {
+        if ($myversion === '2.0.0a3') {
             // we're running from CVS, assume we're 2.0.0
             $myversion = '2.0.0';
         }
