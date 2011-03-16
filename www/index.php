@@ -1,5 +1,12 @@
 <?php
 
+if (!file_exists(dirname(__FILE__).'/../config.inc.php')) {
+    echo '<pre>';
+    include __DIR__ . '/../README';
+    echo '</pre>';
+    exit(0);
+}
+
 require_once dirname(__FILE__).'/../config.inc.php';
 require_once dirname(__FILE__).'/../src/PEAR2Web/Router.php';
 require_once dirname(__FILE__).'/../src/PEAR2Web/License.php';
