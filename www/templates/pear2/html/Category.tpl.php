@@ -11,7 +11,7 @@ $parent->context->page_title = $context->name . ' - Categories - '
                 <h2>
                     <a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/">Packages</a>
                     ›
-                    <?php echo $context->name; ?> <span><?php echo count($context); ?></span>
+                    <?php echo $context->name; ?>
                 </h2>
             </div>
             <div class="pearbox-content clearfix">
