@@ -124,6 +124,10 @@ http://pear.php.net/manual/en/pyrus.php</d>
   </p>
   <a>
    <r>
+    <v>2.0.0a3</v>
+    <s>alpha</s>
+   </r>
+   <r>
     <v>2.0.0a2</v>
     <s>alpha</s>
    </r>
@@ -133,7 +137,7 @@ http://pear.php.net/manual/en/pyrus.php</d>
    </r>
   </a>
   <deps>
-   <v>2.0.0a2</v>
+   <v>2.0.0a3</v>
    <d>a:1:{s:8:&quot;required&quot;;a:3:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:8:&quot;5.3.1RC1&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}s:7:&quot;package&quot;;a:5:{i:0;a:3:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.0&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Exception&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.0&quot;;}i:2;a:3:{s:4:&quot;name&quot;;s:17:&quot;PEAR2_MultiErrors&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.0&quot;;}i:3;a:3:{s:4:&quot;name&quot;;s:18:&quot;PEAR2_HTTP_Request&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.0&quot;;}i:4;a:3:{s:4:&quot;name&quot;;s:25:&quot;PEAR2_Console_CommandLine&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.1.0&quot;;}}}}</d>
   </deps>
  </pi>
