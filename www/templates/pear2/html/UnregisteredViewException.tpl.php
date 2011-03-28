@@ -8,5 +8,5 @@ $parent->context->page_title = 'Page Not Found - '
     . PEAR2\SimpleChannelFrontend\Main::$title;
 
 ?>
-<h1>WHOAH Nelly.</h1>
+<h1>WHOAH, Nelly.</h1>
 <p>That view doesn't exist!</p>

@@ -16,11 +16,14 @@ class Router
             );
         }
 
-        $base       = \PEAR2\SimpleChannelFrontend\Main::getURL();
-        $quotedBase = preg_quote($base, '/');
+        // Trim the base part of the URL, leaving just the path
+        $requestURI = substr($requestURI,
+                        strlen(
+                            parse_url(\PEAR2\SimpleChannelFrontend\Main::getURL(),
+                                      PHP_URL_PATH)));
+
         $packageExp = "/"
             . "^\n"
-            . $quotedBase . "             # base\n"
             . "(?<package>[0-9a-z_]+)     # package name\n"
             . "(-                         # dash separator\n"
             . "    (?<version>[0-9ab.]+)  # version\n"
@@ -30,14 +33,13 @@ class Router
 
         $categoryExp = "/"
             . "^\n"
-            . $quotedBase . "categories\/ # base\n"
+            . "categories\/               # base\n"
             . "(?<category>[0-9a-z_\ -]+) # category name\n"
             . "$\n"
             . "/xi";
 
         $fileExp = "/"
             . "^\n"
-            . $quotedBase . "             # base\n"
             . "(?<package>[0-9a-z_]+)     # package name\n"
             . "(-                         # dash separator\n"
             . "    (?<version>[0-9ab.]+)  # version\n"
@@ -49,15 +51,15 @@ class Router
             . "$\n"
             . "/xi";
 
-        if ($requestURI === $base) {
+        if (empty($requestURI)) {
             $options['view'] = 'news';
-        } elseif ($requestURI === $base . 'search/'
-            || $requestURI === $base . 'search'
+        } elseif ($requestURI === 'search/'
+            || $requestURI === 'search'
         ) {
             $options['view'] = 'search';
-        } elseif ($requestURI === $base . 'categories/') {
+        } elseif ($requestURI === 'categories/') {
             $options['view'] = 'categories';
-        } elseif ($requestURI === $base . 'support/') {
+        } elseif ($requestURI === 'support/') {
             $options['view'] = 'support';
         } elseif (preg_match($categoryExp, $requestURI, $matches) === 1) {
 
