@@ -124,6 +124,7 @@ a.button {
 	text-decoration: none;
 	padding-top: 3px;
 	padding-bottom: 3px;
+    cursor: default;
 }
 
 .button-small {
@@ -139,7 +140,7 @@ a.button-small {
 a.button:hover,
 a.button-small:hover {
 	text-decoration: none;
-	cursor: pointer;
+	cursor: default;
 }
 
 textarea,

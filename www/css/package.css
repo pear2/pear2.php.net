@@ -242,6 +242,11 @@ li.package-documentation-api {
 	margin-left: 16px;
 }
 
+.package-install-instructions div.package-install-instructions-section {
+	margin-left: 0;
+	margin-bottom: 10px;
+}
+
 .package-install .package-install-prompt {
 	font-weight: bold;
 }
