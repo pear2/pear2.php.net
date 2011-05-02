@@ -71,35 +71,35 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
                 <h2>Get Started With Pyrus</h2>
                 <a href="http://pear.php.net/manual/en/pyrus.php">Pyrus</a> is a tool to manage PEAR packages. Pyrus simplifies and improves the PEAR experience.
                 <div id="download">
-                            <a class="button" href="http://pear2.php.net/pyrus.phar">Download Pyrus ↴</a>
+                    <a class="button" href="http://pear2.php.net/pyrus.phar">Download Pyrus ↴</a>
                 </div>
-		After downloading, try out Pyrus using the commands on the right. You can learn more in the <a href="">Pyrus manual</a>.
+                After downloading, try out Pyrus using the commands on the right. You can learn more in the <a href="http://pear.php.net/manual/en/pyrus.php">Pyrus manual</a>.
             </div>
 
             <div class="right">
-                            <div class="package-install-instructions">
-                                <div class="package-install-instructions-section">
-                                    <div># Set your repository location:</div>
-                                    <div>
-                                        <span class="package-install-prompt">$</span>
-                                        <strong>php pyrus.phar mypear</strong> ~/src/my-project/pear
-                                    </div>
-                                </div>
-                                <div class="package-install-instructions-section">
-                                    <div># Install a package:</div>
-                                    <div>
-                                        <span class="package-install-prompt">$</span>
-                                        <strong>php pyrus.phar install</strong> pear2/HTTP_Request
-                                    </div>
-                                </div>
-                                <div class="package-install-instructions-section">
-                                    <div># List installed packages:</div>
-                                    <div>
-                                        <span class="package-install-prompt">$</span>
-                                        <strong>php pyrus.phar list-packages</strong>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="package-install-instructions">
+                    <div class="package-install-instructions-section">
+                        <div># Set your repository location:</div>
+                        <div>
+                            <span class="package-install-prompt">$</span>
+                            <strong>php pyrus.phar mypear</strong> ~/src/my-project/pear
+                        </div>
+                    </div>
+                    <div class="package-install-instructions-section">
+                        <div># Install a package:</div>
+                        <div>
+                            <span class="package-install-prompt">$</span>
+                            <strong>php pyrus.phar install</strong> PEAR2_HTTP_Request
+                        </div>
+                    </div>
+                    <div class="package-install-instructions-section">
+                        <div># List installed packages:</div>
+                        <div>
+                            <span class="package-install-prompt">$</span>
+                            <strong>php pyrus.phar list-packages</strong>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
