@@ -1,25 +1,25 @@
 <?php
 
-if (!file_exists(dirname(__FILE__).'/../config.inc.php')) {
+if (!file_exists(__DIR__ . '/../config.inc.php')) {
     echo '<pre>';
     include __DIR__ . '/../README';
     echo '</pre>';
     exit(0);
 }
 
-require_once dirname(__FILE__).'/../config.inc.php';
-require_once dirname(__FILE__).'/../src/PEAR2Web/Router.php';
-require_once dirname(__FILE__).'/../src/PEAR2Web/License.php';
-require_once dirname(__FILE__).'/../src/PEAR2Web/Menu.php';
+require_once __DIR__ . '/../config.inc.php';
+require_once __DIR__ . '/../src/PEAR2Web/Router.php';
+require_once __DIR__ . '/../src/PEAR2Web/License.php';
+require_once __DIR__ . '/../src/PEAR2Web/Menu.php';
 
 // Set preferred state to devel, so pyrus can get info on all releases
-\PEAR2\Pyrus\Config::current()->preferred_state = 'devel';
+PEAR2\Pyrus\Config::current()->preferred_state = 'devel';
 
 // Set 'force' option so we can get info about packages we can't actually
 // install on the Web server hosting PEAR2Web.
-\PEAR2\Pyrus\Main::$options['force'] = true;
+PEAR2\Pyrus\Main::$options['force'] = true;
 
-$channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
+$channel = new PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
 $options = $_GET + PEAR2Web\Router::getRoute($_SERVER['REQUEST_URI']);
 
@@ -31,15 +31,15 @@ $savant->setClassToTemplateMapper(
 );
 $savant->setTemplatePath(
     array(
-        __DIR__ . '/templates/default/html',
-        __DIR__ . '/templates/pear2/html'
+        __DIR__ . '/../vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/',
+        __DIR__ . '/templates/pear2/html',
     )
 );
 
-switch($frontend->options['format']) {
+switch ($frontend->options['format']) {
 case 'rss':
     $savant->addTemplatePath(
-        __DIR__ . '/templates/default/' . $frontend->options['format']
+        __DIR__ . '/../vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/'
     );
     break;
 }
