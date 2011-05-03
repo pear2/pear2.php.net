@@ -2,26 +2,6 @@
 
 foreach ($context as $key => $package) {
 
-    $package->figureOutBestVersion(
-        new \PEAR2\Pyrus\PackageFile\v2\Dependencies\Package(
-            'required',
-            'package',
-            null,
-            array(
-                'name'              => $package->name,
-                'channel'           => 'pear2.php.net',
-                'uri'               => null,
-                'min'               => null,
-                'max'               => null,
-                'recommended'       => null,
-                'exclude'           => null,
-                'providesextension' => null,
-                'conflicts'         => null
-            ),
-            0
-        )
-    );
-
     // filter PEAR2 from package name
     $packageTitle = str_replace('PEAR2_', '', $package->name);
 
@@ -51,7 +31,7 @@ foreach ($context as $key => $package) {
     echo '</div>';
     echo '<div class="package-more-info">';
 
-    echo $savant->render($package, 'PackageDetails.tpl.php');
+    echo $savant->render($package->getLatestVersion(), 'PackageDetails.tpl.php');
 
     echo '</div>';
 
