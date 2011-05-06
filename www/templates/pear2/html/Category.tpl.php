@@ -2,14 +2,14 @@
 
 // Set the page title
 $parent->context->page_title = $context->name . ' - Categories - '
-    . PEAR2\SimpleChannelFrontend\Main::$title;
+    . $frontend->title;
 
 ?>
 
         <div id="category-packages" class="pearbox">
             <div class="pearbox-header">
                 <h2>
-                    <a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/">Packages</a>
+                    <a href="<?php echo $frontend->getURL(); ?>categories/">Packages</a>
                     ›
                     <?php echo $context->name; ?>
                 </h2>

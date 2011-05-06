@@ -35,7 +35,7 @@ class ObjectProxy implements \Countable
      * 
      * @var mixed
      */
-    protected $object;
+    public $object;
     
     /**
      * The savant templating system
@@ -85,7 +85,7 @@ class ObjectProxy implements \Countable
         case 'double':
             return $this->savant->escape($var);
         case 'array':
-            return new ObjectProxy\ArrayAccess(new \ArrayIterator($var), $this->savant);
+            return new ObjectProxy\ArrayObject(new \ArrayObject($var), $this->savant);
         }
         return $var;
     }
@@ -173,6 +173,9 @@ class ObjectProxy implements \Countable
      */
     public static function factory($object, $savant)
     {
+        if ($object instanceof \Traversable && $object instanceof \ArrayAccess) {
+            return new ObjectProxy\ArrayObject($object, $savant);
+        }
         if ($object instanceof \Traversable) {
             return new ObjectProxy\Traversable($object, $savant);
         }

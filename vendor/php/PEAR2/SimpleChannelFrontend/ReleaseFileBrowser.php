@@ -14,7 +14,7 @@ class ReleaseFileBrowser
 
     public function __construct($options = array())
     {
-        $channel       = $options['frontend']::$channel;
+        $channel       = $options['frontend']->getChannel();
         $this->package = $channel->remotepackage[$options['package']];
 
         if (   isset($options['packageVersion'])
@@ -42,7 +42,10 @@ class ReleaseFileBrowser
             . $this->package->version['release'] . '.tgz';
 
 
-        $root = rtrim(Main::$channel_path, DIRECTORY_SEPARATOR);
+        $root = rtrim(
+            $options['frontend']->getChannelPath(),
+            DIRECTORY_SEPARATOR
+        );
         $root = $root . DIRECTORY_SEPARATOR . 'get';
         $file = $root . DIRECTORY_SEPARATOR . $releaseFile;
 

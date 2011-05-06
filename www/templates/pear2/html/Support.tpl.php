@@ -1,8 +1,7 @@
 <?php
 
 // Set the title for the main template
-$parent->context->page_title = 'Support - '
-    . PEAR2\SimpleChannelFrontend\Main::$title;
+$parent->context->page_title = 'Support - ' . $frontend->title;
 
 ?>
 <div class="support">

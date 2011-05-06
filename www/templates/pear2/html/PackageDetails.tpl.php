@@ -51,10 +51,10 @@ if ($licenseURI) {
 ?>
             </td>
         </tr>
-        <!-- tr>
+        <tr>
             <th>Bugs:</th>
-            <td></td>
-        </tr -->
+            <td><?php echo $savant->render($context, 'PackageBugs.tpl.php'); ?></td>
+        </tr>
 
 <?php
 if (   isset($parent->parent->context->options)

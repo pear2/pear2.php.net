@@ -1,6 +1,6 @@
 <?php
 // Set the title for the main template
-$parent->context->page_title = $context->name.' | '.PEAR2\SimpleChannelFrontend\Main::$channel->name;
+$parent->context->page_title = $context->name . ' | ' . $frontend->getChannel()->name;
 ?>
 <div class="package">
     <div class="grid_8 left">
@@ -20,7 +20,7 @@ $parent->context->page_title = $context->name.' | '.PEAR2\SimpleChannelFrontend\
             <?php
              foreach ($context as $version => $release): ?>
             <li>
-                <a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL() . $context->name . '-' . $version; ?>"><?php echo $version; ?></a>
+                <a href="<?php echo $frontend->getURL() . $context->name . '-' . $version; ?>"><?php echo $version; ?></a>
                 <span class="stability"><?php echo $release['stability']; ?></span>
                 <abbr class="releasedate" title="<?php echo $context->date.' '.$context->time; ?>"><?php echo $context->date; ?></abbr>
                 <a class="download" href="<?php echo $context->getDownloadURL('.tgz'); ?>">Download</a>

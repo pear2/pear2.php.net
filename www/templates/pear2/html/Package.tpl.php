@@ -1,8 +1,7 @@
 <?php
 
 // Set the page title
-$parent->context->page_title = $context->name . ' - '
-    . PEAR2\SimpleChannelFrontend\Main::$title;
+$parent->context->page_title = $context->name . ' - ' . $frontend->title;
 
 ?>
 
@@ -25,7 +24,7 @@ $parent->context->page_title = $context->name . ' - '
                 <h3>Categories</h3>
                 <ul>
                     <?php foreach ($categories as $category): ?>
-                    <li><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::$url . 'categories/' . urlencode($category->name); ?>"><?php echo $category->name; ?></a></li>
+                    <li><a href="<?php echo $frontend->getURL() . 'categories/' . urlencode($category->name); ?>"><?php echo $category->name; ?></a></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -40,7 +39,7 @@ $parent->context->page_title = $context->name . ' - '
 <?php
 
 echo $savant->render(
-    $context->name . '-' . $context->version['release'],
+    $context->name,
     'InstallInstructions.tpl.php'
 );
 
@@ -63,8 +62,7 @@ $count = 0;
 
 foreach ($context as $version => $release) {
 
-    $releaseURL = PEAR2\SimpleChannelFrontend\Main::getURL()
-        . $context->name . '-' . $version;
+    $releaseURL = $frontend->getURL() . $context->name . '-' . $version;
 
     $class = ($count % 2 === 0) ? 'odd' : 'even';
 
@@ -114,8 +112,7 @@ $context->setRawVersion(null, array('release' => $context->key()));
 
 <?php
 
-$filesURL = PEAR2\SimpleChannelFrontend\Main::getURL()
-    . $context->name . '/files';
+$filesURL = $frontend->getURL() . $context->name . '/files';
 
 ?>
     <div class="package-files">

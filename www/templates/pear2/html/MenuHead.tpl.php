@@ -1,6 +1,6 @@
 <?php
 
-$base     = PEAR2\SimpleChannelFrontend\Main::getURL();
+$base     = $frontend->getURL();
 $selected = ($parent->context->options['view'] === 'news') ?
             null : $parent->context->options['view'];
 

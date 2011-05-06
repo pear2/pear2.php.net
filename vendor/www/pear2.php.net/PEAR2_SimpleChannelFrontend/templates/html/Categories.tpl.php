@@ -1,5 +1,5 @@
 <?php
-$parent->context->page_title = 'Categories | '.PEAR2\SimpleChannelFrontend\Main::$channel->name; ?>
+$parent->context->page_title = 'Categories | ' . $frontend->getChannel()->name; ?>
 
 <div class="grid_8 left">
 <div class="packages-header">
@@ -8,15 +8,15 @@ $parent->context->page_title = 'Categories | '.PEAR2\SimpleChannelFrontend\Main:
 <?php
 if (count($context)) : ?>
 <ul class="categories">
-<?php 
+<?php
     foreach ($context as $category) : ?>
     <li id="category-1" class="category category-clear">
-        <h3><a href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>categories/<?php echo $category->name; ?>"><span class="category-title"><?php echo $category->name; ?></span></a><span class="category-count"> (<?php echo count($category); ?>)</span></h3>
+        <h3><a href="<?php echo $frontend->getURL(); ?>categories/<?php echo $category->name; ?>"><span class="category-title"><?php echo $category->name; ?></span></a><span class="category-count"> (<?php echo count($category); ?>)</span></h3>
         <div><?php
         if (count($category)) {
             echo '<ul>';
             foreach ($category as $package) {
-                echo '<li><a href="'.PEAR2\SimpleChannelFrontend\Main::getURL().$package->name.'">'.$package->name.'</a></li>';
+                echo '<li><a href="' . $frontend->getURL() . $package->name . '">' . $package->name . '</a></li>';
             }
             echo '</ul>';
         }

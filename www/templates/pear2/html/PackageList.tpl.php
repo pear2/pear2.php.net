@@ -34,8 +34,7 @@ foreach ($context as $key => $package) {
         );
     }
 
-    $packageHref = PEAR2\SimpleChannelFrontend\Main::getURL()
-        . $package->name;
+    $packageHref = $frontend->getURL() . $package->name;
 
     echo '<div class="package-list-package">';
 

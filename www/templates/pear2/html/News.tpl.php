@@ -1,7 +1,7 @@
 <?php
 
 // Set the page title
-$parent->context->page_title = PEAR2\SimpleChannelFrontend\Main::$title;
+$parent->context->page_title = $frontend->title;
 
 $rss_feed = '/var/tmp/pear/rss_cache/pear-news.xml';
 if (file_exists($rss_feed)) {

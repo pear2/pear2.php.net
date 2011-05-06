@@ -24,10 +24,12 @@ if (isset($matches['package'])) {
 }
 
 $frontend = new PEAR2\SimpleChannelFrontend\Main($channel, $options);
+$frontend->init();
 
 $savant = new PEAR2\Templates\Savant\Main();
 $savant->setClassToTemplateMapper(new PEAR2\SimpleChannelFrontend\TemplateMapper);
 $savant->setTemplatePath(array(__DIR__ . '/templates/html'));
+$savant->addGlobal('frontend', $frontend);
 
 switch($frontend->options['format']) {
 case 'rss':

@@ -9,7 +9,8 @@ class Category implements \IteratorAggregate, \ArrayAccess, \Countable
 
     public function __construct($options = array())
     {
-        $this->_category = $options['frontend']::$channel->remotecategories[$options['category']];
+        $channel = $options['frontend']->getChannel();
+        $this->_category = $channel->remotecategories[$options['category']];
         $this->rewind();
     }
 

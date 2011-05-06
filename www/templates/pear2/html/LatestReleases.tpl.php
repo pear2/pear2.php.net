@@ -11,8 +11,7 @@ foreach ($context as $date => $package) {
         echo '    <ul id="recent-right">' . "\n";
     }
 
-    $packageURL = PEAR2\SimpleChannelFrontend\Main::getURL()
-        . $package->name;
+    $packageURL = $frontend->getURL() . $package->name;
 
     $packageTitle  = str_replace('PEAR2_', '', $package->name);
     $packageTitle .= '-' . $package->version['release'];

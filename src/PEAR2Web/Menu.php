@@ -7,7 +7,7 @@ class Menu
     public $data = array(
 
         'categories'    => array(
-            'title'     => 'Categories',
+            'title'     => 'Packages',
             'link'      => 'categories/',
         ),
 

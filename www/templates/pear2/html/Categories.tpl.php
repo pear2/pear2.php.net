@@ -1,8 +1,7 @@
 <?php
 
 // Set the page title
-$parent->context->page_title = 'Categories - '
-    . PEAR2\SimpleChannelFrontend\Main::$title;
+$parent->context->page_title = 'Categories - ' . $frontend->title;
 
 $categoriesPerRow    = 3;
 $packagesPerCategory = 4;
@@ -29,7 +28,7 @@ foreach ($context as $category) {
     echo '<li class="' . $class . '">';
 
     echo '<h3>';
-    echo '<a href="' . PEAR2\SimpleChannelFrontend\Main::getURL() . 'categories/' . $category->name . '">';
+    echo '<a href="' . $frontend->getURL() . 'categories/' . $category->name . '">';
     echo '<span class="category-title">' . $category->name . '</span> ';
     echo '<span class="category-count">' . $packageCount . '</span>';
     echo '</a>';
@@ -51,8 +50,7 @@ foreach ($context as $category) {
                 break;
             } else {
                 $packageTitle = str_replace('PEAR2_', '', $package->name);
-                $packageHref  = PEAR2\SimpleChannelFrontend\Main::getURL()
-                    . $package->name;
+                $packageHref  = $frontend->getURL() . $package->name;
 
                 echo '<a href="' . $packageHref . '">' . $packageTitle . '</a>';
             }

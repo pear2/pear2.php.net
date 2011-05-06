@@ -2,10 +2,7 @@
 
 $releaseFile = $context->name . '-' . $context->version['release'] . '.tgz';
 
-$root = rtrim(
-    \PEAR2\SimpleChannelFrontend\Main::$channel_path,
-    DIRECTORY_SEPARATOR
-);
+$root        = rtrim($frontend->getChannelPath(), DIRECTORY_SEPARATOR);
 $root        = $root . DIRECTORY_SEPARATOR . 'get';
 $releaseFile = $root . DIRECTORY_SEPARATOR . $releaseFile;
 

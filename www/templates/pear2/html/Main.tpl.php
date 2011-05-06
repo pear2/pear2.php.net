@@ -5,22 +5,22 @@
     <meta charset="utf-8" />
     <title><?php echo $context->page_title; ?></title>
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/yui/2.8.0r4/build/reset-fonts/reset-fonts.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/main.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/news.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/search-form.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/categories.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/category.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/package.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/package-list.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/search.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/file-browser.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/highlight-idea.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/main.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/news.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/search-form.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/categories.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/category.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/package.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/package-list.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/search.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/file-browser.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/highlight-idea.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>js/pearweb.js"></script>
-    <script src="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>js/highlight.pack.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/pearweb.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/highlight.pack.js"></script>
 
-    <link rel="alternate" title="PEAR2 Latest Releases" type="application/rss+xml" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>?view=latest&amp;format=rss" />
+    <link rel="alternate" title="PEAR2 Latest Releases" type="application/rss+xml" href="<?php echo $frontend->getURL(); ?>?view=latest&amp;format=rss" />
 </head>
 
 <body>

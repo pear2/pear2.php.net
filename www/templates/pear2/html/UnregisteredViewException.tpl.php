@@ -4,8 +4,7 @@
 header('HTTP/1.0 404 Not Found');
 
 // Set the page title
-$parent->context->page_title = 'Page Not Found - '
-    . PEAR2\SimpleChannelFrontend\Main::$title;
+$parent->context->page_title = 'Page Not Found - ' . $frontend->title;
 
 ?>
 <h1>WHOAH, Nelly.</h1>

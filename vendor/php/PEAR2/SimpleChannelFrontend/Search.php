@@ -13,9 +13,9 @@ class Search extends \FilterIterator implements \Countable
             $this->query = $options['q'];
         }
 
-        parent::__construct(
-            new \PEAR2\Pyrus\Channel\RemotePackages(Main::$channel)
-        );
+        $channel = $options['frontend']->getChannel();
+
+        parent::__construct(new \PEAR2\Pyrus\Channel\RemotePackages($channel));
     }
 
     public function accept()
