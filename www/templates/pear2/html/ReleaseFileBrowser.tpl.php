@@ -57,7 +57,8 @@ $traverseFiles = function(
     $releaseFile,
     $releaseRoot,
     &$fileCount,
-    &$directoryCount
+    &$directoryCount,
+    $frontend
 ) {
     echo '<ul>';
     foreach ($node as $file) {
