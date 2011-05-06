@@ -3,7 +3,6 @@ if (file_exists('config.inc.php')) {
     require_once 'config.inc.php';
 } elseif (file_exists('channel.xml')) {
     $channel = new \PEAR2\Pyrus\ChannelFile('channel.xml');
-    PEAR2\SimpleChannelFrontend\Main::$url = 'http://'.$channel->name.'/';
 } else {
     echo 'You must place this file in your channel server, or provide a config.inc.php file.';
     exit();
@@ -24,6 +23,7 @@ if (isset($matches['package'])) {
 }
 
 $frontend = new PEAR2\SimpleChannelFrontend\Main($channel, $options);
+$frontend->setURLBase('http://'.$channel->name.'/');
 $frontend->init();
 
 $savant = new PEAR2\Templates\Savant\Main();

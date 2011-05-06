@@ -106,7 +106,7 @@ class Main
      *
      * @see \PEAR2\SimpleChannelFrontend::getURL()
      */
-    public static $url = '';
+    protected $url_base = '';
 
     /**
      * Creates a new simple channel frontend
@@ -144,7 +144,8 @@ class Main
      * @param string $classname the class to instantiate when the specified
      *                          view is requested.
      *
-     * @return Main the current class for fluent interface.
+     * @return \PEAR2\SimpleChannelFrontend\Main the current class for fluent
+     *                                           interface.
      */
     public function registerView($route, $classname)
     {
@@ -157,7 +158,8 @@ class Main
      *
      * @param \PEAR2\Pyrus\ChanelFileInterface $channel The channel object.
      *
-     * @return Main the current class for fluent interface.
+     * @return \PEAR2\SimpleChannelFrontend\Main the current class for fluent
+     *                                           interface.
      */
     public function setChannel(\PEAR2\Pyrus\ChannelFileInterface $channel)
     {
@@ -195,7 +197,8 @@ class Main
      *
      * @return \PEAR2\Pyrus\ChannelInterface this frontend's PEAR channel.
      *
-     * @see \PEAR2\SimpleChannelFrontend\Main::setChannel()
+     * @return \PEAR2\SimpleChannelFrontend\Main the current class for fluent
+     *                                           interface.
      */
     public function getChannel()
     {
@@ -270,7 +273,7 @@ class Main
             $default_view = $properties['options']['view'];
         }
 
-        $url = static::$url;
+        $url = $this->url_base;
         if ($class) {
             if (is_object($class)) {
                 $class = get_class($class);
@@ -288,6 +291,19 @@ class Main
 
         }
         return $url;
+    }
+
+    /**
+     * Sets the base URL for this frontend
+     *
+     * @param string $url the base url for this frontend.
+     *
+     * @return \PEAR2\SimpleChannelFrontend\Main the current class for fluent
+     *                                           interface.
+     */
+    public function setURLBase($url)
+    {
+        $this->url_base = $url;
     }
 
     /**
