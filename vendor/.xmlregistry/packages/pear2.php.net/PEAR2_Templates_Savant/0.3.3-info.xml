@@ -20,10 +20,10 @@ don't need to learn a new markup system.</description>
   <email>cellog@php.net</email>
   <active>yes</active>
  </lead>
- <date>2011-03-03</date>
- <time>10:18:45</time>
+ <date>2011-05-05</date>
+ <time>16:49:21</time>
  <version>
-  <release>0.3.1</release>
+  <release>0.3.3</release>
   <api>0.1.0</api>
  </version>
  <stability>
@@ -33,8 +33,8 @@ don't need to learn a new markup system.</description>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
  <notes>Bugfix Release:
 
- - Improve escaping of arrays
- - Add tests for globals
+ * Proxy array and ArrayObject objects through a new proxy class that supports all ArrayObject interfaces. [saltybeagle, gauthierm]
+
 
 Package PEAR2_Templates_Savant API release notes for version 0.1.0.</notes>
  <contents>
@@ -59,10 +59,12 @@ Package PEAR2_Templates_Savant API release notes for version 0.1.0.</notes>
    <file role="php" name="php/PEAR2/Templates/Savant/UnexpectedValueException.php" md5sum="6476d23be839fc97239e62845f998ae9"/>
    <file role="php" name="php/PEAR2/Templates/Savant/TemplateException.php" md5sum="05a33f3f0f059f6c68758a576966a312"/>
    <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/Traversable.php" md5sum="263deb6dafcaba0e90f6553edf582686"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/ArrayObject.php" md5sum="9970e7cb021df63a342717bcc439fcd7"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/ArrayIterator.php" md5sum="df000f44d34065a8f63dfc3795b9a05d"/>
    <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy/ArrayAccess.php" md5sum="6c4a19e0feb079de2e4dfc6983547b19"/>
-   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy.php" md5sum="bde09883c43b9c84b2b5c7e3029c0d2f"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/ObjectProxy.php" md5sum="90399313311f3e65efd06dce154cd02d"/>
    <file role="php" name="php/PEAR2/Templates/Savant/MapperInterface.php" md5sum="010c6059a851f2a89d4f4caa661ccf6f"/>
-   <file role="php" name="php/PEAR2/Templates/Savant/Main.php" md5sum="9223c136139df8dff786e27acea3454f"/>
+   <file role="php" name="php/PEAR2/Templates/Savant/Main.php" md5sum="3c563f91c83b095b6d1c8e83405a6b79"/>
    <file role="php" name="php/PEAR2/Templates/Savant/FilterAbstract.php" md5sum="295b75cc419ff9bf02afface4227fb3b"/>
    <file role="php" name="php/PEAR2/Templates/Savant/FastCompilerInterface.php" md5sum="82c9f5ce0b400bb59556134b519a5332"/>
    <file role="php" name="php/PEAR2/Templates/Savant/Exception.php" md5sum="95f8ee4d2ca3ab754005bb47cdb37272"/>
