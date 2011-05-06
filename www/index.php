@@ -34,7 +34,7 @@ $options = $_GET + \PEAR2Web\Router::getRoute($baseURI, $_SERVER['REQUEST_URI'])
 $frontend = new \PEAR2\SimpleChannelFrontend\Main($channel, $options);
 $frontend->registerView('package', 'PEAR2Web\Models\Package');
 $frontend->title = \PEAR2Web\Config::$options['title'];
-//$frontend->setURLBase(\PEAR2Web\Config::$options['title']);
+$frontend->setURLBase(\PEAR2Web\Config::$options['url']);
 $frontend->init();
 
 $savant = new \PEAR2\Templates\Savant\Main();
