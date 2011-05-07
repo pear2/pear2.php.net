@@ -4,9 +4,10 @@ class PackageRelease
 {
     public $_package;
 
-    function __construct($options = array())
+    public function __construct($options = array())
     {
-        $this->_package = $options['frontend']::$channel->remotepackage[$options['package']];
+        $channel = $options['frontend']->getChannel();
+        $this->_package = $channel->remotepackage[$options['package']];
         try {
             $this->_package->setRawVersion(
                 null, array('release' => $options['packageVersion'])
@@ -16,12 +17,12 @@ class PackageRelease
         }
     }
 
-    function __get($var)
+    public function __get($var)
     {
         return $this->_package->$var;
     }
 
-    function __call($method, $args)
+    public function __call($method, $args)
     {
         return call_user_func_array(array($this->_package, $method), $args);
     }

@@ -5,22 +5,22 @@
     <meta charset="utf-8" />
     <title><?php echo $context->page_title; ?></title>
     <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/yui/2.8.0r4/build/reset-fonts/reset-fonts.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/main.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/news.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/search-form.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/categories.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/category.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/package.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/package-list.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/search.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/file-browser.css" />
-    <link rel="stylesheet" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>css/highlight-idea.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/main.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/news.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/search-form.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/categories.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/category.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/package.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/package-list.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/search.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/file-browser.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/highlight-idea.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>js/pearweb.js"></script>
-    <script src="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>js/highlight.pack.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/pearweb.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/highlight.pack.js"></script>
 
-    <link rel="alternate" title="PEAR2 Latest Releases" type="application/rss+xml" href="<?php echo PEAR2\SimpleChannelFrontend\Main::getURL(); ?>?view=latest&amp;format=rss" />
+    <link rel="alternate" title="PEAR2 Latest Releases" type="application/rss+xml" href="<?php echo $frontend->getURL(); ?>?view=latest&amp;format=rss" />
 </head>
 
 <body>
@@ -48,10 +48,16 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
             </div>
 
             <div class="right">
-                <h2>Download Pyrus <span>New for PHP 5.3.1+!</span></h2>
-                Pyrus is a tool to manage PEAR packages. Pyrus simplifies and improves the PEAR experience.
-                <div id="download">
-                    <a class="button" href="http://pear2.php.net/pyrus.phar">Download Pyrus ↴</a>
+                <h2>Who’s Using PEAR?</h2>
+                <div>
+                    <a href="http://digg.com/api/docs/toolkits">Digg</a> •
+                    <a href="http://www.easybib.com/">EasyBib</a> •
+                    <a href="http://www.echolibre.com/">echolibre</a> •
+                    <a href="http://www.netresearch.de/">Netresearch</a> •
+                    <a href="http://orchestra.io/">Orchestra</a> •
+                    <a href="http://code.silverorange.com/">silverorange</a> •
+                    <a href="http://www.symfony-project.org/">Symfony</a> •
+                    <a href="http://pear.unl.edu/">University of Nebraska-Lincoln</a>
                 </div>
             </div>
 
@@ -59,18 +65,43 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
     </div>
 
     <div id="bottom">
-        <div class="content">
-        <h2>Who’s Using PEAR?</h2>
-        …
-            <a href="http://digg.com/api/docs/toolkits">Digg</a>,
-            <a href="http://www.doctrine-project.org/">Doctrine</a>,
-            <a href="http://ezcomponents.org/">eZ Components</a>,
-            <a href="http://roundcube.net/">Roundcube</a>,
-            <a href="http://code.google.com/p/sabredav/wiki/Installation">SabreDAV</a>,
-            <a href="http://code.silverorange.com/">silverorange</a>,
-            <a href="http://www.symfony-project.org/">Symfony</a>,
-            <a href="http://framework.zend.com/">Zend Framework</a>
-        …
+        <div class="content clearfix">
+
+            <div class="left">
+                <h2>Get Started With Pyrus</h2>
+                <a href="http://pear.php.net/manual/en/pyrus.php">Pyrus</a> is a tool to manage PEAR packages. Pyrus simplifies and improves the PEAR experience.
+                <div id="download">
+                    <a class="button" href="http://pear2.php.net/pyrus.phar">Download Pyrus ↴</a>
+                </div>
+                After downloading, try out Pyrus using the commands on the right. You can learn more in the <a href="http://pear.php.net/manual/en/pyrus.php">Pyrus manual</a>.
+            </div>
+
+            <div class="right">
+                <div class="package-install-instructions">
+                    <div class="package-install-instructions-section">
+                        <div># Set your repository location:</div>
+                        <div>
+                            <span class="package-install-prompt">$</span>
+                            <strong>php pyrus.phar mypear</strong> ~/src/my-project/pear
+                        </div>
+                    </div>
+                    <div class="package-install-instructions-section">
+                        <div># Install a package:</div>
+                        <div>
+                            <span class="package-install-prompt">$</span>
+                            <strong>php pyrus.phar install</strong> PEAR2_HTTP_Request
+                        </div>
+                    </div>
+                    <div class="package-install-instructions-section">
+                        <div># List installed packages:</div>
+                        <div>
+                            <span class="package-install-prompt">$</span>
+                            <strong>php pyrus.phar list-packages</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

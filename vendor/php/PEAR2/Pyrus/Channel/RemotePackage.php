@@ -23,6 +23,7 @@
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
  * @link      http://svn.php.net/viewvc/pear2/Pyrus/
  */
+use PEAR2\Pyrus\Channel\RemotePackage;
 namespace PEAR2\Pyrus\Channel;
 use \PEAR2\Pyrus\Logger as Logger, \PEAR2\Pyrus\Config as Config;
 class RemotePackage extends \PEAR2\Pyrus\PackageFile\v2 implements \ArrayAccess, \Iterator
@@ -264,6 +265,19 @@ class RemotePackage extends \PEAR2\Pyrus\PackageFile\v2 implements \ArrayAccess,
     function hasConcreteVersion()
     {
         return $this->versionSet;
+    }
+
+    /**
+     * Get the latest version of the package
+     * 
+     * @return RemotePackage
+     */
+    function getLatestVersion()
+    {
+        $version = $this->rest->retrieveCacheFirst($this->parent->protocols->rest['REST1.0']->baseurl .
+                                                    'r/' . strtolower($this->name) . '/latest.txt');
+        $this->setRawVersion(null, array('release' => $version));
+        return $this;
     }
 
     function setUpgradeable()

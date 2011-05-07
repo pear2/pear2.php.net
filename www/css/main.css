@@ -124,6 +124,7 @@ a.button {
 	text-decoration: none;
 	padding-top: 3px;
 	padding-bottom: 3px;
+    cursor: default;
 }
 
 .button-small {
@@ -139,7 +140,7 @@ a.button-small {
 a.button:hover,
 a.button-small:hover {
 	text-decoration: none;
-	cursor: pointer;
+	cursor: default;
 }
 
 textarea,
@@ -233,11 +234,11 @@ input[type=radio] {
 #header #top :link:hover,
 #header #top :visited:hover {
 	color: #fff;
+	text-decoration: underline;
 }
 
 #header #top :link:hover,
 #header #top :visited:hover {
-	text-decoration: underline;
 }
 
 #header #top h1,
@@ -341,8 +342,6 @@ input[type=radio] {
 }
 
 #header #subnavbar {
-position:relative;
-height: 100%;
 	background: #40652a;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -437,6 +436,7 @@ height: 100%;
 .footer-menu :link:hover,
 .footer-menu :visited:hover {
 	color: #fff;
+    text-decoration: underline;
 }
 
 .footer-menu {

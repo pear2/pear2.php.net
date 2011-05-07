@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_templates_savant">PEAR2_Templates_Savant</p>
+ <c>pear2.php.net</c>
+ <v>0.3.3</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>Savant is a powerful but lightweight object-oriented template system for PHP.
+</s>
+ <d>
+Unlike other template systems, Savant by default does not compile your
+templates into PHP; instead, it uses PHP itself as its template language so you
+don't need to learn a new markup system.</d>
+ <da>2011-05-05 14:19:23</da>
+ <n>Bugfix Release:
+
+ * Proxy array and ArrayObject objects through a new proxy class that supports all ArrayObject interfaces. [saltybeagle, gauthierm]
+
+
+Package PEAR2_Templates_Savant API release notes for version 0.1.0.</n>
+ <f>19059</f>
+ <g>http://pear2.php.net/get/PEAR2_Templates_Savant-0.3.3</g>
+ <x xlink:href="package.0.3.3.xml"/>
+</r>

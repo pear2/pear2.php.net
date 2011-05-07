@@ -1,6 +1,6 @@
 <?php
 // Set the title for the main template
-$parent->context->page_title = 'News | '.PEAR2\SimpleChannelFrontend\Main::$channel->name;
+$parent->context->page_title = 'News | ' . $frontend->getChannel()->name;
 ?>
 <div id="news">
     <div class="grid_8 left">
@@ -10,9 +10,9 @@ $parent->context->page_title = 'News | '.PEAR2\SimpleChannelFrontend\Main::$chan
             <li>Download the new PEAR installer:<br />
                 <code><a href="http://pear2.php.net/pyrus.phar">pyrus.phar</a></code></li>
             <li>Discover this channel:<br />
-                <code>$&gt;php pyrus.phar channel-discover <?php echo PEAR2\SimpleChannelFrontend\Main::$channel->name; ?></code></li>
+                <code>$&gt;php pyrus.phar channel-discover <?php echo $frontend->getChannel()->name; ?></code></li>
             <li>Install packages:<br />
-                <code>$&gt;php pyrus.phar install <?php echo PEAR2\SimpleChannelFrontend\Main::$channel->alias; ?>/<var>package</var></code><br />
+                <code>$&gt;php pyrus.phar install <?php echo $frontend->getChannel()->alias; ?>/<var>package</var></code><br />
                 where package is the name of the package to install.</li>
         </ol>
     <p>Users can get started by reading

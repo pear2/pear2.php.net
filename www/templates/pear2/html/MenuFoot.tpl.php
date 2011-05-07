@@ -1,6 +1,6 @@
 <?php
 
-$base = PEAR2\SimpleChannelFrontend\Main::getURL();
+$base = $frontend->getURL();
 $keys = array_keys($context->getRaw('data'));
 $last = end($keys);
 

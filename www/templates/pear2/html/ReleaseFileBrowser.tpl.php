@@ -7,21 +7,16 @@ if (isset($context->options['packageVersion'])) {
     $releaseRoot = $context->package->name;
 }
 
-$packageURL = PEAR2\SimpleChannelFrontend\Main::getURL()
-    . $context->package->name;
-
-$releaseURL = PEAR2\SimpleChannelFrontend\Main::getURL()
-    . $releaseRoot;
+$packageURL = $frontend->getURL() . $context->package->name;
+$releaseURL = $frontend->getURL() . $releaseRoot;
 
 // Set the page title
 if (isset($context->options['file'])) {
     $parent->context->page_title = $context->options['file'] . ' - '
-        . $releaseRoot . ' - '
-        . PEAR2\SimpleChannelFrontend\Main::$title;
+        . $releaseRoot . ' - ' . $frontend->title;
 } else {
     $parent->context->page_title = 'Files - '
-        . $releaseRoot . ' - '
-        . PEAR2\SimpleChannelFrontend\Main::$title;
+        . $releaseRoot . ' - ' . $frontend->title;
 }
 
 ?>
@@ -62,7 +57,8 @@ $traverseFiles = function(
     $releaseFile,
     $releaseRoot,
     &$fileCount,
-    &$directoryCount
+    &$directoryCount,
+    $frontend
 ) {
     echo '<ul>';
     foreach ($node as $file) {
@@ -82,7 +78,7 @@ $traverseFiles = function(
                 strpos($file, $releaseFile) + strlen($releaseFile) + 1
             );
 
-            $fileURL = PEAR2\SimpleChannelFrontend\Main::getURL()
+            $fileURL = $frontend->getURL()
                 . $releaseRoot . '/files/' . $filePath;
 
             echo '<a href="' . htmlspecialchars($fileURL) . '">';

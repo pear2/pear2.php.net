@@ -1,5 +1,5 @@
 <?php
-$parent->context->page_title = $context->name . ' | Categories | ' . PEAR2\SimpleChannelFrontend\Main::$channel->name; ?>
+$parent->context->page_title = $context->name . ' | Categories | ' . $frontend->getChannel()->name; ?>
 
 <div class="grid_8 left">
  <div class="packages-header">
@@ -9,7 +9,7 @@ $parent->context->page_title = $context->name . ' | Categories | ' . PEAR2\Simpl
  if (count($context)) {
     echo '<ul>';
     foreach ($context as $package) {
-        echo '<li><a href="'.PEAR2\SimpleChannelFrontend\Main::getURL().$package->name.'">'.$package->name.'</a></li>';
+        echo '<li><a href="' . $frontend->getURL() . $package->name . '">' . $package->name . '</a></li>';
     }
     echo '</ul>';
  }

@@ -234,7 +234,7 @@ class Main
                     $value = $this->escape($value);
                     break;
                 case 'array':
-                    $value = new ObjectProxy\ArrayAccess(new \ArrayIterator($value), $this);
+                    $value = new ObjectProxy\ArrayIterator($value, $this);
                     break;
             }
         }
@@ -714,6 +714,15 @@ class Main
         return $ret;
     }
 
+    protected function renderArrayAccess(\ArrayAccess $array, $template = null)
+    {
+        $ret = '';
+        foreach ($array as $key => $element) {
+            $ret .= $this->render($element, $template);
+        }
+        return $ret;
+    }
+
     /**
      * Render an if else conditional template output.
      * 
@@ -744,9 +753,16 @@ class Main
      */
     protected function renderObject($object, $template = null)
     {
-        if ($this->__config['escape']
-            && !$object instanceof ObjectProxy) {
-            $object = ObjectProxy::factory($object, $this);
+        if ($this->__config['escape']) {
+
+            if (!$object instanceof ObjectProxy) {
+                $object = ObjectProxy::factory($object, $this);
+            }
+
+            if ($object instanceof ObjectProxy\ArrayIterator) {
+                return $this->renderArrayAccess($object);
+            }
+
         }
         return $this->fetch($object, $template);
     }

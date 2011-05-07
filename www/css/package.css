@@ -80,6 +80,7 @@
 .package-description .package-categories li {
 	font-size: 11px;
 	list-style-type: none;
+    margin: 0;
 }
 
 .package-description .package-categories li a {
@@ -240,6 +241,11 @@ li.package-documentation-api {
 
 .package-install-instructions div {
 	margin-left: 16px;
+}
+
+.package-install-instructions div.package-install-instructions-section {
+	margin-left: 0;
+	margin-bottom: 10px;
 }
 
 .package-install .package-install-prompt {

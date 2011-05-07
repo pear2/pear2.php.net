@@ -4,7 +4,7 @@ namespace PEAR2Web;
 
 class Router
 {
-    public static function getRoute($requestURI)
+    public static function getRoute($baseURI, $requestURI)
     {
         $options = array();
 
@@ -17,10 +17,15 @@ class Router
         }
 
         // Trim the base part of the URL, leaving just the path
-        $requestURI = substr($requestURI,
-                        strlen(
-                            parse_url(\PEAR2\SimpleChannelFrontend\Main::getURL(),
-                                      PHP_URL_PATH)));
+        $requestURI = substr(
+            $requestURI,
+            strlen(
+                parse_url(
+                    $baseURI,
+                    PHP_URL_PATH
+                )
+            )
+        );
 
         $packageExp = "/"
             . "^\n"

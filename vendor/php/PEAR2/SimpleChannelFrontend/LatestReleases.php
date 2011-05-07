@@ -5,20 +5,23 @@ use PEAR2\Pyrus\Channel;
 class LatestReleases extends \ArrayIterator
 {
     public $options = array(
-                        'limit'  => 10,
-                        'offset' => 0);
+        'limit'  => 10,
+        'offset' => 0,
+    );
 
-    function __construct($options = array())
+    public function __construct($options = array())
     {
-
         $this->options = $options + $this->options;
 
-        $packages = array();
-
-        foreach (new \PEAR2\Pyrus\Channel\RemotePackages($options['frontend']::$channel) as $package)
-        {
-            foreach ($package as $version=>$info) {
-                $packages[$package->date.' '.$package->time] = array('packageVersion'=>$version, 'package'=>$package->name);
+        $packages        = array();
+        $channel         = $options['frontend']->getChannel();
+        $remote_packages = new \PEAR2\Pyrus\Channel\RemotePackages($channel);
+        foreach ($remote_packages as $package) {
+            foreach ($package as $version => $info) {
+                $packages[$package->date . ' ' . $package->time] = array(
+                    'packageVersion' => $version,
+                    'package'        => $package->name,
+                );
             }
         }
 
@@ -33,6 +36,6 @@ class LatestReleases extends \ArrayIterator
 
     function current()
     {
-        return new PackageRelease(parent::current() + array('frontend'=>$this->options['frontend']));
+        return new PackageRelease(parent::current() + array('frontend' => $this->options['frontend']));
     }
 }

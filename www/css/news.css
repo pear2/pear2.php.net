@@ -24,12 +24,14 @@
 	color: #fff;
 }
 
-#header #mid .left {
+#header #mid .left,
+#header #bottom .left {
 	width: 440px;
 	float: left;
 }
 
-#header #mid .right {
+#header #mid .right,
+#header #bottom .right {
 	width: 440px;
 	float: right;
 }
@@ -40,29 +42,30 @@
 	font-size: 15px;
 }
 
-#header #mid #download {
+#header #bottom #download {
 	padding-top: 10px;
+	padding-bottom: 13px;
+	font-size: 17px;
 }
 
-#header #mid #download a {
+#header #bottom #download a {
 	color: #646464;
 	text-decoration: none;
 }
 
 /* }}} */
-/* {{{ Featured companies bar */
+/* {{{ Pyrus feature */
 
 #header #bottom {
 	clear: both;
 	padding: 12px;
-	color: #505050;
+	color: #444;
 	background: #afd5df;
 }
 
-#header #bottom h2 {
-	margin-right: 20px;
-	font-size: 14px;
-	display: inline;
+#header #bottom a {
+    color: #444;
+    text-decoration: underline;
 }
 
 /* }}} */
