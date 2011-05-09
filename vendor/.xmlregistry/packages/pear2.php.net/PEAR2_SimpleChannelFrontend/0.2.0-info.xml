@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a3">
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
  <name>PEAR2_SimpleChannelFrontend</name>
  <channel>pear2.php.net</channel>
  <summary>A simple PEAR channel frontend that does not require a database.
@@ -21,7 +21,11 @@ channel server as `index.php`, and add an `.htaccess` file with the following:
 
 For a more customized interface, you can create a `config.inc.php` file, or
 install the package and use the files in the `www_dir` as a starting point for
-a fully customized PEAR channel.
+a fully customized PEAR channel. The pear2.php.net uses this method for a 
+custom frontend.
+
+PEAR2_SimpleChannelFrontend can also be used as a viewer for remote PEAR
+channels. See the `config.sample.php` file for an example of how to do this.
 </description>
  <lead>
   <name>Brett Bieber</name>
@@ -29,24 +33,37 @@ a fully customized PEAR channel.
   <email>saltybeagle@php.net</email>
   <active>yes</active>
  </lead>
- <date>2011-05-06</date>
- <time>15:10:57</time>
+ <date>2011-05-09</date>
+ <time>15:14:56</time>
  <version>
-  <release>0.3.0</release>
-  <api>0.3.0</api>
+  <release>0.2.0</release>
+  <api>0.2.0</api>
  </version>
  <stability>
   <release>alpha</release>
   <api>alpha</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
- <notes>Features:
+ <notes>Features and BugFixes:
 
- - reduce number of static properties and methods [gauthierm]
+ - Change pear2 namespace to PEAR2 [saltybeagle]
+ - Add release file browser [saltybeagle|gauthierm]
+ - Add category page [gauthierm]
+ - Add view for latest releases, ordered by date [saltybeagle]
+ - Support pagination for releases and packages [saltybeagle]
+ - Add package search support [saltybeagle]
+ - Reduce number of static properties and methods [gauthierm]
  - Split initialization into its own method outside of construct [gauthierm]
- - cleanup [gauthierm]
+ - Various cleanup [gauthierm]
+ - Add router for clean URLs, backported from PEAR2Web [saltybeagle]
+ - Add release file browsing support, backported from PEAR2 [saltybeagle|gauthierm]
+ - Support using the frontend as a viewer for remote channels [saltybeagle]
 
-</notes>
+
+PEAR2_SimpleChannelFrontend API release notes for version 0.2.0:
+
+Most of the static methods have been removed. See the sample config file for 
+instructions on how to set up your local channel.</notes>
  <contents>
   <dir name="/">
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/Main.tpl.php" md5sum="615121a4836e8174d7c3d4aa96a214af"/>
@@ -54,36 +71,41 @@ a fully customized PEAR channel.
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/UnregisteredViewException.tpl.php" md5sum="47c4341b4708379ef108c56b5f5030aa"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Support.tpl.php" md5sum="7f174360d1c20159da60c570bcee1548"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Search.tpl.php" md5sum="4a6978c84ad472379c5aafd39f3adf3c"/>
-   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/ReleaseFileBrowser.tpl.php" md5sum="f8b08718edcd410cdba0c119e7133493"/>
-   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/PackageRelease.tpl.php" md5sum="ac51e7808601b763dcd7f081185c54d8"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/ReleaseFileBrowser.tpl.php" md5sum="fd392833eff06b0dca2a432ed7712912"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/PackageRelease.tpl.php" md5sum="c0f09a40b845571a380885369241856a"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/PackageList.tpl.php" md5sum="f7acf5a28fe69bcc0b8253eedd3649a9"/>
-   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Package.tpl.php" md5sum="21a7678b018047d183755a592366d382"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/PackageFileInfo.tpl.php" md5sum="ff1d7e41a667b4f4e548a6146e73fedf"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Package.tpl.php" md5sum="080ac1c8dc1e56627ae13281c77343f1"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/News.tpl.php" md5sum="c33fcd5d88741b9a5f112c5803ac8758"/>
-   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Main.tpl.php" md5sum="add2f6b12fd6f839922747c86439112f"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Main.tpl.php" md5sum="e869a65ab1f552a17217aa6e92cadaa4"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/LatestReleases.tpl.php" md5sum="81d41e18486420d93ceb2a1d92d453fd"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/InstallInstructions.tpl.php" md5sum="7ad07873b133948cb737706164097d8c"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Category.tpl.php" md5sum="f647bd454775a3902acef1f63ec913d1"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Categories.tpl.php" md5sum="9e3e6a193ca88ce901200f6e206cafa5"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/sample.htaccess" md5sum="4a02e03c71ce3b4e119c8e8665f1fbda"/>
-   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/index.php" md5sum="344e289c6d353aee464a4719424b3cbd"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/js/highlight.pack.js" md5sum="ba447885a557e9bd860e48862bd2dcbd"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/index.php" md5sum="ecdff2786e839d08081e01d4674ae455"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/text.css" md5sum="9ab4811156ff06dca5600d6761c922b3"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/scf.css" md5sum="8e577ba61d4c1d33c4c25b7394fcd8b9"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/reset.css" md5sum="5eafd59c737bd3f325f00e9de44a1d3c"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/images/header.png" md5sum="7a8e52bba503f1eb2901c2d50cdd5399"/>
-   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/all.css" md5sum="71baec421874b9ba26348716ee99c0dd"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/highlight-idea.css" md5sum="15cefd979e562bf3dd8a7508777a82e5"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/file-browser.css" md5sum="9c6d8b8e0fad5f7845cc5fd99210d8b3"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/all.css" md5sum="797964094b030060364ba8685e052f95"/>
    <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/960.css" md5sum="283b5e3843e23b5243e7507ed7fa0036"/>
-   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/config.sample.php" md5sum="570f60d99df877915f5e063070dff50e"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/config.sample.php" md5sum="ad605b81fd2c52ccef76c93d89e67cee"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/UnregisteredViewException.php" md5sum="1091411309d58179b6ad31e20dfba736"/>
-   <file role="php" name="php/PEAR2/SimpleChannelFrontend/TemplateMapper.php" md5sum="fb61d2b9342bab9fe7bf6abc55cb7be0"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/TemplateMapper.php" md5sum="e0e12e8fd4a441ccfc72bac1cf1f1080"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/Support.php" md5sum="54bd1009d90914204349493b49bad645"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/Search.php" md5sum="ed10658d5de51eabdd6e00b3456e7b68"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Router.php" md5sum="dd5a57f7f43b93d6583c9d4df9b0d10f"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/ReleaseFileBrowser/FilteredIterator.php" md5sum="43f6b8fdab23ed6d5953d8c9080230d7"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/ReleaseFileBrowser.php" md5sum="c3a79aaf1ac468e0f4ee9e113badc287"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/PackageRelease.php" md5sum="1e5b136f4b775cca3a5d7af651815774"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/PackageList.php" md5sum="12b873f56b8d9de1a524de69b8800782"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/Package.php" md5sum="b51924744467e40810767a10c9364a26"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/News.php" md5sum="fa78e1caee9560226bab41109d7fd3ab"/>
-   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Main.php" md5sum="9a152dd750e8f19f7afe509539daf39e"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Main.php" md5sum="0a5d319900ce5d104d8b80c938aaeeec"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/LatestReleases.php" md5sum="b400abaac7684ae2f8b5c426cbca5f66"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/Internet.php" md5sum="e76deecb0139c233d32aedc078e8cc2b"/>
    <file role="php" name="php/PEAR2/SimpleChannelFrontend/Exception.php" md5sum="83bf3a874f0c55279dd0d6d3d50e2a82"/>
@@ -94,7 +116,7 @@ a fully customized PEAR channel.
  <dependencies>
   <required>
    <php>
-    <min>5.2.0</min>
+    <min>5.3.2</min>
    </php>
    <pearinstaller>
     <min>2.0.0a1</min>

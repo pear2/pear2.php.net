@@ -9,7 +9,7 @@
  * @package   PEAR2_SimpleChannelFrontend
  * @author    Brett Bieber <saltybeagle@php.net>
  * @author    Michael Gauthier <mike@silverorange.com>
- * @copyright 2009 Brett Biever, 2011 Michael Gauthier
+ * @copyright 2009 Brett Bieber, 2011 Michael Gauthier
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
  * @link      http://pear2.php.net/PEAR2_SimpleChannelFrontend
  */
@@ -21,7 +21,7 @@
  * @package   PEAR2_SimpleChannelFrontend
  * @author    Brett Bieber <saltybeagle@php.net>
  * @author    Michael Gauthier <mike@silverorange.com>
- * @copyright 2009 Brett Biever, 2011 Michael Gauthier
+ * @copyright 2009 Brett Bieber, 2011 Michael Gauthier
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
  * @link      http://pear2.php.net/PEAR2_SimpleChannelFrontend
  */
@@ -156,38 +156,47 @@ class Main
     /**
      * Sets the channel file for this frontend
      *
-     * @param \PEAR2\Pyrus\ChanelFileInterface $channel The channel object.
+     * @param \PEAR2\Pyrus\ChanelFileInterface $channel_file The channel object.
      *
      * @return \PEAR2\SimpleChannelFrontend\Main the current class for fluent
      *                                           interface.
      */
-    public function setChannel(\PEAR2\Pyrus\ChannelFileInterface $channel)
+    public function setChannel(\PEAR2\Pyrus\ChannelFileInterface $channel_file)
     {
-        \PEAR2\Pyrus\Main::$downloadClass = __NAMESPACE__ . '\\Internet';
-        \PEAR2\Pyrus\Config::current()->cache_dir = '/tmp';
-
         $config = \PEAR2\Pyrus\Config::current();
 
-        $this->channel      = $config->channelregistry['pear2.php.net'];
-        $this->channel_path = dirname($channel->path);
+        $channel = new \PEAR2\Pyrus\Channel($channel_file);
+
+        // Ensure the channel currently exists in the registry
+        if (!$config->channelregistry->exists($channel->name)) {
+            $config->channelregistry->add($channel);
+        }
+
+        $this->channel      = $config->channelregistry[$channel->name];
+        $this->channel_path = dirname($channel_file->path);
+
+        if (strpos($channel_file->path, 'http://') !== false) {
+            // This channel is remote, there won't be any local files to set up.
+            return $this;
+        }
+
+        \PEAR2\Pyrus\Main::$downloadClass = __NAMESPACE__ . '\\Internet';
 
         $rest = str_replace(
-            'http://' . $channel->name,
+            'http://' . $channel_file->name,
             '',
-            $channel->protocols->rest['REST1.0']->baseurl
+            $channel_file->protocols->rest['REST1.0']->baseurl
         );
 
         Internet::addDirectory(
             $this->channel_path . '/get',
-            'http://' . $channel->name . '/get/'
+            'http://' . $channel_file->name . '/get/'
         );
 
         Internet::addDirectory(
             $this->channel_path . $rest,
-            $channel->protocols->rest['REST1.0']->baseurl
+            $channel_file->protocols->rest['REST1.0']->baseurl
         );
-
-        $this->channel->fromArray($channel->getArray());
 
         return $this;
     }

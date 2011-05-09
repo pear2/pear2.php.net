@@ -13,6 +13,15 @@ $parent->context->page_title = $context->name . ' | ' . $frontend->getChannel()-
             ?>
         </p>
         <?php echo $savant->render($context->channel . '/' . $context->name . '-' . $context->version['release'], 'InstallInstructions.tpl.php'); ?>
+    <?php
+
+    $filesURL = $frontend->getURL() . $context->name . '/files';
+    
+    ?>
+    <div class="package-files">
+        <h3><a class="button" href="<?php echo $filesURL; ?>">Browse Files</a></h3>
+        <span class="package-files-info"><?php echo $savant->render($context, 'PackageFileInfo.tpl.php'); ?>
+    </div>
     </div>
     <div class="grid_4 right releases">
         <h3>Releases</h3>

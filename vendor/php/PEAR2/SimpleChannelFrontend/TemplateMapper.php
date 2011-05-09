@@ -19,3 +19,4 @@ class TemplateMapper extends \PEAR2\Templates\Savant\ClassToTemplateMapper
         static::$classname_replacement = 'PEAR2\\SimpleChannelFrontend\\';
     }
 }
+?>

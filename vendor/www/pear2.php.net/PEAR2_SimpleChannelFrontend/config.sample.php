@@ -10,10 +10,21 @@ error_reporting(E_ALL);
 require_once __DIR__ . '/../../../php/PEAR2/Autoload.php';
 
 $config = PEAR2\Pyrus\Config::singleton('/tmp');
+$config->cache_dir = '/tmp';
 
 /**
- * An example of setting up the channel object.
+ * For a remote channel use this:
+ * $channel = new \PEAR2\Pyrus\ChannelFile('http://pear.php.net/', false, true);
+ * 
+ * Use this format if you want to run on a local channel:
+ * $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
  */
 $channel = new \PEAR2\Pyrus\ChannelFile(__DIR__ . '/channel.xml');
 
-PEAR2\SimpleChannelFrontend\Main::$url = 'http://channel.com/';
+
+/**
+ * If you are viewing the channel from a different URL than the channel name,
+ * customize the URL to the frontend.
+ * 
+ * $url = '/workspace/PEAR2_SimpleChannelFrontend/www/';
+ */
