@@ -54,7 +54,7 @@ PEAR2_SimpleChannelFrontend API release notes for version 0.2.0:
 
 Most of the static methods have been removed. See the sample config file for 
 instructions on how to set up your local channel.</n>
- <f>1982714</f>
+ <f>1982789</f>
  <g>http://pear2.php.net/get/PEAR2_SimpleChannelFrontend-0.2.0</g>
  <x xlink:href="package.0.2.0.xml"/>
 </r>
