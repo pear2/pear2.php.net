@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_SimpleChannelFrontend</name>
+ <channel>pear2.php.net</channel>
+ <summary>A simple PEAR channel frontend that does not require a database.
+</summary>
+ <description>
+This package provides a simple frontend to a PEAR channel by directly using
+the PEAR channel files.
+
+To use, place the PEAR2_SimpleChannelFrontend .phar in the root of your
+channel server as `index.php`, and add an `.htaccess` file with the following:
+
+    &lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php [L]
+    &lt;/IfModule&gt;
+
+For a more customized interface, you can create a `config.inc.php` file, or
+install the package and use the files in the `www_dir` as a starting point for
+a fully customized PEAR channel. The pear2.php.net uses this method for a 
+custom frontend.
+
+PEAR2_SimpleChannelFrontend can also be used as a viewer for remote PEAR
+channels. See the `config.sample.php` file for an example of how to do this.
+</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-05-09</date>
+ <time>14:37:38</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.2.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Features and BugFixes:
+
+ - Change pear2 namespace to PEAR2 [saltybeagle]
+ - Add release file browser [saltybeagle|gauthierm]
+ - Add category page [gauthierm]
+ - Add view for latest releases, ordered by date [saltybeagle]
+ - Support pagination for releases and packages [saltybeagle]
+ - Add package search support [saltybeagle]
+ - Reduce number of static properties and methods [gauthierm]
+ - Split initialization into its own method outside of construct [gauthierm]
+ - Various cleanup [gauthierm]
+ - Add router for clean URLs, backported from PEAR2Web [saltybeagle]
+ - Add release file browsing support, backported from PEAR2 [saltybeagle|gauthierm]
+ - Support using the frontend as a viewer for remote channels [saltybeagle]
+
+
+PEAR2_SimpleChannelFrontend API release notes for version 0.2.0:
+
+Most of the static methods have been removed. See the sample config file for 
+instructions on how to set up your local channel.</notes>
+ <contents>
+  <dir name="/">
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/Main.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/LatestReleases.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/UnregisteredViewException.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Support.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Search.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/ReleaseFileBrowser.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/PackageRelease.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/PackageList.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/PackageFileInfo.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Package.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/News.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Main.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/LatestReleases.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/InstallInstructions.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Category.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/Categories.tpl.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/sample.htaccess"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/js/highlight.pack.js"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/index.php"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/text.css"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/scf.css"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/reset.css"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/images/header.png"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/highlight-idea.css"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/file-browser.css"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/all.css"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/css/960.css"/>
+   <file role="www" name="www/pear2.php.net/PEAR2_SimpleChannelFrontend/config.sample.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/UnregisteredViewException.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/TemplateMapper.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Support.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Search.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Router.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/ReleaseFileBrowser/FilteredIterator.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/ReleaseFileBrowser.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/PackageRelease.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/PackageList.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Package.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/News.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Main.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/LatestReleases.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Internet.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Exception.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Category.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelFrontend/Categories.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.2</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR2_Pyrus</name>
+    <channel>pear2.php.net</channel>
+   </package>
+   <package>
+    <name>PEAR2_Templates_Savant</name>
+    <channel>pear2.php.net</channel>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

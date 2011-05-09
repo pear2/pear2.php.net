@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_simplechannelfrontend">PEAR2_SimpleChannelFrontend</p>
+ <c>pear2.php.net</c>
+ <v>0.2.0</v>
+ <a>0.2.0</a>
+ <mp>5.3.2</mp>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>A simple PEAR channel frontend that does not require a database.
+</s>
+ <d>
+This package provides a simple frontend to a PEAR channel by directly using
+the PEAR channel files.
+
+To use, place the PEAR2_SimpleChannelFrontend .phar in the root of your
+channel server as `index.php`, and add an `.htaccess` file with the following:
+
+    &lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php [L]
+    &lt;/IfModule&gt;
+
+For a more customized interface, you can create a `config.inc.php` file, or
+install the package and use the files in the `www_dir` as a starting point for
+a fully customized PEAR channel. The pear2.php.net uses this method for a 
+custom frontend.
+
+PEAR2_SimpleChannelFrontend can also be used as a viewer for remote PEAR
+channels. See the `config.sample.php` file for an example of how to do this.
+</d>
+ <da>2011-05-09 14:37:38</da>
+ <n>Features and BugFixes:
+
+ - Change pear2 namespace to PEAR2 [saltybeagle]
+ - Add release file browser [saltybeagle|gauthierm]
+ - Add category page [gauthierm]
+ - Add view for latest releases, ordered by date [saltybeagle]
+ - Support pagination for releases and packages [saltybeagle]
+ - Add package search support [saltybeagle]
+ - Reduce number of static properties and methods [gauthierm]
+ - Split initialization into its own method outside of construct [gauthierm]
+ - Various cleanup [gauthierm]
+ - Add router for clean URLs, backported from PEAR2Web [saltybeagle]
+ - Add release file browsing support, backported from PEAR2 [saltybeagle|gauthierm]
+ - Support using the frontend as a viewer for remote channels [saltybeagle]
+
+
+PEAR2_SimpleChannelFrontend API release notes for version 0.2.0:
+
+Most of the static methods have been removed. See the sample config file for 
+instructions on how to set up your local channel.</n>
+ <f>1982714</f>
+ <g>http://pear2.php.net/get/PEAR2_SimpleChannelFrontend-0.2.0</g>
+ <x xlink:href="package.0.2.0.xml"/>
+</r>

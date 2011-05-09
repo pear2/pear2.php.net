@@ -153,32 +153,40 @@ http://pear.php.net/manual/en/pyrus.php</d>
 This package provides a simple frontend to a PEAR channel by directly using
 the PEAR channel files.
 
-To use, place the PEAR2_SimpleChannelFrontend-0.1.0.phar in the root of your
-channel server as index.php, and add an .htaccess file with the following:
+To use, place the PEAR2_SimpleChannelFrontend .phar in the root of your
+channel server as `index.php`, and add an `.htaccess` file with the following:
 
-&lt;IfModule mod_rewrite.c&gt;
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php [L]
-&lt;/IfModule&gt;
+    &lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php [L]
+    &lt;/IfModule&gt;
 
-For a more customized interface, you can create a config.inc.php file, or
-install the package and use the files in the www_dir as a starting point for
-a fully customized PEAR channel.
+For a more customized interface, you can create a `config.inc.php` file, or
+install the package and use the files in the `www_dir` as a starting point for
+a fully customized PEAR channel. The pear2.php.net uses this method for a 
+custom frontend.
+
+PEAR2_SimpleChannelFrontend can also be used as a viewer for remote PEAR
+channels. See the `config.sample.php` file for an example of how to do this.
 </d>
    <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
   </p>
   <a>
+   <r>
+    <v>0.2.0</v>
+    <s>alpha</s>
+   </r>
    <r>
     <v>0.1.0</v>
     <s>alpha</s>
    </r>
   </a>
   <deps>
-   <v>0.1.0</v>
-   <d>a:1:{s:8:&quot;required&quot;;a:3:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.2.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}s:7:&quot;package&quot;;a:2:{i:0;a:2:{s:4:&quot;name&quot;;s:11:&quot;PEAR2_Pyrus&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}i:1;a:2:{s:4:&quot;name&quot;;s:22:&quot;PEAR2_Templates_Savant&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}}}}</d>
+   <v>0.2.0</v>
+   <d>a:1:{s:8:&quot;required&quot;;a:3:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.2&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}s:7:&quot;package&quot;;a:2:{i:0;a:2:{s:4:&quot;name&quot;;s:11:&quot;PEAR2_Pyrus&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}i:1;a:2:{s:4:&quot;name&quot;;s:22:&quot;PEAR2_Templates_Savant&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}}}}</d>
   </deps>
  </pi>
  <pi>

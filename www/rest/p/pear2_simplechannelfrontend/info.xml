@@ -10,20 +10,24 @@
 This package provides a simple frontend to a PEAR channel by directly using
 the PEAR channel files.
 
-To use, place the PEAR2_SimpleChannelFrontend-0.1.0.phar in the root of your
-channel server as index.php, and add an .htaccess file with the following:
+To use, place the PEAR2_SimpleChannelFrontend .phar in the root of your
+channel server as `index.php`, and add an `.htaccess` file with the following:
 
-&lt;IfModule mod_rewrite.c&gt;
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php [L]
-&lt;/IfModule&gt;
+    &lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php [L]
+    &lt;/IfModule&gt;
 
-For a more customized interface, you can create a config.inc.php file, or
-install the package and use the files in the www_dir as a starting point for
-a fully customized PEAR channel.
+For a more customized interface, you can create a `config.inc.php` file, or
+install the package and use the files in the `www_dir` as a starting point for
+a fully customized PEAR channel. The pear2.php.net uses this method for a 
+custom frontend.
+
+PEAR2_SimpleChannelFrontend can also be used as a viewer for remote PEAR
+channels. See the `config.sample.php` file for an example of how to do this.
 </d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>
