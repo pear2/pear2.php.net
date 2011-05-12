@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_SimpleChannelServer</name>
+ <channel>pear2.php.net</channel>
+ <summary>A simple channel server for PEAR compatible channels
+</summary>
+ <description>
+This package contains a set of scripts to create a simple PEAR compatible
+channel server. Included with the package are the scs- commands which are 
+added to pyrus to manage a PEAR channel.
+
+Example usage from the command line:
+php pyrus.phar scs-create pear.example.com &quot;My Channel&quot;
+php pyrus.phar scs-release MyPackage-0.0.0.tgz myhandle
+
+More information here: http://pear.php.net/manual/en/channels.scs.php
+</description>
+ <lead>
+  <name>Gregory Beaver</name>
+  <user>cellog</user>
+  <email>cellog@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>brett.bieber@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-05-11</date>
+ <time>18:21:17</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Fixes:
+
+ - Add support for channels using https [saltybeagle]</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/SimpleChannelServer/REST/Release.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/REST/Package.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/REST/Manager.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/REST/Maintainer.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/REST/Category.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/Main.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/Get.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/Exception.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/CLI.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/Channel.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/Categories/Exception.php"/>
+   <file role="php" name="php/PEAR2/SimpleChannelServer/Categories.php"/>
+   <file role="script" name="script/pearscs"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_SimpleChannelServer/examples/examples/upgradeFromChiara.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_SimpleChannelServer/examples/examples/update_channel.php"/>
+   <file role="customcommand" name="customcommand/pear2.php.net/PEAR2_SimpleChannelServer/commands.xml"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR2_Pyrus</name>
+    <channel>pear2.php.net</channel>
+   </package>
+   <package>
+    <name>PEAR2_MultiErrors</name>
+    <channel>pear2.php.net</channel>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>

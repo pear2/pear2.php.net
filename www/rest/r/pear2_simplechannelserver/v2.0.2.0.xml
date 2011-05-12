@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_simplechannelserver">PEAR2_SimpleChannelServer</p>
+ <c>pear2.php.net</c>
+ <v>0.2.0</v>
+ <a>0.1.0</a>
+ <mp>5.3.0</mp>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>A simple channel server for PEAR compatible channels
+</s>
+ <d>
+This package contains a set of scripts to create a simple PEAR compatible
+channel server. Included with the package are the scs- commands which are 
+added to pyrus to manage a PEAR channel.
+
+Example usage from the command line:
+php pyrus.phar scs-create pear.example.com &quot;My Channel&quot;
+php pyrus.phar scs-release MyPackage-0.0.0.tgz myhandle
+
+More information here: http://pear.php.net/manual/en/channels.scs.php
+</d>
+ <da>2011-05-11 18:21:17</da>
+ <n>Fixes:
+
+ - Add support for channels using https [saltybeagle]</n>
+ <f>2005196</f>
+ <g>http://pear2.php.net/get/PEAR2_SimpleChannelServer-0.2.0</g>
+ <x xlink:href="package.0.2.0.xml"/>
+</r>
