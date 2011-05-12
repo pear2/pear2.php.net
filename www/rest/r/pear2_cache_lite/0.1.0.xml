@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_cache_lite">PEAR2_Cache_Lite</p>
+ <c>pear2.php.net</c>
+ <v>0.1.0</v>
+ <st>alpha</st>
+ <l>LGPL License 2.1</l>
+ <m>gauthierm</m>
+ <s>Cache_Lite is a simple, fast cache system
+</s>
+ <d>
+This is a port of Cache_Lite from PEAR.
+
+Cache_Lite uses the filesystem to cache values. No separate services or
+daemons are required to run Cache_Lite.
+
+Cache_Lite supports cache groups so you can easily invalidate a group of
+cached values.
+</d>
+ <da>2011-05-12 09:01:28</da>
+ <n>First release includes the following basic features:
+
+ - get
+ - save
+ - remove
+ - removeGroup
+ - write protection
+ - read protection
+ - nested directories
+
+
+API includes the following basic features:
+
+ - get
+ - save
+ - remove
+ - removeGroup
+</n>
+ <f>9893</f>
+ <g>http://pear2.php.net/get/PEAR2_Cache_Lite-0.1.0</g>
+ <x xlink:href="package.0.1.0.xml"/>
+</r>

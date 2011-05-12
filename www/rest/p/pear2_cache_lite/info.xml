@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>
+ <n>PEAR2_Cache_Lite</n>
+ <c>pear2.php.net</c>
+ <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <l>LGPL License 2.1</l>
+ <s>Cache_Lite is a simple, fast cache system
+</s>
+ <d>
+This is a port of Cache_Lite from PEAR.
+
+Cache_Lite uses the filesystem to cache values. No separate services or
+daemons are required to run Cache_Lite.
+
+Cache_Lite supports cache groups so you can easily invalidate a group of
+cached values.
+</d>
+ <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+</p>
