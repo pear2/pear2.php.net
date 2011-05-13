@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>
+ <n>PEAR2_Templates_Savant_Turbo</n>
+ <c>pear2.php.net</c>
+ <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <l>New BSD License</l>
+ <s>A simple caching output controller for Savant
+</s>
+ <d>
+Savant output can be cached for faster rendering. PEAR2_Templates_Savant_Turbo
+allows rendered content to be cached, and reused for subsequent requests.
+For basic use, instead of creating a new `PEAR2\Templates\Savant\Main` object,
+create a `PEAR2\Templates\Savant\Turbo` object. In models you'd like to have
+cached, implement the `CacheableInterface`.
+</d>
+ <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+</p>

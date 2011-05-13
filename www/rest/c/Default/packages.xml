@@ -10,4 +10,6 @@
  <p xlink:href="rest/p/PEAR2_MultiErrors">PEAR2_MultiErrors</p>
  <p xlink:href="rest/p/PEAR2_Console_CommandLine">PEAR2_Console_CommandLine</p>
  <p xlink:href="rest/p/PEAR2_Templates_Savant">PEAR2_Templates_Savant</p>
+ <p xlink:href="rest/p/PEAR2_Templates_Savant_Turbo">PEAR2_Templates_Savant_Turbo</p>
+ <p xlink:href="rest/p/PEAR2_Cache_Lite">PEAR2_Cache_Lite</p>
 </l>

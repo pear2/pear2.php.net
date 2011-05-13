@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Cache_Lite</name>
+ <channel>pear2.php.net</channel>
+ <summary>Cache_Lite is a simple, fast cache system
+</summary>
+ <description>
+This is a port of Cache_Lite from PEAR.
+
+Cache_Lite uses the filesystem to cache values. No separate services or
+daemons are required to run Cache_Lite.
+
+Cache_Lite supports cache groups so you can easily invalidate a group of
+cached values.
+</description>
+ <lead>
+  <name>Michael Gauthier</name>
+  <user>gauthierm</user>
+  <email>mike@silverorange.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-05-12</date>
+ <time>09:01:28</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL License 2.1</license>
+ <notes>First release includes the following basic features:
+
+ - get
+ - save
+ - remove
+ - removeGroup
+ - write protection
+ - read protection
+ - nested directories
+
+
+API includes the following basic features:
+
+ - get
+ - save
+ - remove
+ - removeGroup
+</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/Cache/Lite/Main.php"/>
+   <file role="php" name="php/PEAR2/Cache/Lite/InvalidHashTypeException.php"/>
+   <file role="php" name="php/PEAR2/Cache/Lite/FileException.php"/>
+   <file role="php" name="php/PEAR2/Cache/Lite/Exception.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.2</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a3</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
