@@ -52,7 +52,7 @@ if ($licenseURI) {
             </td>
         </tr>
         <tr>
-            <th>Bugs:</th>
+            <th>Issues:</th>
             <td><?php echo $savant->render($context, 'PackageBugs.tpl.php'); ?></td>
         </tr>
 
@@ -73,7 +73,7 @@ if (count($context->maintainer) === 0) {
     foreach ($context->maintainer as $handle=>$maintainer) {
         echo '                    <li>';
         echo '<a href="#">' . $maintainer->name . '</a>';
-        echo ' (' . $handle .' • ' . $maintainer->role . ')';
+        echo ' <span class="package-maintainer-details">(' . $handle .' • ' . $maintainer->role . ')</span>';
         echo '</li>' . "\n";
     }
     echo '                </ul>' . "\n";

@@ -1,16 +1,20 @@
-<a href="https://github.com/pear2/<?php echo $parent->context->name; ?>/issues" class="package-bugs-open">open bugs</a>,
-<a href="https://github.com/pear2/<?php echo $parent->context->name; ?>/issues?state=closed" class="package-bugs-closed">closed</a>
-<a href="https://github.com/pear2/<?php echo $parent->context->name; ?>/issues/new" class="package-bugs-new button button-small">Report New</a>
-<script type="text/javascript">
-$.getJSON('http://github.com/api/v2/json/issues/list/pear2/<?php echo $parent->context->name; ?>/open?callback=?',
-        function(data){
-            $('.package-bugs-open').html(data.issues.length + ' open');
-        }
-);
-$.getJSON('http://github.com/api/v2/json/issues/list/pear2/<?php echo $parent->context->name; ?>/closed?callback=?',
-        function(data){
-            $('.package-bugs-closed').html(data.issues.length + ' closed');
-        }
-);
+<?php
 
-</script>
+$openCount = $context->getGitHubOpenIssueCount();
+
+if ($openCount == 0) {
+    echo '<span>none open</span>';
+} else {
+    echo '<a href="' . $context->getGitHubOpenIssuesLink() . '" class="package-bugs-open">' . $openCount . ' open</a>';
+}
+
+$closedCount = $context->getGitHubClosedIssueCount();
+
+if ($closedCount > 0) {
+    echo ', <a href="' . $context->getGitHubClosedIssuesLink() . '" class="package-bugs-closed">' . $closedCount . ' closed</a>';
+}
+
+?>
+<div class="package-bugs-new">
+    <a href="<?php echo $context->getGitHubNewIssueLink(); ?>" class="button button-small">Report New Issue on GitHub ↪</a>
+</div>

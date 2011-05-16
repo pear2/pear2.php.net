@@ -158,8 +158,12 @@ table.package-details li {
 	margin-left: 2em;
 }
 
+.package-maintainer-details {
+    white-space: nowrap;
+}
+
 .package-details .package-bugs-new {
-	margin-left: 0.5em;
+	margin: 0.5em 0;
 }
 
 /* }}} */
