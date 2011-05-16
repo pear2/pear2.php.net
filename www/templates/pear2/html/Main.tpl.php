@@ -69,7 +69,7 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
 
             <div class="left">
                 <h2>Get Started With Pyrus</h2>
-                <a href="http://pear.php.net/manual/en/pyrus.php">Pyrus</a> is a tool to manage PEAR packages. Pyrus simplifies and improves the PEAR experience.
+                <a href="<?php echo $frontend->getURL(); ?>PEAR2_Pyrus">Pyrus</a> is a tool to manage PEAR packages. Pyrus simplifies and improves the PEAR experience.
                 <div id="download">
                     <a class="button" href="http://pear2.php.net/pyrus.phar">Download Pyrus ↴</a>
                 </div>
