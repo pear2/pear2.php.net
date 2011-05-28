@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/highlight-idea.css" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/jquery.history.js"></script>
     <script src="<?php echo $frontend->getURL(); ?>js/pearweb.js"></script>
     <script src="<?php echo $frontend->getURL(); ?>js/highlight.pack.js"></script>
 
@@ -110,7 +111,7 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
 </div>
 
 <div id="content">
-    <div class="content clearfix view-<?php echo $context->options['view']; ?>">
+    <div id="maincontent" class="content clearfix view-<?php echo $context->options['view']; ?>">
         <?php echo $savant->render($context->page_content); ?>
     </div>
 </div>
