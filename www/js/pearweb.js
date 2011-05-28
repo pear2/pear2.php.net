@@ -4,4 +4,13 @@ $(document).ready(function() {
 		.focus(function(e) {
 			this.select();
 		});
+	$('a.partial').click(function(){
+		$.get(this.href+'?format=partial', function(data, textStatus){
+			if (textStatus == 'success') {
+				$('#maincontent').html(data);
+				// @todo push the url onto the history stack
+			}
+		});
+		return false;
+	});
 });

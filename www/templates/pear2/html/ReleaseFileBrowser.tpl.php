@@ -81,7 +81,7 @@ $traverseFiles = function(
             $fileURL = $frontend->getURL()
                 . $releaseRoot . '/files/' . $filePath;
 
-            echo '<a href="' . htmlspecialchars($fileURL) . '">';
+            echo '<a href="' . htmlspecialchars($fileURL) . '" class="partial">';
             echo $filename;
             echo '</a>';
         }
