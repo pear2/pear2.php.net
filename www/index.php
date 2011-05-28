@@ -47,12 +47,15 @@ $savant->setTemplatePath(
     )
 );
 
-switch ($frontend->options['format']) {
-case 'rss':
-    $savant->addTemplatePath(
-        __DIR__ . '/../vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/'
-    );
-    break;
+switch($frontend->options['format']) {
+    case 'partial':
+        \PEAR2Web\TemplateMapper::$output_template['PEAR2\\SimpleChannelFrontend\\Main'] = 'Main-partial';
+        break;
+    case 'rss':
+	    $savant->addTemplatePath(
+	        __DIR__ . '/../vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/'
+	    );
+	    break;
 }
 
 $savant->setEscape('htmlspecialchars');
