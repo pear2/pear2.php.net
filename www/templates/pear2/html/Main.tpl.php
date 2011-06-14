@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title><?php echo $context->page_title; ?></title>
-    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/yui/2.8.0r4/build/reset-fonts/reset-fonts.css" />
+    <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/reset-fonts.css" />
     <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/main.css" />
     <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/news.css" />
     <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/search-form.css" />
@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/file-browser.css" />
     <link rel="stylesheet" href="<?php echo $frontend->getURL(); ?>css/highlight-idea.css" />
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="<?php echo $frontend->getURL(); ?>js/jquery.history.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/jquery-1.6.1.min.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/history.js"></script>
+    <script src="<?php echo $frontend->getURL(); ?>js/history.adapter.jquery.js"></script>
     <script src="<?php echo $frontend->getURL(); ?>js/pearweb.js"></script>
     <script src="<?php echo $frontend->getURL(); ?>js/highlight.pack.js"></script>
 
