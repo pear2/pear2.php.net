@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a3">
+ <name>PEAR2_Console_Color</name>
+ <channel>pear2.php.net</channel>
+ <summary>PEAR2_Console_Color is a Package to provide a easy way to print text in
+</summary>
+ <description>command line when its necessary.
+Have a simple interface and basicly using the static function 'convert'
+you can make use of this Object.
+</description>
+ <lead>
+  <name>Ivo Nascimento</name>
+  <user>ivonascimento</user>
+  <email>ivo@o8o.com.br</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-08-03</date>
+ <time>17:56:55</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Iniciar cover of needs to echo messages to command with color, background and styles
+Trying to use the save public interface the PEAR/Console_Color to provide a way to 
+use as 4.* (PEAR) or 5.* (PEAR2)
+
+Package Console_Color API release notes for version 0.1.0.</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/Console/Color/StyleMapper.php"/>
+   <file role="php" name="php/PEAR2/Console/Color/Mapper.php"/>
+   <file role="php" name="php/PEAR2/Console/Color/ColorMapper.php"/>
+   <file role="php" name="php/PEAR2/Console/Color/BackgroundMapper.php"/>
+   <file role="php" name="php/PEAR2/Console/Color.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
