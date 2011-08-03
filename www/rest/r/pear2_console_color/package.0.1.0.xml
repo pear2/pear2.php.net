@@ -25,7 +25,7 @@ you can make use of this Object.
   <api>alpha</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
- <notes>Iniciar cover of needs to echo messages to command with color, background and styles
+ <notes>Initial cover of needs to echo messages to command with color, background and styles
 Trying to use the save public interface the PEAR/Console_Color to provide a way to 
 use as 4.* (PEAR) or 5.* (PEAR2)
 
