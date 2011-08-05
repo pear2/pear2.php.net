@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>
+ <n>PEAR2_DB_Pl2Method</n>
+ <c>pear2.php.net</c>
+ <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <l>New BSD License</l>
+ <s>This package was port to PEAR2 to add the benefits of good distribution
+</s>
+ <d>and great enviroment.
+
+This package make stored procedures from PostgreSQL and others SGDB
+can used as PHP Methods.
+You have PDOStatement as answer like in this sample:
+  
+  -- in database dev
+  create or replace function teste() returns varchar(10) as
+	$$
+	begin
+	return 'teste';
+	end;
+	$$
+	language 'plpgsql';
+
+$a =  new PDO(&quot;pgsql:host=localhost;port=5432;dbname=dev;user=postgres;password=root&quot;);
+$pl2method = \PEAR2\DB\Pl2Method\Pl2Method::getInstance($a);
+
+here you have a PDOStatement
+$returned = $pl2method-&gt;public-&gt;teste();
+var_dump( $returned );
+ and You can FetchAll()
+var_dump($returned-&gt;FetchAll());
+</d>
+ <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+</p>

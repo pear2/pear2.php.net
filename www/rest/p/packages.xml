@@ -4,6 +4,7 @@
  <p>pear2_cache_lite</p>
  <p>pear2_console_color</p>
  <p>pear2_console_commandline</p>
+ <p>pear2_db_pl2method</p>
  <p>pear2_exception</p>
  <p>pear2_http_request</p>
  <p>pear2_multierrors</p>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_db_pl2method">PEAR2_DB_Pl2Method</p>
+ <c>pear2.php.net</c>
+ <v>0.1.0</v>
+ <a>0.1.0</a>
+ <mp>5.2.0</mp>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>ivonascimento</m>
+ <s>This package was port to PEAR2 to add the benefits of good distribution
+</s>
+ <d>and great enviroment.
+
+This package make stored procedures from PostgreSQL and others SGDB
+can used as PHP Methods.
+You have PDOStatement as answer like in this sample:
+  
+  -- in database dev
+  create or replace function teste() returns varchar(10) as
+	$$
+	begin
+	return 'teste';
+	end;
+	$$
+	language 'plpgsql';
+
+$a =  new PDO(&quot;pgsql:host=localhost;port=5432;dbname=dev;user=postgres;password=root&quot;);
+$pl2method = \PEAR2\DB\Pl2Method\Pl2Method::getInstance($a);
+
+here you have a PDOStatement
+$returned = $pl2method-&gt;public-&gt;teste();
+var_dump( $returned );
+ and You can FetchAll()
+var_dump($returned-&gt;FetchAll());
+</d>
+ <da>2011-08-05 18:18:33</da>
+ <n>Package PEAR2_DB_Pl2Method release notes for version 0.1.0.
+Support to just Psql PDO Driver
+without type validation yet
+
+
+Package PEAR2_DB_Pl2Method API release notes for version 0.1.0.</n>
+ <f>7567</f>
+ <g>http://pear2.php.net/get/PEAR2_DB_Pl2Method-0.1.0</g>
+ <x xlink:href="package.0.1.0.xml"/>
+</r>
