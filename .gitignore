@@ -4,3 +4,5 @@
 /.settings
 /.project
 /vendor/.config
+/tmp
+/.DS_Store
