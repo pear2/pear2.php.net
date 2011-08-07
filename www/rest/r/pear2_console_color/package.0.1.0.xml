@@ -2,9 +2,9 @@
 <package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a3">
  <name>PEAR2_Console_Color</name>
  <channel>pear2.php.net</channel>
- <summary>This Package provide a easy way to print text with color and style in command line.
+ <summary>PEAR2_Console_Color is a Package to provide a easy way to print text in
 </summary>
- <description>
+ <description>command line when its necessary.
 Have a simple interface and basicly using the static function 'convert'
 you can make use of this Object.
 </description>
@@ -14,8 +14,8 @@ you can make use of this Object.
   <email>ivo@o8o.com.br</email>
   <active>yes</active>
  </lead>
- <date>2011-08-07</date>
- <time>17:23:20</time>
+ <date>2011-08-03</date>
+ <time>17:56:55</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>

@@ -8,19 +8,19 @@
  <st>alpha</st>
  <l>New BSD License</l>
  <m>ivonascimento</m>
- <s>This Package provide a easy way to print text with color and style in command line.
+ <s>PEAR2_Console_Color is a Package to provide a easy way to print text in
 </s>
- <d>
+ <d>command line when its necessary.
 Have a simple interface and basicly using the static function 'convert'
 you can make use of this Object.
 </d>
- <da>2011-08-07 17:23:20</da>
+ <da>2011-08-03 17:56:55</da>
  <n>Initial cover of needs to echo messages to command with color, background and styles
 Trying to use the save public interface the PEAR/Console_Color to provide a way to 
 use as 4.* (PEAR) or 5.* (PEAR2)
 
 Package Console_Color API release notes for version 0.1.0.</n>
- <f>7128</f>
+ <f>7134</f>
  <g>http://pear2.php.net/get/PEAR2_Console_Color-0.1.0</g>
  <x xlink:href="package.0.1.0.xml"/>
 </r>

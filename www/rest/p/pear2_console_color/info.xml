@@ -4,9 +4,9 @@
  <c>pear2.php.net</c>
  <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
  <l>New BSD License</l>
- <s>This Package provide a easy way to print text with color and style in command line.
+ <s>PEAR2_Console_Color is a Package to provide a easy way to print text in
 </s>
- <d>
+ <d>command line when its necessary.
 Have a simple interface and basicly using the static function 'convert'
 you can make use of this Object.
 </d>
