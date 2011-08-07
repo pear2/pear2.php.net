@@ -8,10 +8,9 @@
  <st>alpha</st>
  <l>New BSD License</l>
  <m>ivonascimento</m>
- <s>This package was port to PEAR2 to add the benefits of good distribution
+ <s>Library for accessing stored procedures as PHP Method
 </s>
- <d>and great enviroment.
-
+ <d>
 This package make stored procedures from PostgreSQL and others SGDB
 can used as PHP Methods.
 You have PDOStatement as answer like in this sample:
@@ -34,14 +33,14 @@ var_dump( $returned );
  and You can FetchAll()
 var_dump($returned-&gt;FetchAll());
 </d>
- <da>2011-08-05 18:18:33</da>
+ <da>2011-08-07 18:36:05</da>
  <n>Package PEAR2_DB_Pl2Method release notes for version 0.1.0.
 Support to just Psql PDO Driver
 without type validation yet
 
 
 Package PEAR2_DB_Pl2Method API release notes for version 0.1.0.</n>
- <f>7567</f>
+ <f>7516</f>
  <g>http://pear2.php.net/get/PEAR2_DB_Pl2Method-0.1.0</g>
  <x xlink:href="package.0.1.0.xml"/>
 </r>

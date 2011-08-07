@@ -541,10 +541,9 @@ you can make use of this Object.
    <c>pear2.php.net</c>
    <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
    <l>New BSD License</l>
-   <s>This package was port to PEAR2 to add the benefits of good distribution
+   <s>Library for accessing stored procedures as PHP Method
 </s>
-   <d>and great enviroment.
-
+   <d>
 This package make stored procedures from PostgreSQL and others SGDB
 can used as PHP Methods.
 You have PDOStatement as answer like in this sample:

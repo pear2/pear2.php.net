@@ -2,10 +2,9 @@
 <package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a3">
  <name>PEAR2_DB_Pl2Method</name>
  <channel>pear2.php.net</channel>
- <summary>This package was port to PEAR2 to add the benefits of good distribution
+ <summary>Library for accessing stored procedures as PHP Method
 </summary>
- <description>and great enviroment.
-
+ <description>
 This package make stored procedures from PostgreSQL and others SGDB
 can used as PHP Methods.
 You have PDOStatement as answer like in this sample:
@@ -29,19 +28,13 @@ var_dump( $returned );
 var_dump($returned-&gt;FetchAll());
 </description>
  <lead>
-  <name>Your Name</name>
-  <user>handle</user>
-  <email>handle@php.net</email>
-  <active>yes</active>
- </lead>
- <lead>
   <name>Ivo Nascimento</name>
   <user>ivonascimento</user>
   <email>ivo@o8o.com.br</email>
   <active>yes</active>
  </lead>
- <date>2011-08-05</date>
- <time>18:18:33</time>
+ <date>2011-08-07</date>
+ <time>18:36:05</time>
  <version>
   <release>0.1.0</release>
   <api>0.1.0</api>
