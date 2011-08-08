@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_autoload">PEAR2_Autoload</p>
+ <c>pear2.php.net</c>
+ <v>0.2.4</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>Standard Autoloader for PEAR2
+</s>
+ <d>
+PEAR2_Autoload is the standard method of class loading for
+development and low-volume web sites using PEAR2 packages.
+
+To use:
+
+    &lt;?php
+    require '/path/to/PEAR2/Autoload.php';
+    // Now use class names from installed PEAR2 packages at will
+    
+    // You can also inclue other PEAR2 registries
+    // require '/other/pear2/repo/PEAR2/Autoload.php';
+    // or manually
+    // PEAR2\Autoload::initialize('/other/pear2/repo');
+    ?&gt;</d>
+ <da>2011-08-08 13:56:45</da>
+ <n>- Add optional dynamically-generated class map so full file paths can be
+  used when loading class files.
+  
+- Added a few test cases, along with non-Pyrus .phpt runner to keep us from
+  trying to load PEAR2\Autoload twice!
+
+- Removed PEAR2\ prefix requirement for loaded classes. Now psr-0 compliant.
+</n>
+ <f>25315</f>
+ <g>http://pear2.php.net/get/PEAR2_Autoload-0.2.4</g>
+ <x xlink:href="package.0.2.4.xml"/>
+</r>
