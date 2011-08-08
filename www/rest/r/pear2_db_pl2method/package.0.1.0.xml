@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a3">
+ <name>PEAR2_DB_Pl2Method</name>
+ <channel>pear2.php.net</channel>
+ <summary>Library for accessing stored procedures as PHP Method
+</summary>
+ <description>
+This package make stored procedures from PostgreSQL and others SGDB
+can used as PHP Methods.
+You have PDOStatement as answer like in this sample:
+  
+  -- in database dev
+  create or replace function teste() returns varchar(10) as
+	$$
+	begin
+	return 'teste';
+	end;
+	$$
+	language 'plpgsql';
+
+$a =  new PDO(&quot;pgsql:host=localhost;port=5432;dbname=dev;user=postgres;password=root&quot;);
+$pl2method = \PEAR2\DB\Pl2Method\Pl2Method::getInstance($a);
+
+here you have a PDOStatement
+$returned = $pl2method-&gt;public-&gt;teste();
+var_dump( $returned );
+ and You can FetchAll()
+var_dump($returned-&gt;FetchAll());
+</description>
+ <lead>
+  <name>Ivo Nascimento</name>
+  <user>ivonascimento</user>
+  <email>ivo@o8o.com.br</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-08-07</date>
+ <time>18:36:05</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Package PEAR2_DB_Pl2Method release notes for version 0.1.0.
+Support to just Psql PDO Driver
+without type validation yet
+
+
+Package PEAR2_DB_Pl2Method API release notes for version 0.1.0.</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/DB/Pl2Method/SGDBInterface.php"/>
+   <file role="php" name="php/PEAR2/DB/Pl2Method/SGDBDriver.php"/>
+   <file role="php" name="php/PEAR2/DB/Pl2Method/Driver/Pgsql.php"/>
+   <file role="php" name="php/PEAR2/DB/Pl2Method/.gitignore"/>
+   <file role="php" name="php/PEAR2/DB/Pl2Method.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_DB_Pl2Method/examples/examples/teste.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
