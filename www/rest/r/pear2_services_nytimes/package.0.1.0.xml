@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a3">
+ <name>PEAR2_Services_NYTimes</name>
+ <channel>pear2.php.net</channel>
+ <summary>A wrapper for APIs of the NYTimes.
+</summary>
+ <description>
+Currently supported:
+
+ * Newswire (work in progress): http://developer.nytimes.com/docs/read/times_newswire_api
+</description>
+ <lead>
+  <name>Your Name</name>
+  <user>handle</user>
+  <email>handle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <lead>
+  <name>Till Klampaeckel</name>
+  <user>till</user>
+  <email>till@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-07-08</date>
+ <time>21:39:25</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Initial 0.1.0 release/POC.
+
+
+Work in progress.
+</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="test/pear2.php.net/PEAR2_Services_NYTimes/TestInit.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Services_NYTimes/Services/NYTimes/NewswireTest.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Services_NYTimes/Services/NYTimes/MainTest.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Services_NYTimes/Services/NYTimes/BaseTest.php"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Services_NYTimes/phpunit.xml"/>
+   <file role="test" name="test/pear2.php.net/PEAR2_Services_NYTimes/config.php"/>
+   <file role="php" name="php/PEAR2/Services/NYTimes/NYTimesInterface.php"/>
+   <file role="php" name="php/PEAR2/Services/NYTimes/Newswire.php"/>
+   <file role="php" name="php/PEAR2/Services/NYTimes/Main.php"/>
+   <file role="php" name="php/PEAR2/Services/NYTimes/Base.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+   <package>
+    <name>HTTP_Request2</name>
+    <channel>pear.php.net</channel>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
