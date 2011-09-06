@@ -14,4 +14,5 @@ $parent->context->page_title = 'Support - ' . $frontend->title;
                 <a href="http://www.efnet.org/"> Eris Free Net</a>.
             </li>
         </ul>
+    <p>If you'd like to report a problem or request a feature for the pear2.php.net website, you can submit an issue on <a href="https://github.com/pear2/pear2.php.net" title="Go to the pear2.php.net project page on GitHub">the project page</a>.</p>
 </div>
