@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Text_Markdown</name>
+ <channel>pear2.php.net</channel>
+ <summary>Markdown transforms text into formatted XHTML, similar to wiki syntax.
+</summary>
+ <description>
+This is a port of Solar_Markdown.</description>
+ <lead>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-09-07</date>
+ <time>09:34:17</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
+ <notes>Package PEAR2_Text_Markdown release notes for version 0.1.0.
+
+Change from Solar_ to PEAR2\Text\.
+
+Package PEAR2_Text_Markdown API release notes for version 0.1.0.</notes>
+ <contents>
+  <dir name="/">
+   <file role="php" name="php/PEAR2/Text/Markdown/Wiki/MethodSynopsis.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Wiki/Link.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Wiki/Header.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Wiki/Filter.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Wiki/Escape.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Wiki/ColorCodeBlock.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Wiki.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Uri.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/StripLinkDefs.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Prefilter.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Paragraph.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/List.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Link.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Image.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Html.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/HorizRule.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Header.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Encode.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/EmStrong.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/CodeSpan.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/CodeBlock.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/Break.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/BlockQuote.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin/AmpsAngles.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Plugin.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Main.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Extra/Table.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Extra/Header.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Extra/EmStrong.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Extra/DefList.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Extra.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/VariableList.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/Uri.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/Table.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/Section.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/Screen.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/ProgramListing.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/Paragraph.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/MethodSynopsis.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/Literal.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/List.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/Link.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/EmStrong.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc/ClassPage.php"/>
+   <file role="php" name="php/PEAR2/Text/Markdown/Apidoc.php"/>
+   <file role="doc" name="doc/pear2.php.net/PEAR2_Text_Markdown/examples/examples/example1.php"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>2.0.0a1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease/>
+</package>
