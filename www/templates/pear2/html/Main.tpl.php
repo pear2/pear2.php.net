@@ -81,10 +81,10 @@ echo $savant->render(new PEAR2Web\Menu(), 'MenuHead.tpl.php');
             <div class="right">
                 <div class="package-install-instructions">
                     <div class="package-install-instructions-section">
-                        <div># Set your repository location:</div>
+                        <div># Set where to install packages:</div>
                         <div>
                             <span class="package-install-prompt">$</span>
-                            <strong>php pyrus.phar mypear</strong> ~/src/my-project/pear
+                            <strong>php pyrus.phar mypear</strong> ~/src/my-project/vendor
                         </div>
                     </div>
                     <div class="package-install-instructions-section">
