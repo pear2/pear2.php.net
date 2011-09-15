@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_console_commandline">PEAR2_Console_CommandLine</p>
+ <c>pear2.php.net</c>
+ <v>0.2.0</v>
+ <a>0.1.0</a>
+ <mp>5.3.0</mp>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>PEAR2_Console_CommandLine is a full featured package for managing command-line
+</s>
+ <d>options and arguments highly inspired from python optparse module, it allows
+the developer to easily build complex command line interfaces.
+
+Main features:
+* handles sub commands (ie. $ myscript.php -q subcommand -f file),
+* can be completely built from an xml definition file,
+* generate --help and --version options automatically,
+* can be completely customized,
+* builtin support for i18n,
+* and much more...
+
+</d>
+ <da>2011-08-06 10:48:12</da>
+ <n>Features and changes
+ - Implemented feature request #18582 (From pear.php.net) add possibility to require a subcommand
+ - Implemented feature request #18583 (From pear.php.net) default values for arguments
+ - removed the enclosing &quot;&lt; &gt;&quot; on argument names (it looks better IMO).
+
+Bug Fixes
+ - Fixed bug #18584 (From pear.php.net) optional arguments not shown as optional</n>
+ <f>40478</f>
+ <g>http://pear2.php.net/get/PEAR2_Console_CommandLine-0.2.0</g>
+ <x xlink:href="package.0.2.0.xml"/>
+</r>
