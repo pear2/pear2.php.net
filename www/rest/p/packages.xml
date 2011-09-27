@@ -8,6 +8,7 @@
  <p>pear2_exception</p>
  <p>pear2_http_request</p>
  <p>pear2_multierrors</p>
+ <p>pear2_net_transmitter</p>
  <p>pear2_pyrus</p>
  <p>pear2_pyrus_developer</p>
  <p>pear2_services_nytimes</p>
