@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>
+ <n>PEAR2_Net_RouterOS</n>
+ <c>pear2.php.net</c>
+ <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <l>LGPL License 2.1</l>
+ <s>RouterOS API client implementation.
+</s>
+ <d>This package allows you to read and write information from a RouterOS host using MikroTik's RouterOS API.</d>
+ <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+</p>

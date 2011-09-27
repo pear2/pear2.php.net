@@ -1,0 +1,1 @@
+a:2:{s:8:"required";a:4:{s:3:"php";a:1:{s:3:"min";s:5:"5.3.0";}s:13:"pearinstaller";a:1:{s:3:"min";s:5:"1.4.0";}s:7:"package";a:2:{s:4:"name";s:21:"PEAR2_Net_Transmitter";s:7:"channel";s:13:"pear2.php.net";}s:9:"extension";a:1:{s:4:"name";s:4:"PCRE";}}s:8:"optional";a:1:{s:9:"extension";a:1:{s:4:"name";s:5:"iconv";}}}

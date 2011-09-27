@@ -662,4 +662,26 @@ This is a port of Solar_Markdown.</d>
    <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}}}</d>
   </deps>
  </pi>
+ <pi>
+  <p>
+   <n>PEAR2_Net_RouterOS</n>
+   <c>pear2.php.net</c>
+   <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
+   <l>LGPL License 2.1</l>
+   <s>RouterOS API client implementation.
+</s>
+   <d>This package allows you to read and write information from a RouterOS host using MikroTik's RouterOS API.</d>
+   <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+  </p>
+  <a>
+   <r>
+    <v>1.0.0b1</v>
+    <s>beta</s>
+   </r>
+  </a>
+  <deps>
+   <v>1.0.0b1</v>
+   <d>a:2:{s:8:&quot;required&quot;;a:4:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}s:7:&quot;package&quot;;a:2:{s:4:&quot;name&quot;;s:21:&quot;PEAR2_Net_Transmitter&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:4:&quot;PCRE&quot;;}}s:8:&quot;optional&quot;;a:1:{s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:5:&quot;iconv&quot;;}}}</d>
+  </deps>
+ </pi>
 </f>
