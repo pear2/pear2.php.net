@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <l xmlns="http://pear.php.net/dtd/rest.categorypackages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.categorypackages http://pear.php.net/dtd/rest.categorypackages.xsd">
- <p xlink:href="rest/p/PEAR2_Pyrus_Developer">PEAR2_Pyrus_Developer</p>
- <p xlink:href="rest/p/PEAR2_SimpleChannelServer">PEAR2_SimpleChannelServer</p>
- <p xlink:href="rest/p/PEAR2_Pyrus">PEAR2_Pyrus</p>
- <p xlink:href="rest/p/PEAR2_SimpleChannelFrontend">PEAR2_SimpleChannelFrontend</p>
- <p xlink:href="rest/p/PEAR2_HTTP_Request">PEAR2_HTTP_Request</p>
- <p xlink:href="rest/p/PEAR2_Autoload">PEAR2_Autoload</p>
  <p xlink:href="rest/p/PEAR2_Exception">PEAR2_Exception</p>
  <p xlink:href="rest/p/PEAR2_MultiErrors">PEAR2_MultiErrors</p>
- <p xlink:href="rest/p/PEAR2_Console_CommandLine">PEAR2_Console_CommandLine</p>
- <p xlink:href="rest/p/PEAR2_Templates_Savant">PEAR2_Templates_Savant</p>
- <p xlink:href="rest/p/PEAR2_Templates_Savant_Turbo">PEAR2_Templates_Savant_Turbo</p>
- <p xlink:href="rest/p/PEAR2_Cache_Lite">PEAR2_Cache_Lite</p>
- <p xlink:href="rest/p/PEAR2_Console_Color">PEAR2_Console_Color</p>
- <p xlink:href="rest/p/PEAR2_DB_Pl2Method">PEAR2_DB_Pl2Method</p>
- <p xlink:href="rest/p/PEAR2_Services_NYTimes">PEAR2_Services_NYTimes</p>
- <p xlink:href="rest/p/PEAR2_Text_Markdown">PEAR2_Text_Markdown</p>
- <p xlink:href="rest/p/PEAR2_Net_Transmitter">PEAR2_Net_Transmitter</p>
- <p xlink:href="rest/p/PEAR2_Net_RouterOS">PEAR2_Net_RouterOS</p>
 </l>
