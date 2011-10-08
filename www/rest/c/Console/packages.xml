@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <l xmlns="http://pear.php.net/dtd/rest.categorypackages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.categorypackages http://pear.php.net/dtd/rest.categorypackages.xsd">
- <p xlink:href="rest/p/PEAR2_Templates_Savant">PEAR2_Templates_Savant</p>
- <p xlink:href="rest/p/PEAR2_Templates_Savant_Turbo">PEAR2_Templates_Savant_Turbo</p>
+ <p xlink:href="rest/p/PEAR2_Console_CommandLine">PEAR2_Console_CommandLine</p>
+ <p xlink:href="rest/p/PEAR2_Console_Color">PEAR2_Console_Color</p>
 </l>
