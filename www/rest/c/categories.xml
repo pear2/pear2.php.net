@@ -2,7 +2,6 @@
 <a xmlns="http://pear.php.net/dtd/rest.allcategories" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.allcategories http://pear.php.net/dtd/rest.allcategories.xsd">
  <ch>pear2.php.net</ch>
  <c xlink:href="rest/c/Caching/info.xml">Caching</c>
- <c xlink:href="rest/c/categorize/info.xml">categorize</c>
  <c xlink:href="rest/c/Console/info.xml">Console</c>
  <c xlink:href="rest/c/Default/info.xml">Default</c>
  <c xlink:href="rest/c/HTTP/info.xml">HTTP</c>
