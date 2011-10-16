@@ -6,6 +6,6 @@
  <l>LGPL License 2.1</l>
  <s>RouterOS API client implementation.
 </s>
- <d>This package allows you to read and write information from a RouterOS host using MikroTik's RouterOS API.</d>
+ <d>RouterOS is the flag product of the company MikroTik and is a powerful router software. One of its many abilities is to allow control over it via an API. This package provides a client for that API, in turn allowing you to use PHP to control RouterOS hosts.</d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>
