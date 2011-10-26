@@ -17,17 +17,17 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
 
     public function getGitHubNewIssueLink()
     {
-        return 'https://github.com/pear2/' . $this->name . '/issues/new';
+        return 'https://github.com/pear2/' . str_replace('PEAR2_', '', $this->name) . '/issues/new';
     }
 
     public function getGitHubOpenIssuesLink()
     {
-        return 'https://github.com/pear2/' . $this->name . '/issues';
+        return 'https://github.com/pear2/' . str_replace('PEAR2_', '', $this->name) . '/issues';
     }
 
     public function getGitHubClosedIssuesLink()
     {
-        return 'https://github.com/pear2/' . $this->name . '/issues?state=closed';
+        return 'https://github.com/pear2/' . str_replace('PEAR2_', '', $this->name) . '/issues?state=closed';
     }
 
     public function getGitHubClosedIssueCount()
@@ -38,7 +38,7 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
         $json = $this->cache->get($key);
 
         if ($json === false) {
-            $uri  = self::GIT_HUB_API . $this->name . '/closed';
+            $uri  = self::GIT_HUB_API . str_replace('PEAR2_', '', $this->name) . '/closed';
             $json = file_get_contents($uri);
             if ($json === false) {
                 $json = $this->cache->get($key, 'default', false);
@@ -63,7 +63,7 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
         $json = $this->cache->get($key);
 
         if ($json === false) {
-            $uri  = self::GIT_HUB_API . $this->name . '/open';
+            $uri  = self::GIT_HUB_API . str_replace('PEAR2_', '', $this->name) . '/open';
             $json = file_get_contents($uri);
             if ($json === false) {
                 $json = $this->cache->get($key, 'default', false);
