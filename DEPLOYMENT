@@ -1,0 +1,15 @@
+Deploying the website to live
+=============================
+
+Setup
+-----
+::
+
+$ git remote add live ssh://pear2.php.net/var/www/html/pear2.php.net
+
+
+Deployment
+----------
+::
+
+$ git push live master
