@@ -1,5 +1,5 @@
-Deploying the website to live
-=============================
+Deploying the pear2.php.net website to live
+===========================================
 
 Prerequisites
 -------------
@@ -7,8 +7,8 @@ The developer needs a SSH account on `pear2.php.net` and
 has to be in the `pear2web` group.
 
 
-Setup
------
+Local setup
+-----------
 ::
 
 $ git remote add live ssh://pear2.php.net/var/www/html/pear2.php.net
