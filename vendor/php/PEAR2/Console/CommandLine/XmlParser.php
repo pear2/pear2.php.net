@@ -11,11 +11,11 @@
  * through the world-wide-web at the following URI:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Console 
+ * @category  Console
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   SVN: $Id$
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0
@@ -29,7 +29,7 @@
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     Class available since release 0.1.0
@@ -50,7 +50,7 @@ class XmlParser
      *
      * @return PEAR2\Console\CommandLine A parser instance
      */
-    public static function parse($xmlfile) 
+    public static function parse($xmlfile)
     {
         if (!is_readable($xmlfile)) {
             CommandLine::triggerError('invalid_xml_file',
@@ -75,7 +75,7 @@ class XmlParser
      *
      * @return PEAR2\Console\CommandLine A parser instance
      */
-    public static function parseString($xmlstr) 
+    public static function parseString($xmlstr)
     {
         $doc = new \DomDocument();
         $doc->loadXml($xmlstr);
@@ -97,16 +97,16 @@ class XmlParser
      * @throws PEAR2\Console\CommandLine_Exception
      * @todo use exceptions only
      */
-    public static function validate($doc) 
+    public static function validate($doc)
     {
         $rngfile = '../../../data/PEAR2_Console_CommandLine/pear2.php.net/xmlschema.rng';
         if (!is_file($rngfile)) {
-            $rngfile = __DIR__ . '/../../../data/xmlschema.rng'; 
+            $rngfile = __DIR__ . '/../../../data/xmlschema.rng';
         }
         if (!is_readable($rngfile)) {
             CommandLine::triggerError(
                 'invalid_xml_file',
-                E_USER_ERROR, 
+                E_USER_ERROR,
                 array('{$file}' => $rngfile)
             );
         }
@@ -126,9 +126,9 @@ class XmlParser
      *
      * @return mixed PEAR2\Console\CommandLine or PEAR2\Console\CommandLine_Command
      */
-    private static function _parseCommandNode($node, $isRootNode = false) 
+    private static function _parseCommandNode($node, $isRootNode = false)
     {
-        if ($isRootNode) { 
+        if ($isRootNode) {
             $obj = new CommandLine();
         } else {
             $obj = new CommandLine\Command();
@@ -185,7 +185,7 @@ class XmlParser
      *
      * @return PEAR2\Console\CommandLine\Option The built option
      */
-    private static function _parseOptionNode($node) 
+    private static function _parseOptionNode($node)
     {
         $obj = new CommandLine\Option($node->getAttribute('name'));
         foreach ($node->childNodes as $cNode) {
@@ -218,14 +218,14 @@ class XmlParser
     // _parseArgumentNode() {{{
 
     /**
-     * Parses an argument node and returns the constructed 
+     * Parses an argument node and returns the constructed
      * PEAR2\Console\CommandLine_Argument instance.
      *
      * @param DomDocumentNode $node The node to parse
      *
      * @return PEAR2\Console\CommandLine\Argument The built argument
      */
-    private static function _parseArgumentNode($node) 
+    private static function _parseArgumentNode($node)
     {
         $obj = new CommandLine\Argument($node->getAttribute('name'));
         foreach ($node->childNodes as $cNode) {
@@ -257,7 +257,7 @@ class XmlParser
 
     /**
      * Returns a boolean according to true/false possible strings.
-     * 
+     *
      * @param string $str The string to process
      *
      * @return boolean

@@ -20,7 +20,7 @@
 namespace Doctrine\ORM\Mapping;
 
 /**
- * A one-to-one mapping describes a uni-directional mapping from one entity 
+ * A one-to-one mapping describes a uni-directional mapping from one entity
  * to another entity.
  *
  * <b>IMPORTANT NOTE:</b>
@@ -30,7 +30,7 @@ namespace Doctrine\ORM\Mapping;
  * 2) To drastically reduce the size of a serialized instance (private/protected members
  *    get the whole class name, namespace inclusive, prepended to every property in
  *    the serialized representation).
- *    
+ *
  * Instances of this class are stored serialized in the metadata cache together with the
  * owning <tt>ClassMetadata</tt> instance.
  *
@@ -54,10 +54,10 @@ class OneToOneMapping extends AssociationMapping
      * Reverse mapping of _sourceToTargetKeyColumns.
      */
     public $targetToSourceKeyColumns = array();
-    
+
     /**
      * READ-ONLY: Whether to delete orphaned elements (when nulled out, i.e. $foo->other = null)
-     * 
+     *
      * @var boolean
      */
     public $orphanRemoval = false;
@@ -68,11 +68,11 @@ class OneToOneMapping extends AssociationMapping
      * @var array
      */
     public $joinColumns = array();
-    
+
     /**
      * READ-ONLY: A map of join column names to field names that are used in cases
      * when the join columns are fetched as part of the query result.
-     * 
+     *
      * @var array
      */
     public $joinColumnFieldNames = array();
@@ -87,11 +87,11 @@ class OneToOneMapping extends AssociationMapping
     protected function _validateAndCompleteMapping(array $mapping)
     {
         parent::_validateAndCompleteMapping($mapping);
-        
+
         if (isset($mapping['joinColumns']) && $mapping['joinColumns']) {
             $this->isOwningSide = true;
         }
-        
+
         if ($this->isOwningSide) {
             if ( ! isset($mapping['joinColumns']) || ! $mapping['joinColumns']) {
                 // Apply default join column

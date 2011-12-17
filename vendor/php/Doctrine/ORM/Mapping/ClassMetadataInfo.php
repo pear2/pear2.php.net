@@ -324,7 +324,7 @@ class ClassMetadataInfo
     /**
      * READ-ONLY: The definition of the sequence generator of this class. Only used for the
      * SEQUENCE generation strategy.
-     * 
+     *
      * The definition has the following structure:
      * <code>
      * array(

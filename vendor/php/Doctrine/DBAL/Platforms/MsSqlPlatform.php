@@ -568,6 +568,6 @@ class MsSqlPlatform extends AbstractPlatform
 
     protected function initializeDoctrineTypeMappings()
     {
-        
+
     }
 }

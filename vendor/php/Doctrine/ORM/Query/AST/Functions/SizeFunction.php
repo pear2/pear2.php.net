@@ -52,19 +52,19 @@ class SizeFunction extends FunctionNode
         $qComp = $sqlWalker->getQueryComponent(implode('.', array_merge((array) $dqlAlias, $parts)));
         $assoc = $qComp['metadata']->associationMappings[$assocField];
         $sql = '';
-        
+
         if ($assoc->isOneToMany()) {
             $targetClass = $sqlWalker->getEntityManager()->getClassMetadata($assoc->targetEntityName);
             $targetAssoc = $targetClass->associationMappings[$assoc->mappedBy];
-            
+
             $targetTableAlias = $sqlWalker->getSqlTableAlias($targetClass->table['name']);
             $sourceTableAlias = $sqlWalker->getSqlTableAlias($qComp['metadata']->table['name'], $dqlAlias);
-            
+
             $whereSql = '';
 
             foreach ($targetAssoc->targetToSourceKeyColumns as $targetKeyColumn => $sourceKeyColumn) {
                 $whereSql .= (($whereSql == '') ? ' WHERE ' : ' AND ')
-                           . $targetTableAlias . '.' . $sourceKeyColumn . ' = ' 
+                           . $targetTableAlias . '.' . $sourceKeyColumn . ' = '
                            . $sourceTableAlias . '.' . $targetKeyColumn;
             }
 
@@ -72,18 +72,18 @@ class SizeFunction extends FunctionNode
         } else if ($assoc->isManyToMany()) {
             $targetTableAlias = $sqlWalker->getSqlTableAlias($assoc->joinTable['name']);
             $sourceTableAlias = $sqlWalker->getSqlTableAlias($qComp['metadata']->table['name'], $dqlAlias);
-            
+
             $whereSql = '';
 
             foreach ($assoc->relationToSourceKeyColumns as $targetKeyColumn => $sourceKeyColumn) {
                 $whereSql .= (($whereSql == '') ? ' WHERE ' : ' AND ')
-                           . $targetTableAlias . '.' . $targetKeyColumn . ' = ' 
+                           . $targetTableAlias . '.' . $targetKeyColumn . ' = '
                            . $sourceTableAlias . '.' . $sourceKeyColumn;
             }
 
             $tableName = $assoc->joinTable['name'];
         }
-        
+
         return '(SELECT COUNT(*) FROM ' . $tableName . ' ' . $targetTableAlias . $whereSql . ')';
     }
 
@@ -93,12 +93,12 @@ class SizeFunction extends FunctionNode
     public function parse(\Doctrine\ORM\Query\Parser $parser)
     {
         $lexer = $parser->getLexer();
-        
+
         $parser->match(Lexer::T_SIZE);
         $parser->match(Lexer::T_OPEN_PARENTHESIS);
-        
+
         $this->collectionPathExpression = $parser->CollectionValuedPathExpression();
-        
+
         $parser->match(Lexer::T_CLOSE_PARENTHESIS);
     }
 }

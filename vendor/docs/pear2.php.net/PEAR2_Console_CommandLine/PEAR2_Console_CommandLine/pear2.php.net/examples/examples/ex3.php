@@ -13,11 +13,11 @@
  * through the world-wide-web at the following URI:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Console 
+ * @category  Console
  * @package   PEAR2_Console_CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   CVS: $Id: ex3.php,v 1.1 2008/12/06 11:46:28 izi Exp $
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0
@@ -77,10 +77,10 @@ $bar_cmd->addArgument('text', array(
 try {
     $result = $parser->parse();
     if ($result->command_name) {
-        $st = $result->command->options['reverse'] 
+        $st = $result->command->options['reverse']
             ? strrev($result->command->args['text'])
             : $result->command->args['text'];
-        if ($result->command_name == 'foo') { 
+        if ($result->command_name == 'foo') {
             echo "Foo says: $st\n";
         } else if ($result->command_name == 'bar') {
             echo "Bar says: $st\n";

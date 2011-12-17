@@ -81,7 +81,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
 
     /**
      * Gets the namespace where proxy classes reside.
-     * 
+     *
      * @return string
      */
     public function getProxyNamespace()
@@ -92,7 +92,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
 
     /**
      * Sets the namespace where proxy classes reside.
-     * 
+     *
      * @param string $ns
      */
     public function setProxyNamespace($ns)
@@ -114,7 +114,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
 
     /**
      * Add a new default annotation driver with a correctly configured annotation reader.
-     * 
+     *
      * @param array $paths
      * @return Mapping\Driver\AnnotationDriver
      */
@@ -122,7 +122,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
     {
         $reader = new \Doctrine\Common\Annotations\AnnotationReader();
         $reader->setDefaultAnnotationNamespace('Doctrine\ORM\Mapping\\');
-        
+
         return new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($reader, (array)$paths);
     }
 
@@ -140,7 +140,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
     /**
      * Resolves a registered namespace alias to the full namespace.
      *
-     * @param string $entityNamespaceAlias 
+     * @param string $entityNamespaceAlias
      * @return string
      * @throws MappingException
      */
@@ -351,7 +351,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
 
     /**
      * Gets the implementation class name of a registered custom string DQL function.
-     * 
+     *
      * @param string $name
      * @return string
      */
@@ -394,7 +394,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
 
     /**
      * Gets the implementation class name of a registered custom numeric DQL function.
-     * 
+     *
      * @param string $name
      * @return string
      */
@@ -437,7 +437,7 @@ class Configuration extends \Doctrine\DBAL\Configuration
 
     /**
      * Gets the implementation class name of a registered custom date/time DQL function.
-     * 
+     *
      * @param string $name
      * @return string
      */

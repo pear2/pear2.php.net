@@ -5,7 +5,7 @@
 /**
  * This file is part of the PEAR2_Console_CommandLine package.
  *
- * This example demonstrate the use of xml definitions files with 
+ * This example demonstrate the use of xml definitions files with
  * PEAR2_Console_CommandLine, the result is the same as for the ex1.php file.
  *
  * PHP version 5
@@ -14,11 +14,11 @@
  * through the world-wide-web at the following URI:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Console 
+ * @category  Console
  * @package   PEAR2_Console_CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   SVN: $Id$
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0

@@ -1,11 +1,11 @@
 The PEAR2 website
 
-To release a package, run `pyrus scs-release MyPackage.tgz` handle then commit 
+To release a package, run `pyrus scs-release MyPackage.tgz` handle then commit
 and push to git@github.com:pear2/pear2.php.net.git
 
 The live pear2.php.net site is running from the master branch.
 
-Requirements - 
+Requirements -
 * PHP 5.3.2+
 
 Quick Setup:

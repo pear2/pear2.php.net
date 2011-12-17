@@ -15,7 +15,7 @@
 
 /**
  * Parses a Distinguished Encoding Rule binary string into a DER object
- * 
+ *
  * @category  PEAR2
  * @package   PEAR2_Pyrus
  * @author    Greg Beaver <cellog@php.net>
@@ -26,5 +26,5 @@
 namespace PEAR2\Pyrus\DER;
 class Parser
 {
-    
+
 }

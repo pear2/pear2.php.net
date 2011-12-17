@@ -1,6 +1,6 @@
 <?php
 namespace PEAR2\HTTP\Request;
-abstract class Adapter 
+abstract class Adapter
 {
 
     /**
@@ -81,7 +81,7 @@ abstract class Adapter
     /**
      * Send the specified request
      */
-    public function sendRequest() 
+    public function sendRequest()
     {
     }
 
@@ -90,7 +90,7 @@ abstract class Adapter
      *
      * Base Adapter contains a non efficient baseline method
      */
-    public function requestToFile($file) 
+    public function requestToFile($file)
     {
         $response = $this->sendRequest();
 
@@ -100,7 +100,7 @@ abstract class Adapter
         return $response;
     }
 
-    protected function parseResponseCode($line) 
+    protected function parseResponseCode($line)
     {
         if (sscanf($line, 'HTTP/%s %s', $http_version, $returncode) != 2) {
             throw new Request\Exception('Malformed response.');

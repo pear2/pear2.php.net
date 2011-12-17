@@ -28,7 +28,7 @@ namespace Doctrine\ORM\Query;
  * The properties of this class are only public for fast internal READ access and to (drastically)
  * reduce the size of serialized instances for more effective caching due to better (un-)serialization
  * performance.
- * 
+ *
  * <b>Users should use the public methods.</b>
  *
  * @author Roman Borschel <roman@code-factory.org>
@@ -39,7 +39,7 @@ class ResultSetMapping
 {
     /**
      * Whether the result is mixed (contains scalar values together with field values).
-     * 
+     *
      * @ignore
      * @var boolean
      */
@@ -53,63 +53,63 @@ class ResultSetMapping
     public $aliasMap = array();
     /**
      * Maps alias names to related association field names.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $relationMap = array();
     /**
      * Maps alias names to parent alias names.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $parentAliasMap = array();
     /**
      * Maps column names in the result set to field names for each class.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $fieldMappings = array();
     /**
      * Maps column names in the result set to the alias/field name to use in the mapped result.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $scalarMappings = array();
     /**
      * Maps column names of meta columns (foreign keys, discriminator columns, ...) to field names.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $metaMappings = array();
     /**
      * Maps column names in the result set to the alias they belong to.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $columnOwnerMap = array();
     /**
      * List of columns in the result set that are used as discriminator columns.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $discriminatorColumns = array();
     /**
      * Maps alias names to field names that should be used for indexing.
-     * 
+     *
      * @ignore
      * @var array
      */
     public $indexByMap = array();
     /**
      * Map from column names to class names that declare the field the column is mapped to.
-     * 
+     *
      * @ignore
      * @var array
      */
@@ -222,7 +222,7 @@ class ResultSetMapping
         $this->parentAliasMap[$alias] = $parentAlias;
         $this->relationMap[$alias] = $relation;
     }
-    
+
     /**
      * Adds a scalar result mapping.
      *
@@ -240,7 +240,7 @@ class ResultSetMapping
 
     /**
      * Checks whether a column with a given name is mapped as a scalar result.
-     * 
+     *
      * @param string $columName The name of the column in the SQL result set.
      * @return boolean
      * @todo Rename: isScalar
@@ -379,10 +379,10 @@ class ResultSetMapping
     {
         return $this->isMixed;
     }
-    
+
     /**
      * Adds a meta column (foreign key or discriminator column) to the result set.
-     * 
+     *
      * @param $alias
      * @param $columnName
      * @param $fieldName

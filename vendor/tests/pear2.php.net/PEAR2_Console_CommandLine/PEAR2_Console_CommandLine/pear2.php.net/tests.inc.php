@@ -11,11 +11,11 @@
  * through the world-wide-web at the following URI:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Console 
+ * @category  Console
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   SVN: $Id$
  */
 
@@ -32,13 +32,13 @@ require_once $basedir . '/autoload.php';
 
 /**
  * A dummy callback for tests purposes.
- * 
+ *
  * @param mixed  $value  value provided by the user
  * @param object $option the option instance
  * @param object $result the result instance
  * @param object $parser the parser instance
  * @param array  $params optional params array
- * 
+ *
  * @return string
  */
 function rot13Callback($value, $option, $result, $parser, $params=array())
@@ -170,7 +170,7 @@ function buildParser2()
         'action'      => 'StoreString',
         'description' => 'path to logfile'
     ));
- 
+
     // install subcommand
     $cmd1 = $parser->addCommand('install', array(
         'description' => 'install given package',
@@ -343,7 +343,7 @@ function buildParser4()
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0
@@ -405,7 +405,7 @@ class CustomRenderer implements \PEAR2\Console\CommandLine\Renderer
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0
@@ -456,7 +456,7 @@ class CustomOutputter implements \PEAR2\Console\CommandLine\Outputter
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0

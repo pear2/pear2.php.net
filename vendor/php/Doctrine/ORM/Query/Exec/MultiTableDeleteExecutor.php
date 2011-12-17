@@ -39,7 +39,7 @@ class MultiTableDeleteExecutor extends AbstractSqlExecutor
     private $_createTempTableSql;
     private $_dropTempTableSql;
     private $_insertSql;
-    
+
     /**
      * Initializes a new <tt>MultiTableDeleteExecutor</tt>.
      *
@@ -85,7 +85,7 @@ class MultiTableDeleteExecutor extends AbstractSqlExecutor
             $this->_sqlStatements[] = 'DELETE FROM ' . $tableName
                     . ' WHERE (' . $idColumnList . ') IN (' . $idSubselect . ')';
         }
-    
+
         // 4. Store DDL for temporary identifier table.
         $columnDefinitions = array();
         foreach ($idColumnNames as $idColumnName) {

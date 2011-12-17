@@ -101,19 +101,19 @@ abstract class AbstractCollectionPersister
         //$this->updateRows($coll);
         $this->insertRows($coll);
     }
-    
+
     public function deleteRows(PersistentCollection $coll)
-    {        
+    {
         $deleteDiff = $coll->getDeleteDiff();
         $sql = $this->_getDeleteRowSQL($coll);
         foreach ($deleteDiff as $element) {
             $this->_conn->executeUpdate($sql, $this->_getDeleteRowSQLParameters($coll, $element));
         }
     }
-    
+
     //public function updateRows(PersistentCollection $coll)
     //{}
-    
+
     public function insertRows(PersistentCollection $coll)
     {
         $insertDiff = $coll->getInsertDiff();
@@ -125,7 +125,7 @@ abstract class AbstractCollectionPersister
 
     /**
      * Gets the SQL statement used for deleting a row from the collection.
-     * 
+     *
      * @param PersistentCollection $coll
      */
     abstract protected function _getDeleteRowSQL(PersistentCollection $coll);

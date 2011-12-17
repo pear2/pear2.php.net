@@ -567,7 +567,7 @@ class Parser
                 $pathExpression->parts = array($qComp['metadata']->identifier[0]);
                 $numParts++;
             }
-            
+
             $parts = $pathExpression->parts;
             $aliasIdentificationVariable = $pathExpression->identificationVariable;
             $parentField = $pathExpression->identificationVariable;
@@ -632,7 +632,7 @@ class Parser
                             ),
                             null
                         );
-                        
+
                         $AST->fromClause->identificationVariableDeclarations[0]->joinVariableDeclarations[] = $joinVariableDeclaration;
 
                         $this->_queryComponents[$aliasIdentificationVariable . '.' . $field] = $joinQueryComponent;
@@ -1837,7 +1837,7 @@ class Parser
             $this->match(Lexer::T_NOT);
             $not = true;
         }
-        
+
         $conditionalPrimary = $this->ConditionalPrimary();
 
         // Phase 1 AST optimization: Prevent AST\ConditionalFactor
@@ -2177,7 +2177,7 @@ class Parser
             $this->match(($isPlus) ? Lexer::T_PLUS : Lexer::T_MINUS);
             $sign = $isPlus;
         }
-        
+
         $primary = $this->ArithmeticPrimary();
 
         // Phase 1 AST optimization: Prevent AST\ArithmeticFactor

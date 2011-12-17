@@ -5,23 +5,23 @@ if (!class_exists('\PEAR2\Autoload', false)) {
     {
         /**
          * Whether the autoload class has been spl_autoload_register-ed
-         * 
+         *
          * @var bool
          */
         protected static $registered = false;
 
         /**
          * Array of PEAR2 autoload paths registered
-         * 
+         *
          * @var array
          */
         protected static $paths = array();
 
         /**
          * Initialize the PEAR2 autoloader
-         * 
+         *
          * @param string $path Directory path to register
-         * 
+         *
          * @return void
          */
         static function initialize($path)
@@ -32,7 +32,7 @@ if (!class_exists('\PEAR2\Autoload', false)) {
 
         /**
          * Register the PEAR2 autoload class with spl_autoload_register
-         * 
+         *
          * @return void
          */
         protected static function register()
@@ -52,9 +52,9 @@ if (!class_exists('\PEAR2\Autoload', false)) {
 
         /**
          * Add a path
-         * 
+         *
          * @param string $path The directory to add to the set of PEAR2 paths
-         * 
+         *
          * @return void
          */
         protected static function addPath($path)
@@ -66,9 +66,9 @@ if (!class_exists('\PEAR2\Autoload', false)) {
 
         /**
          * Load a PEAR2 class
-         * 
+         *
          * @param string $class The class to load
-         * 
+         *
          * @return bool
          */
         static function load($class)
@@ -106,7 +106,7 @@ if (!class_exists('\PEAR2\Autoload', false)) {
 
         /**
          * return the array of paths PEAR2 autoload has registered
-         * 
+         *
          * @return array
          */
         static function getPaths()

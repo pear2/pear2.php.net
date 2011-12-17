@@ -99,7 +99,7 @@ class OraclePlatform extends AbstractPlatform
     {
         return 'SYS_GUID()';
     }
-    
+
     /**
      * Gets the SQL used to create a sequence that starts with a given value
      * and increments by the given allocation size.
@@ -115,7 +115,7 @@ class OraclePlatform extends AbstractPlatform
     {
         return 'CREATE SEQUENCE ' . $sequence->getName() .
                ' START WITH ' . $sequence->getInitialValue() .
-               ' MINVALUE ' . $sequence->getInitialValue() . 
+               ' MINVALUE ' . $sequence->getInitialValue() .
                ' INCREMENT BY ' . $sequence->getAllocationSize();
     }
 
@@ -129,7 +129,7 @@ class OraclePlatform extends AbstractPlatform
     {
         return 'SELECT ' . $sequenceName . '.nextval FROM DUAL';
     }
-    
+
     /**
      * {@inheritdoc}
      *
@@ -155,7 +155,7 @@ class OraclePlatform extends AbstractPlatform
                 return parent::_getTransactionIsolationLevelSQL($level);
         }
     }
-    
+
     /**
      * @override
      */
@@ -242,7 +242,7 @@ class OraclePlatform extends AbstractPlatform
         return $fixed ? ($length ? 'CHAR(' . $length . ')' : 'CHAR(2000)')
                 : ($length ? 'VARCHAR2(' . $length . ')' : 'VARCHAR2(4000)');
     }
-    
+
     /** @override */
     public function getClobTypeDeclarationSQL(array $field)
     {
@@ -279,11 +279,11 @@ class OraclePlatform extends AbstractPlatform
             }
 
             if (isset($column['autoincrement']) && $column['autoincrement'] ||
-               (isset($column['autoinc']) && $column['autoinc'])) {           
+               (isset($column['autoinc']) && $column['autoinc'])) {
                 $sql = array_merge($sql, $this->getCreateAutoincrementSql($name, $table));
             }
         }
-        
+
         if (isset($indexes) && ! empty($indexes)) {
             foreach ($indexes as $indexName => $index) {
                 $sql[] = $this->getCreateIndexSQL($index, $table);
@@ -302,7 +302,7 @@ class OraclePlatform extends AbstractPlatform
     public function getListTableIndexesSQL($table)
     {
         $table = strtoupper($table);
-        
+
         return "SELECT uind.index_name AS name, " .
              "       uind.index_type AS type, " .
              "       decode( uind.uniqueness, 'NONUNIQUE', 0, 'UNIQUE', 1 ) AS is_unique, " .
@@ -353,7 +353,7 @@ BEGIN
   IF constraints_Count = 0 OR constraints_Count = \'\' THEN
     EXECUTE IMMEDIATE \''.$this->getCreateConstraintSQL($idx, $table).'\';
   END IF;
-END;';   
+END;';
 
         $sequenceName = $table . '_SEQ';
         $sequence = new \Doctrine\DBAL\Schema\Sequence($sequenceName, $start);
@@ -583,12 +583,12 @@ LEFT JOIN all_cons_columns r_cols
         }
         return $query;
     }
-    
+
     /**
      * Gets the character casing of a column in an SQL result set of this platform.
-     * 
+     *
      * Oracle returns all column names in SQL result sets in uppercase.
-     * 
+     *
      * @param string $column The column name for which to get the correct character casing.
      * @return string The column name in the character casing used in SQL result sets.
      */
@@ -596,17 +596,17 @@ LEFT JOIN all_cons_columns r_cols
     {
         return strtoupper($column);
     }
-    
+
     public function getCreateTemporaryTableSnippetSQL()
     {
         return "CREATE GLOBAL TEMPORARY TABLE";
     }
-    
+
     public function getDateTimeFormatString()
     {
         return 'Y-m-d H:i:sP';
     }
-    
+
     public function fixSchemaElementName($schemaElementName)
     {
         if (strlen($schemaElementName) > 30) {

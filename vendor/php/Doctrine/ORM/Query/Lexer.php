@@ -49,7 +49,7 @@ class Lexer extends \Doctrine\Common\Lexer
     const T_PLUS                = 17;
     const T_OPEN_CURLY_BRACE    = 18;
     const T_CLOSE_CURLY_BRACE   = 19;
-    
+
     // All tokens that are also identifiers should be >= 100
     const T_IDENTIFIER          = 100;
     const T_ALL                 = 101;
@@ -124,7 +124,7 @@ class Lexer extends \Doctrine\Common\Lexer
             '\?[1-9][0-9]*|:[a-z][a-z0-9_]+'
         );
     }
-    
+
     /**
      * @inheritdoc
      */
@@ -142,7 +142,7 @@ class Lexer extends \Doctrine\Common\Lexer
 
         // Recognizing numeric values
         if (is_numeric($value)) {
-            return (strpos($value, '.') !== false || stripos($value, 'e') !== false) 
+            return (strpos($value, '.') !== false || stripos($value, 'e') !== false)
                     ? self::T_FLOAT : self::T_INTEGER;
         }
 

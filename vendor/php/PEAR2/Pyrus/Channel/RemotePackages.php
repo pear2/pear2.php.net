@@ -33,7 +33,7 @@ class RemotePackages implements \ArrayAccess, \Iterator
     /**
      * The list of packages, usually from p/packages.xml unless a stability
      * flag is set and the list is filtered.
-     * 
+     *
      * @var array
      */
     protected $packageList;

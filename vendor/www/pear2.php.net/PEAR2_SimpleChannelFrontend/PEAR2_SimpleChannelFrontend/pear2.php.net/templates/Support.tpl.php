@@ -7,7 +7,7 @@ $parent->context->page_title = 'Support | '.pear2\SimpleChannelFrontend\Main::$c
         <ul>
             <li>There's a Pyrus section in <a href="http://pear.php.net/manual/en/pyrus.php">PEAR manual</a>.</li>
             <li>There are some PEAR-related mailing lists, check <a href="http://pear.php.net/support/lists.php">PEAR website</a> for more info.</li>
-            <li>You can also ask for help on the <i><a href="irc://efnet/#pear">#pear</a></i> 
+            <li>You can also ask for help on the <i><a href="irc://efnet/#pear">#pear</a></i>
                 <acronym title="Internet Relay Chat">IRC</acronym> channel at the
                 <a href="http://www.efnet.org"> Eris Free Net</a>.
             </li>

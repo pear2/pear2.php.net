@@ -49,7 +49,7 @@ class ClassMetadataFactory
     private $_cacheDriver;
     private $_loadedMetadata = array();
     private $_initialized = false;
-    
+
     /**
      * Creates a new factory instance that uses the given metadata driver implementation.
      *
@@ -79,16 +79,16 @@ class ClassMetadataFactory
     {
         return $this->_cacheDriver;
     }
-    
+
     public function getLoadedMetadata()
     {
         return $this->_loadedMetadata;
     }
-    
+
     /**
      * Forces the factory to load the metadata of all classes known to the underlying
      * mapping driver.
-     * 
+     *
      * @return array The ClassMetadata instances of all mapped classes.
      */
     public function getAllMetadata()
@@ -166,7 +166,7 @@ class ClassMetadataFactory
 
     /**
      * Checks whether the factory has the metadata for a class loaded already.
-     * 
+     *
      * @param string $className
      * @return boolean TRUE if the metadata of the class in question is already loaded, FALSE otherwise.
      */
@@ -177,7 +177,7 @@ class ClassMetadataFactory
 
     /**
      * Sets the metadata descriptor for a specific class.
-     * 
+     *
      * NOTE: This is only useful in very special cases, like when generating proxy classes.
      *
      * @param string $className
@@ -254,7 +254,7 @@ class ClassMetadataFactory
             // Invoke driver
             try {
                 $this->_driver->loadMetadataForClass($className, $class);
-            } catch(ReflectionException $e) { 
+            } catch(ReflectionException $e) {
                 throw MappingException::reflectionFailure($className, $e);
             }
 
@@ -313,7 +313,7 @@ class ClassMetadataFactory
     {
         return new ClassMetadata($className);
     }
-    
+
     /**
      * Adds inherited fields to the subclass mapping.
      *

@@ -76,7 +76,7 @@ abstract class AbstractSchemaManager
     }
 
     /**
-     * Try any method on the schema manager. Normally a method throws an 
+     * Try any method on the schema manager. Normally a method throws an
      * exception when your DBMS doesn't support it or if an error occurs.
      * This method allows you to try and method on your SchemaManager
      * instance and will return false if it does not work or is not supported.
@@ -260,7 +260,7 @@ abstract class AbstractSchemaManager
 
     /**
      * Drops a database.
-     * 
+     *
      * NOTE: You can not drop the database this SchemaManager is currently connected to.
      *
      * @param string $database The name of the database to drop
@@ -744,7 +744,7 @@ abstract class AbstractSchemaManager
 
     /**
      * Create a schema instance for the current database.
-     * 
+     *
      * @return Schema
      */
     public function createSchema()

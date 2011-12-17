@@ -5,8 +5,8 @@
 /**
  * This file is part of the PEAR2\Console\CommandLine package.
  *
- * A full featured package for managing command-line options and arguments 
- * hightly inspired from python optparse module, it allows the developper to 
+ * A full featured package for managing command-line options and arguments
+ * hightly inspired from python optparse module, it allows the developper to
  * easily build complex command line interfaces.
  *
  * PHP version 5
@@ -15,11 +15,11 @@
  * through the world-wide-web at the following URI:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Console 
+ * @category  Console
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   SVN: $Id$
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     Class available since release 0.1.0
@@ -27,7 +27,7 @@
 
 /**
  * Main class for parsing command line options and arguments.
- * 
+ *
  * There are three ways to create parsers with this class:
  * <code>
  * // direct usage
@@ -45,7 +45,7 @@
  * @package   PEAR2\Console\CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007-2009 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0
@@ -92,7 +92,7 @@ class CommandLine
     public $description = '';
 
     /**
-     * A string that represents the version of the program, if this property is 
+     * A string that represents the version of the program, if this property is
      * not empty and property add_version_option is not set to false, the
      * command line parser will add a --version option, that will display the
      * property content.
@@ -113,8 +113,8 @@ class CommandLine
     /**
      * Boolean that determine if the command line parser should add the version
      * (-v, --version) option automatically.
-     * Note that the version option is also generated only if the version 
-     * property is not empty, it's up to you to provide a version string of 
+     * Note that the version option is also generated only if the version
+     * property is not empty, it's up to you to provide a version string of
      * course.
      *
      * @var bool $add_version_option Whether to add a version option or not
@@ -143,7 +143,7 @@ class CommandLine
     public $message_provider = false;
 
     /**
-     * Boolean that tells the parser to be POSIX compliant, POSIX demands the 
+     * Boolean that tells the parser to be POSIX compliant, POSIX demands the
      * following behavior: the first non-option stops option processing.
      *
      * @var bool $force_posix Whether to force posix compliance or not
@@ -151,7 +151,7 @@ class CommandLine
     public $force_posix = false;
 
     /**
-     * Boolean that tells the parser to set relevant options default values, 
+     * Boolean that tells the parser to set relevant options default values,
      * according to the option action.
      *
      * @see PEAR2\Console\CommandLine\Option::setDefaults()
@@ -181,7 +181,7 @@ class CommandLine
     public $commands = array();
 
     /**
-     * Parent, only relevant in Command objects but left here for interface 
+     * Parent, only relevant in Command objects but left here for interface
      * convenience.
      *
      * @var PEAR2\Console\CommandLine The parent instance
@@ -190,7 +190,7 @@ class CommandLine
     public $parent = false;
 
     /**
-     * Array of valid actions for an option, this array will also store user 
+     * Array of valid actions for an option, this array will also store user
      * registered actions.
      *
      * The array format is:
@@ -278,7 +278,7 @@ class CommandLine
      *
      * @return void
      */
-    public function __construct(array $params = array()) 
+    public function __construct(array $params = array())
     {
         if (isset($params['name'])) {
             $this->name = $params['name'];
@@ -320,7 +320,7 @@ class CommandLine
 
     /**
      * Method to allow PEAR2\Console\CommandLine to accept either:
-     *  + a custom renderer, 
+     *  + a custom renderer,
      *  + a custom outputter,
      *  + or a custom message provider
      *
@@ -329,7 +329,7 @@ class CommandLine
      * @return void
      * @throws PEAR2\Console\CommandLine\Exception if wrong argument passed
      */
-    public function accept($instance) 
+    public function accept($instance)
     {
         if ($instance instanceof CommandLine\Renderer) {
             if (property_exists($instance, 'parser') && !$instance->parser) {
@@ -366,7 +366,7 @@ class CommandLine
      *
      * @return PEAR2\Console\CommandLine The parser instance
      */
-    public static function fromXmlFile($file) 
+    public static function fromXmlFile($file)
     {
         return CommandLine\XmlParser::parse($file);
     }
@@ -401,7 +401,7 @@ class CommandLine
      *
      * @return PEAR2\Console\CommandLine The parser instance
      */
-    public static function fromXmlString($string) 
+    public static function fromXmlString($string)
     {
         return CommandLine\XmlParser::parseString($string);
     }
@@ -415,7 +415,7 @@ class CommandLine
      * Adds an argument with the name $name and set its attributes with the
      * array $params, then return the PEAR2\Console\CommandLine\Argument instance
      * created.
-     * The method accepts another form: you can directly pass a 
+     * The method accepts another form: you can directly pass a
      * PEAR2\Console\CommandLine\Argument object as the sole argument, this allows
      * you to contruct the argument separately, in order to reuse it in
      * different command line parsers or commands for example.
@@ -468,7 +468,7 @@ class CommandLine
     /**
      * Adds a sub-command to the command line parser.
      *
-     * Adds a command with the given $name to the parser and returns the 
+     * Adds a command with the given $name to the parser and returns the
      * PEAR2\Console\CommandLine\Command instance, you can then populate the command
      * with options, configure it, etc... like you would do for the main parser
      * because the class PEAR2\Console\CommandLine\Command inherits from
@@ -517,9 +517,9 @@ class CommandLine
         } else {
             $params['name'] = $name;
             $command        = new CommandLine\Command($params);
-            // some properties must cascade to the child command if not 
-            // passed explicitely. This is done only in this case, because if 
-            // we have a Command object we have no way to determine if theses 
+            // some properties must cascade to the child command if not
+            // passed explicitely. This is done only in this case, because if
+            // we have a Command object we have no way to determine if theses
             // properties have already been set
             $cascade = array(
                 'add_help_option',
@@ -554,7 +554,7 @@ class CommandLine
      * Adds an option with the name $name and set its attributes with the
      * array $params, then return the PEAR2\Console\CommandLine\Option instance
      * created.
-     * The method accepts another form: you can directly pass a 
+     * The method accepts another form: you can directly pass a
      * PEAR2\Console\CommandLine\Option object as the sole argument, this allows
      * you to contruct the option separately, in order to reuse it in different
      * command line parsers or commands for example.
@@ -780,7 +780,7 @@ class CommandLine
      *
      * @return void
      */
-    public static function registerAction($name, $class) 
+    public static function registerAction($name, $class)
     {
         if (!isset(self::$actions[$name])) {
             if (!class_exists($class)) {
@@ -805,11 +805,11 @@ class CommandLine
      * @return void
      * @todo remove Console::triggerError() and use exceptions only
      */
-    public static function triggerError($msgId, $level, $params=array()) 
+    public static function triggerError($msgId, $level, $params=array())
     {
         if (isset(self::$errors[$msgId])) {
             $msg = str_replace(array_keys($params),
-                array_values($params), self::$errors[$msgId]); 
+                array_values($params), self::$errors[$msgId]);
             trigger_error($msg, $level);
         } else {
             trigger_error('unknown error', $level);
@@ -957,7 +957,7 @@ class CommandLine
                 // is to consider that if there's already an element in the
                 // array, and the commandline expects one or more args, we
                 // leave last tokens to arguments
-                if ($lastopt->action == 'StoreArray' && 
+                if ($lastopt->action == 'StoreArray' &&
                     !empty($result->options[$lastopt->name]) &&
                     count($this->args) > ($argc + count($args))) {
                     if (!is_null($token)) {
@@ -978,7 +978,7 @@ class CommandLine
             // a long option
             $optkv = explode('=', $token, 2);
             if (trim($optkv[0]) == '--') {
-                // the special argument "--" forces in all cases the end of 
+                // the special argument "--" forces in all cases the end of
                 // option scanning.
                 $stopflag = true;
                 return;
@@ -1002,7 +1002,7 @@ class CommandLine
                 );
             }
             if ($opt->expectsArgument() && $value === false) {
-                // maybe the long option argument is separated by a space, if 
+                // maybe the long option argument is separated by a space, if
                 // this is the case it will be the next arg
                 if ($last && !$opt->argument_optional) {
                     throw CommandLine\Exception::factory(
@@ -1057,7 +1057,7 @@ class CommandLine
                 }
                 $value = false;
             } else {
-                if (!$opt->expectsArgument()) { 
+                if (!$opt->expectsArgument()) {
                     if ($nextopt = $this->findOption('-' . $next)) {
                         $this->_dispatchAction($opt, false, $result);
                         $this->parseToken('-' . substr($token, 2), $result,
@@ -1080,7 +1080,7 @@ class CommandLine
             $this->_dispatchAction($opt, $value, $result);
         } else {
             // We have an argument.
-            // if we are in POSIX compliant mode, we must set the stop flag to 
+            // if we are in POSIX compliant mode, we must set the stop flag to
             // true in order to stop option parsing.
             if (!$stopflag && $this->force_posix) {
                 $stopflag = true;
@@ -1105,7 +1105,7 @@ class CommandLine
             $helpOptionParams = array(
                 'long_name'   => '--help',
                 'description' => 'show this help message and exit',
-                'action'      => 'Help'   
+                'action'      => 'Help'
             );
             if (!($option = $this->findOption('-h')) || $option->action == 'Help') {
                 // short name is available, take it
@@ -1117,7 +1117,7 @@ class CommandLine
             $versionOptionParams = array(
                 'long_name'   => '--version',
                 'description' => 'show the program version and exit',
-                'action'      => 'Version'   
+                'action'      => 'Version'
             );
             if (!$this->findOption('-v')) {
                 // short name is available, take it
@@ -1125,7 +1125,7 @@ class CommandLine
             }
             $this->addOption('version', $versionOptionParams);
         }
-    } 
+    }
 
     // }}}
     // getArgcArgv() {{{
@@ -1135,7 +1135,7 @@ class CommandLine
      * if it fails to get them.
      *
      * @return array The argc/argv array
-     * @throws PEAR2\Console\CommandLine\Exception 
+     * @throws PEAR2\Console\CommandLine\Exception
      */
     protected function getArgcArgv()
     {
@@ -1150,7 +1150,7 @@ class CommandLine
                     $opt = $this->findOption($key);
                     if ($opt instanceof CommandLine\Option) {
                         // match a configured option
-                        $argv[] = $opt->short_name ? 
+                        $argv[] = $opt->short_name ?
                             $opt->short_name : $opt->long_name;
                         foreach ($value as $v) {
                             if ($opt->expectsArgument()) {

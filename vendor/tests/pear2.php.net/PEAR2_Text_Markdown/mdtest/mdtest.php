@@ -19,7 +19,7 @@
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
 # of the License, or (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -98,9 +98,9 @@ if (!isset($script)) {
 	if (!is_file($lib)) {
 		exit("$argv[0]: library '$lib' does not exist.\n");
 	}
-	
+
 	include_once $lib;
-	
+
 	if (preg_match('/(.*)(::|->)(.*)/', $func, $matches)) {
 		$func = array($matches[1], $matches[3]);
 		if (!class_exists($func[0])) {
@@ -150,7 +150,7 @@ foreach ($test_dirs as $key => $test_dir) {
 if ($normalize && !class_exists('DOMDocument')) {
 	exit("$argv[0]: HTML normalization (option \"-n\") requires PHP 5.\n");
 }
-	
+
 $tests_passed = 0;
 $tests_failed = 0;
 $tests_all = 0;
@@ -163,19 +163,19 @@ foreach ($test_dirs as $test_dir) {
 	echo "\n";
 	echo "== Test Suite: $name ==\n";
 	echo "\n";
-	
+
 	$testfiles = glob("$test_dir/*.text");
 	if (!$testfiles) {
 		echo "$argv[0]: '$test_dir' does not contain any test case.\n";
 		continue;
 	}
-	
-	
+
+
 	foreach ($testfiles as $testfile) {
 		$dirname = dirname($testfile);
 		$testname = basename($testfile, '.text');
 		printf("%-33s ... ", $testname);
-		
+
 		// Look for a corresponding HTML or XHTML file:
 		if (is_file($resultfile = "$dirname/$testname.html")) {
 			$resultformat = 'html';
@@ -185,9 +185,9 @@ foreach ($test_dirs as $test_dir) {
 			$resultfile = null;
 			$resultformat = null;
 		}
-			
+
 		$tests_all++;
-		
+
 		// No result file, benchmark only.
 		if (!$resultfile) {
 			$t_input = file_get_contents($testfile);
@@ -198,18 +198,18 @@ foreach ($test_dirs as $test_dir) {
 				$t_output = `'$script' '$testfile'`;
 			}
 			$end_time = millisec();
-			
+
 			$proc_time = $end_time - $start_time;
 			$all_times[] = $proc_time;
 			$total_time += $proc_time;
-			
+
 			printf("?      %4d ms\n", $proc_time);
 			continue;
 		}
-		
+
 		$t_input = file_get_contents($testfile);
 		$t_result = file_get_contents($resultfile);
-		
+
 
 		$start_time = millisec();
 		if (!isset($script)) {
@@ -218,7 +218,7 @@ foreach ($test_dirs as $test_dir) {
 			$t_output = `'$script' '$testfile'`;
 		}
 		$end_time = millisec();
-		
+
 		if ($normalize) {
 			// DOMDocuments
 			if ($resultformat == 'xhtml') {
@@ -228,7 +228,7 @@ foreach ($test_dirs as $test_dir) {
 				$doc_output = @DOMDocument::loadXML("<!DOCTYPE html>".
 					"<html xmlns='http://www.w3.org/1999/xhtml'>".
 					"<body>$t_output</body></html>");
-			
+
 				if ($doc_result) {
 					normalizeElementContent($doc_result->documentElement, false);
 					$n_result = $doc_result->saveXML();
@@ -244,17 +244,17 @@ foreach ($test_dirs as $test_dir) {
 			} else {
 				$doc_result = @DOMDocument::loadHTML($t_result);
 				$doc_output = @DOMDocument::loadHTML($t_output);
-			
+
 				normalizeElementContent($doc_result->documentElement, false);
 				normalizeElementContent($doc_output->documentElement, false);
-				
+
 				$n_result = $doc_result->saveHTML();
 				$n_output = $doc_output->saveHTML();
 			}
-			
+
 			$n_result = preg_replace('{^.*?<body>|</body>.*?$}is', '', $n_result);
 			$n_output = preg_replace('{^.*?<body>|</body>.*?$}is', '', $n_output);
-			
+
 			$c_result = $n_result;
 			$c_output = $n_output;
 		}
@@ -262,14 +262,14 @@ foreach ($test_dirs as $test_dir) {
 			$c_result = $t_result;
 			$c_output = $t_output;
 		}
-		
+
 		$c_result = trim($c_result) . "\n";
 		$c_output = trim($c_output) . "\n";
-		
+
 		$proc_time = $end_time - $start_time;
 		$all_times[] = $proc_time;
 		$total_time += $proc_time;
-		
+
 		if ($c_result == $c_output) {
 			printf("OK %8d ms\n", $proc_time);
 			$tests_passed++;
@@ -277,7 +277,7 @@ foreach ($test_dirs as $test_dir) {
 		else {
 			printf("FAILED %4d ms\n", $proc_time);
 			$tests_failed++;
-			
+
 			if ($show_diff) {
 				echo "~~~\n";
 				echo PHPDiff($c_result, $c_output, true);
@@ -321,8 +321,8 @@ if (count($all_times)) {
 
 function normalizeElementContent($element, $whitespace_preserve) {
 #
-# Normalize content of HTML DOM $element. The $whitespace_preserve 
-# argument indicates that whitespace is significant and shouldn't be 
+# Normalize content of HTML DOM $element. The $whitespace_preserve
+# argument indicates that whitespace is significant and shouldn't be
 # normalized; it should be used for the content of certain elements like
 # <pre> or <script>.
 #
@@ -342,11 +342,11 @@ function normalizeElementContent($element, $whitespace_preserve) {
 		case 'h6':
 			$whitespace = "\n\n";
 			break;
-			
+
 		case 'table':
 			$whitespace = "\n";
 			break;
-		
+
 		case 'pre':
 		case 'script':
 		case 'style':
@@ -354,7 +354,7 @@ function normalizeElementContent($element, $whitespace_preserve) {
 			$whitespace_preserve = true;
 			$whitespace = "";
 			break;
-		
+
 		default:
 			$whitespace = "";
 			break;
@@ -364,7 +364,7 @@ function normalizeElementContent($element, $whitespace_preserve) {
 			case XML_ELEMENT_NODE:
 				normalizeElementContent($node, $whitespace_preserve);
 				normalizeElementAttributes($node);
-				
+
 				switch (strtolower($node->nodeName)) {
 					case 'p':
 					case 'div':
@@ -386,26 +386,26 @@ function normalizeElementContent($element, $whitespace_preserve) {
 					case 'h6':
 						$whitespace = "\n\n";
 						break;
-					
+
 					case 'tr':
 					case 'td':
 					case 'dt':
 						$whitespace = "\n";
 						break;
-					
+
 					default:
 						$whitespace = "";
 						break;
 				}
-				
+
 				if (($whitespace == "\n\n" || $whitespace == "\n") &&
-					$node->nextSibling && 
+					$node->nextSibling &&
 					$node->nextSibling->nodeType != XML_TEXT_NODE)
 				{
 					$element->insertBefore(new DOMText($whitespace), $node->nextSibling);
 				}
 				break;
-				
+
 			case XML_TEXT_NODE:
 				if (!$whitespace_preserve) {
 					if (trim($node->data) == "") {
@@ -417,12 +417,12 @@ function normalizeElementContent($element, $whitespace_preserve) {
 				break;
 		}
 	}
-	if (!$whitespace_preserve && 
+	if (!$whitespace_preserve &&
 		($whitespace == "\n\n" || $whitespace == "\n"))
 	{
 		if ($element->firstChild) {
 			if ($element->firstChild->nodeType == XML_TEXT_NODE) {
-				$element->firstChild->data = 
+				$element->firstChild->data =
 					preg_replace('{^\s+}', "\n", $element->firstChild->data);
 			} else {
 				$element->insertBefore(new DOMText("\n"), $element->firstChild);
@@ -430,7 +430,7 @@ function normalizeElementContent($element, $whitespace_preserve) {
 		}
 		if ($element->lastChild) {
 			if ($element->lastChild->nodeType == XML_TEXT_NODE) {
-				$element->lastChild->data = 
+				$element->lastChild->data =
 					preg_replace('{\s+$}', "\n", $element->lastChild->data);
 			} else {
 				$element->insertBefore(new DOMText("\n"), null);
@@ -449,7 +449,7 @@ function normalizeElementAttributes($element) {
 	foreach ($element->attributes as $attr_node) {
 		$attr_list[$attr_node->name] = $attr_node;
 	}
-	
+
 	// Sort attribute list by name.
 	ksort($attr_list);
 
@@ -463,13 +463,13 @@ function normalizeElementAttributes($element) {
 
 /**
 	Diff implemented in pure php, written from scratch.
-	
+
 	Copyright (c) 2003  Daniel Unterberger <diff.phpnet@holomind.de>
-	Copyright (c) 2005  Nils Knappmeier next version 
+	Copyright (c) 2005  Nils Knappmeier next version
 	Copyright (c) 2007  Michel Fortin: Adaptation for MDTest
 **/
 
-    
+
 function PHPDiff($old, $new) {
 #
 # PHPDiff returns the differences between $old and $new, formatted
@@ -477,10 +477,10 @@ function PHPDiff($old, $new) {
 #
    # split the source text into arrays of lines
    $t1 = explode("\n",$old);
-   $x=array_pop($t1); 
+   $x=array_pop($t1);
    if ($x>'') $t1[]="$x\n\\ No newline at end of file";
    $t2 = explode("\n",$new);
-   $x=array_pop($t2); 
+   $x=array_pop($t2);
    if ($x>'') $t2[]="$x\n\\ No newline at end of file";
 
    # build a reverse-index array using the line as key and line number as value
@@ -495,7 +495,7 @@ function PHPDiff($old, $new) {
    # walk this loop until we reach the end of one of the lists
    while ($a1<count($t1) && $a2<count($t2)) {
      # if we have a common element, save it and go to the next
-     if ($t1[$a1]==$t2[$a2]) { $actions[]=4; $a1++; $a2++; continue; } 
+     if ($t1[$a1]==$t2[$a2]) { $actions[]=4; $a1++; $a2++; continue; }
 
      # otherwise, find the shortest move (Manhattan-distance) from the
      # current location
@@ -503,12 +503,12 @@ function PHPDiff($old, $new) {
      $s1=$a1; $s2=$a2;
      while(($s1+$s2-$a1-$a2) < ($best1+$best2-$a1-$a2)) {
        $d=-1;
-       foreach((array)@$r1[$t2[$s2]] as $n) 
+       foreach((array)@$r1[$t2[$s2]] as $n)
          if ($n>=$s1) { $d=$n; break; }
        if ($d>=$s1 && ($d+$s2-$a1-$a2)<($best1+$best2-$a1-$a2))
          { $best1=$d; $best2=$s2; }
        $d=-1;
-       foreach((array)@$r2[$t1[$s1]] as $n) 
+       foreach((array)@$r2[$t1[$s1]] as $n)
          if ($n>=$s2) { $d=$n; break; }
        if ($d>=$s2 && ($s1+$d-$a1-$a2)<($best1+$best2-$a1-$a2))
          { $best1=$s1; $best2=$d; }
@@ -548,6 +548,6 @@ function PHPDiff($old, $new) {
     $op=0;
   }
   $out[] = '';
-  return join("\n",$out); 
+  return join("\n",$out);
 }
 ?>

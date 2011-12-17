@@ -14,7 +14,7 @@ if (isset($response->headers['Content-Length'])) {
 	var_dump($response->headers['Content-Length'] == 5);
 }
 
-/* Expects Should Be: 
+/* Expects Should Be:
 string(5) "Test
 "
 bool(true)

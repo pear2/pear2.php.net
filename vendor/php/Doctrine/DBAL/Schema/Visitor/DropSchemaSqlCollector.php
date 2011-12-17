@@ -45,7 +45,7 @@ class DropSchemaSqlCollector implements Visitor
      * @var array
      */
     private $_constraints = array();
-    
+
     /**
      * @var array
      */
@@ -75,7 +75,7 @@ class DropSchemaSqlCollector implements Visitor
      */
     public function acceptSchema(Schema $schema)
     {
-        
+
     }
 
     /**
@@ -91,7 +91,7 @@ class DropSchemaSqlCollector implements Visitor
      */
     public function acceptColumn(Table $table, Column $column)
     {
-        
+
     }
 
     /**
@@ -113,7 +113,7 @@ class DropSchemaSqlCollector implements Visitor
      */
     public function acceptIndex(Table $table, Index $index)
     {
-        
+
     }
 
     /**

@@ -50,7 +50,7 @@ class MsSqlSchemaManager extends AbstractSchemaManager
         if ( ! isset($tableColumn['name'])) {
             $tableColumn['name'] = '';
         }
-        
+
         // Map db type to Doctrine mapping type
         switch ($dbType) {
             case 'tinyint':
@@ -143,7 +143,7 @@ class MsSqlSchemaManager extends AbstractSchemaManager
             default:
                 $type = 'string';
         }
-        
+
         $def =  array(
             'type' => $type,
             'length' => ((int) $tableColumn['LENGTH'] == 0) ? null : (int) $tableColumn['LENGTH'],
@@ -157,7 +157,7 @@ class MsSqlSchemaManager extends AbstractSchemaManager
         while($default != ($default2 = preg_replace("/^\((.*)\)$/", '$1', $default))) {
             $default = $default2;
         }
-        
+
         $options = array(
             'length'        => ((int) $tableColumn['LENGTH'] == 0) ? null : (int) $tableColumn['LENGTH'],
             'unsigned'      => (bool)$unsigned,

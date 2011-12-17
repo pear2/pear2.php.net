@@ -38,13 +38,13 @@ abstract class AssociationMapping
 {
     /**
      * Specifies that an association is to be fetched when it is first accessed.
-     * 
+     *
      * @var integer
      */
     const FETCH_LAZY = 2;
     /**
      * Specifies that an association is to be fetched when the owner of the
-     * association is fetched. 
+     * association is fetched.
      *
      * @var integer
      */
@@ -186,32 +186,32 @@ abstract class AssociationMapping
      * @throws MappingException If something is wrong with the mapping.
      */
     protected function _validateAndCompleteMapping(array $mapping)
-    {        
+    {
         // Mandatory attributes for both sides
         if ( ! isset($mapping['fieldName'])) {
             throw MappingException::missingFieldName();
         }
         $this->sourceFieldName = $mapping['fieldName'];
-        
+
         if ( ! isset($mapping['sourceEntity'])) {
             throw MappingException::missingSourceEntity($mapping['fieldName']);
         }
         $this->sourceEntityName = $mapping['sourceEntity'];
-        
+
         if ( ! isset($mapping['targetEntity'])) {
             throw MappingException::missingTargetEntity($mapping['fieldName']);
         }
         $this->targetEntityName = $mapping['targetEntity'];
-        
+
         // Mandatory and optional attributes for either side
-        if ( ! isset($mapping['mappedBy'])) {            
+        if ( ! isset($mapping['mappedBy'])) {
             // Optional
             if (isset($mapping['joinTable']) && $mapping['joinTable']) {
                 if ($mapping['joinTable']['name'][0] == '`') {
                     $mapping['joinTable']['name'] = trim($mapping['joinTable']['name'], '`');
                     $mapping['joinTable']['quoted'] = true;
                 }
-                $this->joinTable = $mapping['joinTable'];   
+                $this->joinTable = $mapping['joinTable'];
             }
             if (isset($mapping['inversedBy'])) {
                 $this->inversedBy = $mapping['inversedBy'];
@@ -220,11 +220,11 @@ abstract class AssociationMapping
             $this->isOwningSide = false;
             $this->mappedBy = $mapping['mappedBy'];
         }
-        
+
         // Optional attributes for both sides
         $this->fetchMode = isset($mapping['fetch']) ? $mapping['fetch'] : self::FETCH_LAZY;
         $cascades = isset($mapping['cascade']) ? $mapping['cascade'] : array();
-        
+
         if (in_array('all', $cascades)) {
             $cascades = array(
                'remove',
@@ -234,7 +234,7 @@ abstract class AssociationMapping
                'detach'
             );
         }
-        
+
         $this->isCascadeRemove = in_array('remove',  $cascades);
         $this->isCascadePersist = in_array('persist', $cascades);
         $this->isCascadeRefresh = in_array('refresh', $cascades);
@@ -304,7 +304,7 @@ abstract class AssociationMapping
 
     /**
      * Checks whether the association has any cascades configured.
-     * 
+     *
      * @return boolean
      */
     public function hasCascades()
@@ -328,7 +328,7 @@ abstract class AssociationMapping
      *                                  association) of $sourceEntity, if needed
      */
     abstract public function load($sourceEntity, $target, $em, array $joinColumnValues = array());
-    
+
     /**
      * Gets the (possibly quoted) name of the join table.
      *
@@ -393,7 +393,7 @@ abstract class AssociationMapping
         if ($this->declared) {
             $serialized[] = 'declared';
         }
-        
+
         return $serialized;
     }
 }

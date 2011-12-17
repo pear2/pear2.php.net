@@ -16,7 +16,7 @@
  * and is licensed under the LGPL. For more information, see
  * <http://www.doctrine-project.org>.
  */
- 
+
 namespace Doctrine\ORM\Query\AST;
 
 /**
@@ -28,7 +28,7 @@ namespace Doctrine\ORM\Query\AST;
  * StateField ::= {EmbeddedClassStateField "."}* SimpleStateField
  * SimpleStateFieldPathExpression ::= IdentificationVariable "." StateField
  * SimpleStateFieldAssociationPathExpression ::= SingleValuedAssociationPathExpression "." StateField
- * 
+ *
  * @since   2.0
  * @author  Guilherme Blanco <guilhermeblanco@hotmail.com>
  * @author  Jonathan Wage <jonwage@gmail.com>
@@ -39,19 +39,19 @@ class PathExpression extends Node
     const TYPE_COLLECTION_VALUED_ASSOCIATION = 2;
     const TYPE_SINGLE_VALUED_ASSOCIATION = 4;
     const TYPE_STATE_FIELD = 8;
-    
+
     public $type;
     public $expectedType;
     public $identificationVariable;
     public $parts;
-    
+
     public function __construct($expectedType, $identificationVariable, array $parts)
     {
         $this->expectedType = $expectedType;
         $this->identificationVariable = $identificationVariable;
         $this->parts = $parts;
     }
-    
+
     public function dispatch($walker)
     {
         return $walker->walkPathExpression($this);

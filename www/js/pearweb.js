@@ -27,7 +27,7 @@ $(document).ready(function() {
 	    } else {
 	    	// figure out how to determine which way to go
 	    }
-	    
+
 	    $("#maincontent").animate(direction, "fast", function(){
 	        if (supports_history()) {
 	            var title = url.split(window.url);

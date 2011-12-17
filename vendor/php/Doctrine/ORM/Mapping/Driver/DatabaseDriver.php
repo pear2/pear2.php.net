@@ -42,18 +42,18 @@ class DatabaseDriver implements Driver
 {
     /** The SchemaManager. */
     private $_sm;
-    
+
     /**
      * Initializes a new AnnotationDriver that uses the given AnnotationReader for reading
      * docblock annotations.
-     * 
+     *
      * @param AnnotationReader $reader The AnnotationReader to use.
      */
     public function __construct(AbstractSchemaManager $schemaManager)
     {
         $this->_sm = $schemaManager;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -66,7 +66,7 @@ class DatabaseDriver implements Driver
         $metadata->table['name'] = $tableName;
 
         $columns = $this->_sm->listTableColumns($tableName);
-        
+
         if ($this->_sm->getDatabasePlatform()->supportsForeignKeyConstraints()) {
             $foreignKeys = $this->_sm->listTableForeignKeys($tableName);
         } else {
@@ -151,7 +151,7 @@ class DatabaseDriver implements Driver
     public function getAllClassNames()
     {
         $classes = array();
-        
+
         foreach ($this->_sm->listTables() as $table) {
             // This method must return an array of table names because we need
             // to know the table name after we inflect it to create the entity class name.

@@ -1,5 +1,5 @@
 --TEST--
-PEAR2\HTTP\Request\Adapter\HTTP - Test of an HTTP Get request 
+PEAR2\HTTP\Request\Adapter\HTTP - Test of an HTTP Get request
 uses test001.html
 --SKIPIF--
 <?php

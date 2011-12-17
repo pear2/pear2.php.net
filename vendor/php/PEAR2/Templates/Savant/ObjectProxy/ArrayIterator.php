@@ -1,7 +1,7 @@
 <?php
 namespace PEAR2\Templates\Savant\ObjectProxy;
 use PEAR2\Templates\Savant\ObjectProxy;
-class ArrayIterator extends ObjectProxy\ArrayAccess implements \Iterator, \SeekableIterator, \Countable 
+class ArrayIterator extends ObjectProxy\ArrayAccess implements \Iterator, \SeekableIterator, \Countable
 {
 
     /**

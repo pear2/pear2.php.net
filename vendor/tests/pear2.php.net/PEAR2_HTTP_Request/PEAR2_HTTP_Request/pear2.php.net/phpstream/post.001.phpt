@@ -1,5 +1,5 @@
 --TEST--
-PEAR2\HTTP\Request\Adapter\Phpstream - Test of an HTTP Post request 
+PEAR2\HTTP\Request\Adapter\Phpstream - Test of an HTTP Post request
 uses test001.html
 --FILE--
 <?php

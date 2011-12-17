@@ -21,7 +21,7 @@ namespace Doctrine\ORM\Mapping;
 
 /**
  * Represents a one-to-many mapping.
- * 
+ *
  * NOTE: One-to-many mappings can currently not be uni-directional (one -> many).
  * They must either be bidirectional (one <-> many) or unidirectional (many -> one).
  * In other words, the many-side MUST be the owning side and the one-side MUST be
@@ -34,7 +34,7 @@ namespace Doctrine\ORM\Mapping;
  * 2) To drastically reduce the size of a serialized instance (private/protected members
  *    get the whole class name, namespace inclusive, prepended to every property in
  *    the serialized representation).
- *    
+ *
  * Instances of this class are stored serialized in the metadata cache together with the
  * owning <tt>ClassMetadata</tt> instance.
  *
@@ -75,7 +75,7 @@ class OneToManyMapping extends AssociationMapping
         if ( ! isset($mapping['mappedBy'])) {
             throw MappingException::oneToManyRequiresMappedBy($mapping['fieldName']);
         }
-        
+
         //TODO: if orphanRemoval, cascade=remove is implicit!
         $this->orphanRemoval = isset($mapping['orphanRemoval']) ?
                 (bool) $mapping['orphanRemoval'] : false;
@@ -87,7 +87,7 @@ class OneToManyMapping extends AssociationMapping
             $this->orderBy = $mapping['orderBy'];
         }
     }
-    
+
     /**
      * Whether orphaned elements (removed from the collection) should be deleted.
      *
@@ -97,7 +97,7 @@ class OneToManyMapping extends AssociationMapping
     {
         return $this->deleteOrphans;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -105,14 +105,14 @@ class OneToManyMapping extends AssociationMapping
     {
         return true;
     }
-    
+
     /**
      * Loads a one-to-many collection.
-     * 
+     *
      * @param $sourceEntity The entity that owns the collection.
      * @param $targetCollection The collection to load/fill.
      * @param $em The EntityManager to use.
-     * @param $joinColumnValues 
+     * @param $joinColumnValues
      * @return void
      * @todo Remove
      */

@@ -4,19 +4,19 @@ use PEAR2\HTTP\Request;
 class Filesystem extends Request\Adapter
 {
     public static $requestMap;
-    
+
     /**
      * Add a local filesystem directory, and map it to a url base.
-     * 
+     *
      * <code>
      * PEAR2\HTTP\Request\Adapter\Filesystem::addDirectory(
      *                  '/var/www/html/pear2.php.net',
      *                  'http://pear2.php.net/');
      * </code>
-     * 
+     *
      * @param string $dir     A local directory filename
      * @param string $urlbase The base url to map this directory to
-     * 
+     *
      * @return void
      */
     static function addDirectory($dir, $urlbase)
@@ -28,12 +28,12 @@ class Filesystem extends Request\Adapter
      * Send the request
      *
      * This function retrieves a file from the local filesystem which matches
-     * the requested URL. If the uri does not match a urlbase set using the 
+     * the requested URL. If the uri does not match a urlbase set using the
      * addDirectory method, an exception is thrown.
-     * 
+     *
      * @throws Exception
      */
-    public function sendRequest() 
+    public function sendRequest()
     {
         $uri = $this->uri->url;
         $actualfile = false;

@@ -50,10 +50,10 @@ class Sqlite3 extends \PEAR2\Pyrus\ChannelRegistry\Base
     }
 
     private function _init($path, $readonly)
-    {    
+    {
         $this->initialized = true;
         $database = Db::getRegistry($path);
-        
+
         $sql = 'SELECT COUNT(*) FROM channels';
         if (!$database->querySingle($sql)) {
             if ($readonly) {
@@ -148,7 +148,7 @@ class Sqlite3 extends \PEAR2\Pyrus\ChannelRegistry\Base
                     :alias, :version, :package, :lastmodified
                 )';
         }
-        
+
         $database = Db::getRegistry($this->_path);
 
         $stmt = $database->prepare($sql);
@@ -272,7 +272,7 @@ class Sqlite3 extends \PEAR2\Pyrus\ChannelRegistry\Base
             $this->lazyInit();
         }
         $database = Db::getRegistry($this->_path);
-        
+
         $sql = 'SELECT channel FROM channels WHERE alias = "' .
             $database->escapeString($alias) . '"';
         if ($chan = $database->querySingle($sql)) {
@@ -296,7 +296,7 @@ class Sqlite3 extends \PEAR2\Pyrus\ChannelRegistry\Base
             $this->lazyInit();
         }
         $database = Db::getRegistry($this->_path);
-        
+
         $sql = 'SELECT * FROM channels WHERE channel = "' .
             $database->escapeString($channel) . '"';
 

@@ -10,7 +10,7 @@
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
 # of the License, or (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -59,7 +59,7 @@ $diff = isset($_GET['diff']);
 			} else {
 				continue;
 			}
-			
+
 			$selected = $impl == $value;
 			if ($selected)  $selected = " selected";
 			echo "\t\t\t<option value=\"$value\"$selected>$name</option>\n";
@@ -67,7 +67,7 @@ $diff = isset($_GET['diff']);
 ?>
 		</select>
 	</label>
-	<label><input type="checkbox" name="normalize"<?php echo isset($_GET['normalize']) ? " checked" : "" ?> /> Normalize Output</label> 
+	<label><input type="checkbox" name="normalize"<?php echo isset($_GET['normalize']) ? " checked" : "" ?> /> Normalize Output</label>
 	<label><input type="checkbox" name="diff"<?php echo isset($_GET['diff']) ? " checked" : "" ?> /> Show differences</label>
 	<input type="submit" value="Test">
 </div>

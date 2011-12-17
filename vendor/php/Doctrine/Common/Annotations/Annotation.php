@@ -65,7 +65,7 @@ class Annotation
             sprintf("Unknown property '%s' on annotation '%s'.", $name, get_class($this))
         );
     }
-    
+
     /**
      * Error handler for unknown property mutator in Annotation class.
      *

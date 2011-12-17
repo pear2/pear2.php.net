@@ -357,13 +357,13 @@ class JoinedSubclassPersister extends AbstractEntityInheritancePersister
     {
         throw new \BadMethodCallException("lock() is not yet supported for JoinedSubclassPersister");
     }
-    
+
     /* Ensure this method is never called. This persister overrides _getSelectEntitiesSQL directly. */
     protected function _getSelectColumnListSQL()
     {
         throw new \BadMethodCallException("Illegal invocation of ".__METHOD__.".");
     }
-    
+
     /** {@inheritdoc} */
     protected function _getInsertColumnList()
     {

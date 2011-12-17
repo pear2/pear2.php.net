@@ -26,5 +26,5 @@
 namespace PEAR2\Pyrus\Package\Dependency\Set;
 class Exception extends \PEAR2\Exception
 {
-    
+
 }

@@ -44,7 +44,7 @@ class XmlExporter extends AbstractExporter
      * Converts a single ClassMetadata instance to the exported format
      * and returns it
      *
-     * @param ClassMetadataInfo $metadata 
+     * @param ClassMetadataInfo $metadata
      * @return mixed $exported
      */
     public function exportClassMetadata(ClassMetadataInfo $metadata)
@@ -99,7 +99,7 @@ class XmlExporter extends AbstractExporter
 
         if (isset($metadata->table['indexes'])) {
             $indexesXml = $root->addChild('indexes');
-            
+
             foreach ($metadata->table['indexes'] as $name => $index) {
                 $indexXml = $indexesXml->addChild('index');
                 $indexXml->addAttribute('name', $name);
@@ -109,7 +109,7 @@ class XmlExporter extends AbstractExporter
 
         if (isset($metadata->table['uniqueConstraints'])) {
             $uniqueConstraintsXml = $root->addChild('unique-constraints');
-            
+
             foreach ($metadata->table['uniqueConstraints'] as $unique) {
                 $uniqueConstraintXml = $uniqueConstraintsXml->addChild('unique-constraint');
                 $uniqueConstraintXml->addAttribute('name', $name);
@@ -118,7 +118,7 @@ class XmlExporter extends AbstractExporter
         }
 
         $fields = $metadata->fieldMappings;
-        
+
         $id = array();
         foreach ($fields as $name => $field) {
             if (isset($field['id']) && $field['id']) {
@@ -306,7 +306,7 @@ class XmlExporter extends AbstractExporter
      * Code originally taken from
      * http://recurser.com/articles/2007/04/05/format-xml-with-php/
      *
-     * @param string $simpleXml 
+     * @param string $simpleXml
      * @return string $xml
      */
     private function _asXml($simpleXml)
@@ -335,14 +335,14 @@ class XmlExporter extends AbstractExporter
                 $indent = 4;
             // 4. no indentation needed
             } else {
-                $indent = 0; 
+                $indent = 0;
             }
 
             // pad the line with the required number of leading spaces
             $line = str_pad($token, strlen($token)+$pad, ' ', STR_PAD_LEFT);
             $result .= $line . "\n"; // add to the cumulative result, with linefeed
             $token = strtok("\n"); // get the next token
-            $pad += $indent; // update the pad size for subsequent lines    
+            $pad += $indent; // update the pad size for subsequent lines
         }
         return $result;
     }

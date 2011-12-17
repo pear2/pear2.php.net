@@ -91,7 +91,7 @@ class PostgreSqlPlatform extends AbstractPlatform
             return 'POSITION('.$substr.' IN '.$str.')';
         }
     }
-    
+
     /**
      * parses a literal boolean value and returns
      * proper sql equivalent
@@ -103,7 +103,7 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return $value;
     }*/
-    
+
     /**
      * Whether the platform supports sequences.
      * Postgres has native support for sequences.
@@ -114,17 +114,17 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return true;
     }
-    
+
     /**
      * Whether the platform supports database schemas.
-     * 
+     *
      * @return boolean
      */
     public function supportsSchemas()
     {
         return true;
     }
-    
+
     /**
      * Whether the platform supports identity columns.
      * Postgres supports these through the SERIAL keyword.
@@ -135,7 +135,7 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return true;
     }
-    
+
     /**
      * Whether the platform prefers sequences for ID generation.
      *
@@ -268,7 +268,7 @@ class PostgreSqlPlatform extends AbstractPlatform
                         AND a.atttypid = t.oid
                     ORDER BY a.attnum";
     }
-    
+
     /**
      * create a new database
      *
@@ -321,7 +321,7 @@ class PostgreSqlPlatform extends AbstractPlatform
         }
         return $query;
     }
-    
+
     /**
      * generates the sql for altering an existing table on postgresql
      *
@@ -351,7 +351,7 @@ class PostgreSqlPlatform extends AbstractPlatform
         foreach ($diff->changedColumns AS $columnDiff) {
             $oldColumnName = $columnDiff->oldColumnName;
             $column = $columnDiff->column;
-            
+
             if ($columnDiff->hasChanged('type')) {
                 $type = $column->getType();
 
@@ -381,7 +381,7 @@ class PostgreSqlPlatform extends AbstractPlatform
 
         return $sql;
     }
-    
+
     /**
      * Gets the SQL to create a sequence on this platform.
      *
@@ -395,7 +395,7 @@ class PostgreSqlPlatform extends AbstractPlatform
                ' MINVALUE ' . $sequence->getInitialValue() .
                ' START ' . $sequence->getInitialValue();
     }
-    
+
     /**
      * Drop existing sequence
      * @param  \Doctrine\DBAL\Schema\Sequence $sequence
@@ -418,7 +418,7 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return $this->getDropConstraintSQL($foreignKey, $table);
     }
-    
+
     /**
      * Gets the SQL used to create a table.
      *
@@ -454,7 +454,7 @@ class PostgreSqlPlatform extends AbstractPlatform
 
         return $sql;
     }
-    
+
     /**
      * Postgres wants boolean values converted to the strings 'true'/'false'.
      *
@@ -487,7 +487,7 @@ class PostgreSqlPlatform extends AbstractPlatform
         return 'SET SESSION CHARACTERISTICS AS TRANSACTION ISOLATION LEVEL '
                 . $this->_getTransactionIsolationLevelSQL($level);
     }
-    
+
     /**
      * @override
      */
@@ -504,7 +504,7 @@ class PostgreSqlPlatform extends AbstractPlatform
         if ( ! empty($field['autoincrement'])) {
             return 'SERIAL';
         }
-        
+
         return 'INT';
     }
 
@@ -534,7 +534,7 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return 'TIMESTAMP(0) WITH TIME ZONE';
     }
-    
+
     /**
      * @override
      */
@@ -581,7 +581,7 @@ class PostgreSqlPlatform extends AbstractPlatform
         return $fixed ? ($length ? 'CHAR(' . $length . ')' : 'CHAR(255)')
                 : ($length ? 'VARCHAR(' . $length . ')' : 'TEXT');
     }
-    
+
     /** @override */
     public function getClobTypeDeclarationSQL(array $field)
     {
@@ -597,12 +597,12 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return 'postgresql';
     }
-    
+
     /**
      * Gets the character casing of a column in an SQL result set.
-     * 
+     *
      * PostgreSQL returns all column names in SQL result sets in lowercase.
-     * 
+     *
      * @param string $column The column name for which to get the correct character casing.
      * @return string The column name in the character casing used in SQL result sets.
      */
@@ -610,7 +610,7 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return strtolower($column);
     }
-    
+
     public function getDateTimeFormatString()
     {
         return 'Y-m-d H:i:sO';
@@ -619,8 +619,8 @@ class PostgreSqlPlatform extends AbstractPlatform
     /**
      * Get the insert sql for an empty insert statement
      *
-     * @param string $tableName 
-     * @param string $identifierColumnName 
+     * @param string $tableName
+     * @param string $identifierColumnName
      * @return string $sql
      */
     public function getEmptyIdentityInsertSQL($quotedTableName, $quotedIdentifierColumnName)

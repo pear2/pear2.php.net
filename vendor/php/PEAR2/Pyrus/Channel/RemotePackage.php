@@ -269,7 +269,7 @@ class RemotePackage extends \PEAR2\Pyrus\PackageFile\v2 implements \ArrayAccess,
 
     /**
      * Get the latest version of the package
-     * 
+     *
      * @return RemotePackage
      */
     function getLatestVersion()

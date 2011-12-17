@@ -29,11 +29,11 @@ class Installed extends \PEAR2\Pyrus\Package\Base
 {
     /**
      * The registry this installed package comes from
-     * 
+     *
      * @var \PEAR2\Pyrus\Registry
      */
     protected $registry;
-    
+
     function __construct(\PEAR2\Pyrus\PackageFile $packagefile, $parent = null, \PEAR2\Pyrus\Registry $registry)
     {
         $this->registry = $registry;
@@ -48,7 +48,7 @@ class Installed extends \PEAR2\Pyrus\Package\Base
         $dir = \PEAR2\Pyrus\Config::singleton($this->registry->getPath())->{$role->getLocationConfig()};
         return $dir . DIRECTORY_SEPARATOR . $path;
     }
-    
+
     function copyTo($where)
     {
         throw new Exception('Not possible');

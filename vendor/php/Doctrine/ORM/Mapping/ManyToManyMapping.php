@@ -30,7 +30,7 @@ namespace Doctrine\ORM\Mapping;
  * 2) To drastically reduce the size of a serialized instance (private/protected members
  *    get the whole class name, namespace inclusive, prepended to every property in
  *    the serialized representation).
- *    
+ *
  * Instances of this class are stored serialized in the metadata cache together with the
  * owning <tt>ClassMetadata</tt> instance.
  *
@@ -55,13 +55,13 @@ class ManyToManyMapping extends AssociationMapping
      * READ-ONLY: List of aggregated column names on the join table.
      */
     public $joinTableColumns = array();
-    
+
     /** FUTURE: The key column mapping, if any. The key column holds the keys of the Collection. */
     //public $keyColumn;
 
     /**
      * READ-ONLY: Order this collection by the given DQL snippet.
-     * 
+     *
      * Only simple unqualified field names and ASC|DESC are allowed
      *
      * @var array
@@ -102,23 +102,23 @@ class ManyToManyMapping extends AssociationMapping
             // owning side MUST specify joinColumns
             else if ( ! isset($mapping['joinTable']['joinColumns'])) {
                 throw MappingException::missingRequiredOption(
-                    $this->sourceFieldName, 'joinColumns', 
+                    $this->sourceFieldName, 'joinColumns',
                     'Did you think of case sensitivity / plural s?'
                 );
             }
             // owning side MUST specify inverseJoinColumns
             else if ( ! isset($mapping['joinTable']['inverseJoinColumns'])) {
                 throw MappingException::missingRequiredOption(
-                    $this->sourceFieldName, 'inverseJoinColumns', 
+                    $this->sourceFieldName, 'inverseJoinColumns',
                     'Did you think of case sensitivity / plural s?'
                 );
             }
-            
+
             foreach ($mapping['joinTable']['joinColumns'] as $joinColumn) {
                 $this->relationToSourceKeyColumns[$joinColumn['name']] = $joinColumn['referencedColumnName'];
                 $this->joinTableColumns[] = $joinColumn['name'];
             }
-            
+
             foreach ($mapping['joinTable']['inverseJoinColumns'] as $inverseJoinColumn) {
                 $this->relationToTargetKeyColumns[$inverseJoinColumn['name']] = $inverseJoinColumn['referencedColumnName'];
                 $this->joinTableColumns[] = $inverseJoinColumn['name'];
@@ -137,7 +137,7 @@ class ManyToManyMapping extends AssociationMapping
      * Loads entities in $targetCollection using $em.
      * The data of $sourceEntity are used to restrict the collection
      * via the join table.
-     * 
+     *
      * @param object The owner of the collection.
      * @param object The collection to populate.
      * @param array

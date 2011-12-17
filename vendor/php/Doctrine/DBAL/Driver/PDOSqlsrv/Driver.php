@@ -33,7 +33,7 @@ class Driver implements \Doctrine\DBAL\Driver
         if (isset($params['dbname'])) {
             $driverOptions['Database'] = $params['dbname'];
         }
-        
+
         return new \Doctrine\DBAL\Driver\PDOConnection(
             $this->_constructPdoDsn($params),
             $username,
@@ -55,19 +55,19 @@ class Driver implements \Doctrine\DBAL\Driver
             $dsn .= $params['host'];
         }
         $dsn .= ')';
-        
+
         if (stripos($dsn, '\sqlexpress') !== false)
         {
             $dsn = str_ireplace('\sqlexpress', '', $dsn);
             $dsn .= '\sqlexpress';
         }
-        
+
         $dsn = str_ireplace('localhost', 'local', $dsn);
-        
+
         if (isset($params['port']) && !empty($params['port'])) {
             $dsn .= ',' . $params['port'];
         }
-        
+
         return $dsn;
     }
 
