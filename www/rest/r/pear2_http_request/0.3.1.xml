@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_http_request">PEAR2_HTTP_Request</p>
+ <c>pear2.php.net</c>
+ <v>0.3.1</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>saltybeagle</m>
+ <s>Class to perform HTTP requests. Uses an adapter based system for performing those requests
+</s>
+ <d>
+Please see the examples dir for basic usage
+
+Adapters are available for based on the following code and are used in this order:
+
+* PEAR2\HTTP\Request\Adapter\Http (uses the Pecl Http class)
+* PEAR2\HTTP\Request\Adapter\Curl (based on the curl extension, not complete)
+* PEAR2\HTTP\Request\Adapter\Phpstream (based on the http php stream code)
+* PEAR2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+
+Additional adapters:
+
+* PEAR2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
+</d>
+ <da>2012-02-17 10:05:30</da>
+ <n>Bugfix release:
+
+* Phpstream adapter - add request_fulluri to fix proxy support [olofa]
+</n>
+ <f>46229</f>
+ <g>http://pear2.php.net/get/PEAR2_HTTP_Request-0.3.1</g>
+ <x xlink:href="package.0.3.1.xml"/>
+</r>
