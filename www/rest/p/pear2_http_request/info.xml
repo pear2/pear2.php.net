@@ -10,13 +10,15 @@
 Please see the examples dir for basic usage
 
 Adapters are available for based on the following code and are used in this order:
-PEAR2\HTTP\Request\Adapter\Http (uses the Pecl Http class)
-PEAR2\HTTP\Request\Adapter\Curl (based on the curl extension, not complete)
-PEAR2\HTTP\Request\Adapter\Phpstream (based on the http php stream code)
-PEAR2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
+
+* PEAR2\HTTP\Request\Adapter\Http (uses the Pecl Http class)
+* PEAR2\HTTP\Request\Adapter\Curl (based on the curl extension, not complete)
+* PEAR2\HTTP\Request\Adapter\Phpstream (based on the http php stream code)
+* PEAR2\HTTP\Request\Adapter\Phpsocket (based on php sockets, built from PEAR1 HTTP_Request)
 
 Additional adapters:
-PEAR2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
+
+* PEAR2\HTTP\Request\Adapter\Filesystem (useful for mock Internet interaction)
 </d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>

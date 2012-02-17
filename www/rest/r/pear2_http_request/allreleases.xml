@@ -3,6 +3,10 @@
  <p>PEAR2_HTTP_Request</p>
  <c>pear2.php.net</c>
  <r>
+  <v>0.3.0</v>
+  <s>alpha</s>
+ </r>
+ <r>
   <v>0.2.0</v>
   <s>alpha</s>
  </r>
