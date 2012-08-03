@@ -46,17 +46,17 @@ class Connection implements DriverConnection
      * Constant for transaction isolation level READ UNCOMMITTED.
      */
     const TRANSACTION_READ_UNCOMMITTED = 1;
-    
+
     /**
      * Constant for transaction isolation level READ COMMITTED.
      */
     const TRANSACTION_READ_COMMITTED = 2;
-    
+
     /**
      * Constant for transaction isolation level REPEATABLE READ.
      */
     const TRANSACTION_REPEATABLE_READ = 3;
-    
+
     /**
      * Constant for transaction isolation level SERIALIZABLE.
      */
@@ -128,10 +128,10 @@ class Connection implements DriverConnection
      * @var Doctrine\DBAL\Driver
      */
     protected $_driver;
-    
+
     /**
      * Flag that indicates whether the current transaction is marked for rollback only.
-     * 
+     *
      * @var boolean
      */
     private $_isRollbackOnly = false;
@@ -159,7 +159,7 @@ class Connection implements DriverConnection
         if ( ! $config) {
             $config = new Configuration();
         }
-        
+
         if ( ! $eventManager) {
             $eventManager = new EventManager();
         }
@@ -195,40 +195,40 @@ class Connection implements DriverConnection
     {
         return $this->_driver->getDatabase($this);
     }
-    
+
     /**
      * Gets the hostname of the currently connected database.
-     * 
+     *
      * @return string
      */
     public function getHost()
     {
         return isset($this->_params['host']) ? $this->_params['host'] : null;
     }
-    
+
     /**
      * Gets the port of the currently connected database.
-     * 
+     *
      * @return mixed
      */
     public function getPort()
     {
         return isset($this->_params['port']) ? $this->_params['port'] : null;
     }
-    
+
     /**
      * Gets the username used by this connection.
-     * 
+     *
      * @return string
      */
     public function getUsername()
     {
         return isset($this->_params['user']) ? $this->_params['user'] : null;
     }
-    
+
     /**
      * Gets the password used by this connection.
-     * 
+     *
      * @return string
      */
     public function getPassword()
@@ -306,7 +306,7 @@ class Connection implements DriverConnection
     /**
      * Prepares and executes an SQL query and returns the first row of the result
      * as an associative array.
-     * 
+     *
      * @param string $statement The SQL query.
      * @param array $params The query parameters.
      * @return array
@@ -332,7 +332,7 @@ class Connection implements DriverConnection
     /**
      * Prepares and executes an SQL query and returns the value of a single column
      * of the first row of the result.
-     * 
+     *
      * @param string $statement         sql query to be executed
      * @param array $params             prepared statement params
      * @param int $colnum               0-indexed column number to retrieve
@@ -355,7 +355,7 @@ class Connection implements DriverConnection
 
     /**
      * Checks whether a transaction is currently active.
-     * 
+     *
      * @return boolean TRUE if a transaction is currently active, FALSE otherwise.
      */
     public function isTransactionActive()
@@ -393,7 +393,7 @@ class Connection implements DriverConnection
     public function close()
     {
         unset($this->_conn);
-        
+
         $this->_isConnected = false;
     }
 
@@ -405,7 +405,7 @@ class Connection implements DriverConnection
     public function setTransactionIsolation($level)
     {
         $this->_transactionIsolationLevel = $level;
-        
+
         return $this->executeUpdate($this->_platform->getSetTransactionIsolationSQL($level));
     }
 
@@ -457,7 +457,7 @@ class Connection implements DriverConnection
         // column names are specified as array keys
         $cols = array();
         $placeholders = array();
-        
+
         foreach ($data as $columnName => $value) {
             $cols[] = $columnName;
             $placeholders[] = '?';
@@ -508,7 +508,7 @@ class Connection implements DriverConnection
     public function quote($input, $type = null)
     {
         $this->connect();
-        
+
         return $this->_conn->quote($input, $type);
     }
 
@@ -598,7 +598,7 @@ class Connection implements DriverConnection
 
     /**
      * Executes an SQL statement, returning a result set as a Statement object.
-     * 
+     *
      * @param string $statement
      * @param integer $fetchType
      * @return Doctrine\DBAL\Driver\Statement
@@ -611,7 +611,7 @@ class Connection implements DriverConnection
     /**
      * Executes an SQL INSERT/UPDATE/DELETE query with the given parameters
      * and returns the number of affected rows.
-     * 
+     *
      * This method supports PDO binding types as well as DBAL mapping types.
      *
      * @param string $query The SQL query.
@@ -646,7 +646,7 @@ class Connection implements DriverConnection
 
     /**
      * Execute an SQL statement and return the number of affected rows.
-     * 
+     *
      * @param string $statement
      * @return integer The number of affected rows.
      */
@@ -824,7 +824,7 @@ class Connection implements DriverConnection
     /**
      * Marks the current transaction so that the only possible
      * outcome for the transaction to be rolled back.
-     * 
+     *
      * @throws ConnectionException If no transaction is active.
      */
     public function setRollbackOnly()
@@ -837,7 +837,7 @@ class Connection implements DriverConnection
 
     /**
      * Check whether the current transaction is marked for rollback only.
-     * 
+     *
      * @return boolean
      * @throws ConnectionException If no transaction is active.
      */
@@ -852,7 +852,7 @@ class Connection implements DriverConnection
     /**
      * Converts a given value to its database representation according to the conversion
      * rules of a specific DBAL mapping type.
-     * 
+     *
      * @param mixed $value The value to convert.
      * @param string $type The name of the DBAL mapping type.
      * @return mixed The converted value.
@@ -865,7 +865,7 @@ class Connection implements DriverConnection
     /**
      * Converts a given value to its PHP representation according to the conversion
      * rules of a specific DBAL mapping type.
-     * 
+     *
      * @param mixed $value The value to convert.
      * @param string $type The name of the DBAL mapping type.
      * @return mixed The converted type.
@@ -878,7 +878,7 @@ class Connection implements DriverConnection
     /**
      * Binds a set of parameters, some or all of which are typed with a PDO binding type
      * or DBAL mapping type, to a given statement.
-     * 
+     *
      * @param $stmt The statement to bind the values to.
      * @param array $params The map/list of named/positional parameters.
      * @param array $types The parameter types (PDO binding types or DBAL mapping types).

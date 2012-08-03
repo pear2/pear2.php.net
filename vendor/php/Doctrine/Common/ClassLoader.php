@@ -24,10 +24,10 @@ namespace Doctrine\Common;
  * installed on the SPL autoload stack. It is a class loader that either loads only classes
  * of a specific namespace or all namespaces and it is suitable for working together
  * with other autoloaders in the SPL autoload stack.
- * 
+ *
  * If no include path is configured through {@link setIncludePath}, a ClassLoader
  * relies on the PHP <code>include_path</code>.
- * 
+ *
  * @author Roman Borschel <roman@code-factory.org>
  * @since 2.0
  */
@@ -45,7 +45,7 @@ class ClassLoader
      * If no include path is given, the ClassLoader relies on the PHP include_path.
      * If neither a namespace nor an include path is given, the ClassLoader will
      * be responsible for loading all classes, thereby relying on the PHP include_path.
-     * 
+     *
      * @param string $ns The namespace of the classes to load.
      * @param string $includePath The base include path to use.
      */
@@ -57,7 +57,7 @@ class ClassLoader
 
     /**
      * Sets the namespace separator used by classes in the namespace of this ClassLoader.
-     * 
+     *
      * @param string $sep The separator to use.
      */
     public function setNamespaceSeparator($sep)
@@ -67,7 +67,7 @@ class ClassLoader
 
     /**
      * Gets the namespace separator used by classes in the namespace of this ClassLoader.
-     * 
+     *
      * @return string
      */
     public function getNamespaceSeparator()
@@ -77,7 +77,7 @@ class ClassLoader
 
     /**
      * Sets the base include path for all class files in the namespace of this ClassLoader.
-     * 
+     *
      * @param string $includePath
      */
     public function setIncludePath($includePath)
@@ -87,7 +87,7 @@ class ClassLoader
 
     /**
      * Gets the base include path for all class files in the namespace of this ClassLoader.
-     * 
+     *
      * @return string
      */
     public function getIncludePath()
@@ -97,7 +97,7 @@ class ClassLoader
 
     /**
      * Sets the file extension of class files in the namespace of this ClassLoader.
-     * 
+     *
      * @param string $fileExtension
      */
     public function setFileExtension($fileExtension)
@@ -107,7 +107,7 @@ class ClassLoader
 
     /**
      * Gets the file extension of class files in the namespace of this ClassLoader.
-     * 
+     *
      * @return string
      */
     public function getFileExtension()
@@ -146,7 +146,7 @@ class ClassLoader
         require ($this->includePath !== null ? $this->includePath . DIRECTORY_SEPARATOR : '')
                . str_replace($this->namespaceSeparator, DIRECTORY_SEPARATOR, $className)
                . $this->fileExtension;
-        
+
         return true;
     }
 

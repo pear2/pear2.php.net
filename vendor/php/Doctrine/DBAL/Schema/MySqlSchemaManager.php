@@ -61,7 +61,7 @@ class MySqlSchemaManager extends AbstractSchemaManager
             }
             $tableIndexes[$k] = $v;
         }
-        
+
         return parent::_getPortableTableIndexesList($tableIndexes, $tableName);
     }
 
@@ -74,12 +74,12 @@ class MySqlSchemaManager extends AbstractSchemaManager
     {
         return $database['Database'];
     }
-    
+
     /**
      * Gets a portable column definition.
-     * 
+     *
      * The database type is mapped to a corresponding Doctrine mapping type.
-     * 
+     *
      * @param $tableColumn
      * @return array
      */
@@ -100,10 +100,10 @@ class MySqlSchemaManager extends AbstractSchemaManager
         if ( ! isset($tableColumn['name'])) {
             $tableColumn['name'] = '';
         }
-        
+
         $scale = null;
         $precision = null;
-        
+
         $type = $this->_platform->getDoctrineTypeMapping($dbType);
         switch ($dbType) {
             case 'char':
@@ -178,7 +178,7 @@ class MySqlSchemaManager extends AbstractSchemaManager
         if (!isset($tableForeignKey['update_rule']) || $tableForeignKey['update_rule'] == "RESTRICT") {
             $tableForeignKey['update_rule'] = null;
         }
-        
+
         return new ForeignKeyConstraint(
             (array)$tableForeignKey['column_name'],
             $tableForeignKey['referenced_table_name'],

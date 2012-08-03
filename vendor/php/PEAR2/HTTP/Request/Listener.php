@@ -3,7 +3,7 @@
  * Listener for PEAR2_HTTP_Request and PEAR2_HTTP_Response objects
  *
  * PHP version 5
- * 
+ *
  * LICENSE:
  *
  * Copyright (c) 2002-2007, Richard Heyes
@@ -38,7 +38,7 @@
  * @package     PEAR2_HTTP_Request
  * @author      Alexey Borzov <avb@php.net>
  * @copyright   2002-2007 Richard Heyes
- * @license     http://opensource.org/licenses/bsd-license.php New BSD License 
+ * @license     http://opensource.org/licenses/bsd-license.php New BSD License
  */
 
 /**
@@ -53,7 +53,7 @@
 * @version     Release: @package_version@
 */
 namespace PEAR2\HTTP\Request;
-class Listener 
+class Listener
 {
     /**
     * A listener's identifier

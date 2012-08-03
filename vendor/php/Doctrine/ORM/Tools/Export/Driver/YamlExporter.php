@@ -46,7 +46,7 @@ class YamlExporter extends AbstractExporter
      *
      * TODO: Should this code be pulled out in to a toArray() method in ClassMetadata
      *
-     * @param ClassMetadataInfo $metadata 
+     * @param ClassMetadataInfo $metadata
      * @return mixed $exported
      */
     public function exportClassMetadata(ClassMetadataInfo $metadata)
@@ -87,9 +87,9 @@ class YamlExporter extends AbstractExporter
         if (isset($metadata->table['uniqueConstraints'])) {
             $array['uniqueConstraints'] = $metadata->table['uniqueConstraints'];
         }
-        
+
         $fieldMappings = $metadata->fieldMappings;
-        
+
         $ids = array();
         foreach ($fieldMappings as $name => $fieldMapping) {
             if (isset($fieldMapping['length'])) {
@@ -102,7 +102,7 @@ class YamlExporter extends AbstractExporter
                 $fieldMapping['columnName'],
                 $fieldMapping['fieldName']
             );
- 
+
             if ($fieldMapping['column'] == $name) {
                 unset($fieldMapping['column']);
             }
@@ -119,7 +119,7 @@ class YamlExporter extends AbstractExporter
         if ($idGeneratorType = $this->_getIdGeneratorTypeString($metadata->generatorType)) {
             $ids[$metadata->getSingleIdentifierFieldName()]['generator']['strategy'] = $this->_getIdGeneratorTypeString($metadata->generatorType);
         }
-        
+
         if ($ids) {
             $array['fields'] = $ids;
         }
@@ -153,7 +153,7 @@ class YamlExporter extends AbstractExporter
                 'targetEntity' => $associationMapping->targetEntityName,
                 'cascade'     => $cascade,
             );
-            
+
             if ($associationMapping instanceof OneToOneMapping) {
                 $joinColumns = $associationMapping->joinColumns;
                 $newJoinColumns = array();
@@ -171,7 +171,7 @@ class YamlExporter extends AbstractExporter
                     'joinColumns'   => $newJoinColumns,
                     'orphanRemoval' => $associationMapping->orphanRemoval,
                 );
-                
+
                 $associationMappingArray = array_merge($associationMappingArray, $oneToOneMappingArray);
                 $array['oneToOne'][$name] = $associationMappingArray;
             } else if ($associationMapping instanceof OneToManyMapping) {
@@ -189,7 +189,7 @@ class YamlExporter extends AbstractExporter
                     'joinTable' => $associationMapping->joinTable,
                     'orderBy' => $associationMapping->orderBy
                 );
-                
+
                 $associationMappingArray = array_merge($associationMappingArray, $manyToManyMappingArray);
                 $array['manyToMany'][$name] = $associationMappingArray;
             }

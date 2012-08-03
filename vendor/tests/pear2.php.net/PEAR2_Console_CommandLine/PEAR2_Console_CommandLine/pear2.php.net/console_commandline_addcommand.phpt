@@ -12,7 +12,7 @@ $parser->addCommand('cmd2', array(
 ));
 $cmd3 = new PEAR2\Console\CommandLine\Command(array(
     'name' => 'cmd3',
-    'description' => 'description of cmd3'    
+    'description' => 'description of cmd3'
 ));
 $parser->addCommand($cmd3);
 

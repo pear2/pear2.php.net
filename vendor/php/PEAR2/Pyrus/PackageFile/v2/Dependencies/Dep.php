@@ -61,7 +61,7 @@ class Dep implements \ArrayAccess, \Iterator
                 throw new Exception('Unknown variable ' . $var . ', must be one of ' . implode(', ', $keys));
             }
         }
-        
+
         if ($args[0] === null) {
             $this->info[$var] = null;
             $this->save();

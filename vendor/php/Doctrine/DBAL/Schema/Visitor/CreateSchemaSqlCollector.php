@@ -83,7 +83,7 @@ class CreateSchemaSqlCollector implements Visitor
 
     public function acceptColumn(Table $table, Column $column)
     {
-        
+
     }
 
     /**
@@ -106,7 +106,7 @@ class CreateSchemaSqlCollector implements Visitor
      */
     public function acceptIndex(Table $table, Index $index)
     {
-        
+
     }
 
     /**

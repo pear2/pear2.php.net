@@ -107,7 +107,7 @@ abstract class AbstractPlatform
 
     /**
      * Get the Doctrine type that is mapped for the given database column type.
-     * 
+     *
      * @param  string $dbType
      * @return string
      */
@@ -116,7 +116,7 @@ abstract class AbstractPlatform
         if ($this->doctrineTypeMapping === null) {
             $this->initializeDoctrineTypeMappings();
         }
-        
+
         $dbType = strtolower($dbType);
         if (isset($this->doctrineTypeMapping[$dbType])) {
             return $this->doctrineTypeMapping[$dbType];
@@ -313,7 +313,7 @@ abstract class AbstractPlatform
     {
         $posStr = '';
         $trimChar = ($char != false) ? $char . ' FROM ' : '';
-        
+
         if ($pos == self::TRIM_LEADING) {
             $posStr = 'LEADING '.$trimChar;
         } else if($pos == self::TRIM_TRAILING) {
@@ -588,7 +588,7 @@ abstract class AbstractPlatform
 
     /**
      * Drop a Table
-     * 
+     *
      * @param  Table|string $table
      * @return string
      */
@@ -621,7 +621,7 @@ abstract class AbstractPlatform
 
     /**
      * Get drop constraint sql
-     * 
+     *
      * @param  \Doctrine\DBAL\Schema\Constraint $constraint
      * @param  string|Table $table
      * @return string
@@ -740,13 +740,13 @@ abstract class AbstractPlatform
     protected function _getCreateTableSQL($tableName, array $columns, array $options = array())
     {
         $columnListSql = $this->getColumnDeclarationListSQL($columns);
-        
+
         if (isset($options['uniqueConstraints']) && ! empty($options['uniqueConstraints'])) {
             foreach ($options['uniqueConstraints'] as $name => $definition) {
                 $columnListSql .= ', ' . $this->getUniqueConstraintDeclarationSQL($name, $definition);
             }
         }
-        
+
         if (isset($options['primary']) && ! empty($options['primary'])) {
             $columnListSql .= ', PRIMARY KEY(' . implode(', ', array_unique(array_values($options['primary']))) . ')';
         }
@@ -775,7 +775,7 @@ abstract class AbstractPlatform
 
         return $sql;
     }
-    
+
     public function getCreateTemporaryTableSnippetSQL()
     {
         return "CREATE TEMPORARY TABLE";
@@ -831,7 +831,7 @@ abstract class AbstractPlatform
             foreach ($constraint->getForeignColumns() AS $column) {
                 $foreignColumns[] = $column;
             }
-            
+
             $referencesClause = ' REFERENCES '.$constraint->getForeignTableName(). ' ('.implode(', ', $foreignColumns).')';
         }
         $query .= ' '.$columnList.$referencesClause;
@@ -1060,20 +1060,20 @@ abstract class AbstractPlatform
 
         return $name . ' ' . $columnDef;
     }
-    
+
     /**
      * Gets the SQL snippet that declares a floating point column of arbitrary precision.
      *
      * @param array $columnDef
      * @return string
      */
-    public function getDecimalTypeDeclarationSQL(array $columnDef) 
+    public function getDecimalTypeDeclarationSQL(array $columnDef)
     {
         $columnDef['precision'] = ( ! isset($columnDef['precision']) || empty($columnDef['precision']))
             ? 10 : $columnDef['precision'];
         $columnDef['scale'] = ( ! isset($columnDef['scale']) || empty($columnDef['scale']))
             ? 0 : $columnDef['scale'];
-        
+
         return 'NUMERIC(' . $columnDef['precision'] . ', ' . $columnDef['scale'] . ')';
     }
 
@@ -1167,14 +1167,14 @@ abstract class AbstractPlatform
 
         return implode(', ', $constraints);
     }
-    
+
     /**
      * Obtain DBMS specific SQL code portion needed to set a unique
      * constraint declaration to be used in statements like CREATE TABLE.
      *
      * @param string $name          name of the unique constraint
      * @param Index $index          index definition
-     * @return string               DBMS specific SQL code portion needed 
+     * @return string               DBMS specific SQL code portion needed
      *                              to set a constraint
      */
     public function getUniqueConstraintDeclarationSQL($name, Index $index)
@@ -1182,9 +1182,9 @@ abstract class AbstractPlatform
         if (count($index->getColumns()) == 0) {
             throw \InvalidArgumentException("Incomplete definition. 'columns' required.");
         }
-        
+
         return 'CONSTRAINT ' . $name . ' UNIQUE ('
-             . $this->getIndexFieldDeclarationListSQL($index->getColumns()) 
+             . $this->getIndexFieldDeclarationListSQL($index->getColumns())
              . ')';
     }
 
@@ -1209,7 +1209,7 @@ abstract class AbstractPlatform
         }
 
         return $type . 'INDEX ' . $name . ' ('
-             . $this->getIndexFieldDeclarationListSQL($index->getColumns()) 
+             . $this->getIndexFieldDeclarationListSQL($index->getColumns())
              . ')';
     }
 
@@ -1473,7 +1473,7 @@ abstract class AbstractPlatform
 
     /**
      * Some platforms need the boolean values to be converted.
-     * 
+     *
      * The default conversion in this implementation converts to integers (false => 0, true => 1).
      *
      * @param mixed $item
@@ -1644,21 +1644,21 @@ abstract class AbstractPlatform
     }
 
     /**
-     * Obtain DBMS specific SQL to be used to create datetime fields in 
+     * Obtain DBMS specific SQL to be used to create datetime fields in
      * statements like CREATE TABLE
      *
-     * @param array $fieldDeclaration 
+     * @param array $fieldDeclaration
      * @return string
      */
     public function getDateTimeTypeDeclarationSQL(array $fieldDeclaration)
     {
         throw DBALException::notSupported(__METHOD__);
     }
-    
+
     /**
      * Obtain DBMS specific SQL to be used to create date fields in statements
      * like CREATE TABLE.
-     * 
+     *
      * @param array $fieldDeclaration
      * @return string
      */
@@ -1771,17 +1771,17 @@ abstract class AbstractPlatform
 
     /**
      * Does this platform supports onUpdate in foreign key constraints?
-     * 
+     *
      * @return bool
      */
     public function supportsForeignKeyOnUpdate()
     {
         return ($this->supportsForeignKeyConstraints() && true);
     }
-    
+
     /**
      * Whether the platform supports database schemas.
-     * 
+     *
      * @return boolean
      */
     public function supportsSchemas()
@@ -1826,9 +1826,9 @@ abstract class AbstractPlatform
     /**
      * Gets the format string, as accepted by the date() function, that describes
      * the format of a stored datetime value of this platform.
-     * 
+     *
      * @return string The format string.
-     * 
+     *
      * @todo We need to get the specific format for each dbms and override this
      * function for each platform
      */
@@ -1840,18 +1840,18 @@ abstract class AbstractPlatform
     /**
      * Gets the format string, as accepted by the date() function, that describes
      * the format of a stored date value of this platform.
-     * 
+     *
      * @return string The format string.
      */
     public function getDateFormatString()
     {
         return 'Y-m-d';
     }
-    
+
     /**
      * Gets the format string, as accepted by the date() function, that describes
      * the format of a stored time value of this platform.
-     * 
+     *
      * @return string The format string.
      */
     public function getTimeFormatString()
@@ -1878,7 +1878,7 @@ abstract class AbstractPlatform
      * @param array $field
      */
     abstract public function getVarcharTypeDeclarationSQL(array $field);
-    
+
     /**
      * Gets the SQL snippet used to declare a CLOB column type.
      *
@@ -1892,10 +1892,10 @@ abstract class AbstractPlatform
      * @return string
      */
     abstract public function getName();
-    
+
     /**
      * Gets the character casing of a column in an SQL result set of this platform.
-     * 
+     *
      * @param string $column The column name for which to get the correct character casing.
      * @return string The column name in the character casing used in SQL result sets.
      */
@@ -1903,11 +1903,11 @@ abstract class AbstractPlatform
     {
         return $column;
     }
-    
+
     /**
      * Makes any fixes to a name of a schema element (table, sequence, ...) that are required
      * by restrictions of the platform, like a maximum length.
-     * 
+     *
      * @param string $schemaName
      * @return string
      */
@@ -1918,7 +1918,7 @@ abstract class AbstractPlatform
 
     /**
      * Maximum length of any given databse identifier, like tables or column names.
-     * 
+     *
      * @return int
      */
     public function getMaxIdentifierLength()
@@ -1929,8 +1929,8 @@ abstract class AbstractPlatform
     /**
      * Get the insert sql for an empty insert statement
      *
-     * @param string $tableName 
-     * @param string $identifierColumnName 
+     * @param string $tableName
+     * @param string $identifierColumnName
      * @return string $sql
      */
     public function getEmptyIdentityInsertSQL($tableName, $identifierColumnName)
@@ -1955,7 +1955,7 @@ abstract class AbstractPlatform
 
     /**
      * This is for test reasons, many vendors have special requirements for dummy statements.
-     * 
+     *
      * @return string
      */
     public function getDummySelectSQL()

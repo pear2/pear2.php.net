@@ -260,7 +260,7 @@ class Comparator
         if (array_map('strtolower', $key1->getLocalColumns()) != array_map('strtolower', $key2->getLocalColumns())) {
             return true;
         }
-        
+
         if (array_map('strtolower', $key1->getForeignColumns()) != array_map('strtolower', $key2->getForeignColumns())) {
             return true;
         }

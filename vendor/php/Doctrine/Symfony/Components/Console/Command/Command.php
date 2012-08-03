@@ -384,7 +384,7 @@ class Command
   public function getProcessedHelp()
   {
     $name = $this->namespace.':'.$this->name;
-    
+
     $placeholders = array(
       '%command.name%',
       '%command.full_name%'

@@ -6,16 +6,16 @@ class BasicFastCompiler implements FastCompilerInterface
 {
     /**
      * Directory where compiled templates will be stored
-     * 
+     *
      * @var string
      */
     protected $compiledtemplatedir;
 
     /**
      * Constructor for the BasicFastCompiler
-     * 
+     *
      * @param string $compiledtemplatedir Where to store compiled templates
-     * 
+     *
      * @throws UnexpectedValueException
      */
     function __construct($compiledtemplatedir)
@@ -31,7 +31,7 @@ class BasicFastCompiler implements FastCompilerInterface
 
     /**
      * Compile a template.
-     * 
+     *
      * @param string $name   Template to compile
      * @param Main   $savant Savant main object
      *

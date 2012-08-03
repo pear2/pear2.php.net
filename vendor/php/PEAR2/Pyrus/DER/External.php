@@ -15,7 +15,7 @@
 
 /**
  * Represents a Distinguished Encoding Rule External
- * 
+ *
  * @category  PEAR2
  * @package   PEAR2_Pyrus
  * @author    Greg Beaver <cellog@php.net>

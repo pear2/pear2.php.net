@@ -62,13 +62,13 @@ class AnnotationDriver implements Driver
      * @param array
      */
     protected $_classNames;
-    
+
     /**
      * Initializes a new AnnotationDriver that uses the given AnnotationReader for reading
      * docblock annotations.
-     * 
+     *
      * @param $reader The AnnotationReader to use.
-     * @param string|array $paths One or multiple paths where mapping classes can be found. 
+     * @param string|array $paths One or multiple paths where mapping classes can be found.
      */
     public function __construct(AnnotationReader $reader, $paths = null)
     {
@@ -77,7 +77,7 @@ class AnnotationDriver implements Driver
             $this->addPaths((array) $paths);
         }
     }
-    
+
     /**
      * Append lookup paths to metadata driver.
      *
@@ -468,7 +468,7 @@ class AnnotationDriver implements Driver
 
     /**
      * Factory method for the Annotation Driver
-     * 
+     *
      * @param array|string $paths
      * @param AnnotationReader $reader
      * @return AnnotationDriver

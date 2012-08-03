@@ -30,7 +30,7 @@ class Connection extends \PDO implements \Doctrine\DBAL\Driver\Connection
 {
     /**
      * Performs the rollback.
-     * 
+     *
      * @override
      */
     public function rollback()
@@ -40,7 +40,7 @@ class Connection extends \PDO implements \Doctrine\DBAL\Driver\Connection
 
     /**
      * Performs the commit.
-     * 
+     *
      * @override
      */
     public function commit()
@@ -50,7 +50,7 @@ class Connection extends \PDO implements \Doctrine\DBAL\Driver\Connection
 
     /**
      * Begins a database transaction.
-     * 
+     *
      * @override
      */
     public function beginTransaction()

@@ -1,10 +1,10 @@
 <?php
 /**
- * 
+ *
  * Replaces class page links in source text with XHTML anchors.
- * 
+ *
  * Class page links are in this format ...
- * 
+ *
  *     [[Class]]
  *     [[Class]]es
  *     [[Class | display this instead]]
@@ -12,46 +12,46 @@
  *     [[Class::$property]]
  *     [[Class::method()]]
  *     [[Class::CONSTANT]]
- * 
+ *
  * @category Solar
- * 
+ *
  * @package Markdown_Apidoc
- * 
+ *
  * @author Paul M. Jones <pmjones@solarphp.com>
- * 
+ *
  * @license http://opensource.org/licenses/bsd-license.php BSD
- * 
+ *
  * @version $Id: ClassPage.php 4600 2010-06-16 03:27:55Z pmjones $
- * 
+ *
  */
 namespace PEAR2\Text;
 
 class Markdown_Apidoc_ClassPage extends Markdown_Plugin
 {
     /**
-     * 
+     *
      * Default configuration values.
-     * 
-     * @config string constant A string template for the xml:id for 
+     *
+     * @config string constant A string template for the xml:id for
      * "Constants" page links.
-     * 
-     * @config string overview A string template for the xml:id for 
+     *
+     * @config string overview A string template for the xml:id for
      * "Overview" page links.
-     * 
-     * @config string method A string template for the xml:id for 
+     *
+     * @config string method A string template for the xml:id for
      * individual method page links.
-     * 
-     * @config string other A string template for the xml:id for 
+     *
+     * @config string other A string template for the xml:id for
      * all other types of page links.
-     * 
-     * @config string property A string template for the xml:id for 
+     *
+     * @config string property A string template for the xml:id for
      * "Properties" page links.
-     * 
-     * @config string package A string template for the xml:id for 
+     *
+     * @config string package A string template for the xml:id for
      * "Package" page links.
-     * 
+     *
      * @var array
-     * 
+     *
      */
     protected $_Markdown_Apidoc_ClassPage = array(
         'constant'  => 'class.{:class}.Constants.{:page}',
@@ -61,33 +61,33 @@ class Markdown_Apidoc_ClassPage extends Markdown_Plugin
         'property'  => 'class.{:class}.Properties.{:page}',
         'package'   => 'package.{:package}',
     );
-    
+
     /**
-     * 
+     *
      * This is a span plugin.
-     * 
+     *
      * @var bool
-     * 
+     *
      */
     protected $_is_span = true;
-    
+
     /**
-     * 
+     *
      * A list of classes recognized as being native to PHP.
-     * 
+     *
      * @var array
-     * 
+     *
      */
     protected $_php_classes = array('Exception');
-    
+
     /**
-     * 
+     *
      * Parses the source text for Class::Page links.
-     * 
+     *
      * @param string $text The source text.
-     * 
+     *
      * @return string The parsed text.
-     * 
+     *
      */
     public function parse($text)
     {
@@ -98,20 +98,20 @@ class Markdown_Apidoc_ClassPage extends Markdown_Plugin
             $text
         );
     }
-    
+
     /**
-     * 
+     *
      * Support callback for parsing class page links.
-     * 
+     *
      * @param array $matches Matches from preg_replace_callback().
-     * 
+     *
      * @return string The replacement text.
-     * 
+     *
      */
     protected function _parse($matches)
     {
         $spec = $matches[1];
-        
+
         // the display text
         if (empty($matches[2])) {
             // no pipe was specified, use the spec as the text
@@ -120,97 +120,97 @@ class Markdown_Apidoc_ClassPage extends Markdown_Plugin
             // a pipe was specified; take it off, and trim the rest
             $text = trim(substr($matches[2], 1));
         }
-        
+
         $atch = empty($matches[3]) ? null  : trim($matches[3]);
-        
+
         if (strtolower(substr($spec, 0, 5)) == 'php::') {
             $func = substr($spec, 5);
             $link = $this->_getPhpFunctionLink($func, $text, $atch);
         } else {
             $link = $this->_getClassPageLink($spec, $text, $atch);
         }
-        
+
         return $this->_toHtmlToken($link);
     }
-    
+
     /**
-     * 
+     *
      * Builds a link to functions on php.net pages.
-     * 
+     *
      * @param string $func The PHP function name.
-     * 
+     *
      * @param string $text The displayed text for the link.
-     * 
+     *
      * @param string $atch Additional non-linked text.
-     * 
+     *
      * @return string The replacement text.
-     * 
+     *
      */
     protected function _getPhpFunctionLink($func, $text, $atch)
     {
         $func = trim($func);
-        
+
         if (! $text) {
             $text = $func;
         }
-        
+
         if (substr($func, -2) == '()') {
             $func = substr($func, 0, -2);
         }
-        
+
         $href = "http://php.net/$func";
-        
+
         return '<link xlink:href="' . $this->_escape($href) . '">'
              . $this->_escape($text . $atch)
              . '</link>';
     }
-    
+
     /**
-     * 
+     *
      * Builds a link to classes on php.net pages.
-     * 
+     *
      * @param string $class The PHP class.
-     * 
+     *
      * @param string $page The page for that class, typically a method name.
-     * 
+     *
      * @param string $text The displayed text for the link.
-     * 
+     *
      * @param string $atch Additional non-linked text.
-     * 
+     *
      * @return string The replacement text.
-     * 
+     *
      */
     protected function _getPhpClassLink($class, $page, $text, $atch)
     {
         if (! $text) {
             $text = $page;
         }
-        
+
         // massage page name
         $page = preg_replace('[^a-zA-Z0-9]', '', $page);
-        
+
         // http://php.net/manual/en/exception.getmessage.php
         $href = "http://php.net/manual/en/"
               . strtolower($class) . '.'
               . strtolower($page) . '.php';
-        
+
         return '<link xlink:href="' . $this->_escape($href) . '">'
              . $this->_escape($text . $atch)
              . '</link>';
     }
-    
+
     /**
-     * 
+     *
      * Builds a link for class API documentation pages.
-     * 
+     *
      * @param string $spec The link specification.
-     * 
+     *
      * @param string $text The displayed text for the link.
-     * 
+     *
      * @param string $atch Additional non-linked text.
-     * 
+     *
      * @return string The replacement text.
-     * 
+     *
      */
     protected function _getClassPageLink($spec, $text, $atch)
     {
@@ -228,17 +228,17 @@ class Markdown_Apidoc_ClassPage extends Markdown_Plugin
                 $text = $page;
             }
         }
-        
+
         // is it a recognized PHP class?
         if (in_array($class, $this->_php_classes)) {
             return $this->_getPhpClassLink($class, $page, $text, $atch);
         }
-        
+
         // is it a package link?
         if ($class == 'Package') {
             return $this->_getPackageLink($page, $text, $atch);
         }
-        
+
         // what kind of link to build?
         $is_property = false;
         if (! $page) {
@@ -260,29 +260,29 @@ class Markdown_Apidoc_ClassPage extends Markdown_Plugin
             // other
             $tmpl = $this->_config['other'];
         }
-        
+
         // interpolate values into link template placeholders
         $keys = array('{:class}', '{:page}');
         $vals = array($class, $page);
         $link = str_replace($keys, $vals, $tmpl);
-        
+
         return '<link linkend="' .$this->_escape($link) . '">'
              . $this->_escape($text . $atch)
              . '</link>';
     }
-    
+
     /**
-     * 
+     *
      * Builds a link to a package page.
-     * 
+     *
      * @param string $package The package name.
-     * 
+     *
      * @param string $text The displayed text for the link.
-     * 
+     *
      * @param string $atch Additional non-linked text.
-     * 
+     *
      * @return string The replacement text.
-     * 
+     *
      */
     protected function _getPackageLink($package, $text, $atch)
     {
@@ -290,11 +290,11 @@ class Markdown_Apidoc_ClassPage extends Markdown_Plugin
         $keys = array('{:package}');
         $vals = array($package);
         $link = str_replace($keys, $vals, $tmpl);
-        
+
         if (! $text) {
             $text = $package;
         }
-        
+
         return '<link linkend="' .$this->_escape($link) . '">'
              . $this->_escape($text . $atch)
              . '</link>';

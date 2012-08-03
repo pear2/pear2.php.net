@@ -7,7 +7,7 @@
  * @version $Id$
  */
 namespace PEAR2\HTTP;
-class Request 
+class Request
 {
 
     /**
@@ -26,7 +26,7 @@ class Request
      * @var array $_listeners  The listeners
      */
     protected $_listeners = array();
-    
+
     /**
      * Magic to retrieve items that are actually stored in the adapter
      *
@@ -85,7 +85,7 @@ class Request
      * @param string                     $url      URL for this request
      * @param PEAR2\HTTP\Request\Adapter $instance The adapter to use
      */
-    public function __construct($url = null, $instance = null) 
+    public function __construct($url = null, $instance = null)
     {
         if (!is_null($instance) && $instance instanceof Request\Adapter) {
             $this->adapter = $instance;
@@ -111,7 +111,7 @@ class Request
      *
      * @return PEAR2\HTTP\Request\Response
      */
-    public function sendRequest() 
+    public function sendRequest()
     {
         $response = $this->adapter->sendRequest();
         return $response;
@@ -131,10 +131,10 @@ class Request
 
     /**
      * Setter for request headers
-     * 
+     *
      * @see $this->adapter->headers
      */
-    public function setHeader($header, $value) 
+    public function setHeader($header, $value)
     {
         $this->adapter->headers[$header] = $value;
     }
@@ -142,7 +142,7 @@ class Request
     /**
      * Attach a listener
      *
-     * This method adds a listener to the list of listeners that are 
+     * This method adds a listener to the list of listeners that are
      * notified of the object's events.
      *
      * Events sent by the HTTP\Request Object

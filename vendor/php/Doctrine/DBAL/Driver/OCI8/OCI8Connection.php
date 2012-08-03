@@ -29,7 +29,7 @@ namespace Doctrine\DBAL\Driver\OCI8;
 class OCI8Connection implements \Doctrine\DBAL\Driver\Connection
 {
     private $_dbh;
-    
+
     public function __construct($username, $password, $db)
     {
         $this->_dbh = @oci_connect($username, $password, $db);
@@ -37,12 +37,12 @@ class OCI8Connection implements \Doctrine\DBAL\Driver\Connection
             throw new OCI8Exception($this->errorInfo());
         }
     }
-    
+
     public function prepare($prepareString)
     {
         return new OCI8Statement($this->_dbh, $prepareString);
     }
-    
+
     public function query()
     {
         $args = func_get_args();
@@ -52,29 +52,29 @@ class OCI8Connection implements \Doctrine\DBAL\Driver\Connection
         $stmt->execute();
         return $stmt;
     }
-    
+
     public function quote($input, $type=\PDO::PARAM_STR)
     {
         return is_numeric($input) ? $input : "'$input'";
     }
-    
+
     public function exec($statement)
     {
         $stmt = $this->prepare($statement);
         $stmt->execute();
         return $stmt->rowCount();
     }
-    
+
     public function lastInsertId($name = null)
     {
         //TODO: throw exception or support sequences?
     }
-    
+
     public function beginTransaction()
     {
         return true;
     }
-    
+
     public function commit()
     {
         if (!oci_commit($this->_dbh)) {
@@ -82,7 +82,7 @@ class OCI8Connection implements \Doctrine\DBAL\Driver\Connection
         }
         return true;
     }
-    
+
     public function rollBack()
     {
         if (!oci_rollback($this->_dbh)) {
@@ -90,7 +90,7 @@ class OCI8Connection implements \Doctrine\DBAL\Driver\Connection
         }
         return true;
     }
-    
+
     public function errorCode()
     {
         $error = oci_error($this->_dbh);
@@ -99,10 +99,10 @@ class OCI8Connection implements \Doctrine\DBAL\Driver\Connection
         }
         return $error;
     }
-    
+
     public function errorInfo()
     {
         return oci_error($this->_dbh);
     }
-    
+
 }

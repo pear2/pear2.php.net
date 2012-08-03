@@ -16,7 +16,7 @@ $parent->context->page_title = $context->name . ' | ' . $frontend->getChannel()-
     <?php
 
     $filesURL = $frontend->getURL() . $context->name . '/files';
-    
+
     ?>
     <div class="package-files">
         <h3><a class="button" href="<?php echo $filesURL; ?>">Browse Files</a></h3>

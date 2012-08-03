@@ -4,7 +4,7 @@ function autoload($class)
     $class = str_replace(array('PEAR2\\Text\\', '_'), array('', '/'), $class);
     include $class . '.php';
 }
-    
+
 spl_autoload_register("autoload");
 
 set_include_path(dirname(dirname(__FILE__)).'/src/Text');

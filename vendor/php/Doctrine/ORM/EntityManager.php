@@ -387,7 +387,7 @@ class EntityManager
      *
      * The entity will be entered into the database at or before transaction
      * commit or as a result of the flush operation.
-     * 
+     *
      * NOTE: The persist operation always considers entities that are not yet known to
      * this EntityManager as NEW. Do not pass detached entities to the persist operation.
      *

@@ -51,7 +51,7 @@ class MultiTableUpdateExecutor extends AbstractSqlExecutor
         $em = $sqlWalker->getEntityManager();
         $conn = $em->getConnection();
         $platform = $conn->getDatabasePlatform();
-        
+
         $updateClause = $AST->updateClause;
 
         $primaryClass = $sqlWalker->getEntityManager()->getClassMetadata($updateClause->abstractSchemaName);
@@ -77,7 +77,7 @@ class MultiTableUpdateExecutor extends AbstractSqlExecutor
         // 3. Create and store UPDATE statements
         $classNames = array_merge($primaryClass->parentClasses, array($primaryClass->name), $primaryClass->subClasses);
         $i = -1;
-        
+
         foreach (array_reverse($classNames) as $className) {
             $affected = false;
             $class = $em->getClassMetadata($className);
@@ -87,16 +87,16 @@ class MultiTableUpdateExecutor extends AbstractSqlExecutor
                 $field = $updateItem->field;
                 if (isset($class->fieldMappings[$field]) && ! isset($class->fieldMappings[$field]['inherited'])) {
                     $newValue = $updateItem->newValue;
-                    
+
                     if ( ! $affected) {
                         $affected = true;
                         ++$i;
                     } else {
                         $updateSql .= ', ';
                     }
-                    
+
                     $updateSql .= $sqlWalker->walkUpdateItem($updateItem);
-                    
+
                     //FIXME: parameters can be more deeply nested. traverse the tree.
                     //FIXME (URGENT): With query cache the parameter is out of date. Move to execute() stage.
                     if ($newValue instanceof AST\InputParameter) {
@@ -111,12 +111,12 @@ class MultiTableUpdateExecutor extends AbstractSqlExecutor
                 $this->_sqlStatements[$i] = $updateSql . ' WHERE (' . $idColumnList . ') IN (' . $idSubselect . ')';
             }
         }
-        
+
         // Append WHERE clause to insertSql, if there is one.
         if ($AST->whereClause) {
             $this->_insertSql .= $sqlWalker->walkWhereClause($AST->whereClause);
         }
-        
+
         // 4. Store DDL for temporary identifier table.
         $columnDefinitions = array();
         foreach ($idColumnNames as $idColumnName) {

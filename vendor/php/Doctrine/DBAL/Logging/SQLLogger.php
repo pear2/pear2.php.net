@@ -23,7 +23,7 @@ namespace Doctrine\DBAL\Logging;
 
 /**
  * Interface for SQL loggers.
- * 
+ *
  * @license http://www.opensource.org/licenses/lgpl-license.php LGPL
  * @link    www.doctrine-project.org
  * @since   2.0

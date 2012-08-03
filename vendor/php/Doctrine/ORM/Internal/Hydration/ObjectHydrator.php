@@ -38,9 +38,9 @@ class ObjectHydrator extends AbstractHydrator
      * This local cache is maintained between hydration runs and not cleared.
      */
     private $_ce = array();
-    
+
     /* The following parts are reinitialized on every hydration run. */
-    
+
     private $_identifierMap;
     private $_resultPointers;
     private $_idTemplate;
@@ -49,7 +49,7 @@ class ObjectHydrator extends AbstractHydrator
     private $_initializedCollections = array();
     private $_existingCollections = array();
     //private $_createdEntities;
-    
+
 
     /** @override */
     protected function _prepare()
@@ -58,7 +58,7 @@ class ObjectHydrator extends AbstractHydrator
         $this->_resultPointers =
         $this->_idTemplate = array();
         $this->_resultCounter = 0;
-        
+
         foreach ($this->_rsm->aliasMap as $dqlAlias => $className) {
             $this->_identifierMap[$dqlAlias] = array();
             $this->_idTemplate[$dqlAlias] = '';
@@ -67,7 +67,7 @@ class ObjectHydrator extends AbstractHydrator
             if ( ! isset($this->_ce[$className])) {
                 $this->_ce[$className] = $class;
             }
-            
+
             // Remember which associations are "fetch joined", so that we know where to inject
             // collection stubs or proxies and where not.
             if (isset($this->_rsm->relationMap[$dqlAlias])) {
@@ -144,12 +144,12 @@ class ObjectHydrator extends AbstractHydrator
     {
         $oid = spl_object_hash($entity);
         $relation = $class->associationMappings[$fieldName];
-        
+
         $value = $class->reflFields[$fieldName]->getValue($entity);
         if ($value === null) {
             $value = new ArrayCollection;
         }
-        
+
         if ( ! $value instanceof PersistentCollection) {
             $value = new PersistentCollection(
                 $this->_em,
@@ -170,13 +170,13 @@ class ObjectHydrator extends AbstractHydrator
             // Is already PersistentCollection, and DONT REFRESH
             $this->_existingCollections[$oid . $fieldName] = $value;
         }
-        
+
         return $value;
     }
-    
+
     /**
      * Gets an entity instance.
-     * 
+     *
      * @param $data The instance data.
      * @param $dqlAlias The DQL alias of the entity's class.
      * @return object The entity.
@@ -191,7 +191,7 @@ class ObjectHydrator extends AbstractHydrator
         }
         return $this->_uow->createEntity($className, $data, $this->_hints);
     }
-    
+
     private function _getEntityFromIdentityMap($className, array $data)
     {
         $class = $this->_ce[$className];
@@ -205,12 +205,12 @@ class ObjectHydrator extends AbstractHydrator
             return $this->_uow->tryGetByIdHash($data[$class->identifier[0]], $class->rootEntityName);
         }
     }
-    
+
     /**
      * Gets a ClassMetadata instance from the local cache.
      * If the instance is not yet in the local cache, it is loaded into the
      * local cache.
-     * 
+     *
      * @param string $className The name of the class.
      * @return ClassMetadata
      */
@@ -224,21 +224,21 @@ class ObjectHydrator extends AbstractHydrator
 
     /**
      * Hydrates a single row in an SQL result set.
-     * 
+     *
      * @internal
      * First, the data of the row is split into chunks where each chunk contains data
      * that belongs to a particular component/class. Afterwards, all these chunks
      * are processed, one after the other. For each chunk of class data only one of the
      * following code paths is executed:
-     * 
+     *
      * Path A: The data chunk belongs to a joined/associated object and the association
      *         is collection-valued.
      * Path B: The data chunk belongs to a joined/associated object and the association
      *         is single-valued.
      * Path C: The data chunk belongs to a root result element/object that appears in the topmost
      *         level of the hydrated result. A typical example are the objects of the type
-     *         specified by the FROM clause in a DQL query. 
-     * 
+     *         specified by the FROM clause in a DQL query.
+     *
      * @param array $data The data of the row to process.
      * @param array $cache The cache to use.
      * @param array $result The result array to fill.
@@ -263,7 +263,7 @@ class ObjectHydrator extends AbstractHydrator
         // Hydrate the data chunks
         foreach ($rowData as $dqlAlias => $data) {
             $entityName = $this->_rsm->aliasMap[$dqlAlias];
-            
+
             if (isset($this->_rsm->parentAliasMap[$dqlAlias])) {
                 // It's a joined result
 
@@ -285,7 +285,7 @@ class ObjectHydrator extends AbstractHydrator
                 $relationField = $this->_rsm->relationMap[$dqlAlias];
                 $relation = $parentClass->associationMappings[$relationField];
                 $reflField = $parentClass->reflFields[$relationField];
-                
+
                 // Check the type of the relation (many or single-valued)
                 if ( ! $relation->isOneToOne()) {
                     // PATH A: Collection-valued association
@@ -296,11 +296,11 @@ class ObjectHydrator extends AbstractHydrator
                         } else if ( ! isset($this->_existingCollections[$collKey])) {
                             $reflFieldValue = $this->_initRelatedCollection($parentObject, $parentClass, $relationField);
                         }
-                        
+
                         $indexExists = isset($this->_identifierMap[$dqlAlias][$id[$dqlAlias]]);
                         $index = $indexExists ? $this->_identifierMap[$dqlAlias][$id[$dqlAlias]] : false;
                         $indexIsValid = $index !== false ? isset($reflFieldValue[$index]) : false;
-                        
+
                         if ( ! $indexExists || ! $indexIsValid) {
                             if (isset($this->_existingCollections[$collKey])) {
                                 // Collection exists, only look for the element in the identity map.

@@ -191,7 +191,7 @@ abstract class AbstractHydrator
                     $cache[$key]['dqlAlias'] = $this->_rsm->columnOwnerMap[$key];
                 }
             }
-            
+
             if (isset($cache[$key]['isScalar'])) {
                 $rowData['scalars'][$cache[$key]['fieldName']] = $value;
                 continue;
@@ -252,7 +252,7 @@ abstract class AbstractHydrator
                     $cache[$key]['dqlAlias'] = $this->_rsm->columnOwnerMap[$key];
                 }
             }
-            
+
             $fieldName = $cache[$key]['fieldName'];
 
             if (isset($cache[$key]['isScalar'])) {

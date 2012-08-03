@@ -36,7 +36,7 @@ class PartialSeason
 {
     public $start;
     public $end;
-    
+
     function __construct($start, $end = null)
     {
         $this->start = $start;

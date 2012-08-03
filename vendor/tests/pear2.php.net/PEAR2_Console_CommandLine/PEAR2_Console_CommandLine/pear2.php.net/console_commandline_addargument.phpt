@@ -13,7 +13,7 @@ $parser->addArgument('arg2', array(
 ));
 $arg3 = new PEAR2\Console\CommandLine\Argument('arg3', array(
     'multiple' => true,
-    'description' => 'description of arg3'    
+    'description' => 'description of arg3'
 ));
 $parser->addArgument($arg3);
 $parser->addArgument('arg4', array('optional' => true));

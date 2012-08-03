@@ -129,7 +129,7 @@ class PhpStream extends Request\Adapter
             case STREAM_NOTIFY_AUTH_RESULT:
                 /* Ignore */
                 break;
-    
+
             case STREAM_NOTIFY_COMPLETED:
                 $this->_notify('disconnect');
                 break;
@@ -137,19 +137,19 @@ class PhpStream extends Request\Adapter
             case STREAM_NOTIFY_REDIRECTED:
                 $this->_notify('redirect', $message);
                 break;
-    
+
             case STREAM_NOTIFY_CONNECT:
                 $this->_notify('connect');
                 break;
-    
+
             case STREAM_NOTIFY_FILE_SIZE_IS:
                 $this->_notify('filesize', $bytes_max);
                 break;
-    
+
             case STREAM_NOTIFY_MIME_TYPE_IS:
                 $this->_notify('mime-type', $message);
                 break;
-    
+
             case STREAM_NOTIFY_PROGRESS:
                 $this->_notify('downloadprogress', $bytes_transferred);
                 break;

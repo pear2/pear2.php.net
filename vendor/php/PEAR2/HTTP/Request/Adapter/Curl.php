@@ -9,7 +9,7 @@ class Curl extends Request\Adapter
     protected $curl = false;
     protected $fp = false;
 
-    public function sendRequest() 
+    public function sendRequest()
     {
         $this->_setupRequest();
 
@@ -30,7 +30,7 @@ class Curl extends Request\Adapter
      * @todo error checking
      * @implement put
      */
-    protected function _setupRequest() 
+    protected function _setupRequest()
     {
         $this->curl = curl_init($this->uri->url);
         // check error here
@@ -59,7 +59,7 @@ class Curl extends Request\Adapter
                 curl_setopt($this->curl,CURLOPT_HTTP_VERSION,CURL_HTTP_VERSION_NONE);
                 break;
         }
-        
+
         // http verb
         if (strtoupper($this->verb) == 'PUT') {
             throw new Exception("HTTP put not implmented for Curl yet");

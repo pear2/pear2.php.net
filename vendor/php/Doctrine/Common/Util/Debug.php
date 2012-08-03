@@ -52,36 +52,36 @@ final class Debug
     public static function dump($var, $maxDepth = 2)
     {
         ini_set('html_errors', 'On');
-        
+
         if (extension_loaded('xdebug')) {
             ini_set('xdebug.var_display_max_depth', $maxDepth);
         }
-        
+
         $var = self::export($var, $maxDepth++);
-        
+
         ob_start();
         var_dump($var);
         $dump = ob_get_contents();
         ob_end_clean();
-        
+
         echo strip_tags(html_entity_decode($dump));
-        
+
         ini_set('html_errors', 'Off');
     }
-    
+
     public static function export($var, $maxDepth)
     {
         $return = null;
         $isObj = is_object($var);
-    
+
         if ($isObj && in_array('Doctrine\Common\Collections\Collection', class_implements($var))) {
             $var = $var->toArray();
         }
-        
+
         if ($maxDepth) {
             if (is_array($var)) {
                 $return = array();
-            
+
                 foreach ($var as $k => $v) {
                     $return[$k] = self::export($v, $maxDepth - 1);
                 }
@@ -122,10 +122,10 @@ final class Debug
                 $return = $var;
             }
         } else {
-            $return = is_object($var) ? get_class($var) 
+            $return = is_object($var) ? get_class($var)
                 : (is_array($var) ? 'Array(' . count($var) . ')' : $var);
         }
-        
+
         return $return;
     }
 }

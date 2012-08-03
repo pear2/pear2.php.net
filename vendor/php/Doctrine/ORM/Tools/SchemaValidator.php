@@ -183,7 +183,7 @@ class SchemaValidator
 
     /**
      * Check if the Database Schema is in sync with the current metadata state.
-     * 
+     *
      * @return bool
      */
     public function schemaInSyncWithMetadata()

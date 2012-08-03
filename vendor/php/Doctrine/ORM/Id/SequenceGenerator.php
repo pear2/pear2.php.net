@@ -46,7 +46,7 @@ class SequenceGenerator extends AbstractIdGenerator implements Serializable
         $this->_sequenceName = $sequenceName;
         $this->_allocationSize = $allocationSize;
     }
-    
+
     /**
      * Generates an ID for the given entity.
      *

@@ -39,7 +39,7 @@ my ($g_nested_brackets, $g_nested_parens);
 $g_nested_brackets = qr{
 	(?> 								# Atomic matching
 	   [^\[\]]+							# Anything other than brackets
-	 | 
+	 |
 	   \[
 		 (??{ $g_nested_brackets })		# Recursive set of nested brackets
 	   \]
@@ -50,7 +50,7 @@ $g_nested_brackets = qr{
 $g_nested_parens = qr{
 	(?> 								# Atomic matching
 	   [^()\s]+							# Anything other than parens or whitespace
-	 | 
+	 |
 	   \(
 		 (??{ $g_nested_parens })		# Recursive set of nested brackets
 	   \)
@@ -139,7 +139,7 @@ unless ($@) {
 			my $ctx  = shift;
 			my $raw  = 0;
 		    if (defined $ctx) {
-		    	my $output = $ctx->stash('markdown_output'); 
+		    	my $output = $ctx->stash('markdown_output');
 				if (defined $output  &&  $output =~ m/^html/i) {
 					$g_empty_element_suffix = ">";
 					$ctx->stash('markdown_output', '');
@@ -174,7 +174,7 @@ unless ($@) {
 				my $text = shift;
 				my $ctx  = shift;
 				if (defined $ctx) {
-					my $output = $ctx->stash('markdown_output'); 
+					my $output = $ctx->stash('markdown_output');
 					if (defined $output  &&  $output eq 'html') {
 						$g_empty_element_suffix = ">";
 					}
@@ -393,7 +393,7 @@ sub _HashHTMLBlocks {
 
 
 	# Special case just for <hr />. It was easier to make a special case than
-	# to make the other regex more complicated.	
+	# to make the other regex more complicated.
 	$text =~ s{
 				(?:
 					(?<=\n\n)		# Starting after a blank line
@@ -404,7 +404,7 @@ sub _HashHTMLBlocks {
 					[ ]{0,$less_than_tab}
 					<(hr)				# start tag = $2
 					\b					# word break
-					([^<>])*?			# 
+					([^<>])*?			#
 					/?>					# the matching end tag
 					[ \t]*
 					(?=\n{2,}|\Z)		# followed by a blank line or end of document
@@ -795,7 +795,7 @@ sub _DoHeaders {
 	# Setext-style headers:
 	#	  Header 1
 	#	  ========
-	#  
+	#
 	#	  Header 2
 	#	  --------
 	#
@@ -997,7 +997,7 @@ sub _ProcessListItems {
 sub _DoCodeBlocks {
 #
 #	Process Markdown `<pre><code>` blocks.
-#	
+#
 
 	my $text = shift;
 
@@ -1031,26 +1031,26 @@ sub _DoCodeBlocks {
 sub _DoCodeSpans {
 #
 # 	*	Backtick quotes are used for <code></code> spans.
-# 
+#
 # 	*	You can use multiple backticks as the delimiters if you want to
 # 		include literal backticks in the code span. So, this input:
-#     
+#
 #         Just type ``foo `bar` baz`` at the prompt.
-#     
+#
 #     	Will translate to:
-#     
+#
 #         <p>Just type <code>foo `bar` baz</code> at the prompt.</p>
-#     
+#
 #		There's no arbitrary limit to the number of backticks you
 #		can use as delimters. If you need three consecutive backticks
 #		in your code, use four for delimiters, etc.
 #
 #	*	You can use spaces to get literal backticks at the edges:
-#     
+#
 #         ... type `` `bar` `` ...
-#     
+#
 #     	Turns to:
-#     
+#
 #         ... type <code>`bar`</code> ...
 #
 
@@ -1092,7 +1092,7 @@ sub _EncodeCode {
 	{
 		no warnings 'once';
     	if (defined($blosxom::version)) {
-    		s/\$/&#036;/g;	
+    		s/\$/&#036;/g;
     	}
     }
 
@@ -1534,11 +1534,11 @@ See the readme file for detailed release notes for this version.
 		is broken when Text::Balanced wraps it in parentheses.
 
 		Thanks to Matt Kraai for the patch.
-	
+
 	+	Now supports URLs containing literal parentheses, such as:
-	
+
 			http://en.wikipedia.org/wiki/WIMP_(computing)
-		
+
 		Such parentheses may be arbitrarily nested, but must be
 		balanced.
 
@@ -1546,7 +1546,7 @@ See the readme file for detailed release notes for this version.
 1.0.2b7
 
 	+	Changed shebang line from "/usr/bin/perl" to "/usr/bin/env perl"
-	
+
 	+	Now only trim trailing newlines from code blocks, instead of trimming
 		all trailing whitespace characters.
 
@@ -1559,9 +1559,9 @@ See the readme file for detailed release notes for this version.
 1.0.2b5 - Thu 08 Dec 2005
 
 	+	Fixed bug where this:
-	
+
 			[text](http://m.com "title" )
-			
+
 		wasn't working as expected, because the parser wasn't allowing for spaces
 		before the closing paren.
 
@@ -1570,7 +1570,7 @@ See the readme file for detailed release notes for this version.
 
 	+	Filthy hack to support markdown='1' in div tags, because I need it
 		to write today's fireball.
-	
+
 	+	First crack at a new, smarter, block-level HTML parser.
 
 1.0.2b3 - Thu 28 Apr 2005
@@ -1637,8 +1637,8 @@ See the readme file for detailed release notes for this version.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2003-2005 John Gruber   
-<http://daringfireball.net/>   
+Copyright (c) 2003-2005 John Gruber
+<http://daringfireball.net/>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

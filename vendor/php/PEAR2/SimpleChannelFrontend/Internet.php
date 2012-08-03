@@ -9,7 +9,7 @@ class Internet extends \PEAR2\HTTP\Request
     /**
      * sets up the adapter
      */
-    public function __construct($url = null) 
+    public function __construct($url = null)
     {
         $this->adapter = new \PEAR2\HTTP\Request\Adapter\Filesystem($this);
         if ($url) {

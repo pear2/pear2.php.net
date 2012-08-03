@@ -28,7 +28,7 @@ class FixSchema implements Visitor
      */
     public function acceptSchema(Schema $schema)
     {
-        
+
     }
 
     /**
@@ -44,7 +44,7 @@ class FixSchema implements Visitor
      */
     public function acceptColumn(Table $table, Column $column)
     {
-        
+
     }
 
     /**

@@ -51,7 +51,7 @@ class Phpsocket_Socket
  * @version $Revision: 1.52 $
  */
 class Phpsocket extends Request\Adapter
-{   
+{
     /**
      * Used by _readChunked(): remaining length of the current chunk
      * @var string
@@ -101,8 +101,8 @@ class Phpsocket extends Request\Adapter
 
     /**
      * Parse a HTTP response
-     * 
-     * This extracts response code, headers, cookies and decodes body if it 
+     *
+     * This extracts response code, headers, cookies and decodes body if it
      * was encoded in some way
      *
      * @access public
@@ -128,12 +128,12 @@ class Phpsocket extends Request\Adapter
     } while ($this->code == 100);
 
     // RFC 2616, section 4.4:
-    // 1. Any response message which "MUST NOT" include a message-body ... 
-    // is always terminated by the first empty line after the header fields 
+    // 1. Any response message which "MUST NOT" include a message-body ...
+    // is always terminated by the first empty line after the header fields
     // 3. ... If a message is received with both a
     // Transfer-Encoding header field and a Content-Length header field,
     // the latter MUST be ignored.
-    $canHaveBody = $canHaveBody && $this->code >= 200 && 
+    $canHaveBody = $canHaveBody && $this->code >= 200 &&
                $this->code != 204 && $this->code != 304;
 
     // If response body is present, read it and decode
@@ -183,7 +183,7 @@ class Phpsocket extends Request\Adapter
 
    /**
     * Read a part of response body encoded with chunked Transfer-Encoding
-    * 
+    *
     * @access private
     * @return string
     */
@@ -193,7 +193,7 @@ class Phpsocket extends Request\Adapter
         if (0 == $this->_chunkLength) {
             $line = $this->_stream->readLine();
             if (preg_match('/^([0-9a-f]+)/i', $line, $matches)) {
-                $this->_chunkLength = hexdec($matches[1]); 
+                $this->_chunkLength = hexdec($matches[1]);
                 // Chunk with zero length indicates the end
                 if (0 == $this->_chunkLength) {
                     $this->_stream->readLine(); // make this an eof()
@@ -216,7 +216,7 @@ class Phpsocket extends Request\Adapter
     *
     * The real decoding work is done by gzinflate() built-in function, this
     * method only parses the header and checks data for compliance with
-    * RFC 1952  
+    * RFC 1952
     *
     * @access   private
     * @param    string  gzip-encoded data
@@ -247,7 +247,7 @@ class Phpsocket extends Request\Adapter
             if ($length - $headerLength - 2 < 8) {
                 throw new Request\Exception('_decodeGzip(): data too short');
             }
-        
+
             $extraLength = unpack('v', substr($data, 10, 2));
             if ($length - $headerLength - 2 - $extraLength[1] < 8) {
                 throw new Request\Exception('_decodeGzip(): data too short');

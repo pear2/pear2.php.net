@@ -47,7 +47,7 @@ class DB2Connection implements \Doctrine\DBAL\Driver\Connection
         }
         return new DB2Statement($stmt);
     }
-    
+
     function query()
     {
         $args = func_get_args();

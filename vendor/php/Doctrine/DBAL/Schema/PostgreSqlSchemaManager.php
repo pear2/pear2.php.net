@@ -61,12 +61,12 @@ class PostgreSqlSchemaManager extends AbstractSchemaManager
       $params["dbname"] = "postgres";
       $tmpPlatform = $this->_platform;
       $tmpConn = $this->_conn;
-      
+
       $this->_conn = \Doctrine\DBAL\DriverManager::getConnection($params);
-      $this->_platform = $this->_conn->getDatabasePlatform(); 
-      
+      $this->_platform = $this->_conn->getDatabasePlatform();
+
       parent::dropDatabase($database);
-      
+
       $this->_platform = $tmpPlatform;
       $this->_conn = $tmpConn;
     }
@@ -77,16 +77,16 @@ class PostgreSqlSchemaManager extends AbstractSchemaManager
       $params["dbname"] = "postgres";
       $tmpPlatform = $this->_platform;
       $tmpConn = $this->_conn;
-      
+
       $this->_conn = \Doctrine\DBAL\DriverManager::getConnection($params);
-      $this->_platform = $this->_conn->getDatabasePlatform(); 
-      
+      $this->_platform = $this->_conn->getDatabasePlatform();
+
       parent::createDatabase($database);
-      
+
       $this->_platform = $tmpPlatform;
       $this->_conn = $tmpConn;
     }
-    
+
     protected function _getPortableTriggerDefinition($trigger)
     {
         return $trigger['trigger_name'];
@@ -125,7 +125,7 @@ class PostgreSqlSchemaManager extends AbstractSchemaManager
             $colNumbersSql = 'IN (' . join( ' ,', $colNumbers ) . ' )';
             $columnNameSql = "SELECT attnum, attname FROM pg_attribute
                 WHERE attrelid={$row['indrelid']} AND attnum $colNumbersSql ORDER BY attnum ASC;";
-                
+
             $stmt = $this->_conn->executeQuery($columnNameSql);
             $indexColumns = $stmt->fetchAll();
 
@@ -166,18 +166,18 @@ class PostgreSqlSchemaManager extends AbstractSchemaManager
             $length = preg_replace('~.*\(([0-9]*)\).*~', '$1', $tableColumn['complete_type']);
             $tableColumn['length'] = $length;
         }
-        
+
         $matches = array();
-        
+
         if (preg_match("/^nextval\('(.*)'(::.*)?\)$/", $tableColumn['default'], $matches)) {
             $tableColumn['sequence'] = $matches[1];
             $tableColumn['default'] = null;
         }
-        
+
         if (stripos($tableColumn['default'], 'NULL') === 0) {
             $tableColumn['default'] = null;
         }
-        
+
         $length = (isset($tableColumn['length'])) ? $tableColumn['length'] : null;
         if ($length == '-1' && isset($tableColumn['atttypmod'])) {
             $length = $tableColumn['atttypmod'] - 4;
@@ -187,14 +187,14 @@ class PostgreSqlSchemaManager extends AbstractSchemaManager
         }
         $type = array();
         $fixed = null;
-        
+
         if ( ! isset($tableColumn['name'])) {
             $tableColumn['name'] = '';
         }
 
         $precision = null;
         $scale = null;
-        
+
         $dbType = strtolower($tableColumn['type']);
 
         $type = $this->_platform->getDoctrineTypeMapping($dbType);

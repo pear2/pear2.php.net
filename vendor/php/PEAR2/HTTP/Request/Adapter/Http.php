@@ -16,7 +16,7 @@ class Http extends Request\Adapter
             );
         }
     }
-    
+
     /**
      * Send the request
      *
@@ -27,7 +27,7 @@ class Http extends Request\Adapter
      * @todo catch exceptions from HttpRequest and rethrow
      * @todo handle Puts
      */
-    public function sendRequest() 
+    public function sendRequest()
     {
         $options = array(
             'connecttimeout'    => $this->requestTimeout,
@@ -66,7 +66,7 @@ class Http extends Request\Adapter
 
 
         return new Request\Response($details, $body, $headers, $cookies);
-    }      
+    }
 
     /**
      * Progress handler maps callback progress to listeners

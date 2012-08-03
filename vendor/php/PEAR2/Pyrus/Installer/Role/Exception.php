@@ -1,9 +1,9 @@
 <?php
 /**
  * \PEAR2\Pyrus\Installer\Role\Exception
- * 
+ *
  * PHP version 5
- * 
+ *
  * @category  PEAR2
  * @package   PEAR2_Pyrus
  * @author    Greg Beaver <cellog@php.net>
@@ -15,7 +15,7 @@
 
 /**
  * Exception for roles
- * 
+ *
  * @category  PEAR2
  * @package   PEAR2_Pyrus
  * @author    Greg Beaver <cellog@php.net>

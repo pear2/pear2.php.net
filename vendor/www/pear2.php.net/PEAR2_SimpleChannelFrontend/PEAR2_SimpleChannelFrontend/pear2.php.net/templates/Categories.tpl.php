@@ -8,7 +8,7 @@ $parent->context->page_title = 'Categories | '.pear2\SimpleChannelFrontend\Main:
 <?php
 if (count($context)) : ?>
 <ul class="categories">
-<?php 
+<?php
     foreach ($context as $category) : ?>
     <li id="category-1" class="category category-clear">
         <h3><a href=""><span class="category-title"><?php echo $category->name; ?></span></a><span class="category-count"> (<?php echo count($category); ?>)</span></h3>

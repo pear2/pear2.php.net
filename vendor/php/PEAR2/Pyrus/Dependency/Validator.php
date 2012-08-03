@@ -795,7 +795,7 @@ conflict_error:
 				$fail = false;
 			}
         }
-        
+
         if (isset($dep->exclude)) {
             $fail = true;
             foreach ($dep->exclude as $exclude) {

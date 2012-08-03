@@ -13,7 +13,7 @@ class Categories extends Channel\RemoteCategories
 		$this->package = $package;
 		parent::__construct($channelinfo);
 	}
-	
+
 	function rewind()
 	{
 		$info = $this->package->getPackageInfo($this->package->name);

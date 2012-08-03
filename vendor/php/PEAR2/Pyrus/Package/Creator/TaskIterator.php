@@ -60,7 +60,7 @@ class TaskIterator extends \FilterIterator
         if ($task === false) {
             throw new \RuntimeException("Unknown task `$key` specified.");
         }
-		
+
         if (0 == $task::PHASE & $this->_installphase) {
             // skip tasks that won't run in this installphase
             return false;

@@ -26,9 +26,9 @@ PEAR2\Console\CommandLine\Result Object
     [options] => Array
         (
             [verbose] => 1
-            [logfile] => 
-            [help] => 
-            [version] => 
+            [logfile] =>
+            [help] =>
+            [version] =>
         )
 
     [args] => Array
@@ -41,7 +41,7 @@ PEAR2\Console\CommandLine\Result Object
             [options] => Array
                 (
                     [force] => 1
-                    [help] => 
+                    [help] =>
                 )
 
             [args] => Array
@@ -50,8 +50,8 @@ PEAR2\Console\CommandLine\Result Object
 
                 )
 
-            [command_name] => 
-            [command] => 
+            [command_name] =>
+            [command] =>
         )
 
 )

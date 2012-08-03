@@ -63,7 +63,7 @@ class AssignedGenerator extends AbstractIdGenerator
                 throw ORMException::entityMissingAssignedId($entity);
             }
         }
-        
+
         return $identifier;
     }
 }

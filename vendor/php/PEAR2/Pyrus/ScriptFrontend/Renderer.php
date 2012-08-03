@@ -11,11 +11,11 @@
  * through the world-wide-web at the following URI:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Console 
+ * @category  Console
  * @package   PEAR2_Console_CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   SVN: $Id$
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     File available since release 0.1.0
@@ -28,7 +28,7 @@
  * @package   PEAR2_Console_CommandLine
  * @author    David JEAN LOUIS <izimobil@gmail.com>
  * @copyright 2007 David JEAN LOUIS
- * @license   http://opensource.org/licenses/mit-license.php MIT License 
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @version   Release: @package_version@
  * @link      http://pear.php.net/package/Console_CommandLine
  * @since     Class available since release 0.1.0
@@ -47,7 +47,7 @@ class Renderer extends \PEAR2\Console\CommandLine\Renderer_Default
         $usage = $this->parser->message_provider->get('USAGE_WORD') . ":\n";
         $ret   = $usage . '  ' . $this->name();
         if (count($this->parser->options) > 0) {
-            $ret .= ' [/path/to/pear] [' 
+            $ret .= ' [/path/to/pear] ['
                 . strtolower($this->parser->message_provider->get('OPTION_WORD'))
                 . ']';
         }
@@ -72,7 +72,7 @@ class Renderer extends \PEAR2\Console\CommandLine\Renderer_Default
         }
         $ret = '  ' . $this->name();
         if (count($this->parser->options) > 0) {
-            $ret .= ' [/path/to/pear] [' 
+            $ret .= ' [/path/to/pear] ['
                 . strtolower($this->parser->message_provider->get('OPTION_WORD'))
                 . ']';
         }
