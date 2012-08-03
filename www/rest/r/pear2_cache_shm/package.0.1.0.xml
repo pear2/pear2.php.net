@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a4">
+ <name>PEAR2_Cache_SHM</name>
+ <channel>pear2.php.net</channel>
+ <summary>Wrapper for shared memory and locking functionality across different extensions.
+</summary>
+ <description>Allows you to share data across requests as long as the PHP process is running. One of APC or WinCache is required to accomplish this, with other extensions being potentially pluggable as adapters.</description>
+ <lead>
+  <name>Vasil Rangelov</name>
+  <user>boen_robot</user>
+  <email>boen.robot@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-08-03</date>
+ <time>04:20:46</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL License 2.1</license>
+ <notes>First PEAR2 compatible release.</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="tests/phpunit.xml"/>
+   <file role="test" name="tests/PHPT/_runner.inc"/>
+   <file role="test" name="tests/PHPT/Wincache.phpt"/>
+   <file role="test" name="tests/PHPT/SHM-factory_CLI.phpt"/>
+   <file role="test" name="tests/PHPT/SHM-factory_CGI.phpt"/>
+   <file role="test" name="tests/PHPT/SHM-factory.inc"/>
+   <file role="test" name="tests/PHPT/Placebo.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testSingleFileLockAndUnlock.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testSettingAndGettingValue.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testSettingAndDeletingValue.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingValue.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingTtlValue_part3.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingTtlValue_part2.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingTtlValue_part1.phpt"/>
+   <file role="test" name="tests/PHPT/APC.phpt"/>
+   <file role="test" name="tests/CliCompatibleTest.php"/>
+   <file role="test" name="tests/bootstrap.php">
+    <tasks:replace from="../src" to="php_dir" type="pear-config"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/InvalidArgumentException.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Exception.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Adapter/Wincache.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Adapter/Placebo.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Adapter/APC.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="doc" name="docs/phpdoc.dist.xml">
+    <tasks:replace from="../src" to="php_dir" type="pear-config"/>
+   </file>
+   <file role="doc" name="docs/doxygen.ini">
+    <tasks:replace from="../src" to="php_dir" type="pear-config"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>PEAR2_Autoload</name>
+    <channel>pear2.php.net</channel>
+    <min>0.2.4</min>
+   </package>
+   <extension>
+    <name>apc</name>
+    <min>3.0.13</min>
+   </extension>
+   <extension>
+    <name>wincache</name>
+    <min>1.1.0</min>
+   </extension>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install name="src/PEAR2/Cache/SHM.php" as="PEAR2/Cache/SHM.php"/>
+   <install name="src/PEAR2/Cache/SHM/Adapter/APC.php" as="PEAR2/Cache/SHM/Adapter/APC.php"/>
+   <install name="src/PEAR2/Cache/SHM/Adapter/Wincache.php" as="PEAR2/Cache/SHM/Adapter/Wincache.php"/>
+   <install name="tests/bootstrap.php" as="bootstrap.php"/>
+   <install name="tests/phpunit.xml" as="phpunit.xml"/>
+  </filelist>
+ </phprelease>
+</package>

@@ -15,6 +15,10 @@ This package abstracts this away, so that when you want to get exactly N amount 
   </p>
   <a>
    <r>
+    <v>1.0.0a3</v>
+    <s>alpha</s>
+   </r>
+   <r>
     <v>1.0.0a2</v>
     <s>alpha</s>
    </r>
@@ -24,8 +28,8 @@ This package abstracts this away, so that when you want to get exactly N amount 
    </r>
   </a>
   <deps>
-   <v>1.0.0a2</v>
-   <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}}}</d>
+   <v>1.0.0a3</v>
+   <d>a:2:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}}s:8:&quot;optional&quot;;a:1:{s:7:&quot;package&quot;;a:2:{i:0;a:3:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.4&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Cache_SHM&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.1.0&quot;;}}}}</d>
   </deps>
  </pi>
  <pi>
@@ -41,6 +45,10 @@ This package abstracts this away, so that when you want to get exactly N amount 
   </p>
   <a>
    <r>
+    <v>1.0.0b3</v>
+    <s>beta</s>
+   </r>
+   <r>
     <v>1.0.0b2</v>
     <s>beta</s>
    </r>
@@ -50,8 +58,8 @@ This package abstracts this away, so that when you want to get exactly N amount 
    </r>
   </a>
   <deps>
-   <v>1.0.0b2</v>
-   <d>a:2:{s:8:&quot;required&quot;;a:4:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}s:7:&quot;package&quot;;a:3:{s:4:&quot;name&quot;;s:21:&quot;PEAR2_Net_Transmitter&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:7:&quot;1.0.0a2&quot;;}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:4:&quot;PCRE&quot;;}}s:8:&quot;optional&quot;;a:1:{s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:5:&quot;iconv&quot;;}}}</d>
+   <v>1.0.0b3</v>
+   <d>a:2:{s:8:&quot;required&quot;;a:4:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}s:7:&quot;package&quot;;a:3:{s:4:&quot;name&quot;;s:21:&quot;PEAR2_Net_Transmitter&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:7:&quot;1.0.0a3&quot;;}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:4:&quot;PCRE&quot;;}}s:8:&quot;optional&quot;;a:2:{s:7:&quot;package&quot;;a:2:{i:0;a:3:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.4&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Cache_SHM&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.1.0&quot;;}}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:5:&quot;iconv&quot;;}}}</d>
   </deps>
  </pi>
 </f>
