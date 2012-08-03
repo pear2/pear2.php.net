@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a4">
+ <name>PEAR2_Net_RouterOS</name>
+ <channel>pear2.php.net</channel>
+ <summary>RouterOS API client implementation.
+</summary>
+ <description>RouterOS is the flag product of the company MikroTik and is a powerful router software. One of its many abilities is to allow control over it via an API. This package provides a client for that API, in turn allowing you to use PHP to control RouterOS hosts.</description>
+ <lead>
+  <name>Vasil Rangelov</name>
+  <user>boen_robot</user>
+  <email>boen.robot@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-08-03</date>
+ <time>04:21:24</time>
+ <version>
+  <release>1.0.0b3</release>
+  <api>1.0.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL License 2.1</license>
+ <notes>Bug fixes on edge cases, and some API changes
+
+* (GH #6) Persistent connections are now properly supported. Added a new Registry class to facilitate this.
+* The second and third argument of Request::__construct() have been swapped.
+* At Request::__construct(), a backslash can now be escaped in an argument value, and arguments can be spread across multiple lines.
+* Client::getStreamResponses() and Client::setStreamResponses() are now Client::isStreamingResponses() and Client::setStreamingResponses(), respectively.
+* Query now uses things statically, allowing extensions in the process.
+* ResponseCollection::__invoke() now seeks instead of getting.
+* (GH #4) Client::completeRequest() now works with requests that use a callback.
+* Client::sendSync() now accepts requests with a tag.
+* Added support for non ASCII passwords.
+* Client now throws this package's SocketException on connection errors. The originating Transmitter exception is available in the trace.
+* Documentation fixes.</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="tests/StateAlteringFeaturesTest.php"/>
+   <file role="test" name="tests/RequestHandlingTest.php"/>
+   <file role="test" name="tests/phpunit.xml"/>
+   <file role="test" name="tests/ConnectionTest.php"/>
+   <file role="test" name="tests/ClientPersistentFeaturesTest.php"/>
+   <file role="test" name="tests/ClientFeaturesTest.php"/>
+   <file role="test" name="tests/bootstrap.php">
+    <tasks:replace from="../src" to="php_dir" type="pear-config"/>
+    <tasks:replace from="../../PEAR2_Net_Transmitter.git/src/" to="php_dir" type="pear-config"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/UnexpectedValueException.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/SocketException.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/ResponseCollection.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Response.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Request.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Registry.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Query.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/NotSupportedException.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Message.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/LengthException.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/InvalidArgumentException.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Exception.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/DataFlowException.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Communicator.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="php" name="src/PEAR2/Net/RouterOS/Client.php">
+    <tasks:replace from="~~summary~~" to="summary" type="package-info"/>
+    <tasks:replace from="~~description~~" to="description" type="package-info"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+   <file role="doc" name="examples/sync-request-simple.php"/>
+   <file role="doc" name="examples/sync-request-arguments.php"/>
+   <file role="doc" name="examples/send-and-forget.php"/>
+   <file role="doc" name="examples/send-and-complete.php"/>
+   <file role="doc" name="examples/loop-and-extract.php"/>
+   <file role="doc" name="examples/callback-and-loop.php"/>
+   <file role="doc" name="docs/tutorials/PEAR2_Net_RouterOS/Query.cls"/>
+   <file role="doc" name="docs/tutorials/PEAR2_Net_RouterOS/PEAR2_Net_RouterOS.pkg"/>
+   <file role="doc" name="docs/tutorials/PEAR2_Net_RouterOS/Client.cls"/>
+   <file role="doc" name="docs/phpdoc.dist.xml">
+    <tasks:replace from="../src" to="php_dir" type="pear-config"/>
+   </file>
+   <file role="doc" name="docs/doxygen.ini">
+    <tasks:replace from="../src" to="php_dir" type="pear-config"/>
+    <tasks:replace from="GIT: $Id$" to="version" type="package-info"/>
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>PEAR2_Net_Transmitter</name>
+    <channel>pear2.php.net</channel>
+    <min>1.0.0a3</min>
+   </package>
+   <extension>
+    <name>PCRE</name>
+   </extension>
+  </required>
+  <optional>
+   <package>
+    <name>PEAR2_Autoload</name>
+    <channel>pear2.php.net</channel>
+    <min>0.2.4</min>
+   </package>
+   <package>
+    <name>PEAR2_Cache_SHM</name>
+    <channel>pear2.php.net</channel>
+    <min>0.1.0</min>
+   </package>
+   <extension>
+    <name>iconv</name>
+   </extension>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install name="docs/doxygen.ini" as="doxygen.ini"/>
+   <install name="docs/phpdoc.dist.xml" as="phpdoc.dist.xml"/>
+   <install name="docs/tutorials/PEAR2_Net_RouterOS/Client.cls" as="tutorials/PEAR2_Net_RouterOS/Client.cls"/>
+   <install name="docs/tutorials/PEAR2_Net_RouterOS/PEAR2_Net_RouterOS.pkg" as="tutorials/PEAR2_Net_RouterOS/PEAR2_Net_RouterOS.pkg"/>
+   <install name="docs/tutorials/PEAR2_Net_RouterOS/Query.cls" as="tutorials/PEAR2_Net_RouterOS/Query.cls"/>
+   <install name="src/PEAR2/Net/RouterOS/Client.php" as="PEAR2/Net/RouterOS/Client.php"/>
+   <install name="src/PEAR2/Net/RouterOS/Communicator.php" as="PEAR2/Net/RouterOS/Communicator.php"/>
+   <install name="src/PEAR2/Net/RouterOS/DataFlowException.php" as="PEAR2/Net/RouterOS/DataFlowException.php"/>
+   <install name="src/PEAR2/Net/RouterOS/Exception.php" as="PEAR2/Net/RouterOS/Exception.php"/>
+   <install name="src/PEAR2/Net/RouterOS/InvalidArgumentException.php" as="PEAR2/Net/RouterOS/InvalidArgumentException.php"/>
+   <install name="src/PEAR2/Net/RouterOS/LengthException.php" as="PEAR2/Net/RouterOS/LengthtException.php"/>
+   <install name="src/PEAR2/Net/RouterOS/Message.php" as="PEAR2/Net/RouterOS/Message.php"/>
+   <install name="src/PEAR2/Net/RouterOS/NotSupportedException.php" as="PEAR2/Net/RouterOS/NotSupportedException.php"/>
+   <install name="src/PEAR2/Net/RouterOS/Query.php" as="PEAR2/Net/RouterOS/Query.php"/>
+   <install name="src/PEAR2/Net/RouterOS/Request.php" as="PEAR2/Net/RouterOS/Request.php"/>
+   <install name="src/PEAR2/Net/RouterOS/Response.php" as="PEAR2/Net/RouterOS/Response.php"/>
+   <install name="src/PEAR2/Net/RouterOS/ResponseCollection.php" as="PEAR2/Net/RouterOS/ResponseCollection.php"/>
+   <install name="src/PEAR2/Net/RouterOS/SocketException.php" as="PEAR2/Net/RouterOS/SocketException.php"/>
+   <install name="src/PEAR2/Net/RouterOS/UnexpectedValueException.php" as="PEAR2/Net/RouterOS/UnexpectedValueException.php"/>
+   <install name="tests/bootstrap.php" as="bootstrap.php"/>
+   <install name="tests/ClientFeaturesTest.php" as="ClientFeaturesTest.php"/>
+   <install name="tests/ClientPersistentFeaturesTest.php" as="ClientPersistentFeaturesTest.php"/>
+   <install name="tests/ConnectionTest.php" as="ConnectionTest.php"/>
+   <install name="tests/phpunit.xml" as="phpunit.xml"/>
+   <install name="tests/RequestHandlingTest.php" as="RequestHandlingTest.php"/>
+   <install name="tests/StateAlteringFeaturesTest.php" as="StateAlteringFeaturesTest.php"/>
+  </filelist>
+ </phprelease>
+</package>

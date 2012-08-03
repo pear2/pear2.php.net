@@ -3,6 +3,11 @@
  <p>PEAR2_Net_Transmitter</p>
  <c>pear2.php.net</c>
  <r>
+  <v>1.0.0a3</v>
+  <s>alpha</s>
+  <m>5.3.0</m>
+ </r>
+ <r>
   <v>1.0.0a2</v>
   <s>alpha</s>
   <m>5.3.0</m>

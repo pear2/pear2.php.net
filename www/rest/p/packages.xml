@@ -2,6 +2,7 @@
 <a xmlns="http://pear.php.net/dtd/rest.allpackages" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.allpackages http://pear.php.net/dtd/rest.allpackages.xsd">
  <p>pear2_autoload</p>
  <p>pear2_cache_lite</p>
+ <p>pear2_cache_shm</p>
  <p>pear2_console_color</p>
  <p>pear2_console_commandline</p>
  <p>pear2_db_pl2method</p>
