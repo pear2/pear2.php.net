@@ -39,41 +39,16 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
     {
         return self::GIT_HUB_LINK . $this->shortName . '/issues?state=closed';
     }
-
-    public function getGitHubClosedIssueCount()
+    
+    public function getGitHubIssueCount($state)
     {
         $count = 0;
 
-        $key  = $this->name.'-closed-issues';
+        $key  = $this->name."-{$state}-issues";
         $json = $this->cache->get($key);
 
         if ($json === false) {
-            $uri  = self::GIT_HUB_API . $this->shortName . '/issues?state=closed';
-            $json = file_get_contents($uri);
-            if ($json === false) {
-                $json = $this->cache->get($key, 'default', false);
-            } else {
-                $this->cache->save($json, $key);
-            }
-        }
-
-        if ($json !== false) {
-            $result = json_decode($json);
-            $count  = count($result->issues);
-        }
-
-        return $count;
-    }
-
-    public function getGitHubOpenIssueCount()
-    {
-        $count = 0;
-
-        $key  = $this->name.'-open-issues';
-        $json = $this->cache->get($key);
-
-        if ($json === false) {
-            $uri  = self::GIT_HUB_API . $this->shortName . '/issues?state=open';
+            $uri  = self::GIT_HUB_API . $this->shortName . '/issues?state=' . $state;
             $json = file_get_contents($uri);
             if ($json === false) {
                 $json = $this->cache->get($key, 'default', false);
@@ -87,5 +62,15 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
         }
 
         return $count;
+    }
+
+    public function getGitHubClosedIssueCount()
+    {
+        return $this->getGitHubIssueCount('closed');
+    }
+
+    public function getGitHubOpenIssueCount()
+    {
+        return $this->getGitHubIssueCount('open');
     }
 }
