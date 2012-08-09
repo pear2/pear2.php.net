@@ -17,7 +17,7 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
         $this->cache = new \PEAR2\Cache\Lite\Main();
         $this->cache->setLifeTime(15 * 60);
         
-        $this->shortName = str_replace('PEAR2_', '', $this->name, 1);
+        $this->shortName = str_replace('PEAR2_', '', $this->name);
     }
     
     public function getShortName()
