@@ -16,7 +16,7 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
         parent::__construct($options);
         $this->cache = new \PEAR2\Cache\Lite\Main();
         $this->cache->setLifeTime(15 * 60);
-        
+
         $this->shortName = str_replace('PEAR2_', '', $this->name);
     }
     
@@ -64,7 +64,20 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
 
         if ($json === false) {
             $uri  = self::GIT_HUB_API . $this->shortName . '/issues?state=' . $state;
-            $json = file_get_contents($uri);
+            $json = file_get_contents(
+                $uri, false,
+                stream_context_create(
+                    array(
+                        'http' => array(
+                            'ignore_errors' => true
+                        )
+                    )
+                )
+            );
+            if (false === strpos($http_response_header[0], ' 200 ')) {
+                $json = false;
+            }
+
             if ($json === false) {
                 $json = $this->cache->get($key, 'default', false);
             } else {
@@ -81,12 +94,25 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
     
     protected function getGithubInfo()
     {
-        $key  = $this->name . "-wiki";
+        $key  = $this->name . "-info";
         $json = $this->cache->get($key);
 
         if ($json === false) {
             $uri  = self::GIT_HUB_API . $this->shortName;
-            $json = is_file($uri) && file_get_contents($uri);
+            $json = file_get_contents(
+                $uri, false,
+                stream_context_create(
+                    array(
+                        'http' => array(
+                            'ignore_errors' => true
+                        )
+                    )
+                )
+            );
+            if (false === strpos($http_response_header[0], ' 200 ')) {
+                $json = false;
+            }
+
             if ($json === false) {
                 $json = $this->cache->get($key, 'default', false);
             } else {
