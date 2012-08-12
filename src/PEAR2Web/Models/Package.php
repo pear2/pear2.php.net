@@ -24,6 +24,21 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
     {
         return $this->shortName;
     }
+    
+    public function hasGitHubWiki()
+    {
+        return $this->getGithubInfo()->has_wiki;
+    }
+    
+    public function getGitHubWikiLink()
+    {
+        return self::GIT_HUB_LINK . $this->shortName . '/wiki';
+    }
+    
+    public function hasGitHubIssues()
+    {
+        return $this->getGithubInfo()->has_issues;
+    }
 
     public function getGitHubNewIssueLink()
     {
@@ -44,7 +59,7 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
     {
         $count = 0;
 
-        $key  = $this->name."-{$state}-issues";
+        $key  = $this->name . "-{$state}-issues";
         $json = $this->cache->get($key);
 
         if ($json === false) {
@@ -63,14 +78,24 @@ class Package extends \PEAR2\SimpleChannelFrontend\Package
 
         return $count;
     }
-
-    public function getGitHubClosedIssueCount()
+    
+    protected function getGithubInfo()
     {
-        return $this->getGitHubIssueCount('closed');
-    }
+        $key  = $this->name . "-wiki";
+        $json = $this->cache->get($key);
 
-    public function getGitHubOpenIssueCount()
-    {
-        return $this->getGitHubIssueCount('open');
+        if ($json === false) {
+            $uri  = self::GIT_HUB_API . $this->shortName;
+            $json = is_file($uri) && file_get_contents($uri);
+            if ($json === false) {
+                $json = $this->cache->get($key, 'default', false);
+            } else {
+                $this->cache->save($json, $key);
+            }
+        }
+        
+        return $json === false
+            ? (object) array('has_wiki' => false, 'has_issues' => false)
+            : json_decode($json);
     }
 }

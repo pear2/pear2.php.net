@@ -51,12 +51,23 @@ if ($licenseURI) {
 ?>
             </td>
         </tr>
+<?php
+if ($context->hasGitHubWiki()) {
+?>        <tr>
+            <th>Documentation:</th>
+            <td><a href="<?php echo $context->getGitHubWikiLink() ?>">GitHub Wiki</a></td>
+        </tr>
+<?php
+}
+
+if ($context->hasGitHubIssues()) {
+?>
         <tr>
             <th>Issues:</th>
             <td><?php echo $savant->render($context, 'PackageBugs.tpl.php'); ?></td>
         </tr>
-
 <?php
+}
 if (   isset($parent->parent->context->options)
     && $parent->parent->context->options['view'] === 'package'
 ) {

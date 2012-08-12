@@ -1,6 +1,6 @@
 <?php
 
-$openCount = $context->getGitHubOpenIssueCount();
+$openCount = $context->getGitHubIssueCount('open');
 
 if ($openCount == 0) {
     echo '<span>none open</span>';
@@ -8,7 +8,7 @@ if ($openCount == 0) {
     echo '<a href="' . $context->getGitHubOpenIssuesLink() . '" class="package-bugs-open">' . $openCount . ' open</a>';
 }
 
-$closedCount = $context->getGitHubClosedIssueCount();
+$closedCount = $context->getGitHubIssueCount('closed');
 
 if ($closedCount > 0) {
     echo ', <a href="' . $context->getGitHubClosedIssuesLink() . '" class="package-bugs-closed">' . $closedCount . ' closed</a>';
