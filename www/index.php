@@ -42,7 +42,7 @@ $savant->addGlobal('frontend', $frontend);
 $savant->setClassToTemplateMapper(new \PEAR2Web\TemplateMapper());
 $savant->setTemplatePath(
     array(
-        __DIR__ . '/../vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/',
+        dirname(__DIR__) . '/vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/html/',
         __DIR__ . '/templates/pear2/html',
     )
 );
@@ -53,7 +53,7 @@ switch($frontend->options['format']) {
         break;
     case 'rss':
 	    $savant->addTemplatePath(
-	        __DIR__ . '/../vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/'
+	        dirname(__DIR__) . '/vendor/www/pear2.php.net/PEAR2_SimpleChannelFrontend/templates/rss/'
 	    );
 	    break;
 }
