@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0   http://pear.php.net/dtd/tasks-1.0.xsd   http://pear.php.net/dtd/package-2.0   http://pear.php.net/dtd/package-2.0.xsd">
+ <name>PEAR2_Services_Linkback</name>
+ <channel>pear2.php.net</channel>
+ <summary>Pingback+webmention client and server implementation for PHP 5.3+.</summary>
+ <description>Customizable and unit-tested Pingback and webmention client and server implementation.</description>
+ <lead>
+  <name>Christian Weiske</name>
+  <user>cweiske</user>
+  <email>cweiske@php.net</email>
+  <active>yes</active>
+ </lead>
+ <date>2013-10-31</date>
+ <time>20:15:50</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.2.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+ <notes>
+- Rename Services_Pingback to Services_Linkback
+- Add webmention client and server support, http://webmention.org/
+- Use HTTP2 package to parse link headers
+- XHTML responses get loaded as XML, not HTML
+- Support relative URLs in HTML links
+ </notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="4f33865bc6b52a1eacc712f3918a03ae" name="examples/cli-client.php" role="doc" />
+   <file md5sum="8fe753c6ddd3c639818de7371a416b33" name="examples/config.php" role="doc" />
+   <file md5sum="8fe753c6ddd3c639818de7371a416b33" name="examples/config.php.dist" role="doc" />
+   <file md5sum="7796fce772d9730daf940f8f9afbd7df" name="examples/page-with-link.php" role="doc" />
+   <file md5sum="ec1ea0749520b5a5f48a6a754b962569" name="examples/page-without-link.htm" role="doc" />
+   <file md5sum="92590ac9f286a8a4b02b6a93d80ebf20" name="examples/remote-headlinkonly.php" role="doc" />
+   <file md5sum="b459b9c2062552cf55ff99a21abf5a9d" name="examples/remote-headeronly.php" role="doc" />
+   <file md5sum="7fa01f6e504a1dd1da74753c25ac702a" name="examples/test-client.php" role="doc" />
+   <file md5sum="6e65d1e9bd1264c572311dfabdc2cf0d" name="examples/test-server.php" role="doc" />
+   <file md5sum="1690f9f6b242146b431c395ce08774a5" name="examples/webhook.php" role="doc" />
+   <file md5sum="7d2f1dbe8d8ed2c1c22b82d9199f12fd" name="src/PEAR2/Services/Linkback/Response/Ping.php" role="php" />
+   <file md5sum="94f9d9fe47195e0f33d84e4aa6244630" name="src/PEAR2/Services/Linkback/Server/Callback/Base/HTTPRequest.php" role="php" />
+   <file md5sum="769840c98eb91109cede17e0ebd2f490" name="src/PEAR2/Services/Linkback/Server/Callback/FetchSource/Mock.php" role="php" />
+   <file md5sum="a89c8dbbbf135ad27fae3d751d0ca88a" name="src/PEAR2/Services/Linkback/Server/Callback/LinkExists/Mock.php" role="php" />
+   <file md5sum="c8ffb90ea0d5f1b671627c1a4341f051" name="src/PEAR2/Services/Linkback/Server/Callback/StoreLinkback/Object.php" role="php" />
+   <file md5sum="9a1c5c5de415320c43e08dd716c933f9" name="src/PEAR2/Services/Linkback/Server/Callback/TargetExists/Mock.php" role="php" />
+   <file md5sum="ecbbfaafe53d0cb4997a9ffa4dc338c3" name="src/PEAR2/Services/Linkback/Server/Callback/Akismet.php" role="php" />
+   <file md5sum="557afe8ab67614fa9fe863789b7d1707" name="src/PEAR2/Services/Linkback/Server/Callback/FetchSource.php" role="php" />
+   <file md5sum="b125ef0745783dffd8293eada98f280b" name="src/PEAR2/Services/Linkback/Server/Callback/ITarget.php" role="php" />
+   <file md5sum="af21db2c8566e35ce533974b0189e73f" name="src/PEAR2/Services/Linkback/Server/Callback/ILink.php" role="php" />
+   <file md5sum="895720dcea838de13bfa9316821c788c" name="src/PEAR2/Services/Linkback/Server/Callback/IStorage.php" role="php" />
+   <file md5sum="62ade72c829681577241f5cbf6b8316d" name="src/PEAR2/Services/Linkback/Server/Callback/ISource.php" role="php" />
+   <file md5sum="e4c957b2922b89df36e346006a5e23d8" name="src/PEAR2/Services/Linkback/Server/Callback/LinkExists.php" role="php" />
+   <file md5sum="bdf9c7996e35b140899a97b747a6f8de" name="src/PEAR2/Services/Linkback/Server/Responder/Webmention/Mock.php" role="php" />
+   <file md5sum="d986f0a35f4036d363297e74ab9fd796" name="src/PEAR2/Services/Linkback/Server/Responder/Webmention.php" role="php" />
+   <file md5sum="95e4540b54057a27c36ab03a1059a826" name="src/PEAR2/Services/Linkback/Server/Responder/Pingback.php" role="php" />
+   <file md5sum="44d39e4d469d7495d6a0d12eb72ea60e" name="src/PEAR2/Services/Linkback/Server/Responder/Base.php" role="php" />
+   <file md5sum="18ac81a0944d7dc1a6153ee6a02e24dc" name="src/PEAR2/Services/Linkback/Server/Responder/Mock.php" role="php" />
+   <file md5sum="01ac85b991b983eb9cd3a12cbafed1c7" name="src/PEAR2/Services/Linkback/Server/Info.php" role="php" />
+   <file md5sum="2845a79c0b893236b6034220c46682d4" name="src/PEAR2/Services/Linkback/Client.php" role="php" />
+   <file md5sum="fe7eaaf272a236c003336077211aa3e1" name="src/PEAR2/Services/Linkback/DomLoader.php" role="php" />
+   <file md5sum="d015f98fb5241488af468973b87a3a50" name="src/PEAR2/Services/Linkback/Exception.php" role="php" />
+   <file md5sum="14eee3a895357f6dfb59304276e75ad0" name="src/PEAR2/Services/Linkback/Server.php" role="php" />
+   <file md5sum="2c0bcaadc61cc33bf30d3b49d89b0cc7" name="src/PEAR2/Services/Linkback/States.php" role="php" />
+   <file md5sum="706b980220fcd7a824833da9b38e8340" name="src/PEAR2/Services/Linkback/Url.php" role="php" />
+   <file md5sum="97346dd2203aabcf5401d291224c2400" name="tests/PEAR2/Services/Linkback/Response/PingTest.php" role="test" />
+   <file md5sum="15aa252bfd1454df53c8842ae0661514" name="tests/PEAR2/Services/Linkback/Server/Callback/Base/HTTPRequestTest.php" role="test" />
+   <file md5sum="b9cf6f8e6ef0dbc2b08140536356e125" name="tests/PEAR2/Services/Linkback/Server/Callback/FetchSourceTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/Server/Callback/ISourceTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/Server/Callback/ILinkTest.php" role="test" />
+   <file md5sum="ca76fc508e3257f28588eb2cb80c82c4" name="tests/PEAR2/Services/Linkback/Server/Callback/LinkExistsTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/Server/Callback/ITargetTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/Server/Callback/AkismetTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/Server/Callback/IStorageTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/Server/Callback/LocalStaticTargetTest.php" role="test" />
+   <file md5sum="bd4ccbac043ce756937ae3c40f528bb0" name="tests/PEAR2/Services/Linkback/Server/Responder/WebmentionTest.php" role="test" />
+   <file md5sum="ef1ce4f287b5a275895eb0454fad9ce4" name="tests/PEAR2/Services/Linkback/Server/ResponderTest.php" role="test" />
+   <file md5sum="5955eacbfb713b49899933d89089f81e" name="tests/PEAR2/Services/Linkback/ClientTest.php" role="test" />
+   <file md5sum="0befcd01ccf5fa0ceeb1109e01304875" name="tests/PEAR2/Services/Linkback/DomLoaderTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/ExceptionTest.php" role="test" />
+   <file md5sum="7089cd88f86c1907a839df8a5835d2a5" name="tests/PEAR2/Services/Linkback/ServerTest.php" role="test" />
+   <file md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/PEAR2/Services/Linkback/StatesTest.php" role="test" />
+   <file md5sum="69095ea57d1732b246949718407bef80" name="tests/phpunit.xml" role="test" />
+   <file md5sum="029c2b3958314e66c388654546b46f61" name="tests/bootstrap.php" role="test" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.9.4</min>
+   </pearinstaller>
+   <package>
+    <name>HTTP2</name>
+    <channel>pear.php.net</channel>
+    <min>1.1.1</min>
+   </package>
+   <package>
+    <name>Net_URL2</name>
+    <channel>pear.php.net</channel>
+    <min>1.0.0</min>
+   </package>
+   <extension>
+    <name>xmlrpc</name>
+   </extension>
+  </required>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install as="PEAR2/Services/Linkback/Url.php" name="src/PEAR2/Services/Linkback/Url.php" />
+   <install as="PEAR2/Services/Linkback/Server.php" name="src/PEAR2/Services/Linkback/Server.php" />
+   <install as="PEAR2/Services/Linkback/States.php" name="src/PEAR2/Services/Linkback/States.php" />
+   <install as="PEAR2/Services/Linkback/Response/Ping.php" name="src/PEAR2/Services/Linkback/Response/Ping.php" />
+   <install as="PEAR2/Services/Linkback/DomLoader.php" name="src/PEAR2/Services/Linkback/DomLoader.php" />
+   <install as="PEAR2/Services/Linkback/Server/Info.php" name="src/PEAR2/Services/Linkback/Server/Info.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/LinkExists/Mock.php" name="src/PEAR2/Services/Linkback/Server/Callback/LinkExists/Mock.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/FetchSource.php" name="src/PEAR2/Services/Linkback/Server/Callback/FetchSource.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/Akismet.php" name="src/PEAR2/Services/Linkback/Server/Callback/Akismet.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/TargetExists/Mock.php" name="src/PEAR2/Services/Linkback/Server/Callback/TargetExists/Mock.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/ITarget.php" name="src/PEAR2/Services/Linkback/Server/Callback/ITarget.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/Base/HTTPRequest.php" name="src/PEAR2/Services/Linkback/Server/Callback/Base/HTTPRequest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/ILink.php" name="src/PEAR2/Services/Linkback/Server/Callback/ILink.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/IStorage.php" name="src/PEAR2/Services/Linkback/Server/Callback/IStorage.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/ISource.php" name="src/PEAR2/Services/Linkback/Server/Callback/ISource.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/StoreLinkback/Object.php" name="src/PEAR2/Services/Linkback/Server/Callback/StoreLinkback/Object.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/FetchSource/Mock.php" name="src/PEAR2/Services/Linkback/Server/Callback/FetchSource/Mock.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/LinkExists.php" name="src/PEAR2/Services/Linkback/Server/Callback/LinkExists.php" />
+   <install as="PEAR2/Services/Linkback/Server/Responder/Webmention.php" name="src/PEAR2/Services/Linkback/Server/Responder/Webmention.php" />
+   <install as="PEAR2/Services/Linkback/Server/Responder/Pingback.php" name="src/PEAR2/Services/Linkback/Server/Responder/Pingback.php" />
+   <install as="PEAR2/Services/Linkback/Server/Responder/Base.php" name="src/PEAR2/Services/Linkback/Server/Responder/Base.php" />
+   <install as="PEAR2/Services/Linkback/Server/Responder/Webmention/Mock.php" name="src/PEAR2/Services/Linkback/Server/Responder/Webmention/Mock.php" />
+   <install as="PEAR2/Services/Linkback/Server/Responder/Mock.php" name="src/PEAR2/Services/Linkback/Server/Responder/Mock.php" />
+   <install as="PEAR2/Services/Linkback/Client.php" name="src/PEAR2/Services/Linkback/Client.php" />
+   <install as="PEAR2/Services/Linkback/Exception.php" name="src/PEAR2/Services/Linkback/Exception.php" />
+   <install as="phpunit.xml" name="tests/phpunit.xml" />
+   <install as="bootstrap.php" name="tests/bootstrap.php" />
+   <install as="PEAR2/Services/Linkback/DomLoaderTest.php" name="tests/PEAR2/Services/Linkback/DomLoaderTest.php" />
+   <install as="PEAR2/Services/Linkback/StatesTest.php" name="tests/PEAR2/Services/Linkback/StatesTest.php" />
+   <install as="PEAR2/Services/Linkback/Response/PingTest.php" name="tests/PEAR2/Services/Linkback/Response/PingTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/ResponderTest.php" name="tests/PEAR2/Services/Linkback/Server/ResponderTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/FetchSourceTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/FetchSourceTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/ISourceTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/ISourceTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/ILinkTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/ILinkTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/LinkExistsTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/LinkExistsTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/Base/HTTPRequestTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/Base/HTTPRequestTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/ITargetTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/ITargetTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/AkismetTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/AkismetTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/IStorageTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/IStorageTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Callback/LocalStaticTargetTest.php" name="tests/PEAR2/Services/Linkback/Server/Callback/LocalStaticTargetTest.php" />
+   <install as="PEAR2/Services/Linkback/Server/Responder/WebmentionTest.php" name="tests/PEAR2/Services/Linkback/Server/Responder/WebmentionTest.php" />
+   <install as="PEAR2/Services/Linkback/ExceptionTest.php" name="tests/PEAR2/Services/Linkback/ExceptionTest.php" />
+   <install as="PEAR2/Services/Linkback/ServerTest.php" name="tests/PEAR2/Services/Linkback/ServerTest.php" />
+   <install as="PEAR2/Services/Linkback/ClientTest.php" name="tests/PEAR2/Services/Linkback/ClientTest.php" />
+  </filelist>
+ </phprelease>
+ <changelog>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2013-10-24</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+- Rename Services_Pingback to Services_Linkback
+- Add webmention client and server support, http://webmention.org/
+- Use HTTP2 package to parse link headers
+- XHTML responses get loaded as XML, not HTML
+- Support relative URLs in HTML links
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2013-03-04</date>
+   <license uri="http://www.gnu.org/licenses/lgpl.html">LGPL</license>
+   <notes>
+First public version
+   </notes>
+  </release>
+ </changelog>
+</package>

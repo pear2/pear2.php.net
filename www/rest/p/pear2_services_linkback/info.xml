@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>
+ <n>PEAR2_Services_Linkback</n>
+ <c>pear2.php.net</c>
+ <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
+ <l>LGPL</l>
+ <s>Pingback+webmention client and server implementation for PHP 5.3+.</s>
+ <d>Customizable and unit-tested Pingback and webmention client and server implementation.</d>
+ <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+</p>

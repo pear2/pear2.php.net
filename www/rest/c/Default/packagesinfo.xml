@@ -92,4 +92,25 @@ throw new PEAR2\My\Exception('task failed', $a);
    <d>a:1:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.2.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:7:&quot;2.0.0a1&quot;;}}}</d>
   </deps>
  </pi>
+ <pi>
+  <p>
+   <n>PEAR2_Services_Linkback</n>
+   <c>pear2.php.net</c>
+   <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
+   <l>LGPL</l>
+   <s>Pingback+webmention client and server implementation for PHP 5.3+.</s>
+   <d>Customizable and unit-tested Pingback and webmention client and server implementation.</d>
+   <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
+  </p>
+  <a>
+   <r>
+    <v>0.2.0</v>
+    <s>alpha</s>
+   </r>
+  </a>
+  <deps>
+   <v>0.2.0</v>
+   <d>a:1:{s:8:&quot;required&quot;;a:4:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.2.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.9.4&quot;;}s:7:&quot;package&quot;;a:2:{i:0;a:3:{s:4:&quot;name&quot;;s:5:&quot;HTTP2&quot;;s:7:&quot;channel&quot;;s:12:&quot;pear.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;1.1.1&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:8:&quot;Net_URL2&quot;;s:7:&quot;channel&quot;;s:12:&quot;pear.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;1.0.0&quot;;}}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:6:&quot;xmlrpc&quot;;}}}</d>
+  </deps>
+ </pi>
 </f>
