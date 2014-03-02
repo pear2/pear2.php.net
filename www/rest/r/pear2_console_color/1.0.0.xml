@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_console_color">PEAR2_Console_Color</p>
+ <c>pear2.php.net</c>
+ <v>1.0.0</v>
+ <st>stable</st>
+ <l>New BSD License</l>
+ <m>boen_robot</m>
+ <s>This Package provide a easy way to print text with color and style in command line.
+</s>
+ <d>
+It has a simple interface, whereby you just create an object with the color and style information you want,
+and it will automatically be converted to an escape sequence when used as a string.</d>
+ <da>2014-03-02 15:18:34</da>
+ <n>First stable release.&#13;
+&#13;
+(complete rewrite from the alpha)</n>
+ <f>141426</f>
+ <g>http://pear2.php.net/get/PEAR2_Console_Color-1.0.0</g>
+ <x xlink:href="package.1.0.0.xml"/>
+</r>
