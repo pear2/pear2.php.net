@@ -4,11 +4,10 @@
  <c>pear2.php.net</c>
  <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
  <l>New BSD License</l>
- <s>PEAR2_Console_Color is a Package to provide a easy way to print text in
+ <s>This Package provide a easy way to print text with color and style in command line.
 </s>
- <d>command line when its necessary.
-Have a simple interface and basicly using the static function 'convert'
-you can make use of this Object.
-</d>
+ <d>
+It has a simple interface, whereby you just create an object with the color and style information you want,
+and it will automatically be converted to an escape sequence when used as a string.</d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>

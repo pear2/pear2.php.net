@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <a xmlns="http://pear.php.net/dtd/rest.allcategories" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.allcategories http://pear.php.net/dtd/rest.allcategories.xsd">
  <ch>pear2.php.net</ch>
- <c xlink:href="rest/c/HTTP/info.xml">HTTP</c>
- <c xlink:href="rest/c/DB/info.xml">DB</c>
- <c xlink:href="rest/c/Templates/info.xml">Templates</c>
- <c xlink:href="rest/c/PEAR2/info.xml">PEAR2</c>
- <c xlink:href="rest/c/Default/info.xml">Default</c>
  <c xlink:href="rest/c/Caching/info.xml">Caching</c>
- <c xlink:href="rest/c/Text/info.xml">Text</c>
- <c xlink:href="rest/c/Net/info.xml">Net</c>
  <c xlink:href="rest/c/Console/info.xml">Console</c>
+ <c xlink:href="rest/c/DB/info.xml">DB</c>
+ <c xlink:href="rest/c/Default/info.xml">Default</c>
+ <c xlink:href="rest/c/HTTP/info.xml">HTTP</c>
+ <c xlink:href="rest/c/Net/info.xml">Net</c>
+ <c xlink:href="rest/c/PEAR2/info.xml">PEAR2</c>
  <c xlink:href="rest/c/Services/info.xml">Services</c>
+ <c xlink:href="rest/c/Templates/info.xml">Templates</c>
+ <c xlink:href="rest/c/Text/info.xml">Text</c>
 </a>

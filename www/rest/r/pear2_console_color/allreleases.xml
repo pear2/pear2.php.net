@@ -3,6 +3,10 @@
  <p>PEAR2_Console_Color</p>
  <c>pear2.php.net</c>
  <r>
+  <v>1.0.0</v>
+  <s>stable</s>
+ </r>
+ <r>
   <v>0.1.0</v>
   <s>alpha</s>
  </r>
