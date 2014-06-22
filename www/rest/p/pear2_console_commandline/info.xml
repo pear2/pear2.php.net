@@ -3,7 +3,7 @@
  <n>PEAR2_Console_CommandLine</n>
  <c>pear2.php.net</c>
  <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
- <l>New BSD License</l>
+ <l>MIT License</l>
  <s>PEAR2_Console_CommandLine is a full featured package for managing command-line
 </s>
  <d>options and arguments highly inspired from python optparse module, it allows
