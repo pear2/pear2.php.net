@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0a4">
+ <name>PEAR2_Console_CommandLine</name>
+ <channel>pear2.php.net</channel>
+ <summary>PEAR2_Console_CommandLine is a full featured package for managing command-line
+</summary>
+ <description>options and arguments highly inspired from python optparse module, it allows
+the developer to easily build complex command line interfaces.
+
+Main features:
+* handles sub commands (ie. $ myscript.php -q subcommand -f file),
+* can be completely built from an xml definition file,
+* generate --help and --version options automatically,
+* can be completely customized,
+* builtin support for i18n,
+* and much more...
+
+</description>
+ <lead>
+  <name>David JEAN LOUIS</name>
+  <user>izi</user>
+  <email>izi@php.net</email>
+  <active>yes</active>
+ </lead>
+ <helper>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>saltybeagle@php.net</email>
+  <active>yes</active>
+ </helper>
+ <helper>
+  <name>Vasil Rangelov</name>
+  <user>boen_robot</user>
+  <email>boen.robot@gmail.com</email>
+  <active>yes</active>
+ </helper>
+ <date>2014-06-22</date>
+ <time>23:21:23</time>
+ <version>
+  <release>0.2.1</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://opensource.org/licenses/mit-license.php">MIT License</license>
+ <notes>* Added a composer.json, and this package to packagist.org.
+* Fixed GitHub issue #2: columnWrap() in Default Renderer eats up lines with only a EOL.
+* Fixed validation of XML definition files: The directory of the RNG schema was wrong.
+* Fixed test suite errors, including namespace related ones and adding Travis-CI configuration.
+* Removed PEAR2\Exception dependency - This package's exception directly inherits from the root Exception.
+* CS fixes.
+</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="tests/tests.inc.php">
+    <tasks:replace type="pear-config" to="php_dir" from="../src"/>
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="test" name="tests/test.xml"/>
+   <file role="test" name="tests/console_commandline_webrequest_3.phpt"/>
+   <file role="test" name="tests/console_commandline_webrequest_2.phpt"/>
+   <file role="test" name="tests/console_commandline_webrequest_1.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_29.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_28.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_27.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_26.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_25.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_24.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_23.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_22.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_21.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_20.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_19.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_18.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_17.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_16.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_15.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_14.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_13.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_12.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_11.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_10.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_9.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_8.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_7.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_6.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_5.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_4.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_3.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_2.phpt"/>
+   <file role="test" name="tests/console_commandline_parse_1.phpt"/>
+   <file role="test" name="tests/console_commandline_options_defaults.phpt"/>
+   <file role="test" name="tests/console_commandline_fromxmlstring.phpt"/>
+   <file role="test" name="tests/console_commandline_fromxmlfile_error.phpt"/>
+   <file role="test" name="tests/console_commandline_fromxmlfile.phpt"/>
+   <file role="test" name="tests/console_commandline_bug18682.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption_errors_7.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption_errors_6.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption_errors_5.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption_errors_4.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption_errors_3.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption_errors_2.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption_errors_1.phpt"/>
+   <file role="test" name="tests/console_commandline_addoption.phpt"/>
+   <file role="test" name="tests/console_commandline_addcommand_3.phpt"/>
+   <file role="test" name="tests/console_commandline_addcommand.phpt"/>
+   <file role="test" name="tests/console_commandline_addargument2.phpt"/>
+   <file role="test" name="tests/console_commandline_addargument.phpt"/>
+   <file role="test" name="tests/console_commandline_accept.phpt"/>
+   <file role="test" name="tests/AllTests.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/XmlParser.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Result.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Renderer/Default.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Renderer.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Outputter/Default.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Outputter.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Option.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/MessageProvider/Default.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/MessageProvider.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Exception.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Element.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/CustomMessageProvider.php"/>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Command.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Argument.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/Version.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/StoreTrue.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/StoreString.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/StoreInt.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/StoreFloat.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/StoreFalse.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/StoreArray.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/Password.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/List.php"/>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/Help.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/Counter.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action/Callback.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine/Action.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="php" name="src/PEAR2/Console/CommandLine.php"/>
+   <file role="doc" name="examples/ex4.xml"/>
+   <file role="doc" name="examples/ex4.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="doc" name="examples/ex3.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="doc" name="examples/ex2.xml"/>
+   <file role="doc" name="examples/ex2.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="doc" name="examples/ex1.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="data" name="data/xmlschema.rng">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>PEAR2_Autoload</name>
+    <channel>pear2.php.net</channel>
+   </package>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install name="data/xmlschema.rng" as="xmlschema.rng"/>
+   <install name="examples/ex1.php" as="examples/ex1.php"/>
+   <install name="examples/ex2.php" as="examples/ex2.php"/>
+   <install name="examples/ex2.xml" as="examples/ex2.xml"/>
+   <install name="examples/ex3.php" as="examples/ex3.php"/>
+   <install name="examples/ex4.php" as="examples/ex4.php"/>
+   <install name="examples/ex4.xml" as="examples/ex4.xml"/>
+   <install name="src/PEAR2/Console/CommandLine.php" as="PEAR2/Console/CommandLine.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action.php" as="PEAR2/Console/CommandLine/Action.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/Callback.php" as="PEAR2/Console/CommandLine/Action/Callback.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/Counter.php" as="PEAR2/Console/CommandLine/Action/Counter.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/Help.php" as="PEAR2/Console/CommandLine/Action/Help.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/List.php" as="PEAR2/Console/CommandLine/Action/List.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/Password.php" as="PEAR2/Console/CommandLine/Action/Password.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/StoreArray.php" as="PEAR2/Console/CommandLine/Action/StoreArray.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/StoreFalse.php" as="PEAR2/Console/CommandLine/Action/StoreFalse.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/StoreFloat.php" as="PEAR2/Console/CommandLine/Action/StoreFloat.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/StoreInt.php" as="PEAR2/Console/CommandLine/Action/StoreInt.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/StoreString.php" as="PEAR2/Console/CommandLine/Action/StoreString.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/StoreTrue.php" as="PEAR2/Console/CommandLine/Action/StoreTrue.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Action/Version.php" as="PEAR2/Console/CommandLine/Action/Version.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Argument.php" as="PEAR2/Console/CommandLine/Argument.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Command.php" as="PEAR2/Console/CommandLine/Command.php"/>
+   <install name="src/PEAR2/Console/CommandLine/CustomMessageProvider.php" as="PEAR2/Console/CommandLine/CustomMessageProvider.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Element.php" as="PEAR2/Console/CommandLine/Element.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Exception.php" as="PEAR2/Console/CommandLine/Exception.php"/>
+   <install name="src/PEAR2/Console/CommandLine/MessageProvider.php" as="PEAR2/Console/CommandLine/MessageProvider.php"/>
+   <install name="src/PEAR2/Console/CommandLine/MessageProvider/Default.php" as="PEAR2/Console/CommandLine/MessageProvider/Default.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Option.php" as="PEAR2/Console/CommandLine/Option.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Outputter.php" as="PEAR2/Console/CommandLine/Outputter.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Outputter/Default.php" as="PEAR2/Console/CommandLine/Outputter/Default.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Renderer.php" as="PEAR2/Console/CommandLine/Renderer.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Renderer/Default.php" as="PEAR2/Console/CommandLine/Renderer/Default.php"/>
+   <install name="src/PEAR2/Console/CommandLine/Result.php" as="PEAR2/Console/CommandLine/Result.php"/>
+   <install name="src/PEAR2/Console/CommandLine/XmlParser.php" as="PEAR2/Console/CommandLine/XmlParser.php"/>
+   <install name="tests/AllTests.php" as="AllTests.php"/>
+   <install name="tests/console_commandline_accept.phpt" as="console_commandline_accept.phpt"/>
+   <install name="tests/console_commandline_addargument.phpt" as="console_commandline_addargument.phpt"/>
+   <install name="tests/console_commandline_addargument2.phpt" as="console_commandline_addargument2.phpt"/>
+   <install name="tests/console_commandline_addcommand.phpt" as="console_commandline_addcommand.phpt"/>
+   <install name="tests/console_commandline_addcommand_3.phpt" as="console_commandline_addcommand_3.phpt"/>
+   <install name="tests/console_commandline_addoption.phpt" as="console_commandline_addoption.phpt"/>
+   <install name="tests/console_commandline_addoption_errors_1.phpt" as="console_commandline_addoption_errors_1.phpt"/>
+   <install name="tests/console_commandline_addoption_errors_2.phpt" as="console_commandline_addoption_errors_2.phpt"/>
+   <install name="tests/console_commandline_addoption_errors_3.phpt" as="console_commandline_addoption_errors_3.phpt"/>
+   <install name="tests/console_commandline_addoption_errors_4.phpt" as="console_commandline_addoption_errors_4.phpt"/>
+   <install name="tests/console_commandline_addoption_errors_5.phpt" as="console_commandline_addoption_errors_5.phpt"/>
+   <install name="tests/console_commandline_addoption_errors_6.phpt" as="console_commandline_addoption_errors_6.phpt"/>
+   <install name="tests/console_commandline_addoption_errors_7.phpt" as="console_commandline_addoption_errors_7.phpt"/>
+   <install name="tests/console_commandline_bug18682.phpt" as="console_commandline_bug18682.phpt"/>
+   <install name="tests/console_commandline_fromxmlfile.phpt" as="console_commandline_fromxmlfile.phpt"/>
+   <install name="tests/console_commandline_fromxmlfile_error.phpt" as="console_commandline_fromxmlfile_error.phpt"/>
+   <install name="tests/console_commandline_fromxmlstring.phpt" as="console_commandline_fromxmlstring.phpt"/>
+   <install name="tests/console_commandline_options_defaults.phpt" as="console_commandline_options_defaults.phpt"/>
+   <install name="tests/console_commandline_parse_1.phpt" as="console_commandline_parse_1.phpt"/>
+   <install name="tests/console_commandline_parse_2.phpt" as="console_commandline_parse_2.phpt"/>
+   <install name="tests/console_commandline_parse_3.phpt" as="console_commandline_parse_3.phpt"/>
+   <install name="tests/console_commandline_parse_4.phpt" as="console_commandline_parse_4.phpt"/>
+   <install name="tests/console_commandline_parse_5.phpt" as="console_commandline_parse_5.phpt"/>
+   <install name="tests/console_commandline_parse_6.phpt" as="console_commandline_parse_6.phpt"/>
+   <install name="tests/console_commandline_parse_7.phpt" as="console_commandline_parse_7.phpt"/>
+   <install name="tests/console_commandline_parse_8.phpt" as="console_commandline_parse_8.phpt"/>
+   <install name="tests/console_commandline_parse_9.phpt" as="console_commandline_parse_9.phpt"/>
+   <install name="tests/console_commandline_parse_10.phpt" as="console_commandline_parse_10.phpt"/>
+   <install name="tests/console_commandline_parse_11.phpt" as="console_commandline_parse_11.phpt"/>
+   <install name="tests/console_commandline_parse_12.phpt" as="console_commandline_parse_12.phpt"/>
+   <install name="tests/console_commandline_parse_13.phpt" as="console_commandline_parse_13.phpt"/>
+   <install name="tests/console_commandline_parse_14.phpt" as="console_commandline_parse_14.phpt"/>
+   <install name="tests/console_commandline_parse_15.phpt" as="console_commandline_parse_15.phpt"/>
+   <install name="tests/console_commandline_parse_16.phpt" as="console_commandline_parse_16.phpt"/>
+   <install name="tests/console_commandline_parse_17.phpt" as="console_commandline_parse_17.phpt"/>
+   <install name="tests/console_commandline_parse_18.phpt" as="console_commandline_parse_18.phpt"/>
+   <install name="tests/console_commandline_parse_19.phpt" as="console_commandline_parse_19.phpt"/>
+   <install name="tests/console_commandline_parse_20.phpt" as="console_commandline_parse_20.phpt"/>
+   <install name="tests/console_commandline_parse_21.phpt" as="console_commandline_parse_21.phpt"/>
+   <install name="tests/console_commandline_parse_22.phpt" as="console_commandline_parse_22.phpt"/>
+   <install name="tests/console_commandline_parse_23.phpt" as="console_commandline_parse_23.phpt"/>
+   <install name="tests/console_commandline_parse_24.phpt" as="console_commandline_parse_24.phpt"/>
+   <install name="tests/console_commandline_parse_25.phpt" as="console_commandline_parse_25.phpt"/>
+   <install name="tests/console_commandline_parse_26.phpt" as="console_commandline_parse_26.phpt"/>
+   <install name="tests/console_commandline_parse_27.phpt" as="console_commandline_parse_27.phpt"/>
+   <install name="tests/console_commandline_parse_28.phpt" as="console_commandline_parse_28.phpt"/>
+   <install name="tests/console_commandline_parse_29.phpt" as="console_commandline_parse_29.phpt"/>
+   <install name="tests/console_commandline_webrequest_1.phpt" as="console_commandline_webrequest_1.phpt"/>
+   <install name="tests/console_commandline_webrequest_2.phpt" as="console_commandline_webrequest_2.phpt"/>
+   <install name="tests/console_commandline_webrequest_3.phpt" as="console_commandline_webrequest_3.phpt"/>
+   <install name="tests/test.xml" as="test.xml"/>
+   <install name="tests/tests.inc.php" as="tests.inc.php"/>
+  </filelist>
+ </phprelease>
+</package>
