@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_services_linkback">PEAR2_Services_Linkback</p>
+ <c>pear2.php.net</c>
+ <v>0.2.1</v>
+ <st>alpha</st>
+ <l>LGPL</l>
+ <m/>
+ <s>Pingback+webmention client and server implementation for PHP 5.3+.</s>
+ <d>Customizable and unit-tested Pingback and webmention client and server implementation.</d>
+ <da>2014-07-12 12:08:12</da>
+ <n>
+- Fetch webmention header on GET requests, too
+ </n>
+ <f>22248</f>
+ <g>http://pear2.php.net/get/PEAR2_Services_Linkback-0.2.1</g>
+ <x xlink:href="package.0.2.1.xml"/>
+</r>
