@@ -6,14 +6,17 @@
    <c>pear2.php.net</c>
    <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
    <l>LGPL License 2.1</l>
-   <s>Wrapper for network stream functionality.
-</s>
+   <s>Wrapper for network stream functionality.</s>
    <d>PHP has built in support for various types of network streams, such as HTTP and TCP sockets. One problem that arises with them is the fact that a single fread/fwrite call might not read/write all the data you intended, regardless of whether you're in blocking mode or not. While the PHP manual offers a workaround in the form of a loop with a few variables, using it every single time you want to read/write can be tedious.
 
 This package abstracts this away, so that when you want to get exactly N amount of bytes, you can be sure the upper levels of your app will be dealing with N bytes. Oh, and the functionality is nicely wrapped in an object (but that's just the icing on the cake).</d>
    <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
   </p>
   <a>
+   <r>
+    <v>1.0.0a5</v>
+    <s>alpha</s>
+   </r>
    <r>
     <v>1.0.0a4</v>
     <s>alpha</s>
@@ -32,8 +35,8 @@ This package abstracts this away, so that when you want to get exactly N amount 
    </r>
   </a>
   <deps>
-   <v>1.0.0a4</v>
-   <d>a:2:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}}s:8:&quot;optional&quot;;a:2:{s:7:&quot;package&quot;;a:2:{i:0;a:3:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.4&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Cache_SHM&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.1.2&quot;;}}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:7:&quot;openssl&quot;;}}}</d>
+   <v>1.0.0a5</v>
+   <d>a:2:{s:8:&quot;required&quot;;a:2:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}}s:8:&quot;optional&quot;;a:2:{s:7:&quot;package&quot;;a:2:{i:0;a:3:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.4&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Cache_SHM&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.1.3&quot;;}}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:7:&quot;openssl&quot;;}}}</d>
   </deps>
  </pi>
  <pi>
@@ -42,12 +45,15 @@ This package abstracts this away, so that when you want to get exactly N amount 
    <c>pear2.php.net</c>
    <ca xmlns:xlink="rest/c/Default" xlink:href="rest/c/Default">Default</ca>
    <l>LGPL License 2.1</l>
-   <s>RouterOS API client implementation.
-</s>
+   <s>RouterOS API client implementation.</s>
    <d>RouterOS is the flag product of the company MikroTik and is a powerful router software. One of its many abilities is to allow control over it via an API. This package provides a client for that API, in turn allowing you to use PHP to control RouterOS hosts.</d>
    <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
   </p>
   <a>
+   <r>
+    <v>1.0.0b5</v>
+    <s>beta</s>
+   </r>
    <r>
     <v>1.0.0b4</v>
     <s>beta</s>
@@ -66,8 +72,8 @@ This package abstracts this away, so that when you want to get exactly N amount 
    </r>
   </a>
   <deps>
-   <v>1.0.0b4</v>
-   <d>a:2:{s:8:&quot;required&quot;;a:4:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}s:7:&quot;package&quot;;a:3:{s:4:&quot;name&quot;;s:21:&quot;PEAR2_Net_Transmitter&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:7:&quot;1.0.0a4&quot;;}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:4:&quot;PCRE&quot;;}}s:8:&quot;optional&quot;;a:2:{s:7:&quot;package&quot;;a:2:{i:0;a:3:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.4&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Cache_SHM&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.1.2&quot;;}}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:5:&quot;iconv&quot;;}}}</d>
+   <v>1.0.0b5</v>
+   <d>a:2:{s:8:&quot;required&quot;;a:4:{s:3:&quot;php&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;5.3.0&quot;;}s:13:&quot;pearinstaller&quot;;a:1:{s:3:&quot;min&quot;;s:5:&quot;1.4.0&quot;;}s:7:&quot;package&quot;;a:3:{s:4:&quot;name&quot;;s:21:&quot;PEAR2_Net_Transmitter&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:7:&quot;1.0.0a5&quot;;}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:4:&quot;pcre&quot;;}}s:8:&quot;optional&quot;;a:2:{s:7:&quot;package&quot;;a:4:{i:0;a:3:{s:4:&quot;name&quot;;s:14:&quot;PEAR2_Autoload&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.4&quot;;}i:1;a:3:{s:4:&quot;name&quot;;s:15:&quot;PEAR2_Cache_SHM&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.1.3&quot;;}i:2;a:3:{s:4:&quot;name&quot;;s:25:&quot;PEAR2_Console_CommandLine&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;0.2.1&quot;;}i:3;a:3:{s:4:&quot;name&quot;;s:19:&quot;PEAR2_Console_Color&quot;;s:7:&quot;channel&quot;;s:13:&quot;pear2.php.net&quot;;s:3:&quot;min&quot;;s:5:&quot;1.0.0&quot;;}}s:9:&quot;extension&quot;;a:1:{s:4:&quot;name&quot;;s:5:&quot;iconv&quot;;}}}</d>
   </deps>
  </pi>
 </f>
