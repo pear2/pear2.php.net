@@ -4,8 +4,7 @@
  <c>pear2.php.net</c>
  <ca xlink:href="rest/c/Default" xmlns:xlink="rest/c/Default">Default</ca>
  <l>LGPL License 2.1</l>
- <s>RouterOS API client implementation.
-</s>
+ <s>RouterOS API client implementation.</s>
  <d>RouterOS is the flag product of the company MikroTik and is a powerful router software. One of its many abilities is to allow control over it via an API. This package provides a client for that API, in turn allowing you to use PHP to control RouterOS hosts.</d>
  <r xmlns="http://pear.php.net/dtd/rest.package" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.package http://pear.php.net/dtd/rest.package.xsd"/>
 </p>

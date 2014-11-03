@@ -3,6 +3,10 @@
  <p>PEAR2_Net_RouterOS</p>
  <c>pear2.php.net</c>
  <r>
+  <v>1.0.0b5</v>
+  <s>beta</s>
+ </r>
+ <r>
   <v>1.0.0b4</v>
   <s>beta</s>
  </r>
