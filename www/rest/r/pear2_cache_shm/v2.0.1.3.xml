@@ -18,7 +18,7 @@
 * The PHAR stub also checks and reports the above.
 * SHM::getIterator() now returns ArrayObject instead of a normal array, in order to be compatible with how IteratorAggregate actually works.
 * Doc and CS fixes.</n>
- <f>152708</f>
+ <f>152689</f>
  <g>http://pear2.php.net/get/PEAR2_Cache_SHM-0.1.3</g>
  <x xlink:href="package.0.1.3.xml"/>
 </r>

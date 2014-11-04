@@ -43,7 +43,7 @@
 * New Communicator::seekableStreamLength() method, used internally by Util::filePutContents().
 * Doc fixes (Notably: Clarified the acceptability of seekable streams as argument values, which has been present for a long time, but never documented).
 * CS fixes.</n>
- <f>794859</f>
+ <f>794773</f>
  <g>http://pear2.php.net/get/PEAR2_Net_RouterOS-1.0.0b5</g>
  <x xlink:href="package.1.0.0b5.xml"/>
 </r>
