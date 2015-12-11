@@ -12,6 +12,8 @@ Requirements -
 * PHP 5.3.2+
 
 Quick Setup:
-cp config.sample.php config.inc.php
-cp www/sample.htaccess www/.htaccess
+git clone https://github.com/pear2/pear2.php.net.git
+cp pear2.php.net/config.sample.php pear2.php.net/config.inc.php
+cp pear2.php.net/www/sample.htaccess pear2.php.net/www/.htaccess
 
+Edit the config and .htaccess files as necessary.
