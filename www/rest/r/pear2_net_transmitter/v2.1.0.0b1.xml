@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release2 http://pear.php.net/dtd/rest.release2.xsd">
+ <p xlink:href="rest/p/pear2_net_transmitter">PEAR2_Net_Transmitter</p>
+ <c>pear2.php.net</c>
+ <v>1.0.0b1</v>
+ <a>1.0.0</a>
+ <mp>5.3.0</mp>
+ <st>beta</st>
+ <l>LGPL License 2.1</l>
+ <m>boen_robot</m>
+ <s>Wrapper for network stream functionality.
+</s>
+ <d>PHP has built in support for various types of network streams, such as HTTP and TCP sockets. One problem that arises with them is the fact that a single fread/fwrite call might not read/write all the data you intended, regardless of whether you're in blocking mode or not. While the PHP manual offers a workaround in the form of a loop with a few variables, using it every single time you want to read/write can be tedious.
+
+This package abstracts this away, so that when you want to get exactly N amount of bytes, you can be sure the upper levels of your app will be dealing with N bytes. Oh, and the functionality is nicely wrapped in an object (but that's just the icing on the cake).</d>
+ <da>2016-11-07 03:01:58</da>
+ <n>* Fixed a streaming issue with newer PHP 5.6 versions and later.
+* Stream::setIsBlocking() is only implicitly called if needed (i.e. for encrypted connections), ensuring compatibility with web hosts that for bizzare reasons have disabled stream_set_blocking().
+* Doc and test fixes that now ensure large code coverage.</n>
+ <f>309748</f>
+ <g>http://pear2.php.net/get/PEAR2_Net_Transmitter-1.0.0b1</g>
+ <x xlink:href="package.1.0.0b1.xml"/>
+</r>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd" packagerversion="2.0.0">
+ <name>PEAR2_Cache_SHM</name>
+ <channel>pear2.php.net</channel>
+ <summary>Wrapper for shared memory and locking functionality across different extensions.
+</summary>
+ <description>Allows you to share data across requests as long as the PHP process is running. One of APC or WinCache is required to accomplish this, with other extensions being potentially pluggable as adapters.</description>
+ <lead>
+  <name>Vasil Rangelov</name>
+  <user>boen_robot</user>
+  <email>boen.robot@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2016-11-07</date>
+ <time>02:54:44</time>
+ <version>
+  <release>0.2.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.gnu.org/copyleft/lesser.html">LGPL License 2.1</license>
+ <notes>* __Added APCu adapter__
+* Version requirements bumped to ones that reflect fully available functionality. More specifically:
+    - APC 3.1.1 is now the required minimum (previously, 3.0.13), because it's the minimum for APCIterator.
+    - APCu 5.0.0 is required, because of APCUIterator, though 4.0.0 would be sufficient for the rest.
+    - PHP 5.3.9 is the minimum required PHP version, because it is the firt one in which a critical bug affecting this package is fixed. See [#43200](https://bugs.php.net/bug.php?id=43200) for details.
+* Doc and CS fixes.</notes>
+ <contents>
+  <dir name="/">
+   <file role="test" name="tests/phpunit.xml">
+    <tasks:replace type="pear-config" to="php_dir" from="../src"/>
+   </file>
+   <file role="test" name="tests/PHPT/Wincache.phpt"/>
+   <file role="test" name="tests/PHPT/SHM-factory_CLI.phpt"/>
+   <file role="test" name="tests/PHPT/SHM-factory_CGI.phpt"/>
+   <file role="test" name="tests/PHPT/Placebo.phpt"/>
+   <file role="test" name="tests/PHPT/includes/SHM-factory.php"/>
+   <file role="test" name="tests/PHPT/includes/runner.php">
+    <tasks:replace type="pear-config" to="php_dir" from="../src"/>
+   </file>
+   <file role="test" name="tests/PHPT/Common/testSingleFileLockAndUnlock.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testSettingAndGettingValue.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testSettingAndDeletingValue.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingValue.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingTtlValue_part3.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingTtlValue_part2.phpt"/>
+   <file role="test" name="tests/PHPT/Common/testAddingTtlValue_part1.phpt"/>
+   <file role="test" name="tests/PHPT/APCu.phpt"/>
+   <file role="test" name="tests/PHPT/APC.phpt"/>
+   <file role="test" name="tests/bootstrap.php">
+    <tasks:replace type="pear-config" to="php_dir" from="../src"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/InvalidArgumentException.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+    <tasks:replace type="package-info" to="summary" from="~~summary~~"/>
+    <tasks:replace type="package-info" to="description" from="~~description~~"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Exception.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+    <tasks:replace type="package-info" to="summary" from="~~summary~~"/>
+    <tasks:replace type="package-info" to="description" from="~~description~~"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Adapter/Wincache.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+    <tasks:replace type="package-info" to="summary" from="~~summary~~"/>
+    <tasks:replace type="package-info" to="description" from="~~description~~"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Adapter/Placebo.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+    <tasks:replace type="package-info" to="summary" from="~~summary~~"/>
+    <tasks:replace type="package-info" to="description" from="~~description~~"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Adapter/APCu.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+    <tasks:replace type="package-info" to="summary" from="~~summary~~"/>
+    <tasks:replace type="package-info" to="description" from="~~description~~"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM/Adapter/APC.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+    <tasks:replace type="package-info" to="summary" from="~~summary~~"/>
+    <tasks:replace type="package-info" to="description" from="~~description~~"/>
+   </file>
+   <file role="php" name="src/PEAR2/Cache/SHM.php">
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+    <tasks:replace type="package-info" to="summary" from="~~summary~~"/>
+    <tasks:replace type="package-info" to="description" from="~~description~~"/>
+   </file>
+   <file role="doc" name="docs/phpdoc.dist.xml">
+    <tasks:replace type="pear-config" to="php_dir" from="../src"/>
+   </file>
+   <file role="doc" name="docs/doxygen.ini">
+    <tasks:replace type="pear-config" to="php_dir" from="../src"/>
+    <tasks:replace type="package-info" to="version" from="GIT: $Id$"/>
+   </file>
+   <file role="doc" name="docs/apigen.neon">
+    <tasks:replace type="pear-config" to="php_dir" from="../src"/>
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.3.9</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+  <optional>
+   <package>
+    <name>PEAR2_Autoload</name>
+    <channel>pear2.php.net</channel>
+    <min>0.3.0</min>
+   </package>
+   <extension>
+    <name>apc</name>
+    <min>3.1.1</min>
+   </extension>
+   <extension>
+    <name>apcu</name>
+    <min>5.0.0</min>
+   </extension>
+   <extension>
+    <name>wincache</name>
+    <min>1.1.0</min>
+   </extension>
+  </optional>
+ </dependencies>
+ <phprelease>
+  <filelist>
+   <install name="docs/apigen.neon" as="apigen.neon"/>
+   <install name="docs/doxygen.ini" as="doxygen.ini"/>
+   <install name="docs/phpdoc.dist.xml" as="phpdoc.dist.xml"/>
+   <install name="src/PEAR2/Cache/SHM.php" as="PEAR2/Cache/SHM.php"/>
+   <install name="src/PEAR2/Cache/SHM/Adapter/APC.php" as="PEAR2/Cache/SHM/Adapter/APC.php"/>
+   <install name="src/PEAR2/Cache/SHM/Adapter/APCu.php" as="PEAR2/Cache/SHM/Adapter/APCu.php"/>
+   <install name="src/PEAR2/Cache/SHM/Adapter/Placebo.php" as="PEAR2/Cache/SHM/Adapter/Placebo.php"/>
+   <install name="src/PEAR2/Cache/SHM/Adapter/Wincache.php" as="PEAR2/Cache/SHM/Adapter/Wincache.php"/>
+   <install name="src/PEAR2/Cache/SHM/Exception.php" as="PEAR2/Cache/SHM/Exception.php"/>
+   <install name="src/PEAR2/Cache/SHM/InvalidArgumentException.php" as="PEAR2/Cache/SHM/InvalidArgumentException.php"/>
+   <install name="tests/bootstrap.php" as="bootstrap.php"/>
+   <install name="tests/PHPT/APC.phpt" as="PHPT/APC.phpt"/>
+   <install name="tests/PHPT/APCu.phpt" as="PHPT/APCu.phpt"/>
+   <install name="tests/PHPT/Common/testAddingTtlValue_part1.phpt" as="PHPT/Common/testAddingTtlValue_part1.phpt"/>
+   <install name="tests/PHPT/Common/testAddingTtlValue_part2.phpt" as="PHPT/Common/testAddingTtlValue_part2.phpt"/>
+   <install name="tests/PHPT/Common/testAddingTtlValue_part3.phpt" as="PHPT/Common/testAddingTtlValue_part3.phpt"/>
+   <install name="tests/PHPT/Common/testAddingValue.phpt" as="PHPT/Common/testAddingValue.phpt"/>
+   <install name="tests/PHPT/Common/testSettingAndDeletingValue.phpt" as="PHPT/Common/testSettingAndDeletingValue.phpt"/>
+   <install name="tests/PHPT/Common/testSettingAndGettingValue.phpt" as="PHPT/Common/testSettingAndGettingValue.phpt"/>
+   <install name="tests/PHPT/Common/testSingleFileLockAndUnlock.phpt" as="PHPT/Common/testSingleFileLockAndUnlock.phpt"/>
+   <install name="tests/PHPT/includes/runner.php" as="PHPT/includes/runner.php"/>
+   <install name="tests/PHPT/includes/SHM-factory.php" as="PHPT/includes/SHM-factory.php"/>
+   <install name="tests/PHPT/Placebo.phpt" as="PHPT/Placebo.phpt"/>
+   <install name="tests/PHPT/SHM-factory_CGI.phpt" as="PHPT/SHM-factory_CGI.phpt"/>
+   <install name="tests/PHPT/SHM-factory_CLI.phpt" as="PHPT/SHM-factory_CLI.phpt"/>
+   <install name="tests/PHPT/Wincache.phpt" as="PHPT/Wincache.phpt"/>
+   <install name="tests/phpunit.xml" as="phpunit.xml"/>
+  </filelist>
+ </phprelease>
+</package>

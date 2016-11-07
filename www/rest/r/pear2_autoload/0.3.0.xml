@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_autoload">PEAR2_Autoload</p>
+ <c>pear2.php.net</c>
+ <v>0.3.0</v>
+ <st>alpha</st>
+ <l>New BSD License</l>
+ <m>boen_robot</m>
+ <s>Standard Autoloader for PEAR2
+</s>
+ <d>
+PEAR2_Autoload is the standard method of class loading for
+development and low-volume web sites using PEAR2 packages.
+
+To use:
+
+    &lt;?php
+    require '/path/to/PEAR2/Autoload.php';
+    // Now use class names from installed PEAR2 packages at will
+    
+    // You can also inclue other PEAR2 registries
+    // require '/other/pear2/repo/PEAR2/Autoload.php';
+    // or manually
+    // PEAR2\Autoload::initialize('/other/pear2/repo');
+    ?&gt;</d>
+ <da>2016-11-07 02:44:17</da>
+ <n>- Added ability to autoload traits.
+
+- Added ability to prepend paths instead of appending them,
+  and specifying them as PATH_SEPARATOR separated list.
+
+- Fixed GH #3 - Exceptions are not thrown if there are other registered
+  autoloaders at the time of the failed autoloading.
+
+- This package is now installable from PEAR.
+
+- CS fixes.
+</n>
+ <f>23110</f>
+ <g>http://pear2.php.net/get/PEAR2_Autoload-0.3.0</g>
+ <x xlink:href="package.0.3.0.xml"/>
+</r>
