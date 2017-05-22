@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<r xmlns="http://pear.php.net/dtd/rest.release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://pear.php.net/dtd/rest.release http://pear.php.net/dtd/rest.release.xsd">
+ <p xlink:href="rest/p/pear2_console_commandline">PEAR2_Console_CommandLine</p>
+ <c>pear2.php.net</c>
+ <v>0.2.3</v>
+ <st>alpha</st>
+ <l>MIT License</l>
+ <m>boen_robot</m>
+ <s>PEAR2_Console_CommandLine is a full featured package for managing command-line
+</s>
+ <d>options and arguments highly inspired from python optparse module, it allows
+the developer to easily build complex command line interfaces.
+
+Main features:
+* handles sub commands (ie. $ myscript.php -q subcommand -f file),
+* can be completely built from an xml definition file,
+* generate --help and --version options automatically,
+* can be completely customized,
+* builtin support for i18n,
+* and much more...
+
+</d>
+ <da>2017-05-22 14:40:46</da>
+ <n>* Re-fixed the path to the RNG schema, now with all the new paths in mind.</n>
+ <f>36332</f>
+ <g>http://pear2.php.net/get/PEAR2_Console_CommandLine-0.2.3</g>
+ <x xlink:href="package.0.2.3.xml"/>
+</r>
